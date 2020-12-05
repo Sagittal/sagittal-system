@@ -27,8 +27,8 @@ import {
     getCommaClass,
     N2D3P9,
     SizeCategory,
+    SymbolClassId,
 } from "../../../src"
-import {FlaccoId} from "../../../src/accidental"
 
 describe("getCommaClass", (): void => {
     it("given a comma class ID, returns the full comma class", (): void => {
@@ -37,7 +37,7 @@ describe("getCommaClass", (): void => {
         const actual: CommaClass = getCommaClass(commaClassId)
 
         const expected: CommaClass = {
-            representativeSymbolClassId: FlaccoId.WING_ANTITICK_AND_RIGHT_ARC,
+            representativeSymbolClassId: SymbolClassId.WING_ANTITICK_AND_RIGHT_ARC,
             pitch: {monzo: [-11, 3, 0, 1, 1] as Monzo<{rational: true}>},
         } as CommaClass
         expect(actual).toEqual(expected)
