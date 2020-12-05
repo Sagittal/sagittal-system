@@ -1,13 +1,11 @@
-import {ArmId, HeadId} from "../../../../src"
+import {ArmId, computeAccidental, HeadId} from "../../../../src"
 import {Accidental, Compatible, EMPTY_ACCIDENTAL, Flavor, Smiley} from "../../../../src/accidental"
 import {computeAccidentalSmiley, computeSagittalSmiley} from "../../../../src/accidental/glyph"
 import {Shafts} from "../../../../src/accidental/sagittal"
-import {computeAccidental} from "../../../helpers/src/accidental/accidental"
 
 describe("computeSagittalSmiley", (): void => {
     it("converts a sagittal to smiley code", (): void => {
         const sagittal = computeAccidental({armId: ArmId.WING_AND_TICK, headId: HeadId.RIGHT_ARC})        // `'|)
-
 
         const actual = computeSagittalSmiley(sagittal)
 

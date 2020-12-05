@@ -1,4 +1,4 @@
-import {ArmId, HeadId} from "../../../../src"
+import {ArmId, computeAccidental, HeadId} from "../../../../src"
 import {
     Accidental,
     Compatible,
@@ -8,7 +8,6 @@ import {
     Flavor,
     Unicode,
 } from "../../../../src/accidental"
-import {computeAccidental} from "../../../helpers/src/accidental/accidental"
 
 describe("computeSagittalUnicode", (): void => {
     it("given a symbol, returns its unicode representation", (): void => {

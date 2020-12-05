@@ -1,7 +1,6 @@
 import {Io} from "@sagittal/general"
-import {ArmId, Compatible, HeadId, parseAccidental} from "../../../../src"
+import {ArmId, Compatible, computeAccidental, HeadId, parseAccidental} from "../../../../src"
 import {Shafts} from "../../../../src/accidental/sagittal"
-import {computeAccidental} from "../../../helpers/src/accidental/accidental"
 
 describe("parseAccidental", (): void => {
     it("works for ASCII format", (): void => {

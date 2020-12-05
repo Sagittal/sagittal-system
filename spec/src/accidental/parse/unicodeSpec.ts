@@ -1,6 +1,5 @@
-import {ArmId, Compatible, HeadId, Unicode} from "../../../../src"
+import {ArmId, Compatible, computeAccidental, HeadId, Unicode} from "../../../../src"
 import {parseUnicode} from "../../../../src/accidental/parse/unicode"
-import {computeAccidental} from "../../../helpers/src/accidental/accidental"
 
 describe("parseUnicode", (): void => {
     it("works for Unicode format", (): void => {

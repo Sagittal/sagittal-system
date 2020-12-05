@@ -1,10 +1,8 @@
 import {deepEquals, finalElement, isUndefined, Maybe} from "@sagittal/general"
-import {formatAccidental} from "../../../../src/accidental"
-import {Arm, Flacco, getArm, getHead, Head, HeadId} from "../../../../src/accidental/flacco"
-import {FLACCOS} from "../../../../src/accidental/flacco/flacco"
-import {Accidental, Compatible, EMPTY_ACCIDENTAL} from "../../../../src/accidental/flavor"
-import {computeApotomeComplement, getCore, Sagittal, Shafts} from "../../../../src/accidental/sagittal"
-import {areShaftsEven, isMultiShaft} from "../../../../src/accidental/sagittal/shafts"
+import {Arm, Flacco, FLACCOS, getArm, getHead, Head, HeadId} from "./flacco"
+import {Accidental, Compatible, EMPTY_ACCIDENTAL} from "./flavor"
+import {formatAccidental} from "./glyph"
+import {areShaftsEven, computeApotomeComplement, getCore, isMultiShaft, Sagittal, Shafts} from "./sagittal"
 import {AccidentalOptions} from "./types"
 
 const armContributesAdditionalValueInSameDirection = (arm: Maybe<Arm>): boolean =>

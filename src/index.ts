@@ -74,6 +74,7 @@ export {
     Compatible,
     ArmId,
     HeadId,
+    computeAccidental,
 } from "./accidental"
 export {
     computeMaybeCommaClassId,

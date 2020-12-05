@@ -1,7 +1,6 @@
 import {Formatted, ioSettings, TableFormat} from "@sagittal/general"
-import {HeadId} from "../../../../src"
+import {computeAccidental, HeadId} from "../../../../src"
 import {Compatible, formatAccidental, Glyph} from "../../../../src/accidental"
-import {computeAccidental} from "../../../helpers/src/accidental/accidental"
 
 describe("formatAccidental", (): void => {
     const accidental = computeAccidental({headId: HeadId.LEFT_SCROLL_DOUBLE_RIGHT_BARB, compatible: Compatible.SHARP})

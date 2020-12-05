@@ -1,4 +1,4 @@
-import {ArmId, HeadId} from "../../../../src"
+import {ArmId, computeAccidental, HeadId} from "../../../../src"
 import {
     Accidental,
     Ascii,
@@ -8,7 +8,6 @@ import {
     Flavor,
 } from "../../../../src/accidental"
 import {Shafts} from "../../../../src/accidental/sagittal"
-import {computeAccidental} from "../../../helpers/src/accidental/accidental"
 
 describe("computeSagittalAscii", (): void => {
     it("given a sagittal, returns its ASCII representation", (): void => {

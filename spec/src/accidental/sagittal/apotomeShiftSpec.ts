@@ -1,6 +1,5 @@
-import {ArmId, HeadId} from "../../../../src"
+import {ArmId, computeAccidental, HeadId} from "../../../../src"
 import {apotomeShift, Shafts} from "../../../../src/accidental/sagittal"
-import {computeAccidental} from "../../../helpers/src/accidental/accidental"
 
 describe("apotomeShift", (): void => {
     it("takes a symbol and shifts it by an apotome (adds 2 shafts)", (): void => {

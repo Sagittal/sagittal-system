@@ -1,4 +1,4 @@
-import {HeadId, SymbolClassId} from "../../../../src"
+import {computeAccidental, HeadId, SymbolClassId} from "../../../../src"
 import {Accidental, Flavor} from "../../../../src/accidental"
 import {computeRevoAccidentalFromCaptureZone} from "../../../../src/accidental/flavor/revo"
 import {Shafts} from "../../../../src/accidental/sagittal"
@@ -12,7 +12,6 @@ import {
     SECTION_P2A,
     SECTION_P2T,
 } from "../../../../src/notation/sections"
-import {computeAccidental} from "../../../helpers/src/accidental/accidental"
 
 describe("computeRevoAccidentalFromCaptureZone", (): void => {
     it("works for section P1A", (): void => {

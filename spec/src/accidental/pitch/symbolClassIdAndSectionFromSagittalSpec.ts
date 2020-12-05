@@ -1,9 +1,8 @@
-import {ArmId, HeadId, SymbolClassId} from "../../../../src"
+import {ArmId, computeAccidental, HeadId, SymbolClassId} from "../../../../src"
 import {computeSymbolClassIdAndSectionFromSagittal} from "../../../../src/accidental/pitch/symbolClassIdAndSectionFromSagittal"
 import {Shafts} from "../../../../src/accidental/sagittal"
 import {SECTION_P1T, SECTION_P2A, SECTION_P2T} from "../../../../src/notation"
 import {SECTION_N1A, SECTION_P1A} from "../../../../src/notation/sections"
-import {computeAccidental} from "../../../helpers/src/accidental/accidental"
 
 describe("computeSymbolClassIdAndSectionFromSagittal", (): void => {
     it("works for a single-shaft sagittal below the half apotome", (): void => {

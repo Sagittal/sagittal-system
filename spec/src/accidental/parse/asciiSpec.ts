@@ -1,10 +1,18 @@
-import {Accidental, ArmId, Ascii, Compatible, computeAccidentalAscii, HeadId, parseAscii} from "../../../../src"
+import {
+    Accidental,
+    ArmId,
+    Ascii,
+    Compatible,
+    computeAccidental,
+    computeAccidentalAscii,
+    HeadId,
+    parseAscii,
+} from "../../../../src"
 import {computeRevoAccidentalFromCaptureZone} from "../../../../src/accidental/flavor/revo"
 import {Shafts} from "../../../../src/accidental/sagittal"
 import {CaptureZone} from "../../../../src/notation"
 import {computeCaptureZones} from "../../../../src/notation/captureZones"
 import {EXTREME_NOTATION} from "../../../../src/notations/ji/notations"
-import {computeAccidental} from "../../../helpers/src/accidental/accidental"
 
 describe("parseAscii", (): void => {
     it("parses a sagittal correctly into its arm and core", (): void => {

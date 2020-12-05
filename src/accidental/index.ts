@@ -25,4 +25,5 @@ export {
     BLANK_ASCII,
 } from "./glyph"
 export {computeJiPitchFromAccidental} from "./pitch"
+export {computeAccidental} from "./accidental"
 export {parseAccidental, parseAscii} from "./parse"

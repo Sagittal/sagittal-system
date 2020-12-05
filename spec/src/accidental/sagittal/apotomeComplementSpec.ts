@@ -1,6 +1,6 @@
+import {computeAccidental} from "../../../../src"
 import {ArmId, getArm, HeadId} from "../../../../src/accidental/flacco"
 import {computeApotomeComplement, getCore, Shafts} from "../../../../src/accidental/sagittal"
-import {computeAccidental} from "../../../helpers/src/accidental/accidental"
 
 describe("computeApotomeComplement", (): void => {
     it("returns the apotome complement of the given symbol", (): void => {

@@ -1,5 +1,6 @@
-import {ArmId, Compatible, HeadId} from "../../../../src"
-import {Shafts} from "../../../../src/accidental/sagittal"
+import {ArmId, HeadId} from "./flacco"
+import {Compatible} from "./flavor"
+import {Shafts} from "./sagittal"
 
 type AccidentalOptions = Partial<{
     armId: ArmId,

@@ -1,7 +1,6 @@
-import {Accidental, Compatible} from "../../../../src"
-import {AccentId, ArmId, FlagId, HeadId} from "../../../../src/accidental"
-import {Shafts} from "../../../../src/accidental/sagittal"
-import {computeAccidental} from "./accidental"
+import {Accidental, ArmId, Compatible, computeAccidental, HeadId} from "../../../src"
+import {AccentId, FlagId} from "../../../src/accidental"
+import {Shafts} from "../../../src/accidental/sagittal"
 
 describe("computeAccidental", (): void => {
     it("returns the accidental", (): void => {

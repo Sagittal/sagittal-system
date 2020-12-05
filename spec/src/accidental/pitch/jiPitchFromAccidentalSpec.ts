@@ -1,6 +1,5 @@
 import {Scamon} from "@sagittal/general"
-import {ArmId, Compatible, computeJiPitchFromAccidental, HeadId} from "../../../../src"
-import {computeAccidental} from "../../../helpers/src/accidental/accidental"
+import {ArmId, Compatible, computeAccidental, computeJiPitchFromAccidental, HeadId} from "../../../../src"
 
 describe("computeJiPitchFromAccidental", (): void => {
     it("computes a JI pitch from an accidental", (): void => {
