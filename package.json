@@ -1,6 +1,6 @@
 {
   "name": "@sagittal/system",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "description": "Implementations of Sagittal notations, accidental parsing, useful metrics, comma naming, and finding and analyzing commas using Sagittal-specific properties.",

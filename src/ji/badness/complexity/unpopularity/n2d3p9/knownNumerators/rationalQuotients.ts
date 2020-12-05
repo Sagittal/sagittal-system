@@ -1,18 +1,13 @@
-import {Denominator, Filename, isLowestTerms, Max, NEWLINE, Quotient, QuotientPart, readLines} from "@sagittal/general"
+import {Denominator, isLowestTerms, Max, Quotient, QuotientPart} from "@sagittal/general"
 import {N2D3P9} from "../types"
+import {KNOWN_NUMERATORS} from "./constants"
 import {computeN2D3P9FromKnownLowN2D3P9NumeratorAndPossibleDenominator} from "./n2d3p9"
-import {KnownLowN2D3P9Numerator} from "./types"
 
 const computeKnownRationalQuotients = (maxN2D3P9: Max<N2D3P9>): Array<Quotient<{rational: true, rough: 5}>> => {
-    const knownNumerators: KnownLowN2D3P9Numerator[] = JSON.parse(
-        // tslint:disable-next-line max-line-length
-        readLines("src/sagittal/ji/badness/complexity/unpopularity/n2d3p9/knownNumerators/knownNumerators.txt" as Filename).join(NEWLINE),
-    )
-
     const rationalQuotients = [] as Array<Quotient<{rational: true, rough: 5}>>
 
-    for (const [knownNumeratorIndex, knownNumerator] of knownNumerators.entries()) {
-        const possibleDenominators = knownNumerators.slice(0, knownNumeratorIndex)
+    for (const [knownNumeratorIndex, knownNumerator] of KNOWN_NUMERATORS.entries()) {
+        const possibleDenominators = KNOWN_NUMERATORS.slice(0, knownNumeratorIndex)
 
         for (const [possibleDenominatorIndex, possibleDenominator] of possibleDenominators.entries()) {
             const n2d3p9 =
