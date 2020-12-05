@@ -215,6 +215,7 @@ enum FlaccoId {
     WING_TICK_AND_DOUBLE_BARB = "wingTickAndDoubleBarb",
     ANTIWING_LEFT_SCROLL_AND_DOUBLE_BARB = "antiwingLeftScrollAndDoubleBarb",
     LEFT_SCROLL_AND_DOUBLE_BARB = "leftScrollAndDoubleBarb",
+    // Beyond here, these are not defined as SymbolClassId, because they are greater than a half apotome.
     WING_LEFT_SCROLL_AND_DOUBLE_BARB = "wingLeftScrollAndDoubleBarb",
     BIRD_LEFT_SCROLL_AND_DOUBLE_BARB = "birdLeftScrollAndDoubleBarb",
     ANTIWING_ANTITICK_AND_DOUBLE_ARC = "antiwingAntitickAndDoubleArc",

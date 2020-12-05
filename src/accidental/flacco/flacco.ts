@@ -1,3 +1,4 @@
+import {SymbolClassId} from "../../notation"
 import {getArm} from "./arm"
 import {getHead} from "./head"
 import {ArmId, Flacco, FlaccoId, HeadId} from "./types"
@@ -563,7 +564,7 @@ const FLACCOS: Record<FlaccoId, Flacco> = {
     },
 }
 
-const getFlacco = (flaccoId: FlaccoId): Flacco =>
+const getFlacco = (flaccoId: FlaccoId | SymbolClassId): Flacco =>
     FLACCOS[flaccoId]
 
 export {
