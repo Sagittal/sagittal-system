@@ -17,7 +17,7 @@
     "test-ci": "node -r ts-node/register node_modules/jasmine/bin/jasmine --ci=true"
   },
   "devDependencies": {
-    "@sagittal/general": "^1.0.4",
+    "@sagittal/general": "^1.0.6",
     "@types/jasmine": "^3.6.2",
     "@types/node": "^14.14.10",
     "jasmine": "^3.6.3",
