@@ -1,6 +1,6 @@
 import {Decimal, Exponent, Extrema, Max, Prime} from "@sagittal/general"
 import {computePrimeExponentExtremasGivenMaxN2D3P9, N2D3P9} from "../../../../../../../../src"
-import {onlyRunInCi} from "../../../../../../../helpers/onlyRunInCi"
+import {onlyRunInCi} from "../../../../../../../helpers/shared/onlyRunInCi"
 
 describe("computePrimeExponentExtremasGivenMaxN2D3P9", (): void => {
     it("works for 0", (): void => {

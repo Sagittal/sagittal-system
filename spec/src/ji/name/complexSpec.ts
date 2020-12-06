@@ -1,7 +1,7 @@
 import {BLANK, Comma} from "@sagittal/general"
 import {SizeCategory} from "../../../../src"
 import {computeMaybeComplex} from "../../../../src/ji/name/complex"
-import {onlyRunInCi} from "../../../helpers/onlyRunInCi"
+import {onlyRunInCi} from "../../../helpers/shared/onlyRunInCi"
 
 describe("computeMaybeComplex", (): void => {
     it("returns blank for a comma which is the simplest comma with its (undirected) quotient and size category           ", (): void => {
