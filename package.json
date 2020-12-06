@@ -1,9 +1,10 @@
 {
   "name": "@sagittal/system",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "description": "Implementations of Sagittal notations, accidental parsing, useful metrics, comma naming, and finding and analyzing commas using Sagittal-specific properties.",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sagittal/sagittal-system.git"
@@ -17,7 +18,7 @@
     "test-ci": "node -r ts-node/register node_modules/jasmine/bin/jasmine --ci=true"
   },
   "devDependencies": {
-    "@sagittal/general": "^1.0.6",
+    "@sagittal/general": "^1.0.7",
     "@types/jasmine": "^3.6.2",
     "@types/node": "^14.14.10",
     "jasmine": "^3.6.3",
