@@ -1,4 +1,4 @@
-import {Decimal, Exponent, increment, Index, Max, Numerator, Of, Prime, PRIMES} from "@sagittal/general"
+import {computePrimes, Decimal, Exponent, increment, Index, Max, Numerator, Of, Prime} from "@sagittal/general"
 import {N2D3P9} from "../../../../../../../../../../../../src"
 
 describe("breaking points of max N2D3P9 per numerator prime", (): void => {
@@ -82,9 +82,11 @@ describe("breaking points of max N2D3P9 per numerator prime", (): void => {
         const breakingPoints = [[], []] as Array<Array<Max<N2D3P9>>>
         let primeIndex: Index<Prime> = 2 as Index<Prime>
 
+        const primes = computePrimes()
+
         while (true) {
             breakingPoints.push([] as Array<Max<N2D3P9>>)
-            const numeratorPrime = PRIMES[primeIndex] as Prime & Of<Numerator>
+            const numeratorPrime = primes[primeIndex] as Prime & Of<Numerator>
 
             let maxNumeratorPrimeExponent =
                 0 as Max<Numerator & Decimal<{integer: true}> & Exponent<Prime>>

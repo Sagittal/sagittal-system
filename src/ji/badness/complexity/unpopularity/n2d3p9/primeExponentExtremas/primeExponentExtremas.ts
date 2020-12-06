@@ -1,4 +1,5 @@
 import {
+    computePrimes,
     Decimal,
     deepEquals,
     Exponent,
@@ -7,7 +8,6 @@ import {
     increment,
     Max,
     Prime,
-    PRIMES,
     shallowClone,
 } from "@sagittal/general"
 import {N2D3P9} from "../types"
@@ -25,9 +25,11 @@ const computePrimeExponentExtremasGivenMaxN2D3P9 = (
     const numeratorPossibilitiesForDenominatorGivenMaxN2D3P9 =
         computeNumeratorPossibilitiesForDenominatorGivenMaxN2D3P9(maxN2D3P9)
 
+    const primes = computePrimes()
+
     let index = FIVE_PRIME_INDEX
     while (true) {
-        const prime = PRIMES[index]
+        const prime = primes[index]
         const primeExponentExtremaGivenMaxN2D3P9: Extrema<{of: Decimal<{integer: true}> & Exponent<Prime>}> =
             computePrimeExponentExtremaGivenMaxN2D3P9(
                 prime,

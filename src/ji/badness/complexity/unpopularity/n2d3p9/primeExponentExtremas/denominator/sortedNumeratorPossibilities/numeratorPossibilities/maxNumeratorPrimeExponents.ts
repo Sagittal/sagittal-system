@@ -1,4 +1,5 @@
 import {
+    computePrimes,
     Decimal,
     Exponent,
     FIVE_PRIME_INDEX,
@@ -7,7 +8,6 @@ import {
     Numerator,
     Of,
     Prime,
-    PRIMES,
     shallowClone,
 } from "@sagittal/general"
 import {N2D3P9} from "../../../../types"
@@ -17,11 +17,13 @@ import {INITIAL_MAX_NUMERATOR_PRIME_EXPONENTS_FOR_TWO_AND_THREE} from "./constan
 const computeMaxNumeratorPrimeExponentsGivenMaxN2D3P9 = (
     maxN2D3P9: Max<N2D3P9>,
 ): Array<Max<Numerator & Decimal<{integer: true}> & Exponent<Prime>>> => {
+    const primes = computePrimes()
+
     let numeratorPrimeIndex = FIVE_PRIME_INDEX
     const maxNumeratorPrimeExponentsGivenMaxN2D3P9 =
         shallowClone(INITIAL_MAX_NUMERATOR_PRIME_EXPONENTS_FOR_TWO_AND_THREE)
     while (true) {
-        const numeratorPrime = PRIMES[numeratorPrimeIndex] as Prime & Of<Numerator>
+        const numeratorPrime = primes[numeratorPrimeIndex] as Prime & Of<Numerator>
 
         const maxNumeratorPrimeExponentGivenMaxN2D3P9 =
             computeMaxNumeratorPrimeExponentGivenMaxN2D3P9(numeratorPrime, maxN2D3P9)

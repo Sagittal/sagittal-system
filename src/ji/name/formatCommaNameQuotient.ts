@@ -1,4 +1,5 @@
 import {
+    computePrimes,
     computeRationalDecimalCopf,
     computeRationalDecimalCopfr,
     computeRationalDecimalGpf,
@@ -7,7 +8,6 @@ import {
     DOT_OPERATOR,
     Exponent,
     Prime,
-    PRIMES,
     Quotient,
     QuotientPart,
     SUPERSCRIPT_NUMBERS,
@@ -33,6 +33,8 @@ const formatFactoredCommaNameQuotientPart = (
     }
     const factoredTerms: string[] = []
 
+    const primes = computePrimes()
+
     integerMonzo.forEach(
         (
             primeExponent: Decimal<{integer: true}> & Exponent<Prime>,
@@ -43,11 +45,11 @@ const formatFactoredCommaNameQuotientPart = (
             }
 
             if (primeExponent === 1) {
-                factoredTerms.push(`${PRIMES[primeExponentIndex]}`)
+                factoredTerms.push(`${primes[primeExponentIndex]}`)
             }
 
             if (primeExponent > 1) {
-                factoredTerms.push(`${PRIMES[primeExponentIndex]}${SUPERSCRIPT_NUMBERS[primeExponent]}`)
+                factoredTerms.push(`${primes[primeExponentIndex]}${SUPERSCRIPT_NUMBERS[primeExponent]}`)
             }
         },
     )
