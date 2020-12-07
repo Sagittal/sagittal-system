@@ -1,7 +1,6 @@
-import {Decimal, Max, Numerator} from "@sagittal/general"
+import {Decimal, Max, Numerator, onlyRunInCi} from "@sagittal/general"
 import {N2D3P9} from "../../../../../../../../../../../src"
 import {computeMaxNumeratorGivenMaxN2D3P9} from "../../../../../../../../../../../src/ji/badness/complexity/unpopularity/n2d3p9/primeExponentExtremas/denominator/sortedNumeratorPossibilities/numeratorPossibilities/maxNumerator"
-import {onlyRunInCi} from "../../../../../../../../../../helpers/shared/onlyRunInCi"
 
 describe("computeMaxNumeratorGivenMaxN2D3P9", (): void => {
     it("works for 136, for which the max numerator is a simple power of a single prime", (): void => {
