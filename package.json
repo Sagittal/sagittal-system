@@ -1,6 +1,6 @@
 {
   "name": "@sagittal/system",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "description": "Implementations of Sagittal notations, accidental parsing, useful metrics, comma naming, and finding and analyzing commas using Sagittal-specific properties.",
@@ -21,7 +21,7 @@
     "tmp": "node -r ts-node/register/transpile-only --max-old-space-size=131072 spec/helpers/shared/tmp/tmp.ts"
   },
   "devDependencies": {
-    "@sagittal/general": "^1.0.19",
+    "@sagittal/general": "^1.0.20",
     "@types/jasmine": "^3.6.2",
     "@types/node": "^14.14.10",
     "jasmine": "^3.6.3",
