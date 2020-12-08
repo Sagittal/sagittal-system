@@ -215,9 +215,12 @@ const EXTREME_NOTATION: Notation = {
     symbolClassIds: Object.values(SymbolClassId),   // Extra 26 flaccos, total 149
 }
 
+const JI_NOTATION: Notation = EXTREME_NOTATION
+
 export {
     MEDIUM_NOTATION,
     HIGH_NOTATION,
     ULTRA_NOTATION,
     EXTREME_NOTATION,
+    JI_NOTATION,
 }

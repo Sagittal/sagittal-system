@@ -167,9 +167,12 @@ const JI_NOTATION_LEVELS_COMMA_CLASS_IDS: Record<JiNotationLevelId, CommaClassId
     [JiNotationLevelId.INSANE]: shapeUpIds(INSANE_LEVEL_COMMA_CLASS_IDS),
 }
 
-const JI_NOTATION = finalElement(Object.values(JI_NOTATION_LEVELS_COMMA_CLASS_IDS))
+const JI_NOTATION_COMMA_CLASS_IDS = finalElement(Object.values(JI_NOTATION_LEVELS_COMMA_CLASS_IDS))
+
+// TODO: POST-NOTATION-GENERATION: ELIMINATE COMMA CLASS IDS FILE
+//  I think that this should be covered by the symbol class IDs that are described for the levels, no?
 
 export {
     JI_NOTATION_LEVELS_COMMA_CLASS_IDS,
-    JI_NOTATION,
+    JI_NOTATION_COMMA_CLASS_IDS,
 }

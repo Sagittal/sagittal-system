@@ -94,6 +94,7 @@ export {
     TINA,
     getIntroducingJiNotationLevel,
     getMinaName,
+    JI_NOTATION_COMMA_CLASS_IDS,
     JI_NOTATION,
     computeSecondaryCommaZone,
     BoundType,

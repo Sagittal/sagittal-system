@@ -1,9 +1,9 @@
 import {computeIrrationalDecimalFromScamon, Decimal, Extrema} from "@sagittal/general"
-import {computeSecondaryCommaZone, JI_NOTATION} from "../../../../../src"
+import {computeSecondaryCommaZone, JI_NOTATION_COMMA_CLASS_IDS} from "../../../../../src"
 
 describe("secondary comma zones", (): void => {
     it("they check out", (): void => {
-        const actual = JI_NOTATION.map(computeSecondaryCommaZone)
+        const actual = JI_NOTATION_COMMA_CLASS_IDS.map(computeSecondaryCommaZone)
 
         const expected = [
             [{decimal: 1.000000}, {decimal: 1.001584}], // [{ cents: 0.000000 }, { cents: 2.740244 }],
