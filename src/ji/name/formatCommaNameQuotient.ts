@@ -20,19 +20,8 @@ const formatFactoredCommaNameQuotientPart = (
 ): string => {
     if (commaNameQuotientPart === 1) return "1"
 
-    let integerMonzo
-    try {
-        integerMonzo = computeRationalMonzoFromRationalDecimal(commaNameQuotientPart)
-    } catch (e) {
-        return "?"
-        // Todo: clean up both of these try/catches in here, and actually there's got to be a better way
-        //  `npm run find-commas -- --max-prime-limit 5 --max-aas Infinity --max-2-3-free-copfr 1`
-        //  (with max ATE set to 40, however you need to make that happen, if that's still a problem)
-        //  Returns the "5⋅199⋅362629⋅6260963k" though it's actually for sure the 5k
-        //  And c7⋅13⋅7927⋅15413⋅253937/5k is the c5k
-        //  Maybe the solution is that we need to use commaNameScamon... or use "ratio" since we want folks to know
-        //  That in comma name form its a quotient but it's actually a pitch/scamon
-    }
+    const integerMonzo = computeRationalMonzoFromRationalDecimal(commaNameQuotientPart)
+
     const factoredTerms: string[] = []
 
     const primes = computePrimes()
@@ -71,11 +60,7 @@ const formatUnfactoredCommaNameQuotientPart = (
 const computeShouldFactor = (
     commaNameQuotientPart: QuotientPart & Decimal<{integer: true}>,
 ): boolean => {
-    try {
-        if (computeRationalDecimalCopfr(commaNameQuotientPart) > 2 && commaNameQuotientPart !== 125) return true
-    } catch (e) {
-        return true
-    }
+    if (computeRationalDecimalCopfr(commaNameQuotientPart) > 2 && commaNameQuotientPart !== 125) return true
 
     return computeRationalDecimalGpf(commaNameQuotientPart) > 11
         && commaNameQuotientPart !== 65
