@@ -30,6 +30,8 @@ const formatFactoredCommaNameQuotientPart = (
         //  (with max ATE set to 40, however you need to make that happen, if that's still a problem)
         //  Returns the "5⋅199⋅362629⋅6260963k" though it's actually for sure the 5k
         //  And c7⋅13⋅7927⋅15413⋅253937/5k is the c5k
+        //  Maybe the solution is that we need to use commaNameScamon... or use "ratio" since we want folks to know
+        //  That in comma name form its a quotient but it's actually a pitch/scamon
     }
     const factoredTerms: string[] = []
 
