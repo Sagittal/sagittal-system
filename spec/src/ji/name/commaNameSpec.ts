@@ -230,4 +230,13 @@ describe("computeCommaName", (): void => {
         const expected = "complex-5-Comma"
         expect(actual).toBe(expected)
     })
+
+    it("works for the comma which defines the upper bound of comma size", (): void => {
+        const comma = {monzo: [-22, 14]} as Comma
+
+        const actual = computeCommaName(comma)
+
+        const expected = "3A+A"
+        expect(actual).toBe(expected)
+    })
 })

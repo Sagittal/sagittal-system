@@ -1,4 +1,4 @@
-import {computeSuperScamon, isScamonGreater, NumericProperties, Scamon} from "@sagittal/general"
+import {computeSuperScamon, isScamonGreaterOrEqual, NumericProperties, Scamon} from "@sagittal/general"
 import {MAX_SIZE_CATEGORY_BOUND} from "./constants"
 
 // But not necessarily a Comma, since it isn't necessarily rational.
@@ -7,7 +7,7 @@ import {MAX_SIZE_CATEGORY_BOUND} from "./constants"
 const isCommaSized = <T extends NumericProperties>(
     candidateCommaSizedPitch: Scamon<T>,
 ): candidateCommaSizedPitch is Scamon<T> & {_CommaBrand: boolean} =>
-    isScamonGreater(MAX_SIZE_CATEGORY_BOUND.pitch, computeSuperScamon(candidateCommaSizedPitch))
+    isScamonGreaterOrEqual(MAX_SIZE_CATEGORY_BOUND.pitch, computeSuperScamon(candidateCommaSizedPitch))
 
 export {
     isCommaSized,
