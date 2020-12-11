@@ -239,4 +239,13 @@ describe("computeCommaName", (): void => {
         const expected = "3A+A"
         expect(actual).toBe(expected)
     })
+
+    it("can name commas whose powers are multiple digits", (): void => {
+        const comma = {monzo: [-1, -14, 10]} as Comma
+
+        const actual = computeCommaName(comma)
+
+        const expected = "5¹⁰S"
+        expect(actual).toBe(expected)
+    })
 })

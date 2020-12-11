@@ -7,10 +7,10 @@ import {
     Decimal,
     DOT_OPERATOR,
     Exponent,
+    formatDecimalAsSuperscript,
     Prime,
     Quotient,
     QuotientPart,
-    SUPERSCRIPT_NUMBERS,
 } from "@sagittal/general"
 import {FactoringMode} from "./types"
 
@@ -40,7 +40,7 @@ const formatFactoredCommaNameQuotientPart = (
             }
 
             if (primeExponent > 1) {
-                factoredTerms.push(`${primes[primeExponentIndex]}${SUPERSCRIPT_NUMBERS[primeExponent]}`)
+                factoredTerms.push(`${primes[primeExponentIndex]}${formatDecimalAsSuperscript(primeExponent)}`)
             }
         },
     )
