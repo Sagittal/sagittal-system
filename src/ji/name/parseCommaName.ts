@@ -16,6 +16,8 @@ import {CommaNameQuotient, ParsedCommaName, SizeCategory, SizeCategoryName} from
 //  Which is made possible in part by a resolution to the counterexample given where two commas could have the same name
 //  Which I fixed by devising a series of tie-breakers
 //  See: http://forum.sagittal.org/viewtopic.php?p=3062#p3062
+//  And there's also some new stuff that needs to be parsed, like scaled monzos, half commas, default commas per size
+//  Category, hyphens v spaces, and preferred outputs http://forum.sagittal.org/viewtopic.php?p=3105#p3105
 
 const parseCommaName = (commaNameIo: Io): ParsedCommaName => {
     const quotientPartOfCommaName = commaNameIo // *not* a 2,3-free class, because it's not necessarily super!!!
