@@ -20,7 +20,7 @@
     "pretty": true,
     "esModuleInterop": true,
     "declaration": true,
-    "outDir": "dist",
+    "outDir": "dist/cjs",
     "target": "es5"
   },
   "include": [
