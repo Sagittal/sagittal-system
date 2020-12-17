@@ -10,7 +10,8 @@ import {
 import {SIZE_CATEGORY_ABBREVIATIONS, SIZE_CATEGORY_NAMES, SIZE_CATEGORY_NAME_ALTERNATIVES} from "./sizeCategories"
 import {CommaNameQuotient, ParsedCommaName, SizeCategory, SizeCategoryName} from "./types"
 
-// TODO: comma names need to be updated to reflect the new understanding about up & down being overrides while
+// TODO: COMMA NAMES
+//  Comma names need to be updated to reflect the new understanding about up & down being overrides while
 //  The direction of the ratio in the comma name expresses the direction of the 2,3-free prime content as well as
 //  The direction of the comma itself (positive or negative cents)
 //  Which is made possible in part by a resolution to the counterexample given where two commas could have the same name
@@ -19,6 +20,13 @@ import {CommaNameQuotient, ParsedCommaName, SizeCategory, SizeCategoryName} from
 //  And there's also some new stuff that needs to be parsed, like scaled monzos, half commas, default commas per size
 //  Category, hyphens v spaces, and preferred outputs http://forum.sagittal.org/viewtopic.php?p=3105#p3105
 //  All answers here now: http://forum.sagittal.org/viewtopic.php?p=3106#p3106
+//  - There's also complex name parsing
+//  Eventually add a third element to parsedCommaName: complexity, affecting what it returns
+//  And handle all the alternate input methods
+//  Touched upon here: http://forum.sagittal.org/viewtopic.php?p=1721#p1721
+//  Most recent questions here: http://forum.sagittal.org/viewtopic.php?p=2980#p2980
+//  1c3C = c3C = 41e3C and
+//  0c3C = 3C = 12e3C.
 
 const parseCommaName = (commaNameIo: Io): ParsedCommaName => {
     const quotientPartOfCommaName = commaNameIo // *not* a 2,3-free class, because it's not necessarily super!!!
