@@ -4,6 +4,7 @@ import {
     computeQuotientFromMonzo,
     computeRationalDecimalCopfr,
     computeRationalScamonSopfr,
+    Quotient,
     Scamon,
     THREE_PRIME_INDEX,
 } from "@sagittal/general"
@@ -16,7 +17,7 @@ const computeSecorComplexity = (jiPitch: Scamon<{rational: true}>): SecorComplex
     const two3FreeClass = compute23FreeClass(jiPitch)
     const g = computeRationalScamonSopfr(two3FreeClass)
 
-    const [numerator, denominator] = computeQuotientFromMonzo(two3FreeClass.monzo)
+    const [numerator, denominator]: Quotient<{rational: true}> = computeQuotientFromMonzo(two3FreeClass.monzo)
     const h = computeRationalDecimalCopfr(numerator)
     const i = computeRationalDecimalCopfr(denominator)
     const j = abs(h - i)

@@ -149,6 +149,8 @@ type BoundClass<T extends NumericProperties = {}> = {
     pitch: Scamon<T & {rational: false}>,
 }
 
+// TODO: COMMA CLASS IDS USE SAME PATTERN DEVISED IN STAFF CODE
+//  Like: `"1/(5⋅7⋅13)n",`
 enum CommaClassId {
     _1_u = "_1_u",                              // 1u
     _1_V_5_7_13_n = "_1_V_5_7_13_n",            // 1/(5⋅7⋅13)n
