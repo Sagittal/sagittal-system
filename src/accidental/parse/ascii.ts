@@ -4,10 +4,15 @@ import {Accidental, Compatible, EMPTY_ACCIDENTAL} from "../flavor"
 import {Ascii, BLANK_ASCII, PARENTHETICAL_NATURAL_ASCII} from "../glyph"
 import {Shafts} from "../sagittal"
 
+const computeDown = (ascii: Ascii): boolean =>
+    !ascii.match(/[|!XY]/g) ?
+        !ascii.match(/[`']/) :
+        !ascii.match(/[|X]/g)
+
 const parseAscii = (ascii: Ascii): Accidental => {
     if (ascii === PARENTHETICAL_NATURAL_ASCII) return EMPTY_ACCIDENTAL
 
-    const down = !!ascii.match(/[Y!]/g)
+    const down = computeDown(ascii)
 
     let pastShaft = false
 
@@ -103,7 +108,7 @@ const parseAscii = (ascii: Ascii): Accidental => {
     })
 
     if (down) accidental.down = down
-    accidental.shafts = shaftCount === 1 ?
+    accidental.shafts = shaftCount <= 1 ?
         Shafts.SINGLE :
         shaftCount === 2 ?
             Shafts.DOUBLE :

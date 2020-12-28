@@ -92,4 +92,17 @@ describe("parseAscii", (): void => {
             expect(actual).toEqual(expected)
         })
     })
+
+    it("assumes a floating accent is against a shaft, and gets the direction right", (): void => {
+        expect(parseAscii("`'" as Ascii)).toEqual(computeAccidental({armId: ArmId.WING_AND_TICK}))
+        expect(parseAscii("'" as Ascii)).toEqual(computeAccidental({armId: ArmId.TICK}))
+        // Antiwing & tick is a valid arm, but not a valid symbol!
+        expect(parseAscii("``" as Ascii)).toEqual(computeAccidental({armId: ArmId.BIRD}))
+        expect(parseAscii("`" as Ascii)).toEqual(computeAccidental({armId: ArmId.WING}))
+        expect(parseAscii("," as Ascii)).toEqual(computeAccidental({armId: ArmId.WING, down: true}))
+        expect(parseAscii(",," as Ascii)).toEqual(computeAccidental({armId: ArmId.BIRD, down: true}))
+        // Antiwing & tick is a valid arm, but not a valid symbol!
+        expect(parseAscii("." as Ascii)).toEqual(computeAccidental({armId: ArmId.TICK, down: true}))
+        expect(parseAscii(",." as Ascii)).toEqual(computeAccidental({armId: ArmId.WING_AND_TICK, down: true}))
+    })
 })
