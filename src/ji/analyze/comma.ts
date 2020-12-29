@@ -7,8 +7,7 @@ const analyzeComma = <T extends NumericProperties, U extends Comma<T>>(
     comma: U,
     options: CommaNameOptions = {},
 ): CommaAnalysis<T, U> => {
-    const {directed = true, factoringMode = FactoringMode.THRESHOLD, abbreviated = true} = options
-    const name = computeCommaName(comma, {directed, factoringMode, abbreviated})
+    const name = computeCommaName(comma, options)
     const sizeCategory = computeSizeCategoryIndex(comma)
 
     const jiPitchAnalysis = analyzeJiPitch(comma)

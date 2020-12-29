@@ -7,11 +7,9 @@ const analyzePotentiallyComma = (
     jiPitch: Scamon<{rational: true}>,
     options: CommaNameOptions = {},
 ): PotentiallyCommaAnalysis => {
-    const {directed = true, factoringMode = FactoringMode.THRESHOLD, abbreviated = true} = options
-
     let name
     try {
-        name = computeCommaName(jiPitch as Comma, {directed, factoringMode, abbreviated})
+        name = computeCommaName(jiPitch as Comma, options)
     } catch (e) {
     }
 
