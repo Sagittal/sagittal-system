@@ -248,4 +248,13 @@ describe("computeCommaName", (): void => {
         const expected = "5¹⁰S"
         expect(actual).toBe(expected)
     })
+
+    it("has an ASCII option which uses asterisks instead of dot operator symbols and caret operators instead of superscript", (): void => {
+        const comma = {monzo: [-9, 13, -2, 0, -2]} as Comma
+
+        const actual = computeCommaName(comma, {ascii: true})
+
+        const expected = "1/(5^2*11^2)M"
+        expect(actual).toBe(expected)
+    })
 })

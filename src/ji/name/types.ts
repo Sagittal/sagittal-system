@@ -42,7 +42,8 @@ type SizeCategoryAbbreviation = string & {_SizeCategoryAbbreviationBrand: boolea
 type CommaNameOptions = Partial<{
     directed: boolean,
     factoringMode: FactoringMode,
-    abbreviated: boolean
+    abbreviated: boolean,
+    ascii: boolean,
 }>
 
 // This quotient does not stipulate being super,

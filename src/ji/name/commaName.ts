@@ -28,13 +28,12 @@ const removeParentheses = (string: string): string =>
 
 // "Secor-Keenan systematic name" or "Sagittal name"
 
-const computeCommaName = (
-    comma: Comma,
-    {directed = true, factoringMode = FactoringMode.THRESHOLD, abbreviated = true}: CommaNameOptions = {},
-): Name<Comma> => {
+const computeCommaName = (comma: Comma, options: CommaNameOptions = {}): Name<Comma> => {
     if (!isCommaSized(comma)) {
         throw new Error(`Comma ${stringify(comma)} is outside of comma-sized range and cannot be named: ${formatCents(computeCentsFromPitch(comma))}`)
     }
+
+    const {directed = true, factoringMode = FactoringMode.THRESHOLD, abbreviated = true, ascii = false} = options
 
     const maybeHyphen = abbreviated ? BLANK : "-"
 
@@ -51,14 +50,14 @@ const computeCommaName = (
         const commaNameQuotient = computeCommaNameQuotient(comma)
 
         if (directed) {
-            const stringifiedQuotient = formatCommaNameQuotient(commaNameQuotient, {factoringMode})
+            const stringifiedQuotient = formatCommaNameQuotient(commaNameQuotient, {factoringMode, ascii})
 
             formattedCommaNameQuotient = stringifiedQuotient[1] === "1" ?
                 removeParentheses(stringifiedQuotient[0]) :
                 stringifiedQuotient.join("/")
         } else {
             const stringifiedQuotient =
-                formatCommaNameQuotient(computeSubQuotient(commaNameQuotient), {factoringMode})
+                formatCommaNameQuotient(computeSubQuotient(commaNameQuotient), {factoringMode, ascii})
 
             formattedCommaNameQuotient = stringifiedQuotient[0] === "1" ?
                 removeParentheses(stringifiedQuotient[1]) :
