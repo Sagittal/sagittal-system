@@ -247,4 +247,11 @@ describe("parseCommaName", (): void => {
         expect(parseCommaName("1:5C down" as Io))
             .toEqual({sizeCategory, commaNameQuotient: [5, 1] as CommaNameQuotient, direction: Direction.SUB})
     })
+
+    it("handles factorized comma names", (): void => {
+        expect(parseCommaName("1/(5²⋅7)M" as Io))
+            .toEqual({sizeCategory: SizeCategory.MEDIUM_DIESIS, commaNameQuotient: [1, 175] as CommaNameQuotient})
+        expect(parseCommaName("1/(5^2*7)M" as Io))
+            .toEqual({sizeCategory: SizeCategory.MEDIUM_DIESIS, commaNameQuotient: [1, 175] as CommaNameQuotient})
+    })
 })

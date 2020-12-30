@@ -30,7 +30,7 @@ import {CommaNameQuotient, ParsedCommaName, SizeCategory, SizeCategoryName} from
 //  0c3C = 3C = 12e3C.
 
 const parseCommaName = (commaNameIo: Io): ParsedCommaName => {
-    const commaNameParts = commaNameIo.match(/(.*c)?(\d+[:\/]*\d*)-?([a-zA-Z-+]+)\s?(up|down)?/)
+    const commaNameParts = commaNameIo.match(/(.*c)?([0-9⁰¹²³⁴⁵⁶⁷⁸⁹.⋅*^]+[:\/]?\(?[0-9⁰¹²³⁴⁵⁶⁷⁸⁹.⋅*^]*\)?)-?([a-zA-Z-+]+)\s?(up|down)?/)
     if (commaNameParts === null) throw new Error(`Could not parse comma name ${commaNameIo}.`)
     const [
         _,

@@ -1,7 +1,7 @@
 import {alignAscii, Ascii} from "../../../../src"
 
 describe("alignAscii", (): void => {
-    it("shifts the ascii so that its shaft aligns with all the others' shafts, making it 8 total chars wide                  ", (): void => {
+    it("shifts the ASCII so that its shaft aligns with all the others' shafts, making it 8 total chars wide                  ", (): void => {
         expect(alignAscii(",,)//|" as Ascii)).toEqual(",,)//|  ")
         expect(alignAscii(",)|)" as Ascii)).toEqual("   ,)|) ")
         expect(alignAscii("|\\" as Ascii)).toEqual("     |\\ ")
