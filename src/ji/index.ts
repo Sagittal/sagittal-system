@@ -14,7 +14,7 @@ export {
     DEFAULT_ZONE,
 } from "./find"
 export {
-    computeCommaFromCommaNameQuotientAndSizeCategory,
+    computeCommaFromCommaName,
     computeCommaName,
     SIZE_CATEGORY_BOUNDS,
     parseCommaName,

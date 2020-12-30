@@ -1,4 +1,5 @@
-import {Name, NumericProperties, Quotient, Scamon} from "@sagittal/general"
+import {Direction, Name, NumericProperties, Quotient, Scamon} from "@sagittal/general"
+import {Complexity} from "../badness"
 
 type SizeCategoryBound<T extends NumericProperties = {}> = {
     name: Name<SizeCategoryBound>,
@@ -60,8 +61,10 @@ type CommaNameQuotient<T extends NumericProperties = {}> =
     & {_CommaNameQuotientBrand: boolean}
 
 interface ParsedCommaName {
+    complexity?: Complexity,
     commaNameQuotient: CommaNameQuotient,
     sizeCategory: SizeCategory,
+    direction?: Direction,
 }
 
 interface MaybeComplexOptions {

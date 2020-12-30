@@ -21,7 +21,7 @@ export {
     DEFAULT_EXCLUSIVE,
     DEFAULT_ZONE,
     N2D3P9,
-    computeCommaFromCommaNameQuotientAndSizeCategory,
+    computeCommaFromCommaName,
     parseCommaName,
     computeCommaName,
     SIZE_CATEGORY_BOUNDS,

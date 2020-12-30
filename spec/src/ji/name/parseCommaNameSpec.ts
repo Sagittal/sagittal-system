@@ -1,6 +1,6 @@
-import {Io} from "@sagittal/general"
-import {parseCommaName} from "../../../../src"
-import {CommaNameQuotient, SizeCategory} from "../../../../src/ji/name/types"
+import {Direction, Io} from "@sagittal/general"
+import {parseCommaName, SizeCategory} from "../../../../src"
+import {CommaNameQuotient} from "../../../../src/ji/name/types"
 
 describe("parseCommaName", (): void => {
     const commaNameQuotient = [1, 5] as CommaNameQuotient
@@ -208,5 +208,43 @@ describe("parseCommaName", (): void => {
 
         expect(parseCommaName("1/5-neutral-second" as Io))
             .toEqual({commaNameQuotient, sizeCategory: SizeCategory.SMALL_DIESIS_PLUS_APOTOME})
+    })
+
+    it("uses direction of the comma name quotient to indicate direction of the comma (not the prime content), but you can override either direction in the comma name quotient by suffixing 'up' or 'down'", (): void => {
+        // todo this is unnecessarily complex, this should JUST test that it gets the direction out
+        // but something like this test might be what we want for something that integrates through parsing the comma name and then computing the comma from that
+        // which is uniquley weird about comma name option vs. quotient, monzo, etc. in the ji-pitch script group and would be nice to have i think
+        const sizeCategory = SizeCategory.COMMA
+
+        expect(parseCommaName("5C" as Io))
+            .toEqual({sizeCategory, commaNameQuotient: [5, 1] as CommaNameQuotient})
+        expect(parseCommaName("5/1C" as Io))
+            .toEqual({sizeCategory, commaNameQuotient: [5, 1] as CommaNameQuotient})
+        expect(parseCommaName("1/5C" as Io))
+            .toEqual({sizeCategory, commaNameQuotient: [1, 5] as CommaNameQuotient})
+        expect(parseCommaName("5:1C" as Io))
+            .toEqual({sizeCategory, commaNameQuotient: [5, 1] as CommaNameQuotient})
+        expect(parseCommaName("1:5C" as Io))
+            .toEqual({sizeCategory, commaNameQuotient: [5, 1] as CommaNameQuotient})
+        expect(parseCommaName("5C up" as Io))
+            .toEqual({sizeCategory, commaNameQuotient: [5, 1] as CommaNameQuotient, direction: Direction.SUPER})
+        expect(parseCommaName("5/1C up" as Io))
+            .toEqual({sizeCategory, commaNameQuotient: [5, 1] as CommaNameQuotient, direction: Direction.SUPER})
+        expect(parseCommaName("1/5C up" as Io))
+            .toEqual({sizeCategory, commaNameQuotient: [1, 5] as CommaNameQuotient, direction: Direction.SUPER})
+        expect(parseCommaName("5:1C up" as Io))
+            .toEqual({sizeCategory, commaNameQuotient: [5, 1] as CommaNameQuotient, direction: Direction.SUPER})
+        expect(parseCommaName("1:5C up" as Io))
+            .toEqual({sizeCategory, commaNameQuotient: [5, 1] as CommaNameQuotient, direction: Direction.SUPER})
+        expect(parseCommaName("5C down" as Io))
+            .toEqual({sizeCategory, commaNameQuotient: [5, 1] as CommaNameQuotient, direction: Direction.SUB})
+        expect(parseCommaName("5/1C down" as Io))
+            .toEqual({sizeCategory, commaNameQuotient: [5, 1] as CommaNameQuotient, direction: Direction.SUB})
+        expect(parseCommaName("1/5C down" as Io))
+            .toEqual({sizeCategory, commaNameQuotient: [1, 5] as CommaNameQuotient, direction: Direction.SUB})
+        expect(parseCommaName("5:1C down" as Io))
+            .toEqual({sizeCategory, commaNameQuotient: [5, 1] as CommaNameQuotient, direction: Direction.SUB})
+        expect(parseCommaName("1:5C down" as Io))
+            .toEqual({sizeCategory, commaNameQuotient: [5, 1] as CommaNameQuotient, direction: Direction.SUB})
     })
 })

@@ -13,7 +13,7 @@ import {
 import {computeN2D3P9} from "../badness"
 import {computeRationalMonzoInZone, findNotatingCommas} from "../find"
 import {computeSizeCategoryZone} from "./sizeCategoryZone"
-import {CommaNameQuotient, SizeCategory} from "./types"
+import {CommaNameQuotient, ParsedCommaName, SizeCategory} from "./types"
 
 const compute3LimitCommaInSizeCategory = (sizeCategory: SizeCategory): Comma => {
     let threeExponent = 0
@@ -40,8 +40,8 @@ const compute3LimitCommaInSizeCategory = (sizeCategory: SizeCategory): Comma => 
     }
 }
 
-const computeCommaFromCommaNameQuotientAndSizeCategory = (
-    {commaNameQuotient, sizeCategory}: {commaNameQuotient: CommaNameQuotient, sizeCategory: SizeCategory},
+const computeCommaFromCommaName = (
+    {complexity, commaNameQuotient, sizeCategory, direction}: ParsedCommaName,
 ): Comma => {
     if (computeRationalQuotientSmoothness(commaNameQuotient) < FIVE_SMOOTHNESS) {
         return compute3LimitCommaInSizeCategory(sizeCategory)
@@ -58,6 +58,7 @@ const computeCommaFromCommaNameQuotientAndSizeCategory = (
     let bestPopularity = Infinity
     commas.forEach((comma: Comma): void => {
         const popularity = computeN2D3P9(compute23FreeClass(comma))
+        // console.log('checking', comma, popularity) // todo: okay so this is just kind of random, if you give it 1/5 then -4 4 1 is first and if you give it 5/1 then -34 20 1 is first
         if (popularity < bestPopularity) {
             bestPopularity = popularity
             mostPopularComma = comma
@@ -72,5 +73,5 @@ const computeCommaFromCommaNameQuotientAndSizeCategory = (
 }
 
 export {
-    computeCommaFromCommaNameQuotientAndSizeCategory,
+    computeCommaFromCommaName,
 }
