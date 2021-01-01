@@ -76,6 +76,11 @@ const computeMaybeComplex = (comma: Comma, {sizeCategory, abbreviated}: MaybeCom
             `${COMMA_COMPLEXITY_NAMES[commas.length - 1]}-`
 }
 
+// TODO: COMPLEXITY TIE-BREAKER
+//  See: http://forum.sagittal.org/viewtopic.php?p=3239#p3239
+//  I think the conclusion is to just call one greater and one lesser, based on their size
+//  - I still need to realize how two commas with same undirected 2,3-free content share a complexity level, though, too
+
 export {
     computeMaybeComplex,
 }
