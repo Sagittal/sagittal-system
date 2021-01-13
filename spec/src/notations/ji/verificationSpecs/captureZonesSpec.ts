@@ -2,8 +2,8 @@ import {computeIrrationalDecimalFromScamon, Decimal, Extrema, Maybe, Zone} from 
 import {
     CommaClassId,
     computeJiNotationCaptureZone,
-    JiNotationLevelId,
     JI_NOTATION_LEVELS_COMMA_CLASS_IDS,
+    JiNotationLevelId,
 } from "../../../../../src"
 
 describe("capture zones", (): void => {

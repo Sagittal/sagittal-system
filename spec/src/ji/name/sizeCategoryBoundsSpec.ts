@@ -11,7 +11,7 @@ import {
     PitchExpectation,
     Scamon,
 } from "@sagittal/general"
-import {SizeCategoryBound, SIZE_CATEGORY_BOUNDS} from "../../../../src"
+import {SIZE_CATEGORY_BOUNDS, SizeCategoryBound} from "../../../../src"
 
 describe("SIZE_CATEGORY_BOUNDS", (): void => {
     it("the bounds have the correct cents values and such", (): void => {

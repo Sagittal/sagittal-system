@@ -1,4 +1,4 @@
-import {Ascii, computeSagittalAscii, SymbolSubsetId, SYMBOL_SUBSETS} from "../../../src"
+import {Ascii, computeSagittalAscii, SYMBOL_SUBSETS, SymbolSubsetId} from "../../../src"
 import {computeSagittalFromSymbolClassId} from "../../../src/accidental"
 
 // tslint:disable-next-line ban

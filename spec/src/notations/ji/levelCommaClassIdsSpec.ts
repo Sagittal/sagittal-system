@@ -1,5 +1,5 @@
 import {shallowClone, sort} from "@sagittal/general"
-import {JiNotationLevelId, JI_NOTATION_LEVELS_COMMA_CLASS_IDS} from "../../../../src"
+import {JI_NOTATION_LEVELS_COMMA_CLASS_IDS, JiNotationLevelId} from "../../../../src"
 
 describe("JI_NOTATION_LEVELS_COMMA_CLASS_IDS", (): void => {
     it("has the correct count of comma classes per JI notation level", (): void => {

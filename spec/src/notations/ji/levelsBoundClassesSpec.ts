@@ -1,8 +1,8 @@
 import {
     BoundClassId,
-    JiNotationLevelId,
     JI_NOTATION_LEVELS_BOUND_CLASSES,
     JI_NOTATION_LEVELS_COMMA_CLASS_IDS,
+    JiNotationLevelId,
 } from "../../../../src"
 import {getJiNotationBoundClass} from "../../../../src/notations/ji/boundClasses"
 

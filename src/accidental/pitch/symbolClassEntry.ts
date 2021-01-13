@@ -1,5 +1,5 @@
 import {deepEquals, Maybe} from "@sagittal/general"
-import {SymbolClass, SymbolClassId, SYMBOL_CLASSES} from "../../notation"
+import {SYMBOL_CLASSES, SymbolClass, SymbolClassId} from "../../notation"
 import {computeSagittalFromSymbolClass, Sagittal} from "../sagittal"
 
 const getSymbolClassEntry = (sagittal: Maybe<Sagittal>): Maybe<[SymbolClassId, SymbolClass]> =>

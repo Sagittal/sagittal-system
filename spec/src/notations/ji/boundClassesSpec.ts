@@ -18,10 +18,10 @@ import {
 import {
     BoundClassId,
     INSANE_EDA,
+    JI_NOTATION_BOUND_CLASS_ENTRIES,
+    JI_NOTATION_BOUND_CLASSES,
     JiNotationBoundClass,
     JiNotationBoundClassEntry,
-    JI_NOTATION_BOUND_CLASSES,
-    JI_NOTATION_BOUND_CLASS_ENTRIES,
     TINA,
 } from "../../../../src"
 

@@ -13,7 +13,7 @@ import {
 import {computeN2D3P9} from "../badness"
 import {computeRationalMonzoInZone, findNotatingCommas} from "../find"
 import {computeSizeCategoryZone} from "./sizeCategoryZone"
-import {CommaNameQuotient, ParsedCommaName, SizeCategory} from "./types"
+import {ParsedCommaName, SizeCategory} from "./types"
 
 const compute3LimitCommaInSizeCategory = (sizeCategory: SizeCategory): Comma => {
     let threeExponent = 0

@@ -4,8 +4,8 @@ import {
     CommaClassId,
     computeApotomeSlope,
     getCommaClass,
-    JiNotationLevelId,
     JI_NOTATION_LEVELS_COMMA_CLASS_IDS,
+    JiNotationLevelId,
 } from "../../../../../src"
 
 describe("max AAS per JI notation level", (): void => {

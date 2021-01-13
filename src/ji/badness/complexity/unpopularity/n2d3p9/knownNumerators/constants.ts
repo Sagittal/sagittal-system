@@ -1016,7 +1016,7 @@ const KNOWN_NUMERATORS: KnownLowN2D3P9Numerator[] = [
     {numerator: 1500625, gpf: 7, copfr: 8},
     {numerator: 1953125, gpf: 5, copfr: 9},
     {numerator: 2734375, gpf: 7, copfr: 9},
-    {numerator: 9765625, gpf: 5, copfr: 10}
+    {numerator: 9765625, gpf: 5, copfr: 10},
 ] as KnownLowN2D3P9Numerator[]
 
 export {
