@@ -1,9 +1,12 @@
 {
   "name": "@sagittal/system",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "description": "Implementations of Sagittal notations, accidental parsing, useful metrics, comma naming, and finding and analyzing commas using Sagittal-specific properties.",
   "license": "MIT",
   "repository": {
