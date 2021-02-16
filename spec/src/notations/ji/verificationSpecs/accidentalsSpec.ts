@@ -1,5 +1,5 @@
 import {Unicode} from "../../../../../src"
-import {Ascii, Flavor, Smiley} from "../../../../../src/accidental"
+import {Sagitype, Flavor, Smiley} from "../../../../../src/accidental"
 import {CaptureZone} from "../../../../../src/notation"
 import {computeCaptureZones} from "../../../../../src/notation/captureZones"
 import {EXTREME_NOTATION} from "../../../../../src/notations/ji/notations"
@@ -49,1476 +49,1476 @@ describe("accidentals", (): void => {
         const expectedN1A: FlavorsExpectation[] = [
             {
                 revo: {
-                    ascii: "(|//|)" as Ascii<Flavor.REVO>,
+                    sagitype: "(|//|)" as Sagitype<Flavor.REVO>,
                     smiley: "(:h:)" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(|//|)" as Ascii<Flavor.EVO>,
+                    sagitype: "(|//|)" as Sagitype<Flavor.EVO>,
                     smiley: "(:h:)" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",!" as Ascii<Flavor.REVO>,
+                    sagitype: ",!" as Sagitype<Flavor.REVO>,
                     smiley: ":,::!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",!" as Ascii<Flavor.EVO>,
+                    sagitype: ",!" as Sagitype<Flavor.EVO>,
                     smiley: ":,::!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,!" as Ascii<Flavor.REVO>,
+                    sagitype: ",,!" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,!" as Ascii<Flavor.EVO>,
+                    sagitype: ",,!" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "')!" as Ascii<Flavor.REVO>,
+                    sagitype: "')!" as Sagitype<Flavor.REVO>,
                     smiley: ":'::)!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "')!" as Ascii<Flavor.EVO>,
+                    sagitype: "')!" as Sagitype<Flavor.EVO>,
                     smiley: ":'::)!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".!" as Ascii<Flavor.REVO>,
+                    sagitype: ".!" as Sagitype<Flavor.REVO>,
                     smiley: ":.::!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".!" as Ascii<Flavor.EVO>,
+                    sagitype: ".!" as Sagitype<Flavor.EVO>,
                     smiley: ":.::!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.!" as Ascii<Flavor.REVO>,
+                    sagitype: ",.!" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.!" as Ascii<Flavor.EVO>,
+                    sagitype: ",.!" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)!" as Ascii<Flavor.REVO>,
+                    sagitype: "`)!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)!" as Ascii<Flavor.EVO>,
+                    sagitype: "`)!" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")!" as Ascii<Flavor.REVO>,
+                    sagitype: ")!" as Sagitype<Flavor.REVO>,
                     smiley: ":)!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")!" as Ascii<Flavor.EVO>,
+                    sagitype: ")!" as Sagitype<Flavor.EVO>,
                     smiley: ":)!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)!" as Ascii<Flavor.REVO>,
+                    sagitype: ",)!" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)!" as Ascii<Flavor.EVO>,
+                    sagitype: ",)!" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,)!" as Ascii<Flavor.REVO>,
+                    sagitype: ",,)!" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::)!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,)!" as Ascii<Flavor.EVO>,
+                    sagitype: ",,)!" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::)!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``!(" as Ascii<Flavor.REVO>,
+                    sagitype: "``!(" as Sagitype<Flavor.REVO>,
                     smiley: ":``::!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``!(" as Ascii<Flavor.EVO>,
+                    sagitype: "``!(" as Sagitype<Flavor.EVO>,
                     smiley: ":``::!(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`!(" as Ascii<Flavor.REVO>,
+                    sagitype: "`!(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`!(" as Ascii<Flavor.EVO>,
+                    sagitype: "`!(" as Sagitype<Flavor.EVO>,
                     smiley: ":`::!(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "!(" as Ascii<Flavor.REVO>,
+                    sagitype: "!(" as Sagitype<Flavor.REVO>,
                     smiley: ":!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "!(" as Ascii<Flavor.EVO>,
+                    sagitype: "!(" as Sagitype<Flavor.EVO>,
                     smiley: ":!(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",!(" as Ascii<Flavor.REVO>,
+                    sagitype: ",!(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",!(" as Ascii<Flavor.EVO>,
+                    sagitype: ",!(" as Sagitype<Flavor.EVO>,
                     smiley: ":,::!(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'~!" as Ascii<Flavor.REVO>,
+                    sagitype: "'~!" as Sagitype<Flavor.REVO>,
                     smiley: ":'::~!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'~!" as Ascii<Flavor.EVO>,
+                    sagitype: "'~!" as Sagitype<Flavor.EVO>,
                     smiley: ":'::~!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.!(" as Ascii<Flavor.REVO>,
+                    sagitype: "`.!(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.!(" as Ascii<Flavor.EVO>,
+                    sagitype: "`.!(" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::!(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".!(" as Ascii<Flavor.REVO>,
+                    sagitype: ".!(" as Sagitype<Flavor.REVO>,
                     smiley: ":.::!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".!(" as Ascii<Flavor.EVO>,
+                    sagitype: ".!(" as Sagitype<Flavor.EVO>,
                     smiley: ":.::!(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`~!" as Ascii<Flavor.REVO>,
+                    sagitype: "`~!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::~!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`~!" as Ascii<Flavor.EVO>,
+                    sagitype: "`~!" as Sagitype<Flavor.EVO>,
                     smiley: ":`::~!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~!" as Ascii<Flavor.REVO>,
+                    sagitype: "~!" as Sagitype<Flavor.REVO>,
                     smiley: ":~!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~!" as Ascii<Flavor.EVO>,
+                    sagitype: "~!" as Sagitype<Flavor.EVO>,
                     smiley: ":~!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)!(" as Ascii<Flavor.REVO>,
+                    sagitype: "`)!(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)!(" as Ascii<Flavor.EVO>,
+                    sagitype: "`)!(" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)!(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")!(" as Ascii<Flavor.REVO>,
+                    sagitype: ")!(" as Sagitype<Flavor.REVO>,
                     smiley: ":)!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")!(" as Ascii<Flavor.EVO>,
+                    sagitype: ")!(" as Sagitype<Flavor.EVO>,
                     smiley: ":)!(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)!(" as Ascii<Flavor.REVO>,
+                    sagitype: ",)!(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)!(" as Ascii<Flavor.EVO>,
+                    sagitype: ",)!(" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)!(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,)!(" as Ascii<Flavor.REVO>,
+                    sagitype: ",,)!(" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::)!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,)!(" as Ascii<Flavor.EVO>,
+                    sagitype: ",,)!(" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::)!(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.)!(" as Ascii<Flavor.REVO>,
+                    sagitype: "`.)!(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::)!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.)!(" as Ascii<Flavor.EVO>,
+                    sagitype: "`.)!(" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::)!(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".)!(" as Ascii<Flavor.REVO>,
+                    sagitype: ".)!(" as Sagitype<Flavor.REVO>,
                     smiley: ":.::)!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".)!(" as Ascii<Flavor.EVO>,
+                    sagitype: ".)!(" as Sagitype<Flavor.EVO>,
                     smiley: ":.::)!(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")~!" as Ascii<Flavor.REVO>,
+                    sagitype: ")~!" as Sagitype<Flavor.REVO>,
                     smiley: ":)~!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")~!" as Ascii<Flavor.EVO>,
+                    sagitype: ")~!" as Sagitype<Flavor.EVO>,
                     smiley: ":)~!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'~!(" as Ascii<Flavor.REVO>,
+                    sagitype: "'~!(" as Sagitype<Flavor.REVO>,
                     smiley: ":'::~!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'~!(" as Ascii<Flavor.EVO>,
+                    sagitype: "'~!(" as Sagitype<Flavor.EVO>,
                     smiley: ":'::~!(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'~!(" as Ascii<Flavor.REVO>,
+                    sagitype: ",'~!(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::~!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'~!(" as Ascii<Flavor.EVO>,
+                    sagitype: ",'~!(" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::~!(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``~!(" as Ascii<Flavor.REVO>,
+                    sagitype: "``~!(" as Sagitype<Flavor.REVO>,
                     smiley: ":``::~!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``~!(" as Ascii<Flavor.EVO>,
+                    sagitype: "``~!(" as Sagitype<Flavor.EVO>,
                     smiley: ":``::~!(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`~!(" as Ascii<Flavor.REVO>,
+                    sagitype: "`~!(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::~!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`~!(" as Ascii<Flavor.EVO>,
+                    sagitype: "`~!(" as Sagitype<Flavor.EVO>,
                     smiley: ":`::~!(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~!(" as Ascii<Flavor.REVO>,
+                    sagitype: "~!(" as Sagitype<Flavor.REVO>,
                     smiley: ":~!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~!(" as Ascii<Flavor.EVO>,
+                    sagitype: "~!(" as Sagitype<Flavor.EVO>,
                     smiley: ":~!(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",~!(" as Ascii<Flavor.REVO>,
+                    sagitype: ",~!(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::~!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",~!(" as Ascii<Flavor.EVO>,
+                    sagitype: ",~!(" as Sagitype<Flavor.EVO>,
                     smiley: ":,::~!(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``!~" as Ascii<Flavor.REVO>,
+                    sagitype: "``!~" as Sagitype<Flavor.REVO>,
                     smiley: ":``::!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``!~" as Ascii<Flavor.EVO>,
+                    sagitype: "``!~" as Sagitype<Flavor.EVO>,
                     smiley: ":``::!~:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`!~" as Ascii<Flavor.REVO>,
+                    sagitype: "`!~" as Sagitype<Flavor.REVO>,
                     smiley: ":`::!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`!~" as Ascii<Flavor.EVO>,
+                    sagitype: "`!~" as Sagitype<Flavor.EVO>,
                     smiley: ":`::!~:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "!~" as Ascii<Flavor.REVO>,
+                    sagitype: "!~" as Sagitype<Flavor.REVO>,
                     smiley: ":!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "!~" as Ascii<Flavor.EVO>,
+                    sagitype: "!~" as Sagitype<Flavor.EVO>,
                     smiley: ":!~:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",!~" as Ascii<Flavor.REVO>,
+                    sagitype: ",!~" as Sagitype<Flavor.REVO>,
                     smiley: ":,::!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",!~" as Ascii<Flavor.EVO>,
+                    sagitype: ",!~" as Sagitype<Flavor.EVO>,
                     smiley: ":,::!~:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~~!" as Ascii<Flavor.REVO>,
+                    sagitype: "~~!" as Sagitype<Flavor.REVO>,
                     smiley: ":~~!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~~!" as Ascii<Flavor.EVO>,
+                    sagitype: "~~!" as Sagitype<Flavor.EVO>,
                     smiley: ":~~!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",~~!" as Ascii<Flavor.REVO>,
+                    sagitype: ",~~!" as Sagitype<Flavor.REVO>,
                     smiley: ":,::~~!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",~~!" as Ascii<Flavor.EVO>,
+                    sagitype: ",~~!" as Sagitype<Flavor.EVO>,
                     smiley: ":,::~~!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,~~!" as Ascii<Flavor.REVO>,
+                    sagitype: ",,~~!" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::~~!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,~~!" as Ascii<Flavor.EVO>,
+                    sagitype: ",,~~!" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::~~!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'\\!" as Ascii<Flavor.REVO>,
+                    sagitype: "`'\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::\\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'\\!" as Ascii<Flavor.EVO>,
+                    sagitype: "`'\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::\\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'\\!" as Ascii<Flavor.REVO>,
+                    sagitype: "'\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":'::\\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'\\!" as Ascii<Flavor.EVO>,
+                    sagitype: "'\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":'::\\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")!~" as Ascii<Flavor.REVO>,
+                    sagitype: ")!~" as Sagitype<Flavor.REVO>,
                     smiley: ":)!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")!~" as Ascii<Flavor.EVO>,
+                    sagitype: ")!~" as Sagitype<Flavor.EVO>,
                     smiley: ":)!~:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``\\!" as Ascii<Flavor.REVO>,
+                    sagitype: "``\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":``::\\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``\\!" as Ascii<Flavor.EVO>,
+                    sagitype: "``\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":``::\\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`\\!" as Ascii<Flavor.REVO>,
+                    sagitype: "`\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::\\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`\\!" as Ascii<Flavor.EVO>,
+                    sagitype: "`\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":`::\\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "\\!" as Ascii<Flavor.REVO>,
+                    sagitype: "\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":\\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "\\!" as Ascii<Flavor.EVO>,
+                    sagitype: "\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":\\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",\\!" as Ascii<Flavor.REVO>,
+                    sagitype: ",\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":,::\\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",\\!" as Ascii<Flavor.EVO>,
+                    sagitype: ",\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":,::\\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,\\!" as Ascii<Flavor.REVO>,
+                    sagitype: ",,\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::\\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,\\!" as Ascii<Flavor.EVO>,
+                    sagitype: ",,\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::\\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "')\\!" as Ascii<Flavor.REVO>,
+                    sagitype: "')\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":'::)\\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "')\\!" as Ascii<Flavor.EVO>,
+                    sagitype: "')\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":'::)\\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".\\!" as Ascii<Flavor.REVO>,
+                    sagitype: ".\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":.::\\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".\\!" as Ascii<Flavor.EVO>,
+                    sagitype: ".\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":.::\\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.\\!" as Ascii<Flavor.REVO>,
+                    sagitype: ",.\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::\\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.\\!" as Ascii<Flavor.EVO>,
+                    sagitype: ",.\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::\\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``)\\!" as Ascii<Flavor.REVO>,
+                    sagitype: "``)\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":``::)\\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``)\\!" as Ascii<Flavor.EVO>,
+                    sagitype: "``)\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":``::)\\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)\\!" as Ascii<Flavor.REVO>,
+                    sagitype: "`)\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)\\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)\\!" as Ascii<Flavor.EVO>,
+                    sagitype: "`)\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)\\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")\\!" as Ascii<Flavor.REVO>,
+                    sagitype: ")\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":)\\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")\\!" as Ascii<Flavor.EVO>,
+                    sagitype: ")\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":)\\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'!)" as Ascii<Flavor.REVO>,
+                    sagitype: "`'!)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'!)" as Ascii<Flavor.EVO>,
+                    sagitype: "`'!)" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'!)" as Ascii<Flavor.REVO>,
+                    sagitype: "'!)" as Sagitype<Flavor.REVO>,
                     smiley: ":'::!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'!)" as Ascii<Flavor.EVO>,
+                    sagitype: "'!)" as Sagitype<Flavor.EVO>,
                     smiley: ":'::!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",'!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'!)" as Ascii<Flavor.EVO>,
+                    sagitype: ",'!)" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``!)" as Ascii<Flavor.REVO>,
+                    sagitype: "``!)" as Sagitype<Flavor.REVO>,
                     smiley: ":``::!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``!)" as Ascii<Flavor.EVO>,
+                    sagitype: "``!)" as Sagitype<Flavor.EVO>,
                     smiley: ":``::!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`!)" as Ascii<Flavor.REVO>,
+                    sagitype: "`!)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`!)" as Ascii<Flavor.EVO>,
+                    sagitype: "`!)" as Sagitype<Flavor.EVO>,
                     smiley: ":`::!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "!)" as Ascii<Flavor.REVO>,
+                    sagitype: "!)" as Sagitype<Flavor.REVO>,
                     smiley: ":!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "!)" as Ascii<Flavor.EVO>,
+                    sagitype: "!)" as Sagitype<Flavor.EVO>,
                     smiley: ":!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",!)" as Ascii<Flavor.EVO>,
+                    sagitype: ",!)" as Sagitype<Flavor.EVO>,
                     smiley: ":,::!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",,!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,!)" as Ascii<Flavor.EVO>,
+                    sagitype: ",,!)" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.!)" as Ascii<Flavor.REVO>,
+                    sagitype: "`.!)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.!)" as Ascii<Flavor.EVO>,
+                    sagitype: "`.!)" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".!)" as Ascii<Flavor.REVO>,
+                    sagitype: ".!)" as Sagitype<Flavor.REVO>,
                     smiley: ":.::!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".!)" as Ascii<Flavor.EVO>,
+                    sagitype: ".!)" as Sagitype<Flavor.EVO>,
                     smiley: ":.::!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",.!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.!)" as Ascii<Flavor.EVO>,
+                    sagitype: ",.!)" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)!)" as Ascii<Flavor.REVO>,
+                    sagitype: "`)!)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)!)" as Ascii<Flavor.EVO>,
+                    sagitype: "`)!)" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")!)" as Ascii<Flavor.REVO>,
+                    sagitype: ")!)" as Sagitype<Flavor.REVO>,
                     smiley: ":)!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")!)" as Ascii<Flavor.EVO>,
+                    sagitype: ")!)" as Sagitype<Flavor.EVO>,
                     smiley: ":)!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'(!" as Ascii<Flavor.REVO>,
+                    sagitype: "'(!" as Sagitype<Flavor.REVO>,
                     smiley: ":'::(!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'(!" as Ascii<Flavor.EVO>,
+                    sagitype: "'(!" as Sagitype<Flavor.EVO>,
                     smiley: ":'::(!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "!/" as Ascii<Flavor.REVO>,
+                    sagitype: "!/" as Sagitype<Flavor.REVO>,
                     smiley: ":!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "!/" as Ascii<Flavor.EVO>,
+                    sagitype: "!/" as Sagitype<Flavor.EVO>,
                     smiley: ":!/:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",!/" as Ascii<Flavor.REVO>,
+                    sagitype: ",!/" as Sagitype<Flavor.REVO>,
                     smiley: ":,::!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",!/" as Ascii<Flavor.EVO>,
+                    sagitype: ",!/" as Sagitype<Flavor.EVO>,
                     smiley: ":,::!/:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(!" as Ascii<Flavor.REVO>,
+                    sagitype: "`(!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(!" as Ascii<Flavor.EVO>,
+                    sagitype: "`(!" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(!" as Ascii<Flavor.REVO>,
+                    sagitype: "(!" as Sagitype<Flavor.REVO>,
                     smiley: ":(!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(!" as Ascii<Flavor.EVO>,
+                    sagitype: "(!" as Sagitype<Flavor.EVO>,
                     smiley: ":(!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(!" as Ascii<Flavor.REVO>,
+                    sagitype: ",(!" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(!" as Ascii<Flavor.EVO>,
+                    sagitype: ",(!" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,(!" as Ascii<Flavor.REVO>,
+                    sagitype: ",,(!" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::(!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,(!" as Ascii<Flavor.EVO>,
+                    sagitype: ",,(!" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::(!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.(!" as Ascii<Flavor.REVO>,
+                    sagitype: "`.(!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::(!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.(!" as Ascii<Flavor.EVO>,
+                    sagitype: "`.(!" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::(!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".(!" as Ascii<Flavor.REVO>,
+                    sagitype: ".(!" as Sagitype<Flavor.REVO>,
                     smiley: ":.::(!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".(!" as Ascii<Flavor.EVO>,
+                    sagitype: ".(!" as Sagitype<Flavor.EVO>,
                     smiley: ":.::(!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`~!)" as Ascii<Flavor.REVO>,
+                    sagitype: "`~!)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::~!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`~!)" as Ascii<Flavor.EVO>,
+                    sagitype: "`~!)" as Sagitype<Flavor.EVO>,
                     smiley: ":`::~!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~!)" as Ascii<Flavor.REVO>,
+                    sagitype: "~!)" as Sagitype<Flavor.REVO>,
                     smiley: ":~!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~!)" as Ascii<Flavor.EVO>,
+                    sagitype: "~!)" as Sagitype<Flavor.EVO>,
                     smiley: ":~!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",~!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",~!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::~!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",~!)" as Ascii<Flavor.EVO>,
+                    sagitype: ",~!)" as Sagitype<Flavor.EVO>,
                     smiley: ":,::~!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'(!(" as Ascii<Flavor.REVO>,
+                    sagitype: "`'(!(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::(!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'(!(" as Ascii<Flavor.EVO>,
+                    sagitype: "`'(!(" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::(!(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'(!(" as Ascii<Flavor.REVO>,
+                    sagitype: "'(!(" as Sagitype<Flavor.REVO>,
                     smiley: ":'::(!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'(!(" as Ascii<Flavor.EVO>,
+                    sagitype: "'(!(" as Sagitype<Flavor.EVO>,
                     smiley: ":'::(!(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".~!)" as Ascii<Flavor.REVO>,
+                    sagitype: ".~!)" as Sagitype<Flavor.REVO>,
                     smiley: ":.::~!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".~!)" as Ascii<Flavor.EVO>,
+                    sagitype: ".~!)" as Sagitype<Flavor.EVO>,
                     smiley: ":.::~!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "\\!~" as Ascii<Flavor.REVO>,
+                    sagitype: "\\!~" as Sagitype<Flavor.REVO>,
                     smiley: ":\\!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "\\!~" as Ascii<Flavor.EVO>,
+                    sagitype: "\\!~" as Sagitype<Flavor.EVO>,
                     smiley: ":\\!~:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``(!(" as Ascii<Flavor.REVO>,
+                    sagitype: "``(!(" as Sagitype<Flavor.REVO>,
                     smiley: ":``::(!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``(!(" as Ascii<Flavor.EVO>,
+                    sagitype: "``(!(" as Sagitype<Flavor.EVO>,
                     smiley: ":``::(!(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(!(" as Ascii<Flavor.REVO>,
+                    sagitype: "`(!(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(!(" as Ascii<Flavor.EVO>,
+                    sagitype: "`(!(" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(!(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(!(" as Ascii<Flavor.REVO>,
+                    sagitype: "(!(" as Sagitype<Flavor.REVO>,
                     smiley: ":(!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(!(" as Ascii<Flavor.EVO>,
+                    sagitype: "(!(" as Sagitype<Flavor.EVO>,
                     smiley: ":(!(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(!(" as Ascii<Flavor.REVO>,
+                    sagitype: ",(!(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(!(" as Ascii<Flavor.EVO>,
+                    sagitype: ",(!(" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(!(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~!/" as Ascii<Flavor.REVO>,
+                    sagitype: "~!/" as Sagitype<Flavor.REVO>,
                     smiley: ":~!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~!/" as Ascii<Flavor.EVO>,
+                    sagitype: "~!/" as Sagitype<Flavor.EVO>,
                     smiley: ":~!/:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'\\\\!" as Ascii<Flavor.REVO>,
+                    sagitype: "`'\\\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::\\ \\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'\\\\!" as Ascii<Flavor.EVO>,
+                    sagitype: "`'\\\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::\\ \\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'\\\\!" as Ascii<Flavor.REVO>,
+                    sagitype: "'\\\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":'::\\ \\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'\\\\!" as Ascii<Flavor.EVO>,
+                    sagitype: "'\\\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":'::\\ \\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'\\\\!" as Ascii<Flavor.REVO>,
+                    sagitype: ",'\\\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::\\ \\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'\\\\!" as Ascii<Flavor.EVO>,
+                    sagitype: ",'\\\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::\\ \\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``\\\\!" as Ascii<Flavor.REVO>,
+                    sagitype: "``\\\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":``::\\ \\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``\\\\!" as Ascii<Flavor.EVO>,
+                    sagitype: "``\\\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":``::\\ \\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`\\\\!" as Ascii<Flavor.REVO>,
+                    sagitype: "`\\\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::\\ \\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`\\\\!" as Ascii<Flavor.EVO>,
+                    sagitype: "`\\\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":`::\\ \\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "\\\\!" as Ascii<Flavor.REVO>,
+                    sagitype: "\\\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":\\ \\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "\\\\!" as Ascii<Flavor.EVO>,
+                    sagitype: "\\\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":\\ \\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",\\\\!" as Ascii<Flavor.REVO>,
+                    sagitype: ",\\\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":,::\\ \\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",\\\\!" as Ascii<Flavor.EVO>,
+                    sagitype: ",\\\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":,::\\ \\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,\\\\!" as Ascii<Flavor.REVO>,
+                    sagitype: ",,\\\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::\\ \\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,\\\\!" as Ascii<Flavor.EVO>,
+                    sagitype: ",,\\\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::\\ \\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.\\\\!" as Ascii<Flavor.REVO>,
+                    sagitype: "`.\\\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::\\ \\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.\\\\!" as Ascii<Flavor.EVO>,
+                    sagitype: "`.\\\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::\\ \\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".\\\\!" as Ascii<Flavor.REVO>,
+                    sagitype: ".\\\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":.::\\ \\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".\\\\!" as Ascii<Flavor.EVO>,
+                    sagitype: ".\\\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":.::\\ \\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``)\\\\!" as Ascii<Flavor.REVO>,
+                    sagitype: "``)\\\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":``::)\\ \\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``)\\\\!" as Ascii<Flavor.EVO>,
+                    sagitype: "``)\\\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":``::)\\ \\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)\\\\!" as Ascii<Flavor.REVO>,
+                    sagitype: "`)\\\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)\\ \\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)\\\\!" as Ascii<Flavor.EVO>,
+                    sagitype: "`)\\\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)\\ \\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")\\\\!" as Ascii<Flavor.REVO>,
+                    sagitype: ")\\\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":)\\ \\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")\\\\!" as Ascii<Flavor.EVO>,
+                    sagitype: ")\\\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":)\\ \\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)\\\\!" as Ascii<Flavor.REVO>,
+                    sagitype: ",)\\\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)\\ \\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)\\\\!" as Ascii<Flavor.EVO>,
+                    sagitype: ",)\\\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)\\ \\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,)\\\\!" as Ascii<Flavor.REVO>,
+                    sagitype: ",,)\\\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::)\\ \\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,)\\\\!" as Ascii<Flavor.EVO>,
+                    sagitype: ",,)\\\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::)\\ \\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``\\!)" as Ascii<Flavor.REVO>,
+                    sagitype: "``\\!)" as Sagitype<Flavor.REVO>,
                     smiley: ":``::\\!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``\\!)" as Ascii<Flavor.EVO>,
+                    sagitype: "``\\!)" as Sagitype<Flavor.EVO>,
                     smiley: ":``::\\!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`\\!)" as Ascii<Flavor.REVO>,
+                    sagitype: "`\\!)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::\\!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`\\!)" as Ascii<Flavor.EVO>,
+                    sagitype: "`\\!)" as Sagitype<Flavor.EVO>,
                     smiley: ":`::\\!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "\\!)" as Ascii<Flavor.REVO>,
+                    sagitype: "\\!)" as Sagitype<Flavor.REVO>,
                     smiley: ":\\!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "\\!)" as Ascii<Flavor.EVO>,
+                    sagitype: "\\!)" as Sagitype<Flavor.EVO>,
                     smiley: ":\\!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",\\!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",\\!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::\\!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",\\!)" as Ascii<Flavor.EVO>,
+                    sagitype: ",\\!)" as Sagitype<Flavor.EVO>,
                     smiley: ":,::\\!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(!~" as Ascii<Flavor.REVO>,
+                    sagitype: "(!~" as Sagitype<Flavor.REVO>,
                     smiley: ":(!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(!~" as Ascii<Flavor.EVO>,
+                    sagitype: "(!~" as Sagitype<Flavor.EVO>,
                     smiley: ":(!~:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.\\!)" as Ascii<Flavor.REVO>,
+                    sagitype: "`.\\!)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::\\!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.\\!)" as Ascii<Flavor.EVO>,
+                    sagitype: "`.\\!)" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::\\!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".\\!)" as Ascii<Flavor.REVO>,
+                    sagitype: ".\\!)" as Sagitype<Flavor.REVO>,
                     smiley: ":.::\\!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".\\!)" as Ascii<Flavor.EVO>,
+                    sagitype: ".\\!)" as Sagitype<Flavor.EVO>,
                     smiley: ":.::\\!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.\\!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",.\\!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::\\!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.\\!)" as Ascii<Flavor.EVO>,
+                    sagitype: ",.\\!)" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::\\!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'\\!/" as Ascii<Flavor.REVO>,
+                    sagitype: "'\\!/" as Sagitype<Flavor.REVO>,
                     smiley: ":'::\\!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'\\!/" as Ascii<Flavor.EVO>,
+                    sagitype: "'\\!/" as Sagitype<Flavor.EVO>,
                     smiley: ":'::\\!/:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'\\!/" as Ascii<Flavor.REVO>,
+                    sagitype: ",'\\!/" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::\\!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'\\!/" as Ascii<Flavor.EVO>,
+                    sagitype: ",'\\!/" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::\\!/:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``\\!/" as Ascii<Flavor.REVO>,
+                    sagitype: "``\\!/" as Sagitype<Flavor.REVO>,
                     smiley: ":``::\\!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``\\!/" as Ascii<Flavor.EVO>,
+                    sagitype: "``\\!/" as Sagitype<Flavor.EVO>,
                     smiley: ":``::\\!/:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`\\!/" as Ascii<Flavor.REVO>,
+                    sagitype: "`\\!/" as Sagitype<Flavor.REVO>,
                     smiley: ":`::\\!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`\\!/" as Ascii<Flavor.EVO>,
+                    sagitype: "`\\!/" as Sagitype<Flavor.EVO>,
                     smiley: ":`::\\!/:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "\\!/" as Ascii<Flavor.REVO>,
+                    sagitype: "\\!/" as Sagitype<Flavor.REVO>,
                     smiley: ":\\!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "\\!/" as Ascii<Flavor.EVO>,
+                    sagitype: "\\!/" as Sagitype<Flavor.EVO>,
                     smiley: ":\\!/:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",\\!/" as Ascii<Flavor.REVO>,
+                    sagitype: ",\\!/" as Sagitype<Flavor.REVO>,
                     smiley: ":,::\\!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",\\!/" as Ascii<Flavor.EVO>,
+                    sagitype: ",\\!/" as Sagitype<Flavor.EVO>,
                     smiley: ":,::\\!/:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(\\!" as Ascii<Flavor.REVO>,
+                    sagitype: "`(\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(\\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(\\!" as Ascii<Flavor.EVO>,
+                    sagitype: "`(\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(\\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(\\!" as Ascii<Flavor.REVO>,
+                    sagitype: "(\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":(\\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(\\!" as Ascii<Flavor.EVO>,
+                    sagitype: "(\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":(\\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(\\!" as Ascii<Flavor.REVO>,
+                    sagitype: ",(\\!" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(\\!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(\\!" as Ascii<Flavor.EVO>,
+                    sagitype: ",(\\!" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(\\!:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".\\!/" as Ascii<Flavor.REVO>,
+                    sagitype: ".\\!/" as Sagitype<Flavor.REVO>,
                     smiley: ":.::\\!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".\\!/" as Ascii<Flavor.EVO>,
+                    sagitype: ".\\!/" as Sagitype<Flavor.EVO>,
                     smiley: ":.::\\!/:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.\\!/" as Ascii<Flavor.REVO>,
+                    sagitype: ",.\\!/" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::\\!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.\\!/" as Ascii<Flavor.EVO>,
+                    sagitype: ",.\\!/" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::\\!/:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)\\!/" as Ascii<Flavor.REVO>,
+                    sagitype: "`)\\!/" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)\\!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)\\!/" as Ascii<Flavor.EVO>,
+                    sagitype: "`)\\!/" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)\\!/:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")\\!/" as Ascii<Flavor.REVO>,
+                    sagitype: ")\\!/" as Sagitype<Flavor.REVO>,
                     smiley: ":)\\!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")\\!/" as Ascii<Flavor.EVO>,
+                    sagitype: ")\\!/" as Sagitype<Flavor.EVO>,
                     smiley: ":)\\!/:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
@@ -1527,1476 +1527,1476 @@ describe("accidentals", (): void => {
         const expectedN1T: FlavorsExpectation[] = [
             {
                 revo: {
-                    ascii: ",)\\!/" as Ascii<Flavor.REVO>,
+                    sagitype: ",)\\!/" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)\\!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)\\!/" as Ascii<Flavor.EVO>,
+                    sagitype: ",)\\!/" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)\\!/:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,)\\!/" as Ascii<Flavor.REVO>,
+                    sagitype: ",,)\\!/" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::)\\!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,)\\!/" as Ascii<Flavor.EVO>,
+                    sagitype: ",,)\\!/" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::)\\!/:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'(!)" as Ascii<Flavor.REVO>,
+                    sagitype: "`'(!)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::(!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'(!)" as Ascii<Flavor.EVO>,
+                    sagitype: "`'(!)" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::(!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'(!)" as Ascii<Flavor.REVO>,
+                    sagitype: "'(!)" as Sagitype<Flavor.REVO>,
                     smiley: ":'::(!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'(!)" as Ascii<Flavor.EVO>,
+                    sagitype: "'(!)" as Sagitype<Flavor.EVO>,
                     smiley: ":'::(!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`!/)" as Ascii<Flavor.REVO>,
+                    sagitype: "`!/)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::!/):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`!/)" as Ascii<Flavor.EVO>,
+                    sagitype: "`!/)" as Sagitype<Flavor.EVO>,
                     smiley: ":`::!/):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "!/)" as Ascii<Flavor.REVO>,
+                    sagitype: "!/)" as Sagitype<Flavor.REVO>,
                     smiley: ":!/):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "!/)" as Ascii<Flavor.EVO>,
+                    sagitype: "!/)" as Sagitype<Flavor.EVO>,
                     smiley: ":!/):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",!/)" as Ascii<Flavor.REVO>,
+                    sagitype: ",!/)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::!/):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",!/)" as Ascii<Flavor.EVO>,
+                    sagitype: ",!/)" as Sagitype<Flavor.EVO>,
                     smiley: ":,::!/):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(!)" as Ascii<Flavor.REVO>,
+                    sagitype: "`(!)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(!)" as Ascii<Flavor.EVO>,
+                    sagitype: "`(!)" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(!)" as Ascii<Flavor.REVO>,
+                    sagitype: "(!)" as Sagitype<Flavor.REVO>,
                     smiley: ":(!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(!)" as Ascii<Flavor.EVO>,
+                    sagitype: "(!)" as Sagitype<Flavor.EVO>,
                     smiley: ":(!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",(!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(!)" as Ascii<Flavor.EVO>,
+                    sagitype: ",(!)" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,(!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",,(!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::(!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,(!)" as Ascii<Flavor.EVO>,
+                    sagitype: ",,(!)" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::(!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.(!)" as Ascii<Flavor.REVO>,
+                    sagitype: "`.(!)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::(!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.(!)" as Ascii<Flavor.EVO>,
+                    sagitype: "`.(!)" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::(!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".(!)" as Ascii<Flavor.REVO>,
+                    sagitype: ".(!)" as Sagitype<Flavor.REVO>,
                     smiley: ":.::(!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".(!)" as Ascii<Flavor.EVO>,
+                    sagitype: ".(!)" as Sagitype<Flavor.EVO>,
                     smiley: ":.::(!):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'(!/" as Ascii<Flavor.REVO>,
+                    sagitype: "`'(!/" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::(!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'(!/" as Ascii<Flavor.EVO>,
+                    sagitype: "`'(!/" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::(!/:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'(!/" as Ascii<Flavor.REVO>,
+                    sagitype: "'(!/" as Sagitype<Flavor.REVO>,
                     smiley: ":'::(!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'(!/" as Ascii<Flavor.EVO>,
+                    sagitype: "'(!/" as Sagitype<Flavor.EVO>,
                     smiley: ":'::(!/:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'(!/" as Ascii<Flavor.REVO>,
+                    sagitype: ",'(!/" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::(!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'(!/" as Ascii<Flavor.EVO>,
+                    sagitype: ",'(!/" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::(!/:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "!//" as Ascii<Flavor.REVO>,
+                    sagitype: "!//" as Sagitype<Flavor.REVO>,
                     smiley: ":!/ /:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "!//" as Ascii<Flavor.EVO>,
+                    sagitype: "!//" as Sagitype<Flavor.EVO>,
                     smiley: ":!/ /:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(!/" as Ascii<Flavor.REVO>,
+                    sagitype: "`(!/" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(!/" as Ascii<Flavor.EVO>,
+                    sagitype: "`(!/" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(!/:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(!/" as Ascii<Flavor.REVO>,
+                    sagitype: "(!/" as Sagitype<Flavor.REVO>,
                     smiley: ":(!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(!/" as Ascii<Flavor.EVO>,
+                    sagitype: "(!/" as Sagitype<Flavor.EVO>,
                     smiley: ":(!/:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(!/" as Ascii<Flavor.REVO>,
+                    sagitype: ",(!/" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(!/" as Ascii<Flavor.EVO>,
+                    sagitype: ",(!/" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(!/:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,(!/" as Ascii<Flavor.REVO>,
+                    sagitype: ",,(!/" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::(!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,(!/" as Ascii<Flavor.EVO>,
+                    sagitype: ",,(!/" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::(!/:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``)!//" as Ascii<Flavor.REVO>,
+                    sagitype: "``)!//" as Sagitype<Flavor.REVO>,
                     smiley: ":``::)!/ /:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``)!//" as Ascii<Flavor.EVO>,
+                    sagitype: "``)!//" as Sagitype<Flavor.EVO>,
                     smiley: ":``::)!/ /:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)!//" as Ascii<Flavor.REVO>,
+                    sagitype: "`)!//" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)!/ /:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)!//" as Ascii<Flavor.EVO>,
+                    sagitype: "`)!//" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)!/ /:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")!//" as Ascii<Flavor.REVO>,
+                    sagitype: ")!//" as Sagitype<Flavor.REVO>,
                     smiley: ":)!/ /:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")!//" as Ascii<Flavor.EVO>,
+                    sagitype: ")!//" as Sagitype<Flavor.EVO>,
                     smiley: ":)!/ /:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)!//" as Ascii<Flavor.REVO>,
+                    sagitype: ",)!//" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)!/ /:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)!//" as Ascii<Flavor.EVO>,
+                    sagitype: ",)!//" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)!/ /:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,)!//" as Ascii<Flavor.REVO>,
+                    sagitype: ",,)!//" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::)!/ /:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,)!//" as Ascii<Flavor.EVO>,
+                    sagitype: ",,)!//" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::)!/ /:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "')!!(" as Ascii<Flavor.REVO>,
+                    sagitype: "')!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":'::)!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'//|b" as Ascii<Flavor.EVO>,
+                    sagitype: "'//|b" as Sagitype<Flavor.EVO>,
                     smiley: ":'::/ /|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",')!!(" as Ascii<Flavor.REVO>,
+                    sagitype: ",')!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::)!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'//|b" as Ascii<Flavor.EVO>,
+                    sagitype: ",'//|b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::/ /|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``)!!(" as Ascii<Flavor.REVO>,
+                    sagitype: "``)!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":``::)!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``//|b" as Ascii<Flavor.EVO>,
+                    sagitype: "``//|b" as Sagitype<Flavor.EVO>,
                     smiley: ":``::/ /|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)!!(" as Ascii<Flavor.REVO>,
+                    sagitype: "`)!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`//|b" as Ascii<Flavor.EVO>,
+                    sagitype: "`//|b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::/ /|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")!!(" as Ascii<Flavor.REVO>,
+                    sagitype: ")!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":)!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "//|b" as Ascii<Flavor.EVO>,
+                    sagitype: "//|b" as Sagitype<Flavor.EVO>,
                     smiley: ":/ /|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)!!(" as Ascii<Flavor.REVO>,
+                    sagitype: ",)!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",//|b" as Ascii<Flavor.EVO>,
+                    sagitype: ",//|b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::/ /|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,)!!(" as Ascii<Flavor.REVO>,
+                    sagitype: ",,)!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::)!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,//|b" as Ascii<Flavor.EVO>,
+                    sagitype: ",,//|b" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::/ /|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.)!!(" as Ascii<Flavor.REVO>,
+                    sagitype: "`.)!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::)!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.//|b" as Ascii<Flavor.EVO>,
+                    sagitype: "`.//|b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::/ /|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".)!!(" as Ascii<Flavor.REVO>,
+                    sagitype: ".)!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":.::)!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".//|b" as Ascii<Flavor.EVO>,
+                    sagitype: ".//|b" as Sagitype<Flavor.EVO>,
                     smiley: ":.::/ /|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.)!!(" as Ascii<Flavor.REVO>,
+                    sagitype: ",.)!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::)!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.//|b" as Ascii<Flavor.EVO>,
+                    sagitype: ",.//|b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::/ /|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")~!!" as Ascii<Flavor.REVO>,
+                    sagitype: ")~!!" as Sagitype<Flavor.REVO>,
                     smiley: ":)~!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~|\\b" as Ascii<Flavor.EVO>,
+                    sagitype: "~|\\b" as Sagitype<Flavor.EVO>,
                     smiley: ":~|\\::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`~!!(" as Ascii<Flavor.REVO>,
+                    sagitype: "`~!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::~!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(|(b" as Ascii<Flavor.EVO>,
+                    sagitype: "`(|(b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(|(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~!!(" as Ascii<Flavor.REVO>,
+                    sagitype: "~!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":~!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(|(b" as Ascii<Flavor.EVO>,
+                    sagitype: "(|(b" as Sagitype<Flavor.EVO>,
                     smiley: ":(|(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",~!!(" as Ascii<Flavor.REVO>,
+                    sagitype: ",~!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::~!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(|(b" as Ascii<Flavor.EVO>,
+                    sagitype: ",(|(b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(|(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,~!!(" as Ascii<Flavor.REVO>,
+                    sagitype: ",,~!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::~!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,(|(b" as Ascii<Flavor.EVO>,
+                    sagitype: ",,(|(b" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::(|(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "!!~" as Ascii<Flavor.REVO>,
+                    sagitype: "!!~" as Sagitype<Flavor.REVO>,
                     smiley: ":!!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "/|~b" as Ascii<Flavor.EVO>,
+                    sagitype: "/|~b" as Sagitype<Flavor.EVO>,
                     smiley: ":/|~::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'~~!!" as Ascii<Flavor.REVO>,
+                    sagitype: "'~~!!" as Sagitype<Flavor.REVO>,
                     smiley: ":'::~~!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'~|)b" as Ascii<Flavor.EVO>,
+                    sagitype: "'~|)b" as Sagitype<Flavor.EVO>,
                     smiley: ":'::~|)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".~!!(" as Ascii<Flavor.REVO>,
+                    sagitype: ".~!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":.::~!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".(|(b" as Ascii<Flavor.EVO>,
+                    sagitype: ".(|(b" as Sagitype<Flavor.EVO>,
                     smiley: ":.::(|(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.~!!(" as Ascii<Flavor.REVO>,
+                    sagitype: ",.~!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::~!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.(|(b" as Ascii<Flavor.EVO>,
+                    sagitype: ",.(|(b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::(|(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`~~!!" as Ascii<Flavor.REVO>,
+                    sagitype: "`~~!!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::~~!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`~|)b" as Ascii<Flavor.EVO>,
+                    sagitype: "`~|)b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::~|)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~~!!" as Ascii<Flavor.REVO>,
+                    sagitype: "~~!!" as Sagitype<Flavor.REVO>,
                     smiley: ":~~!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~|)b" as Ascii<Flavor.EVO>,
+                    sagitype: "~|)b" as Sagitype<Flavor.EVO>,
                     smiley: ":~|)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",~~!!" as Ascii<Flavor.REVO>,
+                    sagitype: ",~~!!" as Sagitype<Flavor.REVO>,
                     smiley: ":,::~~!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",~|)b" as Ascii<Flavor.EVO>,
+                    sagitype: ",~|)b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::~|)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "')!!~" as Ascii<Flavor.REVO>,
+                    sagitype: "')!!~" as Sagitype<Flavor.REVO>,
                     smiley: ":'::)!!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'(|b" as Ascii<Flavor.EVO>,
+                    sagitype: "'(|b" as Sagitype<Flavor.EVO>,
                     smiley: ":'::(|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",')!!~" as Ascii<Flavor.REVO>,
+                    sagitype: ",')!!~" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::)!!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'(|b" as Ascii<Flavor.EVO>,
+                    sagitype: ",'(|b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::(|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``)!!~" as Ascii<Flavor.REVO>,
+                    sagitype: "``)!!~" as Sagitype<Flavor.REVO>,
                     smiley: ":``::)!!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``(|b" as Ascii<Flavor.EVO>,
+                    sagitype: "``(|b" as Sagitype<Flavor.EVO>,
                     smiley: ":``::(|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)!!~" as Ascii<Flavor.REVO>,
+                    sagitype: "`)!!~" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)!!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(|b" as Ascii<Flavor.EVO>,
+                    sagitype: "`(|b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")!!~" as Ascii<Flavor.REVO>,
+                    sagitype: ")!!~" as Sagitype<Flavor.REVO>,
                     smiley: ":)!!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(|b" as Ascii<Flavor.EVO>,
+                    sagitype: "(|b" as Sagitype<Flavor.EVO>,
                     smiley: ":(|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)!!~" as Ascii<Flavor.REVO>,
+                    sagitype: ",)!!~" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)!!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(|b" as Ascii<Flavor.EVO>,
+                    sagitype: ",(|b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`\\!!" as Ascii<Flavor.REVO>,
+                    sagitype: "`\\!!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::\\!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`|\\b" as Ascii<Flavor.EVO>,
+                    sagitype: "`|\\b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::|\\::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "\\!!" as Ascii<Flavor.REVO>,
+                    sagitype: "\\!!" as Sagitype<Flavor.REVO>,
                     smiley: ":\\!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "|\\b" as Ascii<Flavor.EVO>,
+                    sagitype: "|\\b" as Sagitype<Flavor.EVO>,
                     smiley: ":|\\::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".)!!~" as Ascii<Flavor.REVO>,
+                    sagitype: ".)!!~" as Sagitype<Flavor.REVO>,
                     smiley: ":.::)!!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".(|b" as Ascii<Flavor.EVO>,
+                    sagitype: ".(|b" as Sagitype<Flavor.EVO>,
                     smiley: ":.::(|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")\\!!" as Ascii<Flavor.REVO>,
+                    sagitype: ")\\!!" as Sagitype<Flavor.REVO>,
                     smiley: ":)\\!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")|)b" as Ascii<Flavor.EVO>,
+                    sagitype: ")|)b" as Sagitype<Flavor.EVO>,
                     smiley: ":)|)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)\\!!" as Ascii<Flavor.REVO>,
+                    sagitype: ",)\\!!" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)\\!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)|)b" as Ascii<Flavor.EVO>,
+                    sagitype: ",)|)b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)|)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "`'!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'|)b" as Ascii<Flavor.EVO>,
+                    sagitype: "`'|)b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::|)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "'!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":'::!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'|)b" as Ascii<Flavor.EVO>,
+                    sagitype: "'|)b" as Sagitype<Flavor.EVO>,
                     smiley: ":'::|)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'!!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",'!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'|)b" as Ascii<Flavor.EVO>,
+                    sagitype: ",'|)b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::|)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "``!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":``::!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``|)b" as Ascii<Flavor.EVO>,
+                    sagitype: "``|)b" as Sagitype<Flavor.EVO>,
                     smiley: ":``::|)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "`!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`|)b" as Ascii<Flavor.EVO>,
+                    sagitype: "`|)b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::|)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "|)b" as Ascii<Flavor.EVO>,
+                    sagitype: "|)b" as Sagitype<Flavor.EVO>,
                     smiley: ":|)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",!!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",|)b" as Ascii<Flavor.EVO>,
+                    sagitype: ",|)b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::|)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,!!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",,!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,|)b" as Ascii<Flavor.EVO>,
+                    sagitype: ",,|)b" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::|)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "`.!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.|)b" as Ascii<Flavor.EVO>,
+                    sagitype: "`.|)b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::|)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".!!)" as Ascii<Flavor.REVO>,
+                    sagitype: ".!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":.::!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".|)b" as Ascii<Flavor.EVO>,
+                    sagitype: ".|)b" as Sagitype<Flavor.EVO>,
                     smiley: ":.::|)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.!!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",.!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.|)b" as Ascii<Flavor.EVO>,
+                    sagitype: ",.|)b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::|)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")!!)" as Ascii<Flavor.REVO>,
+                    sagitype: ")!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":)!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")/|b" as Ascii<Flavor.EVO>,
+                    sagitype: ")/|b" as Sagitype<Flavor.EVO>,
                     smiley: ":)/|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)!!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",)!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)/|b" as Ascii<Flavor.EVO>,
+                    sagitype: ",)/|b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)/|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,)!!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",,)!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::)!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,)/|b" as Ascii<Flavor.EVO>,
+                    sagitype: ",,)/|b" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::)/|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'!!/" as Ascii<Flavor.REVO>,
+                    sagitype: "`'!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'/|b" as Ascii<Flavor.EVO>,
+                    sagitype: "`'/|b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::/|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'!!/" as Ascii<Flavor.REVO>,
+                    sagitype: "'!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":'::!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'/|b" as Ascii<Flavor.EVO>,
+                    sagitype: "'/|b" as Sagitype<Flavor.EVO>,
                     smiley: ":'::/|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".)!!)" as Ascii<Flavor.REVO>,
+                    sagitype: ".)!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":.::)!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".)/|b" as Ascii<Flavor.EVO>,
+                    sagitype: ".)/|b" as Sagitype<Flavor.EVO>,
                     smiley: ":.::)/|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``!!/" as Ascii<Flavor.REVO>,
+                    sagitype: "``!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":``::!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``/|b" as Ascii<Flavor.EVO>,
+                    sagitype: "``/|b" as Sagitype<Flavor.EVO>,
                     smiley: ":``::/|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`!!/" as Ascii<Flavor.REVO>,
+                    sagitype: "`!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":`::!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`/|b" as Ascii<Flavor.EVO>,
+                    sagitype: "`/|b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::/|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "!!/" as Ascii<Flavor.REVO>,
+                    sagitype: "!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "/|b" as Ascii<Flavor.EVO>,
+                    sagitype: "/|b" as Sagitype<Flavor.EVO>,
                     smiley: ":/|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",!!/" as Ascii<Flavor.REVO>,
+                    sagitype: ",!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":,::!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",/|b" as Ascii<Flavor.EVO>,
+                    sagitype: ",/|b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::/|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,!!/" as Ascii<Flavor.REVO>,
+                    sagitype: ",,!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,/|b" as Ascii<Flavor.EVO>,
+                    sagitype: ",,/|b" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::/|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(!!" as Ascii<Flavor.REVO>,
+                    sagitype: "(!!" as Sagitype<Flavor.REVO>,
                     smiley: ":(!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")|~b" as Ascii<Flavor.EVO>,
+                    sagitype: ")|~b" as Sagitype<Flavor.EVO>,
                     smiley: ":)|~::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".!!/" as Ascii<Flavor.REVO>,
+                    sagitype: ".!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":.::!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "./|b" as Ascii<Flavor.EVO>,
+                    sagitype: "./|b" as Sagitype<Flavor.EVO>,
                     smiley: ":.::/|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.!!/" as Ascii<Flavor.REVO>,
+                    sagitype: ",.!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",./|b" as Ascii<Flavor.EVO>,
+                    sagitype: ",./|b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::/|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``~!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "``~!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":``::~!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``~~|b" as Ascii<Flavor.EVO>,
+                    sagitype: "``~~|b" as Sagitype<Flavor.EVO>,
                     smiley: ":``::~~|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`~!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "`~!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::~!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`~~|b" as Ascii<Flavor.EVO>,
+                    sagitype: "`~~|b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::~~|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "~!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":~!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~~|b" as Ascii<Flavor.EVO>,
+                    sagitype: "~~|b" as Sagitype<Flavor.EVO>,
                     smiley: ":~~|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`\\!!~" as Ascii<Flavor.REVO>,
+                    sagitype: "`\\!!~" as Sagitype<Flavor.REVO>,
                     smiley: ":`::\\!!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`|~b" as Ascii<Flavor.EVO>,
+                    sagitype: "`|~b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::|~::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "\\!!~" as Ascii<Flavor.REVO>,
+                    sagitype: "\\!!~" as Sagitype<Flavor.REVO>,
                     smiley: ":\\!!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "|~b" as Ascii<Flavor.EVO>,
+                    sagitype: "|~b" as Sagitype<Flavor.EVO>,
                     smiley: ":|~::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",\\!!~" as Ascii<Flavor.REVO>,
+                    sagitype: ",\\!!~" as Sagitype<Flavor.REVO>,
                     smiley: ":,::\\!!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",|~b" as Ascii<Flavor.EVO>,
+                    sagitype: ",|~b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::|~::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,\\!!~" as Ascii<Flavor.REVO>,
+                    sagitype: ",,\\!!~" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::\\!!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,|~b" as Ascii<Flavor.EVO>,
+                    sagitype: ",,|~b" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::|~::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(!!(" as Ascii<Flavor.REVO>,
+                    sagitype: "`(!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`~|(b" as Ascii<Flavor.EVO>,
+                    sagitype: "`~|(b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::~|(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(!!(" as Ascii<Flavor.REVO>,
+                    sagitype: "(!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":(!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~|(b" as Ascii<Flavor.EVO>,
+                    sagitype: "~|(b" as Sagitype<Flavor.EVO>,
                     smiley: ":~|(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(!!(" as Ascii<Flavor.REVO>,
+                    sagitype: ",(!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",~|(b" as Ascii<Flavor.EVO>,
+                    sagitype: ",~|(b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::~|(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,(!!(" as Ascii<Flavor.REVO>,
+                    sagitype: ",,(!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::(!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,~|(b" as Ascii<Flavor.EVO>,
+                    sagitype: ",,~|(b" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::~|(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.(!!(" as Ascii<Flavor.REVO>,
+                    sagitype: "`.(!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::(!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.~|(b" as Ascii<Flavor.EVO>,
+                    sagitype: "`.~|(b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::~|(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".(!!(" as Ascii<Flavor.REVO>,
+                    sagitype: ".(!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":.::(!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".~|(b" as Ascii<Flavor.EVO>,
+                    sagitype: ".~|(b" as Sagitype<Flavor.EVO>,
                     smiley: ":.::~|(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~!!/" as Ascii<Flavor.REVO>,
+                    sagitype: "~!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":~!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")~|b" as Ascii<Flavor.EVO>,
+                    sagitype: ")~|b" as Sagitype<Flavor.EVO>,
                     smiley: ":)~|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'\\\\!!" as Ascii<Flavor.REVO>,
+                    sagitype: "'\\\\!!" as Sagitype<Flavor.REVO>,
                     smiley: ":'::\\ \\!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "')|(b" as Ascii<Flavor.EVO>,
+                    sagitype: "')|(b" as Sagitype<Flavor.EVO>,
                     smiley: ":'::)|(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'\\\\!!" as Ascii<Flavor.REVO>,
+                    sagitype: ",'\\\\!!" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::\\ \\!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",')|(b" as Ascii<Flavor.EVO>,
+                    sagitype: ",')|(b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::)|(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``\\\\!!" as Ascii<Flavor.REVO>,
+                    sagitype: "``\\\\!!" as Sagitype<Flavor.REVO>,
                     smiley: ":``::\\ \\!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``)|(b" as Ascii<Flavor.EVO>,
+                    sagitype: "``)|(b" as Sagitype<Flavor.EVO>,
                     smiley: ":``::)|(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`\\\\!!" as Ascii<Flavor.REVO>,
+                    sagitype: "`\\\\!!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::\\ \\!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)|(b" as Ascii<Flavor.EVO>,
+                    sagitype: "`)|(b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)|(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "\\\\!!" as Ascii<Flavor.REVO>,
+                    sagitype: "\\\\!!" as Sagitype<Flavor.REVO>,
                     smiley: ":\\ \\!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")|(b" as Ascii<Flavor.EVO>,
+                    sagitype: ")|(b" as Sagitype<Flavor.EVO>,
                     smiley: ":)|(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",\\\\!!" as Ascii<Flavor.REVO>,
+                    sagitype: ",\\\\!!" as Sagitype<Flavor.REVO>,
                     smiley: ":,::\\ \\!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)|(b" as Ascii<Flavor.EVO>,
+                    sagitype: ",)|(b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)|(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")\\\\!!" as Ascii<Flavor.REVO>,
+                    sagitype: ")\\\\!!" as Sagitype<Flavor.REVO>,
                     smiley: ":)\\ \\!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~|b" as Ascii<Flavor.EVO>,
+                    sagitype: "~|b" as Sagitype<Flavor.EVO>,
                     smiley: ":~|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)\\\\!!" as Ascii<Flavor.REVO>,
+                    sagitype: ",)\\\\!!" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)\\ \\!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",~|b" as Ascii<Flavor.EVO>,
+                    sagitype: ",~|b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::~|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'\\!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "'\\!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":'::\\!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'|(b" as Ascii<Flavor.EVO>,
+                    sagitype: "'|(b" as Sagitype<Flavor.EVO>,
                     smiley: ":'::|(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'\\!!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",'\\!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::\\!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'|(b" as Ascii<Flavor.EVO>,
+                    sagitype: ",'|(b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::|(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".)\\\\!!" as Ascii<Flavor.REVO>,
+                    sagitype: ".)\\\\!!" as Sagitype<Flavor.REVO>,
                     smiley: ":.::)\\ \\!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".~|b" as Ascii<Flavor.EVO>,
+                    sagitype: ".~|b" as Sagitype<Flavor.EVO>,
                     smiley: ":.::~|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`\\!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "`\\!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::\\!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`|(b" as Ascii<Flavor.EVO>,
+                    sagitype: "`|(b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::|(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "\\!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "\\!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":\\!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "|(b" as Ascii<Flavor.EVO>,
+                    sagitype: "|(b" as Sagitype<Flavor.EVO>,
                     smiley: ":|(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",\\!!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",\\!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::\\!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",|(b" as Ascii<Flavor.EVO>,
+                    sagitype: ",|(b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::|(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,\\!!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",,\\!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::\\!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,|(b" as Ascii<Flavor.EVO>,
+                    sagitype: ",,|(b" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::|(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``(!!~" as Ascii<Flavor.REVO>,
+                    sagitype: "``(!!~" as Sagitype<Flavor.REVO>,
                     smiley: ":``::(!!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``)|b" as Ascii<Flavor.EVO>,
+                    sagitype: "``)|b" as Sagitype<Flavor.EVO>,
                     smiley: ":``::)|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(!!~" as Ascii<Flavor.REVO>,
+                    sagitype: "`(!!~" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(!!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)|b" as Ascii<Flavor.EVO>,
+                    sagitype: "`)|b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(!!~" as Ascii<Flavor.REVO>,
+                    sagitype: "(!!~" as Sagitype<Flavor.REVO>,
                     smiley: ":(!!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")|b" as Ascii<Flavor.EVO>,
+                    sagitype: ")|b" as Sagitype<Flavor.EVO>,
                     smiley: ":)|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(!!~" as Ascii<Flavor.REVO>,
+                    sagitype: ",(!!~" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(!!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)|b" as Ascii<Flavor.EVO>,
+                    sagitype: ",)|b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'\\!!/" as Ascii<Flavor.REVO>,
+                    sagitype: "`'\\!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::\\!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'|b" as Ascii<Flavor.EVO>,
+                    sagitype: "`'|b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'\\!!/" as Ascii<Flavor.REVO>,
+                    sagitype: "'\\!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":'::\\!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'|b" as Ascii<Flavor.EVO>,
+                    sagitype: "'|b" as Sagitype<Flavor.EVO>,
                     smiley: ":'::|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".(!!~" as Ascii<Flavor.REVO>,
+                    sagitype: ".(!!~" as Sagitype<Flavor.REVO>,
                     smiley: ":.::(!!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".)|b" as Ascii<Flavor.EVO>,
+                    sagitype: ".)|b" as Sagitype<Flavor.EVO>,
                     smiley: ":.::)|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``\\!!/" as Ascii<Flavor.REVO>,
+                    sagitype: "``\\!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":``::\\!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``|b" as Ascii<Flavor.EVO>,
+                    sagitype: "``|b" as Sagitype<Flavor.EVO>,
                     smiley: ":``::|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`\\!!/" as Ascii<Flavor.REVO>,
+                    sagitype: "`\\!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":`::\\!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`|b" as Ascii<Flavor.EVO>,
+                    sagitype: "`|b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::|::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "\\!!/" as Ascii<Flavor.REVO>,
+                    sagitype: "\\!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":\\!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "b" as Ascii<Flavor.EVO>,
+                    sagitype: "b" as Sagitype<Flavor.EVO>,
                     smiley: ":b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
@@ -3005,1476 +3005,1476 @@ describe("accidentals", (): void => {
         const expectedN2A: FlavorsExpectation[] = [
             {
                 revo: {
-                    ascii: "\\!!/" as Ascii<Flavor.REVO>,
+                    sagitype: "\\!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":\\!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "b" as Ascii<Flavor.EVO>,
+                    sagitype: "b" as Sagitype<Flavor.EVO>,
                     smiley: ":b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",\\!!/" as Ascii<Flavor.REVO>,
+                    sagitype: ",\\!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":,::\\!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",!b" as Ascii<Flavor.EVO>,
+                    sagitype: ",!b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,\\!!/" as Ascii<Flavor.REVO>,
+                    sagitype: ",,\\!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::\\!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,!b" as Ascii<Flavor.EVO>,
+                    sagitype: ",,!b" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "')!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "')!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":'::)!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "')!b" as Ascii<Flavor.EVO>,
+                    sagitype: "')!b" as Sagitype<Flavor.EVO>,
                     smiley: ":'::)!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".\\!!/" as Ascii<Flavor.REVO>,
+                    sagitype: ".\\!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":.::\\!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".!b" as Ascii<Flavor.EVO>,
+                    sagitype: ".!b" as Sagitype<Flavor.EVO>,
                     smiley: ":.::!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.\\!!/" as Ascii<Flavor.REVO>,
+                    sagitype: ",.\\!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::\\!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.!b" as Ascii<Flavor.EVO>,
+                    sagitype: ",.!b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "`)!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)!b" as Ascii<Flavor.EVO>,
+                    sagitype: "`)!b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")!!!" as Ascii<Flavor.REVO>,
+                    sagitype: ")!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":)!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")!b" as Ascii<Flavor.EVO>,
+                    sagitype: ")!b" as Sagitype<Flavor.EVO>,
                     smiley: ":)!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)!!!" as Ascii<Flavor.REVO>,
+                    sagitype: ",)!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)!b" as Ascii<Flavor.EVO>,
+                    sagitype: ",)!b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,)!!!" as Ascii<Flavor.REVO>,
+                    sagitype: ",,)!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::)!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,)!b" as Ascii<Flavor.EVO>,
+                    sagitype: ",,)!b" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::)!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``!!!(" as Ascii<Flavor.REVO>,
+                    sagitype: "``!!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":``::!!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``!(b" as Ascii<Flavor.EVO>,
+                    sagitype: "``!(b" as Sagitype<Flavor.EVO>,
                     smiley: ":``::!(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`!!!(" as Ascii<Flavor.REVO>,
+                    sagitype: "`!!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::!!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`!(b" as Ascii<Flavor.EVO>,
+                    sagitype: "`!(b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::!(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "!!!(" as Ascii<Flavor.REVO>,
+                    sagitype: "!!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":!!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "!(b" as Ascii<Flavor.EVO>,
+                    sagitype: "!(b" as Sagitype<Flavor.EVO>,
                     smiley: ":!(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",!!!(" as Ascii<Flavor.REVO>,
+                    sagitype: ",!!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::!!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",!(b" as Ascii<Flavor.EVO>,
+                    sagitype: ",!(b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::!(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'~!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "'~!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":'::~!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'~!b" as Ascii<Flavor.EVO>,
+                    sagitype: "'~!b" as Sagitype<Flavor.EVO>,
                     smiley: ":'::~!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.!!!(" as Ascii<Flavor.REVO>,
+                    sagitype: "`.!!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::!!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.!(b" as Ascii<Flavor.EVO>,
+                    sagitype: "`.!(b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::!(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".!!!(" as Ascii<Flavor.REVO>,
+                    sagitype: ".!!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":.::!!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".!(b" as Ascii<Flavor.EVO>,
+                    sagitype: ".!(b" as Sagitype<Flavor.EVO>,
                     smiley: ":.::!(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`~!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "`~!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::~!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`~!b" as Ascii<Flavor.EVO>,
+                    sagitype: "`~!b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::~!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "~!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":~!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~!b" as Ascii<Flavor.EVO>,
+                    sagitype: "~!b" as Sagitype<Flavor.EVO>,
                     smiley: ":~!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)!!!(" as Ascii<Flavor.REVO>,
+                    sagitype: "`)!!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)!!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)!(b" as Ascii<Flavor.EVO>,
+                    sagitype: "`)!(b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)!(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")!!!(" as Ascii<Flavor.REVO>,
+                    sagitype: ")!!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":)!!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")!(b" as Ascii<Flavor.EVO>,
+                    sagitype: ")!(b" as Sagitype<Flavor.EVO>,
                     smiley: ":)!(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)!!!(" as Ascii<Flavor.REVO>,
+                    sagitype: ",)!!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)!!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)!(b" as Ascii<Flavor.EVO>,
+                    sagitype: ",)!(b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)!(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,)!!!(" as Ascii<Flavor.REVO>,
+                    sagitype: ",,)!!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::)!!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,)!(b" as Ascii<Flavor.EVO>,
+                    sagitype: ",,)!(b" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::)!(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.)!!!(" as Ascii<Flavor.REVO>,
+                    sagitype: "`.)!!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::)!!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.)!(b" as Ascii<Flavor.EVO>,
+                    sagitype: "`.)!(b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::)!(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".)!!!(" as Ascii<Flavor.REVO>,
+                    sagitype: ".)!!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":.::)!!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".)!(b" as Ascii<Flavor.EVO>,
+                    sagitype: ".)!(b" as Sagitype<Flavor.EVO>,
                     smiley: ":.::)!(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")~!!!" as Ascii<Flavor.REVO>,
+                    sagitype: ")~!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":)~!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")~!b" as Ascii<Flavor.EVO>,
+                    sagitype: ")~!b" as Sagitype<Flavor.EVO>,
                     smiley: ":)~!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'~!!!(" as Ascii<Flavor.REVO>,
+                    sagitype: "'~!!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":'::~!!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'~!(b" as Ascii<Flavor.EVO>,
+                    sagitype: "'~!(b" as Sagitype<Flavor.EVO>,
                     smiley: ":'::~!(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'~!!!(" as Ascii<Flavor.REVO>,
+                    sagitype: ",'~!!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::~!!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'~!(b" as Ascii<Flavor.EVO>,
+                    sagitype: ",'~!(b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::~!(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``~!!!(" as Ascii<Flavor.REVO>,
+                    sagitype: "``~!!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":``::~!!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``~!(b" as Ascii<Flavor.EVO>,
+                    sagitype: "``~!(b" as Sagitype<Flavor.EVO>,
                     smiley: ":``::~!(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`~!!!(" as Ascii<Flavor.REVO>,
+                    sagitype: "`~!!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::~!!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`~!(b" as Ascii<Flavor.EVO>,
+                    sagitype: "`~!(b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::~!(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~!!!(" as Ascii<Flavor.REVO>,
+                    sagitype: "~!!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":~!!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~!(b" as Ascii<Flavor.EVO>,
+                    sagitype: "~!(b" as Sagitype<Flavor.EVO>,
                     smiley: ":~!(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",~!!!(" as Ascii<Flavor.REVO>,
+                    sagitype: ",~!!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::~!!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",~!(b" as Ascii<Flavor.EVO>,
+                    sagitype: ",~!(b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::~!(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``!!!~" as Ascii<Flavor.REVO>,
+                    sagitype: "``!!!~" as Sagitype<Flavor.REVO>,
                     smiley: ":``::!!!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``!~b" as Ascii<Flavor.EVO>,
+                    sagitype: "``!~b" as Sagitype<Flavor.EVO>,
                     smiley: ":``::!~::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`!!!~" as Ascii<Flavor.REVO>,
+                    sagitype: "`!!!~" as Sagitype<Flavor.REVO>,
                     smiley: ":`::!!!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`!~b" as Ascii<Flavor.EVO>,
+                    sagitype: "`!~b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::!~::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "!!!~" as Ascii<Flavor.REVO>,
+                    sagitype: "!!!~" as Sagitype<Flavor.REVO>,
                     smiley: ":!!!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "!~b" as Ascii<Flavor.EVO>,
+                    sagitype: "!~b" as Sagitype<Flavor.EVO>,
                     smiley: ":!~::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",!!!~" as Ascii<Flavor.REVO>,
+                    sagitype: ",!!!~" as Sagitype<Flavor.REVO>,
                     smiley: ":,::!!!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",!~b" as Ascii<Flavor.EVO>,
+                    sagitype: ",!~b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::!~::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~~!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "~~!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":~~!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~~!b" as Ascii<Flavor.EVO>,
+                    sagitype: "~~!b" as Sagitype<Flavor.EVO>,
                     smiley: ":~~!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",~~!!!" as Ascii<Flavor.REVO>,
+                    sagitype: ",~~!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":,::~~!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",~~!b" as Ascii<Flavor.EVO>,
+                    sagitype: ",~~!b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::~~!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,~~!!!" as Ascii<Flavor.REVO>,
+                    sagitype: ",,~~!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::~~!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,~~!b" as Ascii<Flavor.EVO>,
+                    sagitype: ",,~~!b" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::~~!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "`'\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::\\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: "`'\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::\\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "'\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":'::\\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: "'\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":'::\\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")!!!~" as Ascii<Flavor.REVO>,
+                    sagitype: ")!!!~" as Sagitype<Flavor.REVO>,
                     smiley: ":)!!!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")!~b" as Ascii<Flavor.EVO>,
+                    sagitype: ")!~b" as Sagitype<Flavor.EVO>,
                     smiley: ":)!~::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "``\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":``::\\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: "``\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":``::\\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "`\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::\\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: "`\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::\\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":\\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: "\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":\\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: ",\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":,::\\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: ",\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::\\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: ",,\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::\\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: ",,\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::\\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "')\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "')\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":'::)\\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "')\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: "')\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":'::)\\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: ".\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":.::\\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: ".\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":.::\\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: ",.\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::\\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: ",.\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::\\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``)\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "``)\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":``::)\\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``)\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: "``)\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":``::)\\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "`)\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)\\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: "`)\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)\\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: ")\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":)\\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: ")\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":)\\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "`'!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'!)b" as Ascii<Flavor.EVO>,
+                    sagitype: "`'!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "'!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":'::!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'!)b" as Ascii<Flavor.EVO>,
+                    sagitype: "'!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":'::!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",'!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'!)b" as Ascii<Flavor.EVO>,
+                    sagitype: ",'!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "``!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":``::!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``!)b" as Ascii<Flavor.EVO>,
+                    sagitype: "``!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":``::!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "`!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`!)b" as Ascii<Flavor.EVO>,
+                    sagitype: "`!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "!)b" as Ascii<Flavor.EVO>,
+                    sagitype: "!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",!)b" as Ascii<Flavor.EVO>,
+                    sagitype: ",!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",,!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,!)b" as Ascii<Flavor.EVO>,
+                    sagitype: ",,!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "`.!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.!)b" as Ascii<Flavor.EVO>,
+                    sagitype: "`.!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: ".!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":.::!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".!)b" as Ascii<Flavor.EVO>,
+                    sagitype: ".!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":.::!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",.!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.!)b" as Ascii<Flavor.EVO>,
+                    sagitype: ",.!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "`)!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)!)b" as Ascii<Flavor.EVO>,
+                    sagitype: "`)!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: ")!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":)!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")!)b" as Ascii<Flavor.EVO>,
+                    sagitype: ")!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":)!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'(!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "'(!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":'::(!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'(!b" as Ascii<Flavor.EVO>,
+                    sagitype: "'(!b" as Sagitype<Flavor.EVO>,
                     smiley: ":'::(!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "!!!/" as Ascii<Flavor.REVO>,
+                    sagitype: "!!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":!!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "!/b" as Ascii<Flavor.EVO>,
+                    sagitype: "!/b" as Sagitype<Flavor.EVO>,
                     smiley: ":!/::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",!!!/" as Ascii<Flavor.REVO>,
+                    sagitype: ",!!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":,::!!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",!/b" as Ascii<Flavor.EVO>,
+                    sagitype: ",!/b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::!/::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "`(!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(!b" as Ascii<Flavor.EVO>,
+                    sagitype: "`(!b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "(!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":(!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(!b" as Ascii<Flavor.EVO>,
+                    sagitype: "(!b" as Sagitype<Flavor.EVO>,
                     smiley: ":(!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(!!!" as Ascii<Flavor.REVO>,
+                    sagitype: ",(!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(!b" as Ascii<Flavor.EVO>,
+                    sagitype: ",(!b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,(!!!" as Ascii<Flavor.REVO>,
+                    sagitype: ",,(!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::(!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,(!b" as Ascii<Flavor.EVO>,
+                    sagitype: ",,(!b" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::(!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.(!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "`.(!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::(!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.(!b" as Ascii<Flavor.EVO>,
+                    sagitype: "`.(!b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::(!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".(!!!" as Ascii<Flavor.REVO>,
+                    sagitype: ".(!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":.::(!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".(!b" as Ascii<Flavor.EVO>,
+                    sagitype: ".(!b" as Sagitype<Flavor.EVO>,
                     smiley: ":.::(!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`~!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "`~!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::~!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`~!)b" as Ascii<Flavor.EVO>,
+                    sagitype: "`~!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::~!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "~!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":~!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~!)b" as Ascii<Flavor.EVO>,
+                    sagitype: "~!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":~!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",~!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",~!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::~!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",~!)b" as Ascii<Flavor.EVO>,
+                    sagitype: ",~!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::~!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'(!!!(" as Ascii<Flavor.REVO>,
+                    sagitype: "`'(!!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::(!!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'(!(b" as Ascii<Flavor.EVO>,
+                    sagitype: "`'(!(b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::(!(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'(!!!(" as Ascii<Flavor.REVO>,
+                    sagitype: "'(!!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":'::(!!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'(!(b" as Ascii<Flavor.EVO>,
+                    sagitype: "'(!(b" as Sagitype<Flavor.EVO>,
                     smiley: ":'::(!(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".~!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: ".~!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":.::~!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".~!)b" as Ascii<Flavor.EVO>,
+                    sagitype: ".~!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":.::~!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "\\!!!~" as Ascii<Flavor.REVO>,
+                    sagitype: "\\!!!~" as Sagitype<Flavor.REVO>,
                     smiley: ":\\!!!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "\\!~b" as Ascii<Flavor.EVO>,
+                    sagitype: "\\!~b" as Sagitype<Flavor.EVO>,
                     smiley: ":\\!~::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``(!!!(" as Ascii<Flavor.REVO>,
+                    sagitype: "``(!!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":``::(!!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``(!(b" as Ascii<Flavor.EVO>,
+                    sagitype: "``(!(b" as Sagitype<Flavor.EVO>,
                     smiley: ":``::(!(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(!!!(" as Ascii<Flavor.REVO>,
+                    sagitype: "`(!!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(!!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(!(b" as Ascii<Flavor.EVO>,
+                    sagitype: "`(!(b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(!(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(!!!(" as Ascii<Flavor.REVO>,
+                    sagitype: "(!!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":(!!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(!(b" as Ascii<Flavor.EVO>,
+                    sagitype: "(!(b" as Sagitype<Flavor.EVO>,
                     smiley: ":(!(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(!!!(" as Ascii<Flavor.REVO>,
+                    sagitype: ",(!!!(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(!!!(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(!(b" as Ascii<Flavor.EVO>,
+                    sagitype: ",(!(b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(!(::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~!!!/" as Ascii<Flavor.REVO>,
+                    sagitype: "~!!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":~!!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~!/b" as Ascii<Flavor.EVO>,
+                    sagitype: "~!/b" as Sagitype<Flavor.EVO>,
                     smiley: ":~!/::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'\\\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "`'\\\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::\\ \\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'\\\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: "`'\\\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::\\ \\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'\\\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "'\\\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":'::\\ \\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'\\\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: "'\\\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":'::\\ \\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'\\\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: ",'\\\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::\\ \\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'\\\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: ",'\\\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::\\ \\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``\\\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "``\\\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":``::\\ \\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``\\\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: "``\\\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":``::\\ \\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`\\\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "`\\\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::\\ \\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`\\\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: "`\\\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::\\ \\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "\\\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "\\\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":\\ \\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "\\\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: "\\\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":\\ \\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",\\\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: ",\\\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":,::\\ \\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",\\\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: ",\\\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::\\ \\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,\\\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: ",,\\\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::\\ \\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,\\\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: ",,\\\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::\\ \\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.\\\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "`.\\\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::\\ \\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.\\\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: "`.\\\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::\\ \\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".\\\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: ".\\\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":.::\\ \\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".\\\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: ".\\\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":.::\\ \\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``)\\\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "``)\\\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":``::)\\ \\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``)\\\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: "``)\\\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":``::)\\ \\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)\\\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "`)\\\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)\\ \\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)\\\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: "`)\\\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)\\ \\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")\\\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: ")\\\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":)\\ \\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")\\\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: ")\\\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":)\\ \\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)\\\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: ",)\\\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)\\ \\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)\\\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: ",)\\\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)\\ \\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,)\\\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: ",,)\\\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::)\\ \\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,)\\\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: ",,)\\\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::)\\ \\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``\\!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "``\\!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":``::\\!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``\\!)b" as Ascii<Flavor.EVO>,
+                    sagitype: "``\\!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":``::\\!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`\\!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "`\\!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::\\!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`\\!)b" as Ascii<Flavor.EVO>,
+                    sagitype: "`\\!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::\\!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "\\!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "\\!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":\\!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "\\!)b" as Ascii<Flavor.EVO>,
+                    sagitype: "\\!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":\\!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",\\!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",\\!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::\\!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",\\!)b" as Ascii<Flavor.EVO>,
+                    sagitype: ",\\!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::\\!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(!!!~" as Ascii<Flavor.REVO>,
+                    sagitype: "(!!!~" as Sagitype<Flavor.REVO>,
                     smiley: ":(!!!~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(!~b" as Ascii<Flavor.EVO>,
+                    sagitype: "(!~b" as Sagitype<Flavor.EVO>,
                     smiley: ":(!~::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.\\!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "`.\\!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::\\!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.\\!)b" as Ascii<Flavor.EVO>,
+                    sagitype: "`.\\!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::\\!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".\\!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: ".\\!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":.::\\!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".\\!)b" as Ascii<Flavor.EVO>,
+                    sagitype: ".\\!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":.::\\!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.\\!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",.\\!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::\\!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.\\!)b" as Ascii<Flavor.EVO>,
+                    sagitype: ",.\\!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::\\!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'\\!!!/" as Ascii<Flavor.REVO>,
+                    sagitype: "'\\!!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":'::\\!!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'\\!/b" as Ascii<Flavor.EVO>,
+                    sagitype: "'\\!/b" as Sagitype<Flavor.EVO>,
                     smiley: ":'::\\!/::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'\\!!!/" as Ascii<Flavor.REVO>,
+                    sagitype: ",'\\!!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::\\!!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'\\!/b" as Ascii<Flavor.EVO>,
+                    sagitype: ",'\\!/b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::\\!/::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``\\!!!/" as Ascii<Flavor.REVO>,
+                    sagitype: "``\\!!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":``::\\!!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``\\!/b" as Ascii<Flavor.EVO>,
+                    sagitype: "``\\!/b" as Sagitype<Flavor.EVO>,
                     smiley: ":``::\\!/::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`\\!!!/" as Ascii<Flavor.REVO>,
+                    sagitype: "`\\!!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":`::\\!!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`\\!/b" as Ascii<Flavor.EVO>,
+                    sagitype: "`\\!/b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::\\!/::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "\\!!!/" as Ascii<Flavor.REVO>,
+                    sagitype: "\\!!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":\\!!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "\\!/b" as Ascii<Flavor.EVO>,
+                    sagitype: "\\!/b" as Sagitype<Flavor.EVO>,
                     smiley: ":\\!/::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",\\!!!/" as Ascii<Flavor.REVO>,
+                    sagitype: ",\\!!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":,::\\!!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",\\!/b" as Ascii<Flavor.EVO>,
+                    sagitype: ",\\!/b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::\\!/::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "`(\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(\\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: "`(\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(\\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: "(\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":(\\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: "(\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":(\\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(\\!!!" as Ascii<Flavor.REVO>,
+                    sagitype: ",(\\!!!" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(\\!!!:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(\\!b" as Ascii<Flavor.EVO>,
+                    sagitype: ",(\\!b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(\\!::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".\\!!!/" as Ascii<Flavor.REVO>,
+                    sagitype: ".\\!!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":.::\\!!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".\\!/b" as Ascii<Flavor.EVO>,
+                    sagitype: ".\\!/b" as Sagitype<Flavor.EVO>,
                     smiley: ":.::\\!/::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.\\!!!/" as Ascii<Flavor.REVO>,
+                    sagitype: ",.\\!!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::\\!!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.\\!/b" as Ascii<Flavor.EVO>,
+                    sagitype: ",.\\!/b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::\\!/::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)\\!!!/" as Ascii<Flavor.REVO>,
+                    sagitype: "`)\\!!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)\\!!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)\\!/b" as Ascii<Flavor.EVO>,
+                    sagitype: "`)\\!/b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)\\!/::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")\\!!!/" as Ascii<Flavor.REVO>,
+                    sagitype: ")\\!!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":)\\!!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")\\!/b" as Ascii<Flavor.EVO>,
+                    sagitype: ")\\!/b" as Sagitype<Flavor.EVO>,
                     smiley: ":)\\!/::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
@@ -4483,1476 +4483,1476 @@ describe("accidentals", (): void => {
         const expectedN2T: FlavorsExpectation[] = [
             {
                 revo: {
-                    ascii: ",)\\!!!/" as Ascii<Flavor.REVO>,
+                    sagitype: ",)\\!!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)\\!!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)\\!/b" as Ascii<Flavor.EVO>,
+                    sagitype: ",)\\!/b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)\\!/::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,)\\!!!/" as Ascii<Flavor.REVO>,
+                    sagitype: ",,)\\!!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::)\\!!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,)\\!/b" as Ascii<Flavor.EVO>,
+                    sagitype: ",,)\\!/b" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::)\\!/::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'(!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "`'(!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::(!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'(!)b" as Ascii<Flavor.EVO>,
+                    sagitype: "`'(!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::(!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'(!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "'(!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":'::(!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'(!)b" as Ascii<Flavor.EVO>,
+                    sagitype: "'(!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":'::(!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`!!!/)" as Ascii<Flavor.REVO>,
+                    sagitype: "`!!!/)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::!!!/):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`!/)b" as Ascii<Flavor.EVO>,
+                    sagitype: "`!/)b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::!/)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "!!!/)" as Ascii<Flavor.REVO>,
+                    sagitype: "!!!/)" as Sagitype<Flavor.REVO>,
                     smiley: ":!!!/):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "!/)b" as Ascii<Flavor.EVO>,
+                    sagitype: "!/)b" as Sagitype<Flavor.EVO>,
                     smiley: ":!/)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",!!!/)" as Ascii<Flavor.REVO>,
+                    sagitype: ",!!!/)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::!!!/):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",!/)b" as Ascii<Flavor.EVO>,
+                    sagitype: ",!/)b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::!/)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "`(!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(!)b" as Ascii<Flavor.EVO>,
+                    sagitype: "`(!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "(!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":(!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(!)b" as Ascii<Flavor.EVO>,
+                    sagitype: "(!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":(!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",(!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(!)b" as Ascii<Flavor.EVO>,
+                    sagitype: ",(!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,(!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: ",,(!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::(!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,(!)b" as Ascii<Flavor.EVO>,
+                    sagitype: ",,(!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::(!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.(!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: "`.(!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::(!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.(!)b" as Ascii<Flavor.EVO>,
+                    sagitype: "`.(!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::(!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".(!!!)" as Ascii<Flavor.REVO>,
+                    sagitype: ".(!!!)" as Sagitype<Flavor.REVO>,
                     smiley: ":.::(!!!):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".(!)b" as Ascii<Flavor.EVO>,
+                    sagitype: ".(!)b" as Sagitype<Flavor.EVO>,
                     smiley: ":.::(!)::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'(!!!/" as Ascii<Flavor.REVO>,
+                    sagitype: "`'(!!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::(!!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'(!/b" as Ascii<Flavor.EVO>,
+                    sagitype: "`'(!/b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::(!/::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'(!!!/" as Ascii<Flavor.REVO>,
+                    sagitype: "'(!!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":'::(!!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'(!/b" as Ascii<Flavor.EVO>,
+                    sagitype: "'(!/b" as Sagitype<Flavor.EVO>,
                     smiley: ":'::(!/::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'(!!!/" as Ascii<Flavor.REVO>,
+                    sagitype: ",'(!!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::(!!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'(!/b" as Ascii<Flavor.EVO>,
+                    sagitype: ",'(!/b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::(!/::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "!!!//" as Ascii<Flavor.REVO>,
+                    sagitype: "!!!//" as Sagitype<Flavor.REVO>,
                     smiley: ":!!!/ /:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "!//b" as Ascii<Flavor.EVO>,
+                    sagitype: "!//b" as Sagitype<Flavor.EVO>,
                     smiley: ":!/ /::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(!!!/" as Ascii<Flavor.REVO>,
+                    sagitype: "`(!!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(!!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(!/b" as Ascii<Flavor.EVO>,
+                    sagitype: "`(!/b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(!/::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(!!!/" as Ascii<Flavor.REVO>,
+                    sagitype: "(!!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":(!!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(!/b" as Ascii<Flavor.EVO>,
+                    sagitype: "(!/b" as Sagitype<Flavor.EVO>,
                     smiley: ":(!/::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(!!!/" as Ascii<Flavor.REVO>,
+                    sagitype: ",(!!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(!!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(!/b" as Ascii<Flavor.EVO>,
+                    sagitype: ",(!/b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(!/::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,(!!!/" as Ascii<Flavor.REVO>,
+                    sagitype: ",,(!!!/" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::(!!!/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,(!/b" as Ascii<Flavor.EVO>,
+                    sagitype: ",,(!/b" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::(!/::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``)!!!//" as Ascii<Flavor.REVO>,
+                    sagitype: "``)!!!//" as Sagitype<Flavor.REVO>,
                     smiley: ":``::)!!!/ /:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``)!//b" as Ascii<Flavor.EVO>,
+                    sagitype: "``)!//b" as Sagitype<Flavor.EVO>,
                     smiley: ":``::)!/ /::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)!!!//" as Ascii<Flavor.REVO>,
+                    sagitype: "`)!!!//" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)!!!/ /:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)!//b" as Ascii<Flavor.EVO>,
+                    sagitype: "`)!//b" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)!/ /::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")!!!//" as Ascii<Flavor.REVO>,
+                    sagitype: ")!!!//" as Sagitype<Flavor.REVO>,
                     smiley: ":)!!!/ /:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")!//b" as Ascii<Flavor.EVO>,
+                    sagitype: ")!//b" as Sagitype<Flavor.EVO>,
                     smiley: ":)!/ /::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)!!!//" as Ascii<Flavor.REVO>,
+                    sagitype: ",)!!!//" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)!!!/ /:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)!//b" as Ascii<Flavor.EVO>,
+                    sagitype: ",)!//b" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)!/ /::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,)!!!//" as Ascii<Flavor.REVO>,
+                    sagitype: ",,)!!!//" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::)!!!/ /:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,)!//b" as Ascii<Flavor.EVO>,
+                    sagitype: ",,)!//b" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::)!/ /::b:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "')Y(" as Ascii<Flavor.REVO>,
+                    sagitype: "')Y(" as Sagitype<Flavor.REVO>,
                     smiley: ":'::)Y(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'//|bb" as Ascii<Flavor.EVO>,
+                    sagitype: "'//|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":'::/ /|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",')Y(" as Ascii<Flavor.REVO>,
+                    sagitype: ",')Y(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::)Y(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'//|bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",'//|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::/ /|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``)Y(" as Ascii<Flavor.REVO>,
+                    sagitype: "``)Y(" as Sagitype<Flavor.REVO>,
                     smiley: ":``::)Y(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``//|bb" as Ascii<Flavor.EVO>,
+                    sagitype: "``//|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":``::/ /|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)Y(" as Ascii<Flavor.REVO>,
+                    sagitype: "`)Y(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)Y(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`//|bb" as Ascii<Flavor.EVO>,
+                    sagitype: "`//|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":`::/ /|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")Y(" as Ascii<Flavor.REVO>,
+                    sagitype: ")Y(" as Sagitype<Flavor.REVO>,
                     smiley: ":)Y(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "//|bb" as Ascii<Flavor.EVO>,
+                    sagitype: "//|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":/ /|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)Y(" as Ascii<Flavor.REVO>,
+                    sagitype: ",)Y(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)Y(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",//|bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",//|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,::/ /|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,)Y(" as Ascii<Flavor.REVO>,
+                    sagitype: ",,)Y(" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::)Y(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,//|bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",,//|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::/ /|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.)Y(" as Ascii<Flavor.REVO>,
+                    sagitype: "`.)Y(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::)Y(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.//|bb" as Ascii<Flavor.EVO>,
+                    sagitype: "`.//|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::/ /|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".)Y(" as Ascii<Flavor.REVO>,
+                    sagitype: ".)Y(" as Sagitype<Flavor.REVO>,
                     smiley: ":.::)Y(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".//|bb" as Ascii<Flavor.EVO>,
+                    sagitype: ".//|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":.::/ /|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.)Y(" as Ascii<Flavor.REVO>,
+                    sagitype: ",.)Y(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::)Y(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.//|bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",.//|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::/ /|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")~Y" as Ascii<Flavor.REVO>,
+                    sagitype: ")~Y" as Sagitype<Flavor.REVO>,
                     smiley: ":)~Y:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~|\\bb" as Ascii<Flavor.EVO>,
+                    sagitype: "~|\\bb" as Sagitype<Flavor.EVO>,
                     smiley: ":~|\\::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`~Y(" as Ascii<Flavor.REVO>,
+                    sagitype: "`~Y(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::~Y(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(|(bb" as Ascii<Flavor.EVO>,
+                    sagitype: "`(|(bb" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(|(::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~Y(" as Ascii<Flavor.REVO>,
+                    sagitype: "~Y(" as Sagitype<Flavor.REVO>,
                     smiley: ":~Y(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(|(bb" as Ascii<Flavor.EVO>,
+                    sagitype: "(|(bb" as Sagitype<Flavor.EVO>,
                     smiley: ":(|(::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",~Y(" as Ascii<Flavor.REVO>,
+                    sagitype: ",~Y(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::~Y(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(|(bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",(|(bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(|(::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,~Y(" as Ascii<Flavor.REVO>,
+                    sagitype: ",,~Y(" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::~Y(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,(|(bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",,(|(bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::(|(::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "Y~" as Ascii<Flavor.REVO>,
+                    sagitype: "Y~" as Sagitype<Flavor.REVO>,
                     smiley: ":Y~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "/|~bb" as Ascii<Flavor.EVO>,
+                    sagitype: "/|~bb" as Sagitype<Flavor.EVO>,
                     smiley: ":/|~::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'~~Y" as Ascii<Flavor.REVO>,
+                    sagitype: "'~~Y" as Sagitype<Flavor.REVO>,
                     smiley: ":'::~~Y:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'~|)bb" as Ascii<Flavor.EVO>,
+                    sagitype: "'~|)bb" as Sagitype<Flavor.EVO>,
                     smiley: ":'::~|)::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".~Y(" as Ascii<Flavor.REVO>,
+                    sagitype: ".~Y(" as Sagitype<Flavor.REVO>,
                     smiley: ":.::~Y(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".(|(bb" as Ascii<Flavor.EVO>,
+                    sagitype: ".(|(bb" as Sagitype<Flavor.EVO>,
                     smiley: ":.::(|(::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.~Y(" as Ascii<Flavor.REVO>,
+                    sagitype: ",.~Y(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::~Y(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.(|(bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",.(|(bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::(|(::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`~~Y" as Ascii<Flavor.REVO>,
+                    sagitype: "`~~Y" as Sagitype<Flavor.REVO>,
                     smiley: ":`::~~Y:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`~|)bb" as Ascii<Flavor.EVO>,
+                    sagitype: "`~|)bb" as Sagitype<Flavor.EVO>,
                     smiley: ":`::~|)::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~~Y" as Ascii<Flavor.REVO>,
+                    sagitype: "~~Y" as Sagitype<Flavor.REVO>,
                     smiley: ":~~Y:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~|)bb" as Ascii<Flavor.EVO>,
+                    sagitype: "~|)bb" as Sagitype<Flavor.EVO>,
                     smiley: ":~|)::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",~~Y" as Ascii<Flavor.REVO>,
+                    sagitype: ",~~Y" as Sagitype<Flavor.REVO>,
                     smiley: ":,::~~Y:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",~|)bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",~|)bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,::~|)::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "')Y~" as Ascii<Flavor.REVO>,
+                    sagitype: "')Y~" as Sagitype<Flavor.REVO>,
                     smiley: ":'::)Y~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'(|bb" as Ascii<Flavor.EVO>,
+                    sagitype: "'(|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":'::(|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",')Y~" as Ascii<Flavor.REVO>,
+                    sagitype: ",')Y~" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::)Y~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'(|bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",'(|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::(|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``)Y~" as Ascii<Flavor.REVO>,
+                    sagitype: "``)Y~" as Sagitype<Flavor.REVO>,
                     smiley: ":``::)Y~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``(|bb" as Ascii<Flavor.EVO>,
+                    sagitype: "``(|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":``::(|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)Y~" as Ascii<Flavor.REVO>,
+                    sagitype: "`)Y~" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)Y~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(|bb" as Ascii<Flavor.EVO>,
+                    sagitype: "`(|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")Y~" as Ascii<Flavor.REVO>,
+                    sagitype: ")Y~" as Sagitype<Flavor.REVO>,
                     smiley: ":)Y~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(|bb" as Ascii<Flavor.EVO>,
+                    sagitype: "(|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":(|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)Y~" as Ascii<Flavor.REVO>,
+                    sagitype: ",)Y~" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)Y~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(|bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",(|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`\\Y" as Ascii<Flavor.REVO>,
+                    sagitype: "`\\Y" as Sagitype<Flavor.REVO>,
                     smiley: ":`::\\Y:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`|\\bb" as Ascii<Flavor.EVO>,
+                    sagitype: "`|\\bb" as Sagitype<Flavor.EVO>,
                     smiley: ":`::|\\::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "\\Y" as Ascii<Flavor.REVO>,
+                    sagitype: "\\Y" as Sagitype<Flavor.REVO>,
                     smiley: ":\\Y:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "|\\bb" as Ascii<Flavor.EVO>,
+                    sagitype: "|\\bb" as Sagitype<Flavor.EVO>,
                     smiley: ":|\\::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".)Y~" as Ascii<Flavor.REVO>,
+                    sagitype: ".)Y~" as Sagitype<Flavor.REVO>,
                     smiley: ":.::)Y~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".(|bb" as Ascii<Flavor.EVO>,
+                    sagitype: ".(|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":.::(|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")\\Y" as Ascii<Flavor.REVO>,
+                    sagitype: ")\\Y" as Sagitype<Flavor.REVO>,
                     smiley: ":)\\Y:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")|)bb" as Ascii<Flavor.EVO>,
+                    sagitype: ")|)bb" as Sagitype<Flavor.EVO>,
                     smiley: ":)|)::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)\\Y" as Ascii<Flavor.REVO>,
+                    sagitype: ",)\\Y" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)\\Y:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)|)bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",)|)bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)|)::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'Y)" as Ascii<Flavor.REVO>,
+                    sagitype: "`'Y)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::Y):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'|)bb" as Ascii<Flavor.EVO>,
+                    sagitype: "`'|)bb" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::|)::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'Y)" as Ascii<Flavor.REVO>,
+                    sagitype: "'Y)" as Sagitype<Flavor.REVO>,
                     smiley: ":'::Y):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'|)bb" as Ascii<Flavor.EVO>,
+                    sagitype: "'|)bb" as Sagitype<Flavor.EVO>,
                     smiley: ":'::|)::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'Y)" as Ascii<Flavor.REVO>,
+                    sagitype: ",'Y)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::Y):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'|)bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",'|)bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::|)::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``Y)" as Ascii<Flavor.REVO>,
+                    sagitype: "``Y)" as Sagitype<Flavor.REVO>,
                     smiley: ":``::Y):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``|)bb" as Ascii<Flavor.EVO>,
+                    sagitype: "``|)bb" as Sagitype<Flavor.EVO>,
                     smiley: ":``::|)::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`Y)" as Ascii<Flavor.REVO>,
+                    sagitype: "`Y)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::Y):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`|)bb" as Ascii<Flavor.EVO>,
+                    sagitype: "`|)bb" as Sagitype<Flavor.EVO>,
                     smiley: ":`::|)::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "Y)" as Ascii<Flavor.REVO>,
+                    sagitype: "Y)" as Sagitype<Flavor.REVO>,
                     smiley: ":Y):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "|)bb" as Ascii<Flavor.EVO>,
+                    sagitype: "|)bb" as Sagitype<Flavor.EVO>,
                     smiley: ":|)::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",Y)" as Ascii<Flavor.REVO>,
+                    sagitype: ",Y)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::Y):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",|)bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",|)bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,::|)::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,Y)" as Ascii<Flavor.REVO>,
+                    sagitype: ",,Y)" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::Y):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,|)bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",,|)bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::|)::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.Y)" as Ascii<Flavor.REVO>,
+                    sagitype: "`.Y)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::Y):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.|)bb" as Ascii<Flavor.EVO>,
+                    sagitype: "`.|)bb" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::|)::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".Y)" as Ascii<Flavor.REVO>,
+                    sagitype: ".Y)" as Sagitype<Flavor.REVO>,
                     smiley: ":.::Y):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".|)bb" as Ascii<Flavor.EVO>,
+                    sagitype: ".|)bb" as Sagitype<Flavor.EVO>,
                     smiley: ":.::|)::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.Y)" as Ascii<Flavor.REVO>,
+                    sagitype: ",.Y)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::Y):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.|)bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",.|)bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::|)::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")Y)" as Ascii<Flavor.REVO>,
+                    sagitype: ")Y)" as Sagitype<Flavor.REVO>,
                     smiley: ":)Y):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")/|bb" as Ascii<Flavor.EVO>,
+                    sagitype: ")/|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":)/|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)Y)" as Ascii<Flavor.REVO>,
+                    sagitype: ",)Y)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)Y):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)/|bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",)/|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)/|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,)Y)" as Ascii<Flavor.REVO>,
+                    sagitype: ",,)Y)" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::)Y):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,)/|bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",,)/|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::)/|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'Y/" as Ascii<Flavor.REVO>,
+                    sagitype: "`'Y/" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::Y/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'/|bb" as Ascii<Flavor.EVO>,
+                    sagitype: "`'/|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::/|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'Y/" as Ascii<Flavor.REVO>,
+                    sagitype: "'Y/" as Sagitype<Flavor.REVO>,
                     smiley: ":'::Y/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'/|bb" as Ascii<Flavor.EVO>,
+                    sagitype: "'/|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":'::/|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".)Y)" as Ascii<Flavor.REVO>,
+                    sagitype: ".)Y)" as Sagitype<Flavor.REVO>,
                     smiley: ":.::)Y):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".)/|bb" as Ascii<Flavor.EVO>,
+                    sagitype: ".)/|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":.::)/|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``Y/" as Ascii<Flavor.REVO>,
+                    sagitype: "``Y/" as Sagitype<Flavor.REVO>,
                     smiley: ":``::Y/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``/|bb" as Ascii<Flavor.EVO>,
+                    sagitype: "``/|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":``::/|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`Y/" as Ascii<Flavor.REVO>,
+                    sagitype: "`Y/" as Sagitype<Flavor.REVO>,
                     smiley: ":`::Y/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`/|bb" as Ascii<Flavor.EVO>,
+                    sagitype: "`/|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":`::/|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "Y/" as Ascii<Flavor.REVO>,
+                    sagitype: "Y/" as Sagitype<Flavor.REVO>,
                     smiley: ":Y/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "/|bb" as Ascii<Flavor.EVO>,
+                    sagitype: "/|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":/|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",Y/" as Ascii<Flavor.REVO>,
+                    sagitype: ",Y/" as Sagitype<Flavor.REVO>,
                     smiley: ":,::Y/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",/|bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",/|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,::/|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,Y/" as Ascii<Flavor.REVO>,
+                    sagitype: ",,Y/" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::Y/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,/|bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",,/|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::/|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(Y" as Ascii<Flavor.REVO>,
+                    sagitype: "(Y" as Sagitype<Flavor.REVO>,
                     smiley: ":(Y:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")|~bb" as Ascii<Flavor.EVO>,
+                    sagitype: ")|~bb" as Sagitype<Flavor.EVO>,
                     smiley: ":)|~::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".Y/" as Ascii<Flavor.REVO>,
+                    sagitype: ".Y/" as Sagitype<Flavor.REVO>,
                     smiley: ":.::Y/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "./|bb" as Ascii<Flavor.EVO>,
+                    sagitype: "./|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":.::/|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.Y/" as Ascii<Flavor.REVO>,
+                    sagitype: ",.Y/" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::Y/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",./|bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",./|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::/|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``~Y)" as Ascii<Flavor.REVO>,
+                    sagitype: "``~Y)" as Sagitype<Flavor.REVO>,
                     smiley: ":``::~Y):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``~~|bb" as Ascii<Flavor.EVO>,
+                    sagitype: "``~~|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":``::~~|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`~Y)" as Ascii<Flavor.REVO>,
+                    sagitype: "`~Y)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::~Y):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`~~|bb" as Ascii<Flavor.EVO>,
+                    sagitype: "`~~|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":`::~~|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~Y)" as Ascii<Flavor.REVO>,
+                    sagitype: "~Y)" as Sagitype<Flavor.REVO>,
                     smiley: ":~Y):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~~|bb" as Ascii<Flavor.EVO>,
+                    sagitype: "~~|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":~~|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`\\Y~" as Ascii<Flavor.REVO>,
+                    sagitype: "`\\Y~" as Sagitype<Flavor.REVO>,
                     smiley: ":`::\\Y~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`|~bb" as Ascii<Flavor.EVO>,
+                    sagitype: "`|~bb" as Sagitype<Flavor.EVO>,
                     smiley: ":`::|~::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "\\Y~" as Ascii<Flavor.REVO>,
+                    sagitype: "\\Y~" as Sagitype<Flavor.REVO>,
                     smiley: ":\\Y~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "|~bb" as Ascii<Flavor.EVO>,
+                    sagitype: "|~bb" as Sagitype<Flavor.EVO>,
                     smiley: ":|~::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",\\Y~" as Ascii<Flavor.REVO>,
+                    sagitype: ",\\Y~" as Sagitype<Flavor.REVO>,
                     smiley: ":,::\\Y~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",|~bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",|~bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,::|~::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,\\Y~" as Ascii<Flavor.REVO>,
+                    sagitype: ",,\\Y~" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::\\Y~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,|~bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",,|~bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::|~::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(Y(" as Ascii<Flavor.REVO>,
+                    sagitype: "`(Y(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(Y(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`~|(bb" as Ascii<Flavor.EVO>,
+                    sagitype: "`~|(bb" as Sagitype<Flavor.EVO>,
                     smiley: ":`::~|(::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(Y(" as Ascii<Flavor.REVO>,
+                    sagitype: "(Y(" as Sagitype<Flavor.REVO>,
                     smiley: ":(Y(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~|(bb" as Ascii<Flavor.EVO>,
+                    sagitype: "~|(bb" as Sagitype<Flavor.EVO>,
                     smiley: ":~|(::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(Y(" as Ascii<Flavor.REVO>,
+                    sagitype: ",(Y(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(Y(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",~|(bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",~|(bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,::~|(::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,(Y(" as Ascii<Flavor.REVO>,
+                    sagitype: ",,(Y(" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::(Y(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,~|(bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",,~|(bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::~|(::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.(Y(" as Ascii<Flavor.REVO>,
+                    sagitype: "`.(Y(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::(Y(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.~|(bb" as Ascii<Flavor.EVO>,
+                    sagitype: "`.~|(bb" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::~|(::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".(Y(" as Ascii<Flavor.REVO>,
+                    sagitype: ".(Y(" as Sagitype<Flavor.REVO>,
                     smiley: ":.::(Y(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".~|(bb" as Ascii<Flavor.EVO>,
+                    sagitype: ".~|(bb" as Sagitype<Flavor.EVO>,
                     smiley: ":.::~|(::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~Y/" as Ascii<Flavor.REVO>,
+                    sagitype: "~Y/" as Sagitype<Flavor.REVO>,
                     smiley: ":~Y/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")~|bb" as Ascii<Flavor.EVO>,
+                    sagitype: ")~|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":)~|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'\\\\Y" as Ascii<Flavor.REVO>,
+                    sagitype: "'\\\\Y" as Sagitype<Flavor.REVO>,
                     smiley: ":'::\\ \\Y:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "')|(bb" as Ascii<Flavor.EVO>,
+                    sagitype: "')|(bb" as Sagitype<Flavor.EVO>,
                     smiley: ":'::)|(::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'\\\\Y" as Ascii<Flavor.REVO>,
+                    sagitype: ",'\\\\Y" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::\\ \\Y:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",')|(bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",')|(bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::)|(::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``\\\\Y" as Ascii<Flavor.REVO>,
+                    sagitype: "``\\\\Y" as Sagitype<Flavor.REVO>,
                     smiley: ":``::\\ \\Y:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``)|(bb" as Ascii<Flavor.EVO>,
+                    sagitype: "``)|(bb" as Sagitype<Flavor.EVO>,
                     smiley: ":``::)|(::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`\\\\Y" as Ascii<Flavor.REVO>,
+                    sagitype: "`\\\\Y" as Sagitype<Flavor.REVO>,
                     smiley: ":`::\\ \\Y:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)|(bb" as Ascii<Flavor.EVO>,
+                    sagitype: "`)|(bb" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)|(::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "\\\\Y" as Ascii<Flavor.REVO>,
+                    sagitype: "\\\\Y" as Sagitype<Flavor.REVO>,
                     smiley: ":\\ \\Y:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")|(bb" as Ascii<Flavor.EVO>,
+                    sagitype: ")|(bb" as Sagitype<Flavor.EVO>,
                     smiley: ":)|(::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",\\\\Y" as Ascii<Flavor.REVO>,
+                    sagitype: ",\\\\Y" as Sagitype<Flavor.REVO>,
                     smiley: ":,::\\ \\Y:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)|(bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",)|(bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)|(::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")\\\\Y" as Ascii<Flavor.REVO>,
+                    sagitype: ")\\\\Y" as Sagitype<Flavor.REVO>,
                     smiley: ":)\\ \\Y:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~|bb" as Ascii<Flavor.EVO>,
+                    sagitype: "~|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":~|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)\\\\Y" as Ascii<Flavor.REVO>,
+                    sagitype: ",)\\\\Y" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)\\ \\Y:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",~|bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",~|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,::~|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'\\Y)" as Ascii<Flavor.REVO>,
+                    sagitype: "'\\Y)" as Sagitype<Flavor.REVO>,
                     smiley: ":'::\\Y):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'|(bb" as Ascii<Flavor.EVO>,
+                    sagitype: "'|(bb" as Sagitype<Flavor.EVO>,
                     smiley: ":'::|(::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'\\Y)" as Ascii<Flavor.REVO>,
+                    sagitype: ",'\\Y)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::\\Y):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'|(bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",'|(bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::|(::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".)\\\\Y" as Ascii<Flavor.REVO>,
+                    sagitype: ".)\\\\Y" as Sagitype<Flavor.REVO>,
                     smiley: ":.::)\\ \\Y:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".~|bb" as Ascii<Flavor.EVO>,
+                    sagitype: ".~|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":.::~|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`\\Y)" as Ascii<Flavor.REVO>,
+                    sagitype: "`\\Y)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::\\Y):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`|(bb" as Ascii<Flavor.EVO>,
+                    sagitype: "`|(bb" as Sagitype<Flavor.EVO>,
                     smiley: ":`::|(::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "\\Y)" as Ascii<Flavor.REVO>,
+                    sagitype: "\\Y)" as Sagitype<Flavor.REVO>,
                     smiley: ":\\Y):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "|(bb" as Ascii<Flavor.EVO>,
+                    sagitype: "|(bb" as Sagitype<Flavor.EVO>,
                     smiley: ":|(::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",\\Y)" as Ascii<Flavor.REVO>,
+                    sagitype: ",\\Y)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::\\Y):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",|(bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",|(bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,::|(::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,\\Y)" as Ascii<Flavor.REVO>,
+                    sagitype: ",,\\Y)" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::\\Y):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,|(bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",,|(bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::|(::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``(Y~" as Ascii<Flavor.REVO>,
+                    sagitype: "``(Y~" as Sagitype<Flavor.REVO>,
                     smiley: ":``::(Y~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``)|bb" as Ascii<Flavor.EVO>,
+                    sagitype: "``)|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":``::)|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(Y~" as Ascii<Flavor.REVO>,
+                    sagitype: "`(Y~" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(Y~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)|bb" as Ascii<Flavor.EVO>,
+                    sagitype: "`)|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(Y~" as Ascii<Flavor.REVO>,
+                    sagitype: "(Y~" as Sagitype<Flavor.REVO>,
                     smiley: ":(Y~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")|bb" as Ascii<Flavor.EVO>,
+                    sagitype: ")|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":)|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(Y~" as Ascii<Flavor.REVO>,
+                    sagitype: ",(Y~" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(Y~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)|bb" as Ascii<Flavor.EVO>,
+                    sagitype: ",)|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'\\Y/" as Ascii<Flavor.REVO>,
+                    sagitype: "`'\\Y/" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::\\Y/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'|bb" as Ascii<Flavor.EVO>,
+                    sagitype: "`'|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'\\Y/" as Ascii<Flavor.REVO>,
+                    sagitype: "'\\Y/" as Sagitype<Flavor.REVO>,
                     smiley: ":'::\\Y/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'|bb" as Ascii<Flavor.EVO>,
+                    sagitype: "'|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":'::|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".(Y~" as Ascii<Flavor.REVO>,
+                    sagitype: ".(Y~" as Sagitype<Flavor.REVO>,
                     smiley: ":.::(Y~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".)|bb" as Ascii<Flavor.EVO>,
+                    sagitype: ".)|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":.::)|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``\\Y/" as Ascii<Flavor.REVO>,
+                    sagitype: "``\\Y/" as Sagitype<Flavor.REVO>,
                     smiley: ":``::\\Y/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``|bb" as Ascii<Flavor.EVO>,
+                    sagitype: "``|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":``::|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`\\Y/" as Ascii<Flavor.REVO>,
+                    sagitype: "`\\Y/" as Sagitype<Flavor.REVO>,
                     smiley: ":`::\\Y/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`|bb" as Ascii<Flavor.EVO>,
+                    sagitype: "`|bb" as Sagitype<Flavor.EVO>,
                     smiley: ":`::|::bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "\\Y/" as Ascii<Flavor.REVO>,
+                    sagitype: "\\Y/" as Sagitype<Flavor.REVO>,
                     smiley: ":\\Y/:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "bb" as Ascii<Flavor.EVO>,
+                    sagitype: "bb" as Sagitype<Flavor.EVO>,
                     smiley: ":bb:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
@@ -5962,1476 +5962,1476 @@ describe("accidentals", (): void => {
         const expectedP1A: FlavorsExpectation[] = [
             {
                 revo: {
-                    ascii: "(|//|)" as Ascii<Flavor.REVO>,
+                    sagitype: "(|//|)" as Sagitype<Flavor.REVO>,
                     smiley: "(:h:)" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(|//|)" as Ascii<Flavor.EVO>,
+                    sagitype: "(|//|)" as Sagitype<Flavor.EVO>,
                     smiley: "(:h:)" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`|" as Ascii<Flavor.REVO>,
+                    sagitype: "`|" as Sagitype<Flavor.REVO>,
                     smiley: ":`::|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`|" as Ascii<Flavor.EVO>,
+                    sagitype: "`|" as Sagitype<Flavor.EVO>,
                     smiley: ":`::|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``|" as Ascii<Flavor.REVO>,
+                    sagitype: "``|" as Sagitype<Flavor.REVO>,
                     smiley: ":``::|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``|" as Ascii<Flavor.EVO>,
+                    sagitype: "``|" as Sagitype<Flavor.EVO>,
                     smiley: ":``::|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".)|" as Ascii<Flavor.REVO>,
+                    sagitype: ".)|" as Sagitype<Flavor.REVO>,
                     smiley: ":.::)|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".)|" as Ascii<Flavor.EVO>,
+                    sagitype: ".)|" as Sagitype<Flavor.EVO>,
                     smiley: ":.::)|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'|" as Ascii<Flavor.REVO>,
+                    sagitype: "'|" as Sagitype<Flavor.REVO>,
                     smiley: ":'::|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'|" as Ascii<Flavor.EVO>,
+                    sagitype: "'|" as Sagitype<Flavor.EVO>,
                     smiley: ":'::|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'|" as Ascii<Flavor.REVO>,
+                    sagitype: "`'|" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'|" as Ascii<Flavor.EVO>,
+                    sagitype: "`'|" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)|" as Ascii<Flavor.REVO>,
+                    sagitype: ",)|" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)|" as Ascii<Flavor.EVO>,
+                    sagitype: ",)|" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")|" as Ascii<Flavor.REVO>,
+                    sagitype: ")|" as Sagitype<Flavor.REVO>,
                     smiley: ":)|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")|" as Ascii<Flavor.EVO>,
+                    sagitype: ")|" as Sagitype<Flavor.EVO>,
                     smiley: ":)|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)|" as Ascii<Flavor.REVO>,
+                    sagitype: "`)|" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)|" as Ascii<Flavor.EVO>,
+                    sagitype: "`)|" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``)|" as Ascii<Flavor.REVO>,
+                    sagitype: "``)|" as Sagitype<Flavor.REVO>,
                     smiley: ":``::)|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``)|" as Ascii<Flavor.EVO>,
+                    sagitype: "``)|" as Sagitype<Flavor.EVO>,
                     smiley: ":``::)|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,|(" as Ascii<Flavor.REVO>,
+                    sagitype: ",,|(" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::|(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,|(" as Ascii<Flavor.EVO>,
+                    sagitype: ",,|(" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::|(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",|(" as Ascii<Flavor.REVO>,
+                    sagitype: ",|(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::|(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",|(" as Ascii<Flavor.EVO>,
+                    sagitype: ",|(" as Sagitype<Flavor.EVO>,
                     smiley: ":,::|(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "|(" as Ascii<Flavor.REVO>,
+                    sagitype: "|(" as Sagitype<Flavor.REVO>,
                     smiley: ":|(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "|(" as Ascii<Flavor.EVO>,
+                    sagitype: "|(" as Sagitype<Flavor.EVO>,
                     smiley: ":|(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`|(" as Ascii<Flavor.REVO>,
+                    sagitype: "`|(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::|(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`|(" as Ascii<Flavor.EVO>,
+                    sagitype: "`|(" as Sagitype<Flavor.EVO>,
                     smiley: ":`::|(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".~|" as Ascii<Flavor.REVO>,
+                    sagitype: ".~|" as Sagitype<Flavor.REVO>,
                     smiley: ":.::~|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".~|" as Ascii<Flavor.EVO>,
+                    sagitype: ".~|" as Sagitype<Flavor.EVO>,
                     smiley: ":.::~|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'|(" as Ascii<Flavor.REVO>,
+                    sagitype: ",'|(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::|(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'|(" as Ascii<Flavor.EVO>,
+                    sagitype: ",'|(" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::|(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'|(" as Ascii<Flavor.REVO>,
+                    sagitype: "'|(" as Sagitype<Flavor.REVO>,
                     smiley: ":'::|(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'|(" as Ascii<Flavor.EVO>,
+                    sagitype: "'|(" as Sagitype<Flavor.EVO>,
                     smiley: ":'::|(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",~|" as Ascii<Flavor.REVO>,
+                    sagitype: ",~|" as Sagitype<Flavor.REVO>,
                     smiley: ":,::~|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",~|" as Ascii<Flavor.EVO>,
+                    sagitype: ",~|" as Sagitype<Flavor.EVO>,
                     smiley: ":,::~|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~|" as Ascii<Flavor.REVO>,
+                    sagitype: "~|" as Sagitype<Flavor.REVO>,
                     smiley: ":~|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~|" as Ascii<Flavor.EVO>,
+                    sagitype: "~|" as Sagitype<Flavor.EVO>,
                     smiley: ":~|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)|(" as Ascii<Flavor.REVO>,
+                    sagitype: ",)|(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)|(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)|(" as Ascii<Flavor.EVO>,
+                    sagitype: ",)|(" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)|(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")|(" as Ascii<Flavor.REVO>,
+                    sagitype: ")|(" as Sagitype<Flavor.REVO>,
                     smiley: ":)|(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")|(" as Ascii<Flavor.EVO>,
+                    sagitype: ")|(" as Sagitype<Flavor.EVO>,
                     smiley: ":)|(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)|(" as Ascii<Flavor.REVO>,
+                    sagitype: "`)|(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)|(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)|(" as Ascii<Flavor.EVO>,
+                    sagitype: "`)|(" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)|(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``)|(" as Ascii<Flavor.REVO>,
+                    sagitype: "``)|(" as Sagitype<Flavor.REVO>,
                     smiley: ":``::)|(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``)|(" as Ascii<Flavor.EVO>,
+                    sagitype: "``)|(" as Sagitype<Flavor.EVO>,
                     smiley: ":``::)|(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",')|(" as Ascii<Flavor.REVO>,
+                    sagitype: ",')|(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::)|(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",')|(" as Ascii<Flavor.EVO>,
+                    sagitype: ",')|(" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::)|(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "')|(" as Ascii<Flavor.REVO>,
+                    sagitype: "')|(" as Sagitype<Flavor.REVO>,
                     smiley: ":'::)|(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "')|(" as Ascii<Flavor.EVO>,
+                    sagitype: "')|(" as Sagitype<Flavor.EVO>,
                     smiley: ":'::)|(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")~|" as Ascii<Flavor.REVO>,
+                    sagitype: ")~|" as Sagitype<Flavor.REVO>,
                     smiley: ":)~|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")~|" as Ascii<Flavor.EVO>,
+                    sagitype: ")~|" as Sagitype<Flavor.EVO>,
                     smiley: ":)~|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".~|(" as Ascii<Flavor.REVO>,
+                    sagitype: ".~|(" as Sagitype<Flavor.REVO>,
                     smiley: ":.::~|(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".~|(" as Ascii<Flavor.EVO>,
+                    sagitype: ".~|(" as Sagitype<Flavor.EVO>,
                     smiley: ":.::~|(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.~|(" as Ascii<Flavor.REVO>,
+                    sagitype: "`.~|(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::~|(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.~|(" as Ascii<Flavor.EVO>,
+                    sagitype: "`.~|(" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::~|(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,~|(" as Ascii<Flavor.REVO>,
+                    sagitype: ",,~|(" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::~|(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,~|(" as Ascii<Flavor.EVO>,
+                    sagitype: ",,~|(" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::~|(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",~|(" as Ascii<Flavor.REVO>,
+                    sagitype: ",~|(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::~|(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",~|(" as Ascii<Flavor.EVO>,
+                    sagitype: ",~|(" as Sagitype<Flavor.EVO>,
                     smiley: ":,::~|(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~|(" as Ascii<Flavor.REVO>,
+                    sagitype: "~|(" as Sagitype<Flavor.REVO>,
                     smiley: ":~|(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~|(" as Ascii<Flavor.EVO>,
+                    sagitype: "~|(" as Sagitype<Flavor.EVO>,
                     smiley: ":~|(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`~|(" as Ascii<Flavor.REVO>,
+                    sagitype: "`~|(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::~|(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`~|(" as Ascii<Flavor.EVO>,
+                    sagitype: "`~|(" as Sagitype<Flavor.EVO>,
                     smiley: ":`::~|(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,|~" as Ascii<Flavor.REVO>,
+                    sagitype: ",,|~" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::|~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,|~" as Ascii<Flavor.EVO>,
+                    sagitype: ",,|~" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::|~:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",|~" as Ascii<Flavor.REVO>,
+                    sagitype: ",|~" as Sagitype<Flavor.REVO>,
                     smiley: ":,::|~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",|~" as Ascii<Flavor.EVO>,
+                    sagitype: ",|~" as Sagitype<Flavor.EVO>,
                     smiley: ":,::|~:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "|~" as Ascii<Flavor.REVO>,
+                    sagitype: "|~" as Sagitype<Flavor.REVO>,
                     smiley: ":|~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "|~" as Ascii<Flavor.EVO>,
+                    sagitype: "|~" as Sagitype<Flavor.EVO>,
                     smiley: ":|~:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`|~" as Ascii<Flavor.REVO>,
+                    sagitype: "`|~" as Sagitype<Flavor.REVO>,
                     smiley: ":`::|~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`|~" as Ascii<Flavor.EVO>,
+                    sagitype: "`|~" as Sagitype<Flavor.EVO>,
                     smiley: ":`::|~:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~~|" as Ascii<Flavor.REVO>,
+                    sagitype: "~~|" as Sagitype<Flavor.REVO>,
                     smiley: ":~~|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~~|" as Ascii<Flavor.EVO>,
+                    sagitype: "~~|" as Sagitype<Flavor.EVO>,
                     smiley: ":~~|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`~~|" as Ascii<Flavor.REVO>,
+                    sagitype: "`~~|" as Sagitype<Flavor.REVO>,
                     smiley: ":`::~~|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`~~|" as Ascii<Flavor.EVO>,
+                    sagitype: "`~~|" as Sagitype<Flavor.EVO>,
                     smiley: ":`::~~|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``~~|" as Ascii<Flavor.REVO>,
+                    sagitype: "``~~|" as Sagitype<Flavor.REVO>,
                     smiley: ":``::~~|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``~~|" as Ascii<Flavor.EVO>,
+                    sagitype: "``~~|" as Sagitype<Flavor.EVO>,
                     smiley: ":``::~~|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",./|" as Ascii<Flavor.REVO>,
+                    sagitype: ",./|" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::/|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",./|" as Ascii<Flavor.EVO>,
+                    sagitype: ",./|" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::/|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "./|" as Ascii<Flavor.REVO>,
+                    sagitype: "./|" as Sagitype<Flavor.REVO>,
                     smiley: ":.::/|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "./|" as Ascii<Flavor.EVO>,
+                    sagitype: "./|" as Sagitype<Flavor.EVO>,
                     smiley: ":.::/|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")|~" as Ascii<Flavor.REVO>,
+                    sagitype: ")|~" as Sagitype<Flavor.REVO>,
                     smiley: ":)|~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")|~" as Ascii<Flavor.EVO>,
+                    sagitype: ")|~" as Sagitype<Flavor.EVO>,
                     smiley: ":)|~:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,/|" as Ascii<Flavor.REVO>,
+                    sagitype: ",,/|" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::/|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,/|" as Ascii<Flavor.EVO>,
+                    sagitype: ",,/|" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::/|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",/|" as Ascii<Flavor.REVO>,
+                    sagitype: ",/|" as Sagitype<Flavor.REVO>,
                     smiley: ":,::/|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",/|" as Ascii<Flavor.EVO>,
+                    sagitype: ",/|" as Sagitype<Flavor.EVO>,
                     smiley: ":,::/|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "/|" as Ascii<Flavor.REVO>,
+                    sagitype: "/|" as Sagitype<Flavor.REVO>,
                     smiley: ":/|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "/|" as Ascii<Flavor.EVO>,
+                    sagitype: "/|" as Sagitype<Flavor.EVO>,
                     smiley: ":/|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`/|" as Ascii<Flavor.REVO>,
+                    sagitype: "`/|" as Sagitype<Flavor.REVO>,
                     smiley: ":`::/|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`/|" as Ascii<Flavor.EVO>,
+                    sagitype: "`/|" as Sagitype<Flavor.EVO>,
                     smiley: ":`::/|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``/|" as Ascii<Flavor.REVO>,
+                    sagitype: "``/|" as Sagitype<Flavor.REVO>,
                     smiley: ":``::/|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``/|" as Ascii<Flavor.EVO>,
+                    sagitype: "``/|" as Sagitype<Flavor.EVO>,
                     smiley: ":``::/|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".)/|" as Ascii<Flavor.REVO>,
+                    sagitype: ".)/|" as Sagitype<Flavor.REVO>,
                     smiley: ":.::)/|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".)/|" as Ascii<Flavor.EVO>,
+                    sagitype: ".)/|" as Sagitype<Flavor.EVO>,
                     smiley: ":.::)/|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'/|" as Ascii<Flavor.REVO>,
+                    sagitype: "'/|" as Sagitype<Flavor.REVO>,
                     smiley: ":'::/|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'/|" as Ascii<Flavor.EVO>,
+                    sagitype: "'/|" as Sagitype<Flavor.EVO>,
                     smiley: ":'::/|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'/|" as Ascii<Flavor.REVO>,
+                    sagitype: "`'/|" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::/|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'/|" as Ascii<Flavor.EVO>,
+                    sagitype: "`'/|" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::/|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,)/|" as Ascii<Flavor.REVO>,
+                    sagitype: ",,)/|" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::)/|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,)/|" as Ascii<Flavor.EVO>,
+                    sagitype: ",,)/|" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::)/|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)/|" as Ascii<Flavor.REVO>,
+                    sagitype: ",)/|" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)/|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)/|" as Ascii<Flavor.EVO>,
+                    sagitype: ",)/|" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)/|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")/|" as Ascii<Flavor.REVO>,
+                    sagitype: ")/|" as Sagitype<Flavor.REVO>,
                     smiley: ":)/|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")/|" as Ascii<Flavor.EVO>,
+                    sagitype: ")/|" as Sagitype<Flavor.EVO>,
                     smiley: ":)/|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.|)" as Ascii<Flavor.REVO>,
+                    sagitype: ",.|)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.|)" as Ascii<Flavor.EVO>,
+                    sagitype: ",.|)" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".|)" as Ascii<Flavor.REVO>,
+                    sagitype: ".|)" as Sagitype<Flavor.REVO>,
                     smiley: ":.::|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".|)" as Ascii<Flavor.EVO>,
+                    sagitype: ".|)" as Sagitype<Flavor.EVO>,
                     smiley: ":.::|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.|)" as Ascii<Flavor.REVO>,
+                    sagitype: "`.|)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.|)" as Ascii<Flavor.EVO>,
+                    sagitype: "`.|)" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,|)" as Ascii<Flavor.REVO>,
+                    sagitype: ",,|)" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,|)" as Ascii<Flavor.EVO>,
+                    sagitype: ",,|)" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",|)" as Ascii<Flavor.REVO>,
+                    sagitype: ",|)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",|)" as Ascii<Flavor.EVO>,
+                    sagitype: ",|)" as Sagitype<Flavor.EVO>,
                     smiley: ":,::|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "|)" as Ascii<Flavor.REVO>,
+                    sagitype: "|)" as Sagitype<Flavor.REVO>,
                     smiley: ":|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "|)" as Ascii<Flavor.EVO>,
+                    sagitype: "|)" as Sagitype<Flavor.EVO>,
                     smiley: ":|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`|)" as Ascii<Flavor.REVO>,
+                    sagitype: "`|)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`|)" as Ascii<Flavor.EVO>,
+                    sagitype: "`|)" as Sagitype<Flavor.EVO>,
                     smiley: ":`::|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``|)" as Ascii<Flavor.REVO>,
+                    sagitype: "``|)" as Sagitype<Flavor.REVO>,
                     smiley: ":``::|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``|)" as Ascii<Flavor.EVO>,
+                    sagitype: "``|)" as Sagitype<Flavor.EVO>,
                     smiley: ":``::|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'|)" as Ascii<Flavor.REVO>,
+                    sagitype: ",'|)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'|)" as Ascii<Flavor.EVO>,
+                    sagitype: ",'|)" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'|)" as Ascii<Flavor.REVO>,
+                    sagitype: "'|)" as Sagitype<Flavor.REVO>,
                     smiley: ":'::|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'|)" as Ascii<Flavor.EVO>,
+                    sagitype: "'|)" as Sagitype<Flavor.EVO>,
                     smiley: ":'::|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'|)" as Ascii<Flavor.REVO>,
+                    sagitype: "`'|)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'|)" as Ascii<Flavor.EVO>,
+                    sagitype: "`'|)" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)|)" as Ascii<Flavor.REVO>,
+                    sagitype: ",)|)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)|)" as Ascii<Flavor.EVO>,
+                    sagitype: ",)|)" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")|)" as Ascii<Flavor.REVO>,
+                    sagitype: ")|)" as Sagitype<Flavor.REVO>,
                     smiley: ":)|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")|)" as Ascii<Flavor.EVO>,
+                    sagitype: ")|)" as Sagitype<Flavor.EVO>,
                     smiley: ":)|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".(|" as Ascii<Flavor.REVO>,
+                    sagitype: ".(|" as Sagitype<Flavor.REVO>,
                     smiley: ":.::(|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".(|" as Ascii<Flavor.EVO>,
+                    sagitype: ".(|" as Sagitype<Flavor.EVO>,
                     smiley: ":.::(|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "|\\" as Ascii<Flavor.REVO>,
+                    sagitype: "|\\" as Sagitype<Flavor.REVO>,
                     smiley: ":|\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "|\\" as Ascii<Flavor.EVO>,
+                    sagitype: "|\\" as Sagitype<Flavor.EVO>,
                     smiley: ":|\\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`|\\" as Ascii<Flavor.REVO>,
+                    sagitype: "`|\\" as Sagitype<Flavor.REVO>,
                     smiley: ":`::|\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`|\\" as Ascii<Flavor.EVO>,
+                    sagitype: "`|\\" as Sagitype<Flavor.EVO>,
                     smiley: ":`::|\\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(|" as Ascii<Flavor.REVO>,
+                    sagitype: ",(|" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(|" as Ascii<Flavor.EVO>,
+                    sagitype: ",(|" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(|" as Ascii<Flavor.REVO>,
+                    sagitype: "(|" as Sagitype<Flavor.REVO>,
                     smiley: ":(|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(|" as Ascii<Flavor.EVO>,
+                    sagitype: "(|" as Sagitype<Flavor.EVO>,
                     smiley: ":(|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(|" as Ascii<Flavor.REVO>,
+                    sagitype: "`(|" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(|" as Ascii<Flavor.EVO>,
+                    sagitype: "`(|" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``(|" as Ascii<Flavor.REVO>,
+                    sagitype: "``(|" as Sagitype<Flavor.REVO>,
                     smiley: ":``::(|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``(|" as Ascii<Flavor.EVO>,
+                    sagitype: "``(|" as Sagitype<Flavor.EVO>,
                     smiley: ":``::(|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'(|" as Ascii<Flavor.REVO>,
+                    sagitype: ",'(|" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::(|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'(|" as Ascii<Flavor.EVO>,
+                    sagitype: ",'(|" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::(|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'(|" as Ascii<Flavor.REVO>,
+                    sagitype: "'(|" as Sagitype<Flavor.REVO>,
                     smiley: ":'::(|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'(|" as Ascii<Flavor.EVO>,
+                    sagitype: "'(|" as Sagitype<Flavor.EVO>,
                     smiley: ":'::(|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",~|)" as Ascii<Flavor.REVO>,
+                    sagitype: ",~|)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::~|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",~|)" as Ascii<Flavor.EVO>,
+                    sagitype: ",~|)" as Sagitype<Flavor.EVO>,
                     smiley: ":,::~|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~|)" as Ascii<Flavor.REVO>,
+                    sagitype: "~|)" as Sagitype<Flavor.REVO>,
                     smiley: ":~|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~|)" as Ascii<Flavor.EVO>,
+                    sagitype: "~|)" as Sagitype<Flavor.EVO>,
                     smiley: ":~|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`~|)" as Ascii<Flavor.REVO>,
+                    sagitype: "`~|)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::~|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`~|)" as Ascii<Flavor.EVO>,
+                    sagitype: "`~|)" as Sagitype<Flavor.EVO>,
                     smiley: ":`::~|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.(|(" as Ascii<Flavor.REVO>,
+                    sagitype: ",.(|(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::(|(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.(|(" as Ascii<Flavor.EVO>,
+                    sagitype: ",.(|(" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::(|(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".(|(" as Ascii<Flavor.REVO>,
+                    sagitype: ".(|(" as Sagitype<Flavor.REVO>,
                     smiley: ":.::(|(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".(|(" as Ascii<Flavor.EVO>,
+                    sagitype: ".(|(" as Sagitype<Flavor.EVO>,
                     smiley: ":.::(|(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'~|)" as Ascii<Flavor.REVO>,
+                    sagitype: "'~|)" as Sagitype<Flavor.REVO>,
                     smiley: ":'::~|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'~|)" as Ascii<Flavor.EVO>,
+                    sagitype: "'~|)" as Sagitype<Flavor.EVO>,
                     smiley: ":'::~|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "/|~" as Ascii<Flavor.REVO>,
+                    sagitype: "/|~" as Sagitype<Flavor.REVO>,
                     smiley: ":/|~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "/|~" as Ascii<Flavor.EVO>,
+                    sagitype: "/|~" as Sagitype<Flavor.EVO>,
                     smiley: ":/|~:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,(|(" as Ascii<Flavor.REVO>,
+                    sagitype: ",,(|(" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::(|(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,(|(" as Ascii<Flavor.EVO>,
+                    sagitype: ",,(|(" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::(|(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(|(" as Ascii<Flavor.REVO>,
+                    sagitype: ",(|(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(|(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(|(" as Ascii<Flavor.EVO>,
+                    sagitype: ",(|(" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(|(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(|(" as Ascii<Flavor.REVO>,
+                    sagitype: "(|(" as Sagitype<Flavor.REVO>,
                     smiley: ":(|(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(|(" as Ascii<Flavor.EVO>,
+                    sagitype: "(|(" as Sagitype<Flavor.EVO>,
                     smiley: ":(|(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(|(" as Ascii<Flavor.REVO>,
+                    sagitype: "`(|(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(|(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(|(" as Ascii<Flavor.EVO>,
+                    sagitype: "`(|(" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(|(:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~|\\" as Ascii<Flavor.REVO>,
+                    sagitype: "~|\\" as Sagitype<Flavor.REVO>,
                     smiley: ":~|\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~|\\" as Ascii<Flavor.EVO>,
+                    sagitype: "~|\\" as Sagitype<Flavor.EVO>,
                     smiley: ":~|\\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.//|" as Ascii<Flavor.REVO>,
+                    sagitype: ",.//|" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::/ /|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.//|" as Ascii<Flavor.EVO>,
+                    sagitype: ",.//|" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::/ /|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".//|" as Ascii<Flavor.REVO>,
+                    sagitype: ".//|" as Sagitype<Flavor.REVO>,
                     smiley: ":.::/ /|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".//|" as Ascii<Flavor.EVO>,
+                    sagitype: ".//|" as Sagitype<Flavor.EVO>,
                     smiley: ":.::/ /|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.//|" as Ascii<Flavor.REVO>,
+                    sagitype: "`.//|" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::/ /|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.//|" as Ascii<Flavor.EVO>,
+                    sagitype: "`.//|" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::/ /|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,//|" as Ascii<Flavor.REVO>,
+                    sagitype: ",,//|" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::/ /|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,//|" as Ascii<Flavor.EVO>,
+                    sagitype: ",,//|" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::/ /|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",//|" as Ascii<Flavor.REVO>,
+                    sagitype: ",//|" as Sagitype<Flavor.REVO>,
                     smiley: ":,::/ /|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",//|" as Ascii<Flavor.EVO>,
+                    sagitype: ",//|" as Sagitype<Flavor.EVO>,
                     smiley: ":,::/ /|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "//|" as Ascii<Flavor.REVO>,
+                    sagitype: "//|" as Sagitype<Flavor.REVO>,
                     smiley: ":/ /|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "//|" as Ascii<Flavor.EVO>,
+                    sagitype: "//|" as Sagitype<Flavor.EVO>,
                     smiley: ":/ /|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`//|" as Ascii<Flavor.REVO>,
+                    sagitype: "`//|" as Sagitype<Flavor.REVO>,
                     smiley: ":`::/ /|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`//|" as Ascii<Flavor.EVO>,
+                    sagitype: "`//|" as Sagitype<Flavor.EVO>,
                     smiley: ":`::/ /|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``//|" as Ascii<Flavor.REVO>,
+                    sagitype: "``//|" as Sagitype<Flavor.REVO>,
                     smiley: ":``::/ /|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``//|" as Ascii<Flavor.EVO>,
+                    sagitype: "``//|" as Sagitype<Flavor.EVO>,
                     smiley: ":``::/ /|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'//|" as Ascii<Flavor.REVO>,
+                    sagitype: ",'//|" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::/ /|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'//|" as Ascii<Flavor.EVO>,
+                    sagitype: ",'//|" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::/ /|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'//|" as Ascii<Flavor.REVO>,
+                    sagitype: "'//|" as Sagitype<Flavor.REVO>,
                     smiley: ":'::/ /|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'//|" as Ascii<Flavor.EVO>,
+                    sagitype: "'//|" as Sagitype<Flavor.EVO>,
                     smiley: ":'::/ /|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,)//|" as Ascii<Flavor.REVO>,
+                    sagitype: ",,)//|" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::)/ /|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,)//|" as Ascii<Flavor.EVO>,
+                    sagitype: ",,)//|" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::)/ /|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)//|" as Ascii<Flavor.REVO>,
+                    sagitype: ",)//|" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)/ /|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)//|" as Ascii<Flavor.EVO>,
+                    sagitype: ",)//|" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)/ /|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")//|" as Ascii<Flavor.REVO>,
+                    sagitype: ")//|" as Sagitype<Flavor.REVO>,
                     smiley: ":)/ /|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")//|" as Ascii<Flavor.EVO>,
+                    sagitype: ")//|" as Sagitype<Flavor.EVO>,
                     smiley: ":)/ /|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)//|" as Ascii<Flavor.REVO>,
+                    sagitype: "`)//|" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)/ /|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)//|" as Ascii<Flavor.EVO>,
+                    sagitype: "`)//|" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)/ /|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``)//|" as Ascii<Flavor.REVO>,
+                    sagitype: "``)//|" as Sagitype<Flavor.REVO>,
                     smiley: ":``::)/ /|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``)//|" as Ascii<Flavor.EVO>,
+                    sagitype: "``)//|" as Sagitype<Flavor.EVO>,
                     smiley: ":``::)/ /|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,/|)" as Ascii<Flavor.REVO>,
+                    sagitype: ",,/|)" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::/|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,/|)" as Ascii<Flavor.EVO>,
+                    sagitype: ",,/|)" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::/|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",/|)" as Ascii<Flavor.REVO>,
+                    sagitype: ",/|)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::/|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",/|)" as Ascii<Flavor.EVO>,
+                    sagitype: ",/|)" as Sagitype<Flavor.EVO>,
                     smiley: ":,::/|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "/|)" as Ascii<Flavor.REVO>,
+                    sagitype: "/|)" as Sagitype<Flavor.REVO>,
                     smiley: ":/|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "/|)" as Ascii<Flavor.EVO>,
+                    sagitype: "/|)" as Sagitype<Flavor.EVO>,
                     smiley: ":/|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`/|)" as Ascii<Flavor.REVO>,
+                    sagitype: "`/|)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::/|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`/|)" as Ascii<Flavor.EVO>,
+                    sagitype: "`/|)" as Sagitype<Flavor.EVO>,
                     smiley: ":`::/|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(|~" as Ascii<Flavor.REVO>,
+                    sagitype: "(|~" as Sagitype<Flavor.REVO>,
                     smiley: ":(|~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(|~" as Ascii<Flavor.EVO>,
+                    sagitype: "(|~" as Sagitype<Flavor.EVO>,
                     smiley: ":(|~:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'/|)" as Ascii<Flavor.REVO>,
+                    sagitype: ",'/|)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::/|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'/|)" as Ascii<Flavor.EVO>,
+                    sagitype: ",'/|)" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::/|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'/|)" as Ascii<Flavor.REVO>,
+                    sagitype: "'/|)" as Sagitype<Flavor.REVO>,
                     smiley: ":'::/|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'/|)" as Ascii<Flavor.EVO>,
+                    sagitype: "'/|)" as Sagitype<Flavor.EVO>,
                     smiley: ":'::/|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'/|)" as Ascii<Flavor.REVO>,
+                    sagitype: "`'/|)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::/|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'/|)" as Ascii<Flavor.EVO>,
+                    sagitype: "`'/|)" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::/|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "./|\\" as Ascii<Flavor.REVO>,
+                    sagitype: "./|\\" as Sagitype<Flavor.REVO>,
                     smiley: ":.::/|\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "./|\\" as Ascii<Flavor.EVO>,
+                    sagitype: "./|\\" as Sagitype<Flavor.EVO>,
                     smiley: ":.::/|\\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`./|\\" as Ascii<Flavor.REVO>,
+                    sagitype: "`./|\\" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::/|\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`./|\\" as Ascii<Flavor.EVO>,
+                    sagitype: "`./|\\" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::/|\\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,/|\\" as Ascii<Flavor.REVO>,
+                    sagitype: ",,/|\\" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::/|\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,/|\\" as Ascii<Flavor.EVO>,
+                    sagitype: ",,/|\\" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::/|\\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",/|\\" as Ascii<Flavor.REVO>,
+                    sagitype: ",/|\\" as Sagitype<Flavor.REVO>,
                     smiley: ":,::/|\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",/|\\" as Ascii<Flavor.EVO>,
+                    sagitype: ",/|\\" as Sagitype<Flavor.EVO>,
                     smiley: ":,::/|\\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "/|\\" as Ascii<Flavor.REVO>,
+                    sagitype: "/|\\" as Sagitype<Flavor.REVO>,
                     smiley: ":/|\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "/|\\" as Ascii<Flavor.EVO>,
+                    sagitype: "/|\\" as Sagitype<Flavor.EVO>,
                     smiley: ":/|\\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`/|\\" as Ascii<Flavor.REVO>,
+                    sagitype: "`/|\\" as Sagitype<Flavor.REVO>,
                     smiley: ":`::/|\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`/|\\" as Ascii<Flavor.EVO>,
+                    sagitype: "`/|\\" as Sagitype<Flavor.EVO>,
                     smiley: ":`::/|\\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(/|" as Ascii<Flavor.REVO>,
+                    sagitype: ",(/|" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(/|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(/|" as Ascii<Flavor.EVO>,
+                    sagitype: ",(/|" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(/|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(/|" as Ascii<Flavor.REVO>,
+                    sagitype: "(/|" as Sagitype<Flavor.REVO>,
                     smiley: ":(/|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(/|" as Ascii<Flavor.EVO>,
+                    sagitype: "(/|" as Sagitype<Flavor.EVO>,
                     smiley: ":(/|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(/|" as Ascii<Flavor.REVO>,
+                    sagitype: "`(/|" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(/|:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(/|" as Ascii<Flavor.EVO>,
+                    sagitype: "`(/|" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(/|:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'/|\\" as Ascii<Flavor.REVO>,
+                    sagitype: "'/|\\" as Sagitype<Flavor.REVO>,
                     smiley: ":'::/|\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'/|\\" as Ascii<Flavor.EVO>,
+                    sagitype: "'/|\\" as Sagitype<Flavor.EVO>,
                     smiley: ":'::/|\\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'/|\\" as Ascii<Flavor.REVO>,
+                    sagitype: "`'/|\\" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::/|\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'/|\\" as Ascii<Flavor.EVO>,
+                    sagitype: "`'/|\\" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::/|\\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)/|\\" as Ascii<Flavor.REVO>,
+                    sagitype: ",)/|\\" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)/|\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)/|\\" as Ascii<Flavor.EVO>,
+                    sagitype: ",)/|\\" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)/|\\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")/|\\" as Ascii<Flavor.REVO>,
+                    sagitype: ")/|\\" as Sagitype<Flavor.REVO>,
                     smiley: ":)/|\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")/|\\" as Ascii<Flavor.EVO>,
+                    sagitype: ")/|\\" as Sagitype<Flavor.EVO>,
                     smiley: ":)/|\\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
@@ -7440,1476 +7440,1476 @@ describe("accidentals", (): void => {
         const expectedP1T: FlavorsExpectation[] = [
             {
                 revo: {
-                    ascii: "`)/|\\" as Ascii<Flavor.REVO>,
+                    sagitype: "`)/|\\" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)/|\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)/|\\" as Ascii<Flavor.EVO>,
+                    sagitype: "`)/|\\" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)/|\\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``)/|\\" as Ascii<Flavor.REVO>,
+                    sagitype: "``)/|\\" as Sagitype<Flavor.REVO>,
                     smiley: ":``::)/|\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``)/|\\" as Ascii<Flavor.EVO>,
+                    sagitype: "``)/|\\" as Sagitype<Flavor.EVO>,
                     smiley: ":``::)/|\\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.(|)" as Ascii<Flavor.REVO>,
+                    sagitype: ",.(|)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::(|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.(|)" as Ascii<Flavor.EVO>,
+                    sagitype: ",.(|)" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::(|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".(|)" as Ascii<Flavor.REVO>,
+                    sagitype: ".(|)" as Sagitype<Flavor.REVO>,
                     smiley: ":.::(|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".(|)" as Ascii<Flavor.EVO>,
+                    sagitype: ".(|)" as Sagitype<Flavor.EVO>,
                     smiley: ":.::(|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",|\\)" as Ascii<Flavor.REVO>,
+                    sagitype: ",|\\)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::|\\):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",|\\)" as Ascii<Flavor.EVO>,
+                    sagitype: ",|\\)" as Sagitype<Flavor.EVO>,
                     smiley: ":,::|\\):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "|\\)" as Ascii<Flavor.REVO>,
+                    sagitype: "|\\)" as Sagitype<Flavor.REVO>,
                     smiley: ":|\\):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "|\\)" as Ascii<Flavor.EVO>,
+                    sagitype: "|\\)" as Sagitype<Flavor.EVO>,
                     smiley: ":|\\):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`|\\)" as Ascii<Flavor.REVO>,
+                    sagitype: "`|\\)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::|\\):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`|\\)" as Ascii<Flavor.EVO>,
+                    sagitype: "`|\\)" as Sagitype<Flavor.EVO>,
                     smiley: ":`::|\\):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(|)" as Ascii<Flavor.REVO>,
+                    sagitype: ",(|)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(|)" as Ascii<Flavor.EVO>,
+                    sagitype: ",(|)" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(|)" as Ascii<Flavor.REVO>,
+                    sagitype: "(|)" as Sagitype<Flavor.REVO>,
                     smiley: ":(|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(|)" as Ascii<Flavor.EVO>,
+                    sagitype: "(|)" as Sagitype<Flavor.EVO>,
                     smiley: ":(|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(|)" as Ascii<Flavor.REVO>,
+                    sagitype: "`(|)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(|)" as Ascii<Flavor.EVO>,
+                    sagitype: "`(|)" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``(|)" as Ascii<Flavor.REVO>,
+                    sagitype: "``(|)" as Sagitype<Flavor.REVO>,
                     smiley: ":``::(|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``(|)" as Ascii<Flavor.EVO>,
+                    sagitype: "``(|)" as Sagitype<Flavor.EVO>,
                     smiley: ":``::(|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'(|)" as Ascii<Flavor.REVO>,
+                    sagitype: ",'(|)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::(|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'(|)" as Ascii<Flavor.EVO>,
+                    sagitype: ",'(|)" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::(|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'(|)" as Ascii<Flavor.REVO>,
+                    sagitype: "'(|)" as Sagitype<Flavor.REVO>,
                     smiley: ":'::(|):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'(|)" as Ascii<Flavor.EVO>,
+                    sagitype: "'(|)" as Sagitype<Flavor.EVO>,
                     smiley: ":'::(|):" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.(|\\" as Ascii<Flavor.REVO>,
+                    sagitype: ",.(|\\" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::(|\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.(|\\" as Ascii<Flavor.EVO>,
+                    sagitype: ",.(|\\" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::(|\\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".(|\\" as Ascii<Flavor.REVO>,
+                    sagitype: ".(|\\" as Sagitype<Flavor.REVO>,
                     smiley: ":.::(|\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".(|\\" as Ascii<Flavor.EVO>,
+                    sagitype: ".(|\\" as Sagitype<Flavor.EVO>,
                     smiley: ":.::(|\\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.(|\\" as Ascii<Flavor.REVO>,
+                    sagitype: "`.(|\\" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::(|\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.(|\\" as Ascii<Flavor.EVO>,
+                    sagitype: "`.(|\\" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::(|\\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "|\\\\" as Ascii<Flavor.REVO>,
+                    sagitype: "|\\\\" as Sagitype<Flavor.REVO>,
                     smiley: ":|\\ \\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "|\\\\" as Ascii<Flavor.EVO>,
+                    sagitype: "|\\\\" as Sagitype<Flavor.EVO>,
                     smiley: ":|\\ \\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(|\\" as Ascii<Flavor.REVO>,
+                    sagitype: ",(|\\" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(|\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(|\\" as Ascii<Flavor.EVO>,
+                    sagitype: ",(|\\" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(|\\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(|\\" as Ascii<Flavor.REVO>,
+                    sagitype: "(|\\" as Sagitype<Flavor.REVO>,
                     smiley: ":(|\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(|\\" as Ascii<Flavor.EVO>,
+                    sagitype: "(|\\" as Sagitype<Flavor.EVO>,
                     smiley: ":(|\\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(|\\" as Ascii<Flavor.REVO>,
+                    sagitype: "`(|\\" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(|\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(|\\" as Ascii<Flavor.EVO>,
+                    sagitype: "`(|\\" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(|\\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``(|\\" as Ascii<Flavor.REVO>,
+                    sagitype: "``(|\\" as Sagitype<Flavor.REVO>,
                     smiley: ":``::(|\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``(|\\" as Ascii<Flavor.EVO>,
+                    sagitype: "``(|\\" as Sagitype<Flavor.EVO>,
                     smiley: ":``::(|\\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,)|\\\\" as Ascii<Flavor.REVO>,
+                    sagitype: ",,)|\\\\" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::)|\\ \\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,)|\\\\" as Ascii<Flavor.EVO>,
+                    sagitype: ",,)|\\\\" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::)|\\ \\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)|\\\\" as Ascii<Flavor.REVO>,
+                    sagitype: ",)|\\\\" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)|\\ \\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)|\\\\" as Ascii<Flavor.EVO>,
+                    sagitype: ",)|\\\\" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)|\\ \\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")|\\\\" as Ascii<Flavor.REVO>,
+                    sagitype: ")|\\\\" as Sagitype<Flavor.REVO>,
                     smiley: ":)|\\ \\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")|\\\\" as Ascii<Flavor.EVO>,
+                    sagitype: ")|\\\\" as Sagitype<Flavor.EVO>,
                     smiley: ":)|\\ \\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)|\\\\" as Ascii<Flavor.REVO>,
+                    sagitype: "`)|\\\\" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)|\\ \\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)|\\\\" as Ascii<Flavor.EVO>,
+                    sagitype: "`)|\\\\" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)|\\ \\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``)|\\\\" as Ascii<Flavor.REVO>,
+                    sagitype: "``)|\\\\" as Sagitype<Flavor.REVO>,
                     smiley: ":``::)|\\ \\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``)|\\\\" as Ascii<Flavor.EVO>,
+                    sagitype: "``)|\\\\" as Sagitype<Flavor.EVO>,
                     smiley: ":``::)|\\ \\:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".)||(" as Ascii<Flavor.REVO>,
+                    sagitype: ".)||(" as Sagitype<Flavor.REVO>,
                     smiley: ":.::)||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".\\\\!#" as Ascii<Flavor.EVO>,
+                    sagitype: ".\\\\!#" as Sagitype<Flavor.EVO>,
                     smiley: ":.::\\ \\!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.)||(" as Ascii<Flavor.REVO>,
+                    sagitype: "`.)||(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::)||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.\\\\!#" as Ascii<Flavor.EVO>,
+                    sagitype: "`.\\\\!#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::\\ \\!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,)||(" as Ascii<Flavor.REVO>,
+                    sagitype: ",,)||(" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::)||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,\\\\!#" as Ascii<Flavor.EVO>,
+                    sagitype: ",,\\\\!#" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::\\ \\!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)||(" as Ascii<Flavor.REVO>,
+                    sagitype: ",)||(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",\\\\!#" as Ascii<Flavor.EVO>,
+                    sagitype: ",\\\\!#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::\\ \\!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")||(" as Ascii<Flavor.REVO>,
+                    sagitype: ")||(" as Sagitype<Flavor.REVO>,
                     smiley: ":)||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "\\\\!#" as Ascii<Flavor.EVO>,
+                    sagitype: "\\\\!#" as Sagitype<Flavor.EVO>,
                     smiley: ":\\ \\!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)||(" as Ascii<Flavor.REVO>,
+                    sagitype: "`)||(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`\\\\!#" as Ascii<Flavor.EVO>,
+                    sagitype: "`\\\\!#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::\\ \\!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``)||(" as Ascii<Flavor.REVO>,
+                    sagitype: "``)||(" as Sagitype<Flavor.REVO>,
                     smiley: ":``::)||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``\\\\!#" as Ascii<Flavor.EVO>,
+                    sagitype: "``\\\\!#" as Sagitype<Flavor.EVO>,
                     smiley: ":``::\\ \\!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",')||(" as Ascii<Flavor.REVO>,
+                    sagitype: ",')||(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::)||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'\\\\!#" as Ascii<Flavor.EVO>,
+                    sagitype: ",'\\\\!#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::\\ \\!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "')||(" as Ascii<Flavor.REVO>,
+                    sagitype: "')||(" as Sagitype<Flavor.REVO>,
                     smiley: ":'::)||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'\\\\!#" as Ascii<Flavor.EVO>,
+                    sagitype: "'\\\\!#" as Sagitype<Flavor.EVO>,
                     smiley: ":'::\\ \\!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`')||(" as Ascii<Flavor.REVO>,
+                    sagitype: "`')||(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::)||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'\\\\!#" as Ascii<Flavor.EVO>,
+                    sagitype: "`'\\\\!#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::\\ \\!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")~||" as Ascii<Flavor.REVO>,
+                    sagitype: ")~||" as Sagitype<Flavor.REVO>,
                     smiley: ":)~||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~!/#" as Ascii<Flavor.EVO>,
+                    sagitype: "~!/#" as Sagitype<Flavor.EVO>,
                     smiley: ":~!/::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",~||(" as Ascii<Flavor.REVO>,
+                    sagitype: ",~||(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::~||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(!(#" as Ascii<Flavor.EVO>,
+                    sagitype: ",(!(#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(!(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~||(" as Ascii<Flavor.REVO>,
+                    sagitype: "~||(" as Sagitype<Flavor.REVO>,
                     smiley: ":~||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(!(#" as Ascii<Flavor.EVO>,
+                    sagitype: "(!(#" as Sagitype<Flavor.EVO>,
                     smiley: ":(!(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`~||(" as Ascii<Flavor.REVO>,
+                    sagitype: "`~||(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::~||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(!(#" as Ascii<Flavor.EVO>,
+                    sagitype: "`(!(#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(!(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``~||(" as Ascii<Flavor.REVO>,
+                    sagitype: "``~||(" as Sagitype<Flavor.REVO>,
                     smiley: ":``::~||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``(!(#" as Ascii<Flavor.EVO>,
+                    sagitype: "``(!(#" as Sagitype<Flavor.EVO>,
                     smiley: ":``::(!(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "||~" as Ascii<Flavor.REVO>,
+                    sagitype: "||~" as Sagitype<Flavor.REVO>,
                     smiley: ":||~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "\\!~#" as Ascii<Flavor.EVO>,
+                    sagitype: "\\!~#" as Sagitype<Flavor.EVO>,
                     smiley: ":\\!~::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".~~||" as Ascii<Flavor.REVO>,
+                    sagitype: ".~~||" as Sagitype<Flavor.REVO>,
                     smiley: ":.::~~||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".~!)#" as Ascii<Flavor.EVO>,
+                    sagitype: ".~!)#" as Sagitype<Flavor.EVO>,
                     smiley: ":.::~!)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'~||(" as Ascii<Flavor.REVO>,
+                    sagitype: "'~||(" as Sagitype<Flavor.REVO>,
                     smiley: ":'::~||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'(!(#" as Ascii<Flavor.EVO>,
+                    sagitype: "'(!(#" as Sagitype<Flavor.EVO>,
                     smiley: ":'::(!(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'~||(" as Ascii<Flavor.REVO>,
+                    sagitype: "`'~||(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::~||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'(!(#" as Ascii<Flavor.EVO>,
+                    sagitype: "`'(!(#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::(!(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",~~||" as Ascii<Flavor.REVO>,
+                    sagitype: ",~~||" as Sagitype<Flavor.REVO>,
                     smiley: ":,::~~||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",~!)#" as Ascii<Flavor.EVO>,
+                    sagitype: ",~!)#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::~!)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~~||" as Ascii<Flavor.REVO>,
+                    sagitype: "~~||" as Sagitype<Flavor.REVO>,
                     smiley: ":~~||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~!)#" as Ascii<Flavor.EVO>,
+                    sagitype: "~!)#" as Sagitype<Flavor.EVO>,
                     smiley: ":~!)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`~~||" as Ascii<Flavor.REVO>,
+                    sagitype: "`~~||" as Sagitype<Flavor.REVO>,
                     smiley: ":`::~~||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`~!)#" as Ascii<Flavor.EVO>,
+                    sagitype: "`~!)#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::~!)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".)||~" as Ascii<Flavor.REVO>,
+                    sagitype: ".)||~" as Sagitype<Flavor.REVO>,
                     smiley: ":.::)||~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".(!#" as Ascii<Flavor.EVO>,
+                    sagitype: ".(!#" as Sagitype<Flavor.EVO>,
                     smiley: ":.::(!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.)||~" as Ascii<Flavor.REVO>,
+                    sagitype: "`.)||~" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::)||~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.(!#" as Ascii<Flavor.EVO>,
+                    sagitype: "`.(!#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::(!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,)||~" as Ascii<Flavor.REVO>,
+                    sagitype: ",,)||~" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::)||~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,(!#" as Ascii<Flavor.EVO>,
+                    sagitype: ",,(!#" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::(!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)||~" as Ascii<Flavor.REVO>,
+                    sagitype: ",)||~" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)||~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(!#" as Ascii<Flavor.EVO>,
+                    sagitype: ",(!#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")||~" as Ascii<Flavor.REVO>,
+                    sagitype: ")||~" as Sagitype<Flavor.REVO>,
                     smiley: ":)||~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(!#" as Ascii<Flavor.EVO>,
+                    sagitype: "(!#" as Sagitype<Flavor.EVO>,
                     smiley: ":(!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)||~" as Ascii<Flavor.REVO>,
+                    sagitype: "`)||~" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)||~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(!#" as Ascii<Flavor.EVO>,
+                    sagitype: "`(!#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",/||" as Ascii<Flavor.REVO>,
+                    sagitype: ",/||" as Sagitype<Flavor.REVO>,
                     smiley: ":,::/||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",!/#" as Ascii<Flavor.EVO>,
+                    sagitype: ",!/#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::!/::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "/||" as Ascii<Flavor.REVO>,
+                    sagitype: "/||" as Sagitype<Flavor.REVO>,
                     smiley: ":/||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "!/#" as Ascii<Flavor.EVO>,
+                    sagitype: "!/#" as Sagitype<Flavor.EVO>,
                     smiley: ":!/::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "')||~" as Ascii<Flavor.REVO>,
+                    sagitype: "')||~" as Sagitype<Flavor.REVO>,
                     smiley: ":'::)||~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'(!#" as Ascii<Flavor.EVO>,
+                    sagitype: "'(!#" as Sagitype<Flavor.EVO>,
                     smiley: ":'::(!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")/||" as Ascii<Flavor.REVO>,
+                    sagitype: ")/||" as Sagitype<Flavor.REVO>,
                     smiley: ":)/||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")!)#" as Ascii<Flavor.EVO>,
+                    sagitype: ")!)#" as Sagitype<Flavor.EVO>,
                     smiley: ":)!)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)/||" as Ascii<Flavor.REVO>,
+                    sagitype: "`)/||" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)/||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)!)#" as Ascii<Flavor.EVO>,
+                    sagitype: "`)!)#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)!)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.||)" as Ascii<Flavor.REVO>,
+                    sagitype: ",.||)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.!)#" as Ascii<Flavor.EVO>,
+                    sagitype: ",.!)#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::!)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".||)" as Ascii<Flavor.REVO>,
+                    sagitype: ".||)" as Sagitype<Flavor.REVO>,
                     smiley: ":.::||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".!)#" as Ascii<Flavor.EVO>,
+                    sagitype: ".!)#" as Sagitype<Flavor.EVO>,
                     smiley: ":.::!)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.||)" as Ascii<Flavor.REVO>,
+                    sagitype: "`.||)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.!)#" as Ascii<Flavor.EVO>,
+                    sagitype: "`.!)#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::!)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,||)" as Ascii<Flavor.REVO>,
+                    sagitype: ",,||)" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,!)#" as Ascii<Flavor.EVO>,
+                    sagitype: ",,!)#" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::!)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",||)" as Ascii<Flavor.REVO>,
+                    sagitype: ",||)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",!)#" as Ascii<Flavor.EVO>,
+                    sagitype: ",!)#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::!)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "||)" as Ascii<Flavor.REVO>,
+                    sagitype: "||)" as Sagitype<Flavor.REVO>,
                     smiley: ":||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "!)#" as Ascii<Flavor.EVO>,
+                    sagitype: "!)#" as Sagitype<Flavor.EVO>,
                     smiley: ":!)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`||)" as Ascii<Flavor.REVO>,
+                    sagitype: "`||)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`!)#" as Ascii<Flavor.EVO>,
+                    sagitype: "`!)#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::!)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``||)" as Ascii<Flavor.REVO>,
+                    sagitype: "``||)" as Sagitype<Flavor.REVO>,
                     smiley: ":``::||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``!)#" as Ascii<Flavor.EVO>,
+                    sagitype: "``!)#" as Sagitype<Flavor.EVO>,
                     smiley: ":``::!)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'||)" as Ascii<Flavor.REVO>,
+                    sagitype: ",'||)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'!)#" as Ascii<Flavor.EVO>,
+                    sagitype: ",'!)#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::!)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'||)" as Ascii<Flavor.REVO>,
+                    sagitype: "'||)" as Sagitype<Flavor.REVO>,
                     smiley: ":'::||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'!)#" as Ascii<Flavor.EVO>,
+                    sagitype: "'!)#" as Sagitype<Flavor.EVO>,
                     smiley: ":'::!)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'||)" as Ascii<Flavor.REVO>,
+                    sagitype: "`'||)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'!)#" as Ascii<Flavor.EVO>,
+                    sagitype: "`'!)#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::!)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")||)" as Ascii<Flavor.REVO>,
+                    sagitype: ")||)" as Sagitype<Flavor.REVO>,
                     smiley: ":)||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")\\!#" as Ascii<Flavor.EVO>,
+                    sagitype: ")\\!#" as Sagitype<Flavor.EVO>,
                     smiley: ":)\\!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)||)" as Ascii<Flavor.REVO>,
+                    sagitype: "`)||)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)\\!#" as Ascii<Flavor.EVO>,
+                    sagitype: "`)\\!#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)\\!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``)||)" as Ascii<Flavor.REVO>,
+                    sagitype: "``)||)" as Sagitype<Flavor.REVO>,
                     smiley: ":``::)||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``)\\!#" as Ascii<Flavor.EVO>,
+                    sagitype: "``)\\!#" as Sagitype<Flavor.EVO>,
                     smiley: ":``::)\\!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.||\\" as Ascii<Flavor.REVO>,
+                    sagitype: ",.||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.\\!#" as Ascii<Flavor.EVO>,
+                    sagitype: ",.\\!#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::\\!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".||\\" as Ascii<Flavor.REVO>,
+                    sagitype: ".||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":.::||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".\\!#" as Ascii<Flavor.EVO>,
+                    sagitype: ".\\!#" as Sagitype<Flavor.EVO>,
                     smiley: ":.::\\!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "')||)" as Ascii<Flavor.REVO>,
+                    sagitype: "')||)" as Sagitype<Flavor.REVO>,
                     smiley: ":'::)||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "')\\!#" as Ascii<Flavor.EVO>,
+                    sagitype: "')\\!#" as Sagitype<Flavor.EVO>,
                     smiley: ":'::)\\!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,||\\" as Ascii<Flavor.REVO>,
+                    sagitype: ",,||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,\\!#" as Ascii<Flavor.EVO>,
+                    sagitype: ",,\\!#" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::\\!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",||\\" as Ascii<Flavor.REVO>,
+                    sagitype: ",||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":,::||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",\\!#" as Ascii<Flavor.EVO>,
+                    sagitype: ",\\!#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::\\!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "\\!#" as Ascii<Flavor.EVO>,
+                    sagitype: "\\!#" as Sagitype<Flavor.EVO>,
                     smiley: ":\\!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "`||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":`::||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`\\!#" as Ascii<Flavor.EVO>,
+                    sagitype: "`\\!#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::\\!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "``||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":``::||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``\\!#" as Ascii<Flavor.EVO>,
+                    sagitype: "``\\!#" as Sagitype<Flavor.EVO>,
                     smiley: ":``::\\!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(||" as Ascii<Flavor.REVO>,
+                    sagitype: "(||" as Sagitype<Flavor.REVO>,
                     smiley: ":(||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")!~#" as Ascii<Flavor.EVO>,
+                    sagitype: ")!~#" as Sagitype<Flavor.EVO>,
                     smiley: ":)!~::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "'||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":'::||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'\\!#" as Ascii<Flavor.EVO>,
+                    sagitype: "'\\!#" as Sagitype<Flavor.EVO>,
                     smiley: ":'::\\!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "`'||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'\\!#" as Ascii<Flavor.EVO>,
+                    sagitype: "`'\\!#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::\\!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,~||)" as Ascii<Flavor.REVO>,
+                    sagitype: ",,~||)" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::~||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,~~!#" as Ascii<Flavor.EVO>,
+                    sagitype: ",,~~!#" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::~~!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",~||)" as Ascii<Flavor.REVO>,
+                    sagitype: ",~||)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::~||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",~~!#" as Ascii<Flavor.EVO>,
+                    sagitype: ",~~!#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::~~!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~||)" as Ascii<Flavor.REVO>,
+                    sagitype: "~||)" as Sagitype<Flavor.REVO>,
                     smiley: ":~||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~~!#" as Ascii<Flavor.EVO>,
+                    sagitype: "~~!#" as Sagitype<Flavor.EVO>,
                     smiley: ":~~!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",/||~" as Ascii<Flavor.REVO>,
+                    sagitype: ",/||~" as Sagitype<Flavor.REVO>,
                     smiley: ":,::/||~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",!~#" as Ascii<Flavor.EVO>,
+                    sagitype: ",!~#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::!~::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "/||~" as Ascii<Flavor.REVO>,
+                    sagitype: "/||~" as Sagitype<Flavor.REVO>,
                     smiley: ":/||~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "!~#" as Ascii<Flavor.EVO>,
+                    sagitype: "!~#" as Sagitype<Flavor.EVO>,
                     smiley: ":!~::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`/||~" as Ascii<Flavor.REVO>,
+                    sagitype: "`/||~" as Sagitype<Flavor.REVO>,
                     smiley: ":`::/||~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`!~#" as Ascii<Flavor.EVO>,
+                    sagitype: "`!~#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::!~::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``/||~" as Ascii<Flavor.REVO>,
+                    sagitype: "``/||~" as Sagitype<Flavor.REVO>,
                     smiley: ":``::/||~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``!~#" as Ascii<Flavor.EVO>,
+                    sagitype: "``!~#" as Sagitype<Flavor.EVO>,
                     smiley: ":``::!~::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(||(" as Ascii<Flavor.REVO>,
+                    sagitype: ",(||(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",~!(#" as Ascii<Flavor.EVO>,
+                    sagitype: ",~!(#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::~!(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(||(" as Ascii<Flavor.REVO>,
+                    sagitype: "(||(" as Sagitype<Flavor.REVO>,
                     smiley: ":(||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~!(#" as Ascii<Flavor.EVO>,
+                    sagitype: "~!(#" as Sagitype<Flavor.EVO>,
                     smiley: ":~!(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(||(" as Ascii<Flavor.REVO>,
+                    sagitype: "`(||(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`~!(#" as Ascii<Flavor.EVO>,
+                    sagitype: "`~!(#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::~!(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``(||(" as Ascii<Flavor.REVO>,
+                    sagitype: "``(||(" as Sagitype<Flavor.REVO>,
                     smiley: ":``::(||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``~!(#" as Ascii<Flavor.EVO>,
+                    sagitype: "``~!(#" as Sagitype<Flavor.EVO>,
                     smiley: ":``::~!(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'(||(" as Ascii<Flavor.REVO>,
+                    sagitype: ",'(||(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::(||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'~!(#" as Ascii<Flavor.EVO>,
+                    sagitype: ",'~!(#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::~!(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'(||(" as Ascii<Flavor.REVO>,
+                    sagitype: "'(||(" as Sagitype<Flavor.REVO>,
                     smiley: ":'::(||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'~!(#" as Ascii<Flavor.EVO>,
+                    sagitype: "'~!(#" as Sagitype<Flavor.EVO>,
                     smiley: ":'::~!(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "~||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":~||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")~!#" as Ascii<Flavor.EVO>,
+                    sagitype: ")~!#" as Sagitype<Flavor.EVO>,
                     smiley: ":)~!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".//||" as Ascii<Flavor.REVO>,
+                    sagitype: ".//||" as Sagitype<Flavor.REVO>,
                     smiley: ":.::/ /||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".)!(#" as Ascii<Flavor.EVO>,
+                    sagitype: ".)!(#" as Sagitype<Flavor.EVO>,
                     smiley: ":.::)!(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.//||" as Ascii<Flavor.REVO>,
+                    sagitype: "`.//||" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::/ /||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.)!(#" as Ascii<Flavor.EVO>,
+                    sagitype: "`.)!(#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::)!(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,//||" as Ascii<Flavor.REVO>,
+                    sagitype: ",,//||" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::/ /||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,)!(#" as Ascii<Flavor.EVO>,
+                    sagitype: ",,)!(#" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::)!(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",//||" as Ascii<Flavor.REVO>,
+                    sagitype: ",//||" as Sagitype<Flavor.REVO>,
                     smiley: ":,::/ /||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)!(#" as Ascii<Flavor.EVO>,
+                    sagitype: ",)!(#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)!(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "//||" as Ascii<Flavor.REVO>,
+                    sagitype: "//||" as Sagitype<Flavor.REVO>,
                     smiley: ":/ /||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")!(#" as Ascii<Flavor.EVO>,
+                    sagitype: ")!(#" as Sagitype<Flavor.EVO>,
                     smiley: ":)!(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`//||" as Ascii<Flavor.REVO>,
+                    sagitype: "`//||" as Sagitype<Flavor.REVO>,
                     smiley: ":`::/ /||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)!(#" as Ascii<Flavor.EVO>,
+                    sagitype: "`)!(#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)!(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")//||" as Ascii<Flavor.REVO>,
+                    sagitype: ")//||" as Sagitype<Flavor.REVO>,
                     smiley: ":)/ /||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~!#" as Ascii<Flavor.EVO>,
+                    sagitype: "~!#" as Sagitype<Flavor.EVO>,
                     smiley: ":~!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)//||" as Ascii<Flavor.REVO>,
+                    sagitype: "`)//||" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)/ /||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`~!#" as Ascii<Flavor.EVO>,
+                    sagitype: "`~!#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::~!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "./||)" as Ascii<Flavor.REVO>,
+                    sagitype: "./||)" as Sagitype<Flavor.REVO>,
                     smiley: ":.::/||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".!(#" as Ascii<Flavor.EVO>,
+                    sagitype: ".!(#" as Sagitype<Flavor.EVO>,
                     smiley: ":.::!(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`./||)" as Ascii<Flavor.REVO>,
+                    sagitype: "`./||)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::/||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.!(#" as Ascii<Flavor.EVO>,
+                    sagitype: "`.!(#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::!(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "')//||" as Ascii<Flavor.REVO>,
+                    sagitype: "')//||" as Sagitype<Flavor.REVO>,
                     smiley: ":'::)/ /||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'~!#" as Ascii<Flavor.EVO>,
+                    sagitype: "'~!#" as Sagitype<Flavor.EVO>,
                     smiley: ":'::~!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",/||)" as Ascii<Flavor.REVO>,
+                    sagitype: ",/||)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::/||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",!(#" as Ascii<Flavor.EVO>,
+                    sagitype: ",!(#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::!(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "/||)" as Ascii<Flavor.REVO>,
+                    sagitype: "/||)" as Sagitype<Flavor.REVO>,
                     smiley: ":/||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "!(#" as Ascii<Flavor.EVO>,
+                    sagitype: "!(#" as Sagitype<Flavor.EVO>,
                     smiley: ":!(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`/||)" as Ascii<Flavor.REVO>,
+                    sagitype: "`/||)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::/||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`!(#" as Ascii<Flavor.EVO>,
+                    sagitype: "`!(#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::!(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``/||)" as Ascii<Flavor.REVO>,
+                    sagitype: "``/||)" as Sagitype<Flavor.REVO>,
                     smiley: ":``::/||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``!(#" as Ascii<Flavor.EVO>,
+                    sagitype: "``!(#" as Sagitype<Flavor.EVO>,
                     smiley: ":``::!(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,(||~" as Ascii<Flavor.REVO>,
+                    sagitype: ",,(||~" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::(||~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,)!#" as Ascii<Flavor.EVO>,
+                    sagitype: ",,)!#" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::)!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(||~" as Ascii<Flavor.REVO>,
+                    sagitype: ",(||~" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(||~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)!#" as Ascii<Flavor.EVO>,
+                    sagitype: ",)!#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(||~" as Ascii<Flavor.REVO>,
+                    sagitype: "(||~" as Sagitype<Flavor.REVO>,
                     smiley: ":(||~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")!#" as Ascii<Flavor.EVO>,
+                    sagitype: ")!#" as Sagitype<Flavor.EVO>,
                     smiley: ":)!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(||~" as Ascii<Flavor.REVO>,
+                    sagitype: "`(||~" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(||~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)!#" as Ascii<Flavor.EVO>,
+                    sagitype: "`)!#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",./||\\" as Ascii<Flavor.REVO>,
+                    sagitype: ",./||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::/||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.!#" as Ascii<Flavor.EVO>,
+                    sagitype: ",.!#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "./||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "./||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":.::/||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".!#" as Ascii<Flavor.EVO>,
+                    sagitype: ".!#" as Sagitype<Flavor.EVO>,
                     smiley: ":.::!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'(||~" as Ascii<Flavor.REVO>,
+                    sagitype: "'(||~" as Sagitype<Flavor.REVO>,
                     smiley: ":'::(||~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "')!#" as Ascii<Flavor.EVO>,
+                    sagitype: "')!#" as Sagitype<Flavor.EVO>,
                     smiley: ":'::)!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,/||\\" as Ascii<Flavor.REVO>,
+                    sagitype: ",,/||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::/||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,!#" as Ascii<Flavor.EVO>,
+                    sagitype: ",,!#" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",/||\\" as Ascii<Flavor.REVO>,
+                    sagitype: ",/||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":,::/||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",!#" as Ascii<Flavor.EVO>,
+                    sagitype: ",!#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::!::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "/||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "/||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":/||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "#" as Ascii<Flavor.EVO>,
+                    sagitype: "#" as Sagitype<Flavor.EVO>,
                     smiley: ":#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
@@ -8918,1476 +8918,1476 @@ describe("accidentals", (): void => {
         const expectedP2A: FlavorsExpectation[] = [
             {
                 revo: {
-                    ascii: "/||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "/||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":/||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "#" as Ascii<Flavor.EVO>,
+                    sagitype: "#" as Sagitype<Flavor.EVO>,
                     smiley: ":#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`/||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "`/||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":`::/||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`|#" as Ascii<Flavor.EVO>,
+                    sagitype: "`|#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``/||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "``/||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":``::/||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``|#" as Ascii<Flavor.EVO>,
+                    sagitype: "``|#" as Sagitype<Flavor.EVO>,
                     smiley: ":``::|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".)|||" as Ascii<Flavor.REVO>,
+                    sagitype: ".)|||" as Sagitype<Flavor.REVO>,
                     smiley: ":.::)|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".)|#" as Ascii<Flavor.EVO>,
+                    sagitype: ".)|#" as Sagitype<Flavor.EVO>,
                     smiley: ":.::)|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'/||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "'/||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":'::/||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'|#" as Ascii<Flavor.EVO>,
+                    sagitype: "'|#" as Sagitype<Flavor.EVO>,
                     smiley: ":'::|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'/||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "`'/||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::/||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'|#" as Ascii<Flavor.EVO>,
+                    sagitype: "`'|#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)|||" as Ascii<Flavor.REVO>,
+                    sagitype: ",)|||" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)|#" as Ascii<Flavor.EVO>,
+                    sagitype: ",)|#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")|||" as Ascii<Flavor.REVO>,
+                    sagitype: ")|||" as Sagitype<Flavor.REVO>,
                     smiley: ":)|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")|#" as Ascii<Flavor.EVO>,
+                    sagitype: ")|#" as Sagitype<Flavor.EVO>,
                     smiley: ":)|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)|||" as Ascii<Flavor.REVO>,
+                    sagitype: "`)|||" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)|#" as Ascii<Flavor.EVO>,
+                    sagitype: "`)|#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``)|||" as Ascii<Flavor.REVO>,
+                    sagitype: "``)|||" as Sagitype<Flavor.REVO>,
                     smiley: ":``::)|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``)|#" as Ascii<Flavor.EVO>,
+                    sagitype: "``)|#" as Sagitype<Flavor.EVO>,
                     smiley: ":``::)|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,|||(" as Ascii<Flavor.REVO>,
+                    sagitype: ",,|||(" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::|||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,|(#" as Ascii<Flavor.EVO>,
+                    sagitype: ",,|(#" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::|(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",|||(" as Ascii<Flavor.REVO>,
+                    sagitype: ",|||(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::|||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",|(#" as Ascii<Flavor.EVO>,
+                    sagitype: ",|(#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::|(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "|||(" as Ascii<Flavor.REVO>,
+                    sagitype: "|||(" as Sagitype<Flavor.REVO>,
                     smiley: ":|||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "|(#" as Ascii<Flavor.EVO>,
+                    sagitype: "|(#" as Sagitype<Flavor.EVO>,
                     smiley: ":|(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`|||(" as Ascii<Flavor.REVO>,
+                    sagitype: "`|||(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::|||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`|(#" as Ascii<Flavor.EVO>,
+                    sagitype: "`|(#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::|(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".~|||" as Ascii<Flavor.REVO>,
+                    sagitype: ".~|||" as Sagitype<Flavor.REVO>,
                     smiley: ":.::~|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".~|#" as Ascii<Flavor.EVO>,
+                    sagitype: ".~|#" as Sagitype<Flavor.EVO>,
                     smiley: ":.::~|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'|||(" as Ascii<Flavor.REVO>,
+                    sagitype: ",'|||(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::|||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'|(#" as Ascii<Flavor.EVO>,
+                    sagitype: ",'|(#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::|(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'|||(" as Ascii<Flavor.REVO>,
+                    sagitype: "'|||(" as Sagitype<Flavor.REVO>,
                     smiley: ":'::|||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'|(#" as Ascii<Flavor.EVO>,
+                    sagitype: "'|(#" as Sagitype<Flavor.EVO>,
                     smiley: ":'::|(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",~|||" as Ascii<Flavor.REVO>,
+                    sagitype: ",~|||" as Sagitype<Flavor.REVO>,
                     smiley: ":,::~|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",~|#" as Ascii<Flavor.EVO>,
+                    sagitype: ",~|#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::~|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~|||" as Ascii<Flavor.REVO>,
+                    sagitype: "~|||" as Sagitype<Flavor.REVO>,
                     smiley: ":~|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~|#" as Ascii<Flavor.EVO>,
+                    sagitype: "~|#" as Sagitype<Flavor.EVO>,
                     smiley: ":~|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)|||(" as Ascii<Flavor.REVO>,
+                    sagitype: ",)|||(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)|||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)|(#" as Ascii<Flavor.EVO>,
+                    sagitype: ",)|(#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)|(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")|||(" as Ascii<Flavor.REVO>,
+                    sagitype: ")|||(" as Sagitype<Flavor.REVO>,
                     smiley: ":)|||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")|(#" as Ascii<Flavor.EVO>,
+                    sagitype: ")|(#" as Sagitype<Flavor.EVO>,
                     smiley: ":)|(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)|||(" as Ascii<Flavor.REVO>,
+                    sagitype: "`)|||(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)|||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)|(#" as Ascii<Flavor.EVO>,
+                    sagitype: "`)|(#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)|(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``)|||(" as Ascii<Flavor.REVO>,
+                    sagitype: "``)|||(" as Sagitype<Flavor.REVO>,
                     smiley: ":``::)|||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``)|(#" as Ascii<Flavor.EVO>,
+                    sagitype: "``)|(#" as Sagitype<Flavor.EVO>,
                     smiley: ":``::)|(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",')|||(" as Ascii<Flavor.REVO>,
+                    sagitype: ",')|||(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::)|||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",')|(#" as Ascii<Flavor.EVO>,
+                    sagitype: ",')|(#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::)|(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "')|||(" as Ascii<Flavor.REVO>,
+                    sagitype: "')|||(" as Sagitype<Flavor.REVO>,
                     smiley: ":'::)|||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "')|(#" as Ascii<Flavor.EVO>,
+                    sagitype: "')|(#" as Sagitype<Flavor.EVO>,
                     smiley: ":'::)|(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")~|||" as Ascii<Flavor.REVO>,
+                    sagitype: ")~|||" as Sagitype<Flavor.REVO>,
                     smiley: ":)~|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")~|#" as Ascii<Flavor.EVO>,
+                    sagitype: ")~|#" as Sagitype<Flavor.EVO>,
                     smiley: ":)~|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".~|||(" as Ascii<Flavor.REVO>,
+                    sagitype: ".~|||(" as Sagitype<Flavor.REVO>,
                     smiley: ":.::~|||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".~|(#" as Ascii<Flavor.EVO>,
+                    sagitype: ".~|(#" as Sagitype<Flavor.EVO>,
                     smiley: ":.::~|(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.~|||(" as Ascii<Flavor.REVO>,
+                    sagitype: "`.~|||(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::~|||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.~|(#" as Ascii<Flavor.EVO>,
+                    sagitype: "`.~|(#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::~|(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,~|||(" as Ascii<Flavor.REVO>,
+                    sagitype: ",,~|||(" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::~|||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,~|(#" as Ascii<Flavor.EVO>,
+                    sagitype: ",,~|(#" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::~|(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",~|||(" as Ascii<Flavor.REVO>,
+                    sagitype: ",~|||(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::~|||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",~|(#" as Ascii<Flavor.EVO>,
+                    sagitype: ",~|(#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::~|(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~|||(" as Ascii<Flavor.REVO>,
+                    sagitype: "~|||(" as Sagitype<Flavor.REVO>,
                     smiley: ":~|||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~|(#" as Ascii<Flavor.EVO>,
+                    sagitype: "~|(#" as Sagitype<Flavor.EVO>,
                     smiley: ":~|(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`~|||(" as Ascii<Flavor.REVO>,
+                    sagitype: "`~|||(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::~|||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`~|(#" as Ascii<Flavor.EVO>,
+                    sagitype: "`~|(#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::~|(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,|||~" as Ascii<Flavor.REVO>,
+                    sagitype: ",,|||~" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::|||~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,|~#" as Ascii<Flavor.EVO>,
+                    sagitype: ",,|~#" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::|~::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",|||~" as Ascii<Flavor.REVO>,
+                    sagitype: ",|||~" as Sagitype<Flavor.REVO>,
                     smiley: ":,::|||~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",|~#" as Ascii<Flavor.EVO>,
+                    sagitype: ",|~#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::|~::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "|||~" as Ascii<Flavor.REVO>,
+                    sagitype: "|||~" as Sagitype<Flavor.REVO>,
                     smiley: ":|||~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "|~#" as Ascii<Flavor.EVO>,
+                    sagitype: "|~#" as Sagitype<Flavor.EVO>,
                     smiley: ":|~::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`|||~" as Ascii<Flavor.REVO>,
+                    sagitype: "`|||~" as Sagitype<Flavor.REVO>,
                     smiley: ":`::|||~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`|~#" as Ascii<Flavor.EVO>,
+                    sagitype: "`|~#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::|~::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~~|||" as Ascii<Flavor.REVO>,
+                    sagitype: "~~|||" as Sagitype<Flavor.REVO>,
                     smiley: ":~~|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~~|#" as Ascii<Flavor.EVO>,
+                    sagitype: "~~|#" as Sagitype<Flavor.EVO>,
                     smiley: ":~~|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`~~|||" as Ascii<Flavor.REVO>,
+                    sagitype: "`~~|||" as Sagitype<Flavor.REVO>,
                     smiley: ":`::~~|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`~~|#" as Ascii<Flavor.EVO>,
+                    sagitype: "`~~|#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::~~|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``~~|||" as Ascii<Flavor.REVO>,
+                    sagitype: "``~~|||" as Sagitype<Flavor.REVO>,
                     smiley: ":``::~~|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``~~|#" as Ascii<Flavor.EVO>,
+                    sagitype: "``~~|#" as Sagitype<Flavor.EVO>,
                     smiley: ":``::~~|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",./|||" as Ascii<Flavor.REVO>,
+                    sagitype: ",./|||" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::/|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",./|#" as Ascii<Flavor.EVO>,
+                    sagitype: ",./|#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::/|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "./|||" as Ascii<Flavor.REVO>,
+                    sagitype: "./|||" as Sagitype<Flavor.REVO>,
                     smiley: ":.::/|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "./|#" as Ascii<Flavor.EVO>,
+                    sagitype: "./|#" as Sagitype<Flavor.EVO>,
                     smiley: ":.::/|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")|||~" as Ascii<Flavor.REVO>,
+                    sagitype: ")|||~" as Sagitype<Flavor.REVO>,
                     smiley: ":)|||~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")|~#" as Ascii<Flavor.EVO>,
+                    sagitype: ")|~#" as Sagitype<Flavor.EVO>,
                     smiley: ":)|~::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,/|||" as Ascii<Flavor.REVO>,
+                    sagitype: ",,/|||" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::/|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,/|#" as Ascii<Flavor.EVO>,
+                    sagitype: ",,/|#" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::/|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",/|||" as Ascii<Flavor.REVO>,
+                    sagitype: ",/|||" as Sagitype<Flavor.REVO>,
                     smiley: ":,::/|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",/|#" as Ascii<Flavor.EVO>,
+                    sagitype: ",/|#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::/|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "/|||" as Ascii<Flavor.REVO>,
+                    sagitype: "/|||" as Sagitype<Flavor.REVO>,
                     smiley: ":/|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "/|#" as Ascii<Flavor.EVO>,
+                    sagitype: "/|#" as Sagitype<Flavor.EVO>,
                     smiley: ":/|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`/|||" as Ascii<Flavor.REVO>,
+                    sagitype: "`/|||" as Sagitype<Flavor.REVO>,
                     smiley: ":`::/|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`/|#" as Ascii<Flavor.EVO>,
+                    sagitype: "`/|#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::/|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``/|||" as Ascii<Flavor.REVO>,
+                    sagitype: "``/|||" as Sagitype<Flavor.REVO>,
                     smiley: ":``::/|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``/|#" as Ascii<Flavor.EVO>,
+                    sagitype: "``/|#" as Sagitype<Flavor.EVO>,
                     smiley: ":``::/|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".)/|||" as Ascii<Flavor.REVO>,
+                    sagitype: ".)/|||" as Sagitype<Flavor.REVO>,
                     smiley: ":.::)/|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".)/|#" as Ascii<Flavor.EVO>,
+                    sagitype: ".)/|#" as Sagitype<Flavor.EVO>,
                     smiley: ":.::)/|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'/|||" as Ascii<Flavor.REVO>,
+                    sagitype: "'/|||" as Sagitype<Flavor.REVO>,
                     smiley: ":'::/|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'/|#" as Ascii<Flavor.EVO>,
+                    sagitype: "'/|#" as Sagitype<Flavor.EVO>,
                     smiley: ":'::/|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'/|||" as Ascii<Flavor.REVO>,
+                    sagitype: "`'/|||" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::/|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'/|#" as Ascii<Flavor.EVO>,
+                    sagitype: "`'/|#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::/|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,)/|||" as Ascii<Flavor.REVO>,
+                    sagitype: ",,)/|||" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::)/|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,)/|#" as Ascii<Flavor.EVO>,
+                    sagitype: ",,)/|#" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::)/|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)/|||" as Ascii<Flavor.REVO>,
+                    sagitype: ",)/|||" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)/|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)/|#" as Ascii<Flavor.EVO>,
+                    sagitype: ",)/|#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)/|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")/|||" as Ascii<Flavor.REVO>,
+                    sagitype: ")/|||" as Sagitype<Flavor.REVO>,
                     smiley: ":)/|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")/|#" as Ascii<Flavor.EVO>,
+                    sagitype: ")/|#" as Sagitype<Flavor.EVO>,
                     smiley: ":)/|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.|||)" as Ascii<Flavor.REVO>,
+                    sagitype: ",.|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.|)#" as Ascii<Flavor.EVO>,
+                    sagitype: ",.|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".|||)" as Ascii<Flavor.REVO>,
+                    sagitype: ".|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":.::|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".|)#" as Ascii<Flavor.EVO>,
+                    sagitype: ".|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":.::|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.|||)" as Ascii<Flavor.REVO>,
+                    sagitype: "`.|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.|)#" as Ascii<Flavor.EVO>,
+                    sagitype: "`.|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,|||)" as Ascii<Flavor.REVO>,
+                    sagitype: ",,|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,|)#" as Ascii<Flavor.EVO>,
+                    sagitype: ",,|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",|||)" as Ascii<Flavor.REVO>,
+                    sagitype: ",|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",|)#" as Ascii<Flavor.EVO>,
+                    sagitype: ",|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "|||)" as Ascii<Flavor.REVO>,
+                    sagitype: "|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "|)#" as Ascii<Flavor.EVO>,
+                    sagitype: "|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`|||)" as Ascii<Flavor.REVO>,
+                    sagitype: "`|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`|)#" as Ascii<Flavor.EVO>,
+                    sagitype: "`|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``|||)" as Ascii<Flavor.REVO>,
+                    sagitype: "``|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":``::|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``|)#" as Ascii<Flavor.EVO>,
+                    sagitype: "``|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":``::|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'|||)" as Ascii<Flavor.REVO>,
+                    sagitype: ",'|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'|)#" as Ascii<Flavor.EVO>,
+                    sagitype: ",'|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'|||)" as Ascii<Flavor.REVO>,
+                    sagitype: "'|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":'::|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'|)#" as Ascii<Flavor.EVO>,
+                    sagitype: "'|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":'::|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'|||)" as Ascii<Flavor.REVO>,
+                    sagitype: "`'|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'|)#" as Ascii<Flavor.EVO>,
+                    sagitype: "`'|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)|||)" as Ascii<Flavor.REVO>,
+                    sagitype: ",)|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)|)#" as Ascii<Flavor.EVO>,
+                    sagitype: ",)|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")|||)" as Ascii<Flavor.REVO>,
+                    sagitype: ")|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":)|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")|)#" as Ascii<Flavor.EVO>,
+                    sagitype: ")|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":)|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".(|||" as Ascii<Flavor.REVO>,
+                    sagitype: ".(|||" as Sagitype<Flavor.REVO>,
                     smiley: ":.::(|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".(|#" as Ascii<Flavor.EVO>,
+                    sagitype: ".(|#" as Sagitype<Flavor.EVO>,
                     smiley: ":.::(|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "|||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "|||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":|||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "|\\#" as Ascii<Flavor.EVO>,
+                    sagitype: "|\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":|\\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`|||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "`|||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":`::|||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`|\\#" as Ascii<Flavor.EVO>,
+                    sagitype: "`|\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::|\\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(|||" as Ascii<Flavor.REVO>,
+                    sagitype: ",(|||" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(|#" as Ascii<Flavor.EVO>,
+                    sagitype: ",(|#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(|||" as Ascii<Flavor.REVO>,
+                    sagitype: "(|||" as Sagitype<Flavor.REVO>,
                     smiley: ":(|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(|#" as Ascii<Flavor.EVO>,
+                    sagitype: "(|#" as Sagitype<Flavor.EVO>,
                     smiley: ":(|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(|||" as Ascii<Flavor.REVO>,
+                    sagitype: "`(|||" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(|#" as Ascii<Flavor.EVO>,
+                    sagitype: "`(|#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``(|||" as Ascii<Flavor.REVO>,
+                    sagitype: "``(|||" as Sagitype<Flavor.REVO>,
                     smiley: ":``::(|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``(|#" as Ascii<Flavor.EVO>,
+                    sagitype: "``(|#" as Sagitype<Flavor.EVO>,
                     smiley: ":``::(|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'(|||" as Ascii<Flavor.REVO>,
+                    sagitype: ",'(|||" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::(|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'(|#" as Ascii<Flavor.EVO>,
+                    sagitype: ",'(|#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::(|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'(|||" as Ascii<Flavor.REVO>,
+                    sagitype: "'(|||" as Sagitype<Flavor.REVO>,
                     smiley: ":'::(|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'(|#" as Ascii<Flavor.EVO>,
+                    sagitype: "'(|#" as Sagitype<Flavor.EVO>,
                     smiley: ":'::(|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",~|||)" as Ascii<Flavor.REVO>,
+                    sagitype: ",~|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::~|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",~|)#" as Ascii<Flavor.EVO>,
+                    sagitype: ",~|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::~|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~|||)" as Ascii<Flavor.REVO>,
+                    sagitype: "~|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":~|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~|)#" as Ascii<Flavor.EVO>,
+                    sagitype: "~|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":~|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`~|||)" as Ascii<Flavor.REVO>,
+                    sagitype: "`~|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::~|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`~|)#" as Ascii<Flavor.EVO>,
+                    sagitype: "`~|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::~|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.(|||(" as Ascii<Flavor.REVO>,
+                    sagitype: ",.(|||(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::(|||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.(|(#" as Ascii<Flavor.EVO>,
+                    sagitype: ",.(|(#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::(|(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".(|||(" as Ascii<Flavor.REVO>,
+                    sagitype: ".(|||(" as Sagitype<Flavor.REVO>,
                     smiley: ":.::(|||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".(|(#" as Ascii<Flavor.EVO>,
+                    sagitype: ".(|(#" as Sagitype<Flavor.EVO>,
                     smiley: ":.::(|(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'~|||)" as Ascii<Flavor.REVO>,
+                    sagitype: "'~|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":'::~|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'~|)#" as Ascii<Flavor.EVO>,
+                    sagitype: "'~|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":'::~|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "/|||~" as Ascii<Flavor.REVO>,
+                    sagitype: "/|||~" as Sagitype<Flavor.REVO>,
                     smiley: ":/|||~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "/|~#" as Ascii<Flavor.EVO>,
+                    sagitype: "/|~#" as Sagitype<Flavor.EVO>,
                     smiley: ":/|~::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,(|||(" as Ascii<Flavor.REVO>,
+                    sagitype: ",,(|||(" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::(|||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,(|(#" as Ascii<Flavor.EVO>,
+                    sagitype: ",,(|(#" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::(|(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(|||(" as Ascii<Flavor.REVO>,
+                    sagitype: ",(|||(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(|||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(|(#" as Ascii<Flavor.EVO>,
+                    sagitype: ",(|(#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(|(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(|||(" as Ascii<Flavor.REVO>,
+                    sagitype: "(|||(" as Sagitype<Flavor.REVO>,
                     smiley: ":(|||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(|(#" as Ascii<Flavor.EVO>,
+                    sagitype: "(|(#" as Sagitype<Flavor.EVO>,
                     smiley: ":(|(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(|||(" as Ascii<Flavor.REVO>,
+                    sagitype: "`(|||(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(|||(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(|(#" as Ascii<Flavor.EVO>,
+                    sagitype: "`(|(#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(|(::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~|||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "~|||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":~|||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~|\\#" as Ascii<Flavor.EVO>,
+                    sagitype: "~|\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":~|\\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.//|||" as Ascii<Flavor.REVO>,
+                    sagitype: ",.//|||" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::/ /|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.//|#" as Ascii<Flavor.EVO>,
+                    sagitype: ",.//|#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::/ /|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".//|||" as Ascii<Flavor.REVO>,
+                    sagitype: ".//|||" as Sagitype<Flavor.REVO>,
                     smiley: ":.::/ /|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".//|#" as Ascii<Flavor.EVO>,
+                    sagitype: ".//|#" as Sagitype<Flavor.EVO>,
                     smiley: ":.::/ /|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.//|||" as Ascii<Flavor.REVO>,
+                    sagitype: "`.//|||" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::/ /|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.//|#" as Ascii<Flavor.EVO>,
+                    sagitype: "`.//|#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::/ /|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,//|||" as Ascii<Flavor.REVO>,
+                    sagitype: ",,//|||" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::/ /|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,//|#" as Ascii<Flavor.EVO>,
+                    sagitype: ",,//|#" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::/ /|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",//|||" as Ascii<Flavor.REVO>,
+                    sagitype: ",//|||" as Sagitype<Flavor.REVO>,
                     smiley: ":,::/ /|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",//|#" as Ascii<Flavor.EVO>,
+                    sagitype: ",//|#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::/ /|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "//|||" as Ascii<Flavor.REVO>,
+                    sagitype: "//|||" as Sagitype<Flavor.REVO>,
                     smiley: ":/ /|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "//|#" as Ascii<Flavor.EVO>,
+                    sagitype: "//|#" as Sagitype<Flavor.EVO>,
                     smiley: ":/ /|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`//|||" as Ascii<Flavor.REVO>,
+                    sagitype: "`//|||" as Sagitype<Flavor.REVO>,
                     smiley: ":`::/ /|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`//|#" as Ascii<Flavor.EVO>,
+                    sagitype: "`//|#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::/ /|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``//|||" as Ascii<Flavor.REVO>,
+                    sagitype: "``//|||" as Sagitype<Flavor.REVO>,
                     smiley: ":``::/ /|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``//|#" as Ascii<Flavor.EVO>,
+                    sagitype: "``//|#" as Sagitype<Flavor.EVO>,
                     smiley: ":``::/ /|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'//|||" as Ascii<Flavor.REVO>,
+                    sagitype: ",'//|||" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::/ /|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'//|#" as Ascii<Flavor.EVO>,
+                    sagitype: ",'//|#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::/ /|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'//|||" as Ascii<Flavor.REVO>,
+                    sagitype: "'//|||" as Sagitype<Flavor.REVO>,
                     smiley: ":'::/ /|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'//|#" as Ascii<Flavor.EVO>,
+                    sagitype: "'//|#" as Sagitype<Flavor.EVO>,
                     smiley: ":'::/ /|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,)//|||" as Ascii<Flavor.REVO>,
+                    sagitype: ",,)//|||" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::)/ /|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,)//|#" as Ascii<Flavor.EVO>,
+                    sagitype: ",,)//|#" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::)/ /|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)//|||" as Ascii<Flavor.REVO>,
+                    sagitype: ",)//|||" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)/ /|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)//|#" as Ascii<Flavor.EVO>,
+                    sagitype: ",)//|#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)/ /|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")//|||" as Ascii<Flavor.REVO>,
+                    sagitype: ")//|||" as Sagitype<Flavor.REVO>,
                     smiley: ":)/ /|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")//|#" as Ascii<Flavor.EVO>,
+                    sagitype: ")//|#" as Sagitype<Flavor.EVO>,
                     smiley: ":)/ /|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)//|||" as Ascii<Flavor.REVO>,
+                    sagitype: "`)//|||" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)/ /|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)//|#" as Ascii<Flavor.EVO>,
+                    sagitype: "`)//|#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)/ /|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``)//|||" as Ascii<Flavor.REVO>,
+                    sagitype: "``)//|||" as Sagitype<Flavor.REVO>,
                     smiley: ":``::)/ /|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``)//|#" as Ascii<Flavor.EVO>,
+                    sagitype: "``)//|#" as Sagitype<Flavor.EVO>,
                     smiley: ":``::)/ /|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,/|||)" as Ascii<Flavor.REVO>,
+                    sagitype: ",,/|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::/|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,/|)#" as Ascii<Flavor.EVO>,
+                    sagitype: ",,/|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::/|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",/|||)" as Ascii<Flavor.REVO>,
+                    sagitype: ",/|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::/|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",/|)#" as Ascii<Flavor.EVO>,
+                    sagitype: ",/|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::/|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "/|||)" as Ascii<Flavor.REVO>,
+                    sagitype: "/|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":/|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "/|)#" as Ascii<Flavor.EVO>,
+                    sagitype: "/|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":/|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`/|||)" as Ascii<Flavor.REVO>,
+                    sagitype: "`/|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::/|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`/|)#" as Ascii<Flavor.EVO>,
+                    sagitype: "`/|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::/|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(|||~" as Ascii<Flavor.REVO>,
+                    sagitype: "(|||~" as Sagitype<Flavor.REVO>,
                     smiley: ":(|||~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(|~#" as Ascii<Flavor.EVO>,
+                    sagitype: "(|~#" as Sagitype<Flavor.EVO>,
                     smiley: ":(|~::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'/|||)" as Ascii<Flavor.REVO>,
+                    sagitype: ",'/|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::/|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'/|)#" as Ascii<Flavor.EVO>,
+                    sagitype: ",'/|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::/|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'/|||)" as Ascii<Flavor.REVO>,
+                    sagitype: "'/|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":'::/|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'/|)#" as Ascii<Flavor.EVO>,
+                    sagitype: "'/|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":'::/|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'/|||)" as Ascii<Flavor.REVO>,
+                    sagitype: "`'/|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::/|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'/|)#" as Ascii<Flavor.EVO>,
+                    sagitype: "`'/|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::/|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "./|||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "./|||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":.::/|||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "./|\\#" as Ascii<Flavor.EVO>,
+                    sagitype: "./|\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":.::/|\\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`./|||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "`./|||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::/|||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`./|\\#" as Ascii<Flavor.EVO>,
+                    sagitype: "`./|\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::/|\\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,/|||\\" as Ascii<Flavor.REVO>,
+                    sagitype: ",,/|||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::/|||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,/|\\#" as Ascii<Flavor.EVO>,
+                    sagitype: ",,/|\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::/|\\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",/|||\\" as Ascii<Flavor.REVO>,
+                    sagitype: ",/|||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":,::/|||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",/|\\#" as Ascii<Flavor.EVO>,
+                    sagitype: ",/|\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::/|\\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "/|||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "/|||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":/|||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "/|\\#" as Ascii<Flavor.EVO>,
+                    sagitype: "/|\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":/|\\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`/|||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "`/|||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":`::/|||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`/|\\#" as Ascii<Flavor.EVO>,
+                    sagitype: "`/|\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::/|\\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(/|||" as Ascii<Flavor.REVO>,
+                    sagitype: ",(/|||" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(/|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(/|#" as Ascii<Flavor.EVO>,
+                    sagitype: ",(/|#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(/|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(/|||" as Ascii<Flavor.REVO>,
+                    sagitype: "(/|||" as Sagitype<Flavor.REVO>,
                     smiley: ":(/|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(/|#" as Ascii<Flavor.EVO>,
+                    sagitype: "(/|#" as Sagitype<Flavor.EVO>,
                     smiley: ":(/|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(/|||" as Ascii<Flavor.REVO>,
+                    sagitype: "`(/|||" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(/|||:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(/|#" as Ascii<Flavor.EVO>,
+                    sagitype: "`(/|#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(/|::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'/|||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "'/|||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":'::/|||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'/|\\#" as Ascii<Flavor.EVO>,
+                    sagitype: "'/|\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":'::/|\\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'/|||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "`'/|||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::/|||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'/|\\#" as Ascii<Flavor.EVO>,
+                    sagitype: "`'/|\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::/|\\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)/|||\\" as Ascii<Flavor.REVO>,
+                    sagitype: ",)/|||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)/|||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)/|\\#" as Ascii<Flavor.EVO>,
+                    sagitype: ",)/|\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)/|\\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")/|||\\" as Ascii<Flavor.REVO>,
+                    sagitype: ")/|||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":)/|||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")/|\\#" as Ascii<Flavor.EVO>,
+                    sagitype: ")/|\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":)/|\\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
@@ -10396,1476 +10396,1476 @@ describe("accidentals", (): void => {
         const expectedP2T: FlavorsExpectation[] = [
             {
                 revo: {
-                    ascii: "`)/|||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "`)/|||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)/|||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)/|\\#" as Ascii<Flavor.EVO>,
+                    sagitype: "`)/|\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)/|\\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``)/|||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "``)/|||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":``::)/|||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``)/|\\#" as Ascii<Flavor.EVO>,
+                    sagitype: "``)/|\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":``::)/|\\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.(|||)" as Ascii<Flavor.REVO>,
+                    sagitype: ",.(|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::(|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.(|)#" as Ascii<Flavor.EVO>,
+                    sagitype: ",.(|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::(|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".(|||)" as Ascii<Flavor.REVO>,
+                    sagitype: ".(|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":.::(|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".(|)#" as Ascii<Flavor.EVO>,
+                    sagitype: ".(|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":.::(|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",|||\\)" as Ascii<Flavor.REVO>,
+                    sagitype: ",|||\\)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::|||\\):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",|\\)#" as Ascii<Flavor.EVO>,
+                    sagitype: ",|\\)#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::|\\)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "|||\\)" as Ascii<Flavor.REVO>,
+                    sagitype: "|||\\)" as Sagitype<Flavor.REVO>,
                     smiley: ":|||\\):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "|\\)#" as Ascii<Flavor.EVO>,
+                    sagitype: "|\\)#" as Sagitype<Flavor.EVO>,
                     smiley: ":|\\)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`|||\\)" as Ascii<Flavor.REVO>,
+                    sagitype: "`|||\\)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::|||\\):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`|\\)#" as Ascii<Flavor.EVO>,
+                    sagitype: "`|\\)#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::|\\)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(|||)" as Ascii<Flavor.REVO>,
+                    sagitype: ",(|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(|)#" as Ascii<Flavor.EVO>,
+                    sagitype: ",(|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(|||)" as Ascii<Flavor.REVO>,
+                    sagitype: "(|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":(|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(|)#" as Ascii<Flavor.EVO>,
+                    sagitype: "(|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":(|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(|||)" as Ascii<Flavor.REVO>,
+                    sagitype: "`(|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(|)#" as Ascii<Flavor.EVO>,
+                    sagitype: "`(|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``(|||)" as Ascii<Flavor.REVO>,
+                    sagitype: "``(|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":``::(|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``(|)#" as Ascii<Flavor.EVO>,
+                    sagitype: "``(|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":``::(|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'(|||)" as Ascii<Flavor.REVO>,
+                    sagitype: ",'(|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::(|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'(|)#" as Ascii<Flavor.EVO>,
+                    sagitype: ",'(|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::(|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'(|||)" as Ascii<Flavor.REVO>,
+                    sagitype: "'(|||)" as Sagitype<Flavor.REVO>,
                     smiley: ":'::(|||):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'(|)#" as Ascii<Flavor.EVO>,
+                    sagitype: "'(|)#" as Sagitype<Flavor.EVO>,
                     smiley: ":'::(|)::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.(|||\\" as Ascii<Flavor.REVO>,
+                    sagitype: ",.(|||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::(|||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.(|\\#" as Ascii<Flavor.EVO>,
+                    sagitype: ",.(|\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::(|\\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".(|||\\" as Ascii<Flavor.REVO>,
+                    sagitype: ".(|||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":.::(|||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".(|\\#" as Ascii<Flavor.EVO>,
+                    sagitype: ".(|\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":.::(|\\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.(|||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "`.(|||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::(|||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.(|\\#" as Ascii<Flavor.EVO>,
+                    sagitype: "`.(|\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::(|\\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "|||\\\\" as Ascii<Flavor.REVO>,
+                    sagitype: "|||\\\\" as Sagitype<Flavor.REVO>,
                     smiley: ":|||\\ \\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "|\\\\#" as Ascii<Flavor.EVO>,
+                    sagitype: "|\\\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":|\\ \\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(|||\\" as Ascii<Flavor.REVO>,
+                    sagitype: ",(|||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(|||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(|\\#" as Ascii<Flavor.EVO>,
+                    sagitype: ",(|\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(|\\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(|||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "(|||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":(|||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(|\\#" as Ascii<Flavor.EVO>,
+                    sagitype: "(|\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":(|\\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(|||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "`(|||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(|||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(|\\#" as Ascii<Flavor.EVO>,
+                    sagitype: "`(|\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(|\\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``(|||\\" as Ascii<Flavor.REVO>,
+                    sagitype: "``(|||\\" as Sagitype<Flavor.REVO>,
                     smiley: ":``::(|||\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``(|\\#" as Ascii<Flavor.EVO>,
+                    sagitype: "``(|\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":``::(|\\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,)|||\\\\" as Ascii<Flavor.REVO>,
+                    sagitype: ",,)|||\\\\" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::)|||\\ \\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,)|\\\\#" as Ascii<Flavor.EVO>,
+                    sagitype: ",,)|\\\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::)|\\ \\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)|||\\\\" as Ascii<Flavor.REVO>,
+                    sagitype: ",)|||\\\\" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)|||\\ \\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)|\\\\#" as Ascii<Flavor.EVO>,
+                    sagitype: ",)|\\\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)|\\ \\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")|||\\\\" as Ascii<Flavor.REVO>,
+                    sagitype: ")|||\\\\" as Sagitype<Flavor.REVO>,
                     smiley: ":)|||\\ \\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")|\\\\#" as Ascii<Flavor.EVO>,
+                    sagitype: ")|\\\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":)|\\ \\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)|||\\\\" as Ascii<Flavor.REVO>,
+                    sagitype: "`)|||\\\\" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)|||\\ \\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)|\\\\#" as Ascii<Flavor.EVO>,
+                    sagitype: "`)|\\\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)|\\ \\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``)|||\\\\" as Ascii<Flavor.REVO>,
+                    sagitype: "``)|||\\\\" as Sagitype<Flavor.REVO>,
                     smiley: ":``::)|||\\ \\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``)|\\\\#" as Ascii<Flavor.EVO>,
+                    sagitype: "``)|\\\\#" as Sagitype<Flavor.EVO>,
                     smiley: ":``::)|\\ \\::#:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".)X(" as Ascii<Flavor.REVO>,
+                    sagitype: ".)X(" as Sagitype<Flavor.REVO>,
                     smiley: ":.::)X(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".\\\\!x" as Ascii<Flavor.EVO>,
+                    sagitype: ".\\\\!x" as Sagitype<Flavor.EVO>,
                     smiley: ":.::\\ \\!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.)X(" as Ascii<Flavor.REVO>,
+                    sagitype: "`.)X(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::)X(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.\\\\!x" as Ascii<Flavor.EVO>,
+                    sagitype: "`.\\\\!x" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::\\ \\!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,)X(" as Ascii<Flavor.REVO>,
+                    sagitype: ",,)X(" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::)X(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,\\\\!x" as Ascii<Flavor.EVO>,
+                    sagitype: ",,\\\\!x" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::\\ \\!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)X(" as Ascii<Flavor.REVO>,
+                    sagitype: ",)X(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)X(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",\\\\!x" as Ascii<Flavor.EVO>,
+                    sagitype: ",\\\\!x" as Sagitype<Flavor.EVO>,
                     smiley: ":,::\\ \\!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")X(" as Ascii<Flavor.REVO>,
+                    sagitype: ")X(" as Sagitype<Flavor.REVO>,
                     smiley: ":)X(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "\\\\!x" as Ascii<Flavor.EVO>,
+                    sagitype: "\\\\!x" as Sagitype<Flavor.EVO>,
                     smiley: ":\\ \\!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)X(" as Ascii<Flavor.REVO>,
+                    sagitype: "`)X(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)X(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`\\\\!x" as Ascii<Flavor.EVO>,
+                    sagitype: "`\\\\!x" as Sagitype<Flavor.EVO>,
                     smiley: ":`::\\ \\!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``)X(" as Ascii<Flavor.REVO>,
+                    sagitype: "``)X(" as Sagitype<Flavor.REVO>,
                     smiley: ":``::)X(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``\\\\!x" as Ascii<Flavor.EVO>,
+                    sagitype: "``\\\\!x" as Sagitype<Flavor.EVO>,
                     smiley: ":``::\\ \\!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",')X(" as Ascii<Flavor.REVO>,
+                    sagitype: ",')X(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::)X(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'\\\\!x" as Ascii<Flavor.EVO>,
+                    sagitype: ",'\\\\!x" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::\\ \\!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "')X(" as Ascii<Flavor.REVO>,
+                    sagitype: "')X(" as Sagitype<Flavor.REVO>,
                     smiley: ":'::)X(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'\\\\!x" as Ascii<Flavor.EVO>,
+                    sagitype: "'\\\\!x" as Sagitype<Flavor.EVO>,
                     smiley: ":'::\\ \\!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`')X(" as Ascii<Flavor.REVO>,
+                    sagitype: "`')X(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::)X(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'\\\\!x" as Ascii<Flavor.EVO>,
+                    sagitype: "`'\\\\!x" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::\\ \\!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")~X" as Ascii<Flavor.REVO>,
+                    sagitype: ")~X" as Sagitype<Flavor.REVO>,
                     smiley: ":)~X:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~!/x" as Ascii<Flavor.EVO>,
+                    sagitype: "~!/x" as Sagitype<Flavor.EVO>,
                     smiley: ":~!/::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",~X(" as Ascii<Flavor.REVO>,
+                    sagitype: ",~X(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::~X(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(!(x" as Ascii<Flavor.EVO>,
+                    sagitype: ",(!(x" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(!(::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~X(" as Ascii<Flavor.REVO>,
+                    sagitype: "~X(" as Sagitype<Flavor.REVO>,
                     smiley: ":~X(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(!(x" as Ascii<Flavor.EVO>,
+                    sagitype: "(!(x" as Sagitype<Flavor.EVO>,
                     smiley: ":(!(::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`~X(" as Ascii<Flavor.REVO>,
+                    sagitype: "`~X(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::~X(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(!(x" as Ascii<Flavor.EVO>,
+                    sagitype: "`(!(x" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(!(::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``~X(" as Ascii<Flavor.REVO>,
+                    sagitype: "``~X(" as Sagitype<Flavor.REVO>,
                     smiley: ":``::~X(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``(!(x" as Ascii<Flavor.EVO>,
+                    sagitype: "``(!(x" as Sagitype<Flavor.EVO>,
                     smiley: ":``::(!(::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "X~" as Ascii<Flavor.REVO>,
+                    sagitype: "X~" as Sagitype<Flavor.REVO>,
                     smiley: ":X~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "\\!~x" as Ascii<Flavor.EVO>,
+                    sagitype: "\\!~x" as Sagitype<Flavor.EVO>,
                     smiley: ":\\!~::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".~~X" as Ascii<Flavor.REVO>,
+                    sagitype: ".~~X" as Sagitype<Flavor.REVO>,
                     smiley: ":.::~~X:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".~!)x" as Ascii<Flavor.EVO>,
+                    sagitype: ".~!)x" as Sagitype<Flavor.EVO>,
                     smiley: ":.::~!)::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'~X(" as Ascii<Flavor.REVO>,
+                    sagitype: "'~X(" as Sagitype<Flavor.REVO>,
                     smiley: ":'::~X(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'(!(x" as Ascii<Flavor.EVO>,
+                    sagitype: "'(!(x" as Sagitype<Flavor.EVO>,
                     smiley: ":'::(!(::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'~X(" as Ascii<Flavor.REVO>,
+                    sagitype: "`'~X(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::~X(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'(!(x" as Ascii<Flavor.EVO>,
+                    sagitype: "`'(!(x" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::(!(::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",~~X" as Ascii<Flavor.REVO>,
+                    sagitype: ",~~X" as Sagitype<Flavor.REVO>,
                     smiley: ":,::~~X:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",~!)x" as Ascii<Flavor.EVO>,
+                    sagitype: ",~!)x" as Sagitype<Flavor.EVO>,
                     smiley: ":,::~!)::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~~X" as Ascii<Flavor.REVO>,
+                    sagitype: "~~X" as Sagitype<Flavor.REVO>,
                     smiley: ":~~X:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~!)x" as Ascii<Flavor.EVO>,
+                    sagitype: "~!)x" as Sagitype<Flavor.EVO>,
                     smiley: ":~!)::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`~~X" as Ascii<Flavor.REVO>,
+                    sagitype: "`~~X" as Sagitype<Flavor.REVO>,
                     smiley: ":`::~~X:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`~!)x" as Ascii<Flavor.EVO>,
+                    sagitype: "`~!)x" as Sagitype<Flavor.EVO>,
                     smiley: ":`::~!)::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".)X~" as Ascii<Flavor.REVO>,
+                    sagitype: ".)X~" as Sagitype<Flavor.REVO>,
                     smiley: ":.::)X~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".(!x" as Ascii<Flavor.EVO>,
+                    sagitype: ".(!x" as Sagitype<Flavor.EVO>,
                     smiley: ":.::(!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.)X~" as Ascii<Flavor.REVO>,
+                    sagitype: "`.)X~" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::)X~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.(!x" as Ascii<Flavor.EVO>,
+                    sagitype: "`.(!x" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::(!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,)X~" as Ascii<Flavor.REVO>,
+                    sagitype: ",,)X~" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::)X~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,(!x" as Ascii<Flavor.EVO>,
+                    sagitype: ",,(!x" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::(!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",)X~" as Ascii<Flavor.REVO>,
+                    sagitype: ",)X~" as Sagitype<Flavor.REVO>,
                     smiley: ":,::)X~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",(!x" as Ascii<Flavor.EVO>,
+                    sagitype: ",(!x" as Sagitype<Flavor.EVO>,
                     smiley: ":,::(!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")X~" as Ascii<Flavor.REVO>,
+                    sagitype: ")X~" as Sagitype<Flavor.REVO>,
                     smiley: ":)X~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "(!x" as Ascii<Flavor.EVO>,
+                    sagitype: "(!x" as Sagitype<Flavor.EVO>,
                     smiley: ":(!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)X~" as Ascii<Flavor.REVO>,
+                    sagitype: "`)X~" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)X~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`(!x" as Ascii<Flavor.EVO>,
+                    sagitype: "`(!x" as Sagitype<Flavor.EVO>,
                     smiley: ":`::(!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",/X" as Ascii<Flavor.REVO>,
+                    sagitype: ",/X" as Sagitype<Flavor.REVO>,
                     smiley: ":,::/X:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",!/x" as Ascii<Flavor.EVO>,
+                    sagitype: ",!/x" as Sagitype<Flavor.EVO>,
                     smiley: ":,::!/::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "/X" as Ascii<Flavor.REVO>,
+                    sagitype: "/X" as Sagitype<Flavor.REVO>,
                     smiley: ":/X:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "!/x" as Ascii<Flavor.EVO>,
+                    sagitype: "!/x" as Sagitype<Flavor.EVO>,
                     smiley: ":!/::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "')X~" as Ascii<Flavor.REVO>,
+                    sagitype: "')X~" as Sagitype<Flavor.REVO>,
                     smiley: ":'::)X~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'(!x" as Ascii<Flavor.EVO>,
+                    sagitype: "'(!x" as Sagitype<Flavor.EVO>,
                     smiley: ":'::(!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")/X" as Ascii<Flavor.REVO>,
+                    sagitype: ")/X" as Sagitype<Flavor.REVO>,
                     smiley: ":)/X:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")!)x" as Ascii<Flavor.EVO>,
+                    sagitype: ")!)x" as Sagitype<Flavor.EVO>,
                     smiley: ":)!)::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)/X" as Ascii<Flavor.REVO>,
+                    sagitype: "`)/X" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)/X:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)!)x" as Ascii<Flavor.EVO>,
+                    sagitype: "`)!)x" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)!)::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.X)" as Ascii<Flavor.REVO>,
+                    sagitype: ",.X)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::X):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.!)x" as Ascii<Flavor.EVO>,
+                    sagitype: ",.!)x" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::!)::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".X)" as Ascii<Flavor.REVO>,
+                    sagitype: ".X)" as Sagitype<Flavor.REVO>,
                     smiley: ":.::X):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".!)x" as Ascii<Flavor.EVO>,
+                    sagitype: ".!)x" as Sagitype<Flavor.EVO>,
                     smiley: ":.::!)::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.X)" as Ascii<Flavor.REVO>,
+                    sagitype: "`.X)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::X):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.!)x" as Ascii<Flavor.EVO>,
+                    sagitype: "`.!)x" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::!)::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,X)" as Ascii<Flavor.REVO>,
+                    sagitype: ",,X)" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::X):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,!)x" as Ascii<Flavor.EVO>,
+                    sagitype: ",,!)x" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::!)::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",X)" as Ascii<Flavor.REVO>,
+                    sagitype: ",X)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::X):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",!)x" as Ascii<Flavor.EVO>,
+                    sagitype: ",!)x" as Sagitype<Flavor.EVO>,
                     smiley: ":,::!)::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "X)" as Ascii<Flavor.REVO>,
+                    sagitype: "X)" as Sagitype<Flavor.REVO>,
                     smiley: ":X):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "!)x" as Ascii<Flavor.EVO>,
+                    sagitype: "!)x" as Sagitype<Flavor.EVO>,
                     smiley: ":!)::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`X)" as Ascii<Flavor.REVO>,
+                    sagitype: "`X)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::X):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`!)x" as Ascii<Flavor.EVO>,
+                    sagitype: "`!)x" as Sagitype<Flavor.EVO>,
                     smiley: ":`::!)::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``X)" as Ascii<Flavor.REVO>,
+                    sagitype: "``X)" as Sagitype<Flavor.REVO>,
                     smiley: ":``::X):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``!)x" as Ascii<Flavor.EVO>,
+                    sagitype: "``!)x" as Sagitype<Flavor.EVO>,
                     smiley: ":``::!)::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'X)" as Ascii<Flavor.REVO>,
+                    sagitype: ",'X)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::X):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'!)x" as Ascii<Flavor.EVO>,
+                    sagitype: ",'!)x" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::!)::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'X)" as Ascii<Flavor.REVO>,
+                    sagitype: "'X)" as Sagitype<Flavor.REVO>,
                     smiley: ":'::X):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'!)x" as Ascii<Flavor.EVO>,
+                    sagitype: "'!)x" as Sagitype<Flavor.EVO>,
                     smiley: ":'::!)::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'X)" as Ascii<Flavor.REVO>,
+                    sagitype: "`'X)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::X):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'!)x" as Ascii<Flavor.EVO>,
+                    sagitype: "`'!)x" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::!)::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")X)" as Ascii<Flavor.REVO>,
+                    sagitype: ")X)" as Sagitype<Flavor.REVO>,
                     smiley: ":)X):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")\\!x" as Ascii<Flavor.EVO>,
+                    sagitype: ")\\!x" as Sagitype<Flavor.EVO>,
                     smiley: ":)\\!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)X)" as Ascii<Flavor.REVO>,
+                    sagitype: "`)X)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)X):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)\\!x" as Ascii<Flavor.EVO>,
+                    sagitype: "`)\\!x" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)\\!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``)X)" as Ascii<Flavor.REVO>,
+                    sagitype: "``)X)" as Sagitype<Flavor.REVO>,
                     smiley: ":``::)X):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``)\\!x" as Ascii<Flavor.EVO>,
+                    sagitype: "``)\\!x" as Sagitype<Flavor.EVO>,
                     smiley: ":``::)\\!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",.X\\" as Ascii<Flavor.REVO>,
+                    sagitype: ",.X\\" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::X\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.\\!x" as Ascii<Flavor.EVO>,
+                    sagitype: ",.\\!x" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::\\!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".X\\" as Ascii<Flavor.REVO>,
+                    sagitype: ".X\\" as Sagitype<Flavor.REVO>,
                     smiley: ":.::X\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".\\!x" as Ascii<Flavor.EVO>,
+                    sagitype: ".\\!x" as Sagitype<Flavor.EVO>,
                     smiley: ":.::\\!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "')X)" as Ascii<Flavor.REVO>,
+                    sagitype: "')X)" as Sagitype<Flavor.REVO>,
                     smiley: ":'::)X):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "')\\!x" as Ascii<Flavor.EVO>,
+                    sagitype: "')\\!x" as Sagitype<Flavor.EVO>,
                     smiley: ":'::)\\!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,X\\" as Ascii<Flavor.REVO>,
+                    sagitype: ",,X\\" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::X\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,\\!x" as Ascii<Flavor.EVO>,
+                    sagitype: ",,\\!x" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::\\!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",X\\" as Ascii<Flavor.REVO>,
+                    sagitype: ",X\\" as Sagitype<Flavor.REVO>,
                     smiley: ":,::X\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",\\!x" as Ascii<Flavor.EVO>,
+                    sagitype: ",\\!x" as Sagitype<Flavor.EVO>,
                     smiley: ":,::\\!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "X\\" as Ascii<Flavor.REVO>,
+                    sagitype: "X\\" as Sagitype<Flavor.REVO>,
                     smiley: ":X\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "\\!x" as Ascii<Flavor.EVO>,
+                    sagitype: "\\!x" as Sagitype<Flavor.EVO>,
                     smiley: ":\\!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`X\\" as Ascii<Flavor.REVO>,
+                    sagitype: "`X\\" as Sagitype<Flavor.REVO>,
                     smiley: ":`::X\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`\\!x" as Ascii<Flavor.EVO>,
+                    sagitype: "`\\!x" as Sagitype<Flavor.EVO>,
                     smiley: ":`::\\!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``X\\" as Ascii<Flavor.REVO>,
+                    sagitype: "``X\\" as Sagitype<Flavor.REVO>,
                     smiley: ":``::X\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``\\!x" as Ascii<Flavor.EVO>,
+                    sagitype: "``\\!x" as Sagitype<Flavor.EVO>,
                     smiley: ":``::\\!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(X" as Ascii<Flavor.REVO>,
+                    sagitype: "(X" as Sagitype<Flavor.REVO>,
                     smiley: ":(X:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")!~x" as Ascii<Flavor.EVO>,
+                    sagitype: ")!~x" as Sagitype<Flavor.EVO>,
                     smiley: ":)!~::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'X\\" as Ascii<Flavor.REVO>,
+                    sagitype: "'X\\" as Sagitype<Flavor.REVO>,
                     smiley: ":'::X\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'\\!x" as Ascii<Flavor.EVO>,
+                    sagitype: "'\\!x" as Sagitype<Flavor.EVO>,
                     smiley: ":'::\\!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`'X\\" as Ascii<Flavor.REVO>,
+                    sagitype: "`'X\\" as Sagitype<Flavor.REVO>,
                     smiley: ":`::'::X\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`'\\!x" as Ascii<Flavor.EVO>,
+                    sagitype: "`'\\!x" as Sagitype<Flavor.EVO>,
                     smiley: ":`::'::\\!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,~X)" as Ascii<Flavor.REVO>,
+                    sagitype: ",,~X)" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::~X):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,~~!x" as Ascii<Flavor.EVO>,
+                    sagitype: ",,~~!x" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::~~!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",~X)" as Ascii<Flavor.REVO>,
+                    sagitype: ",~X)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::~X):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",~~!x" as Ascii<Flavor.EVO>,
+                    sagitype: ",~~!x" as Sagitype<Flavor.EVO>,
                     smiley: ":,::~~!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~X)" as Ascii<Flavor.REVO>,
+                    sagitype: "~X)" as Sagitype<Flavor.REVO>,
                     smiley: ":~X):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~~!x" as Ascii<Flavor.EVO>,
+                    sagitype: "~~!x" as Sagitype<Flavor.EVO>,
                     smiley: ":~~!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",/X~" as Ascii<Flavor.REVO>,
+                    sagitype: ",/X~" as Sagitype<Flavor.REVO>,
                     smiley: ":,::/X~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",!~x" as Ascii<Flavor.EVO>,
+                    sagitype: ",!~x" as Sagitype<Flavor.EVO>,
                     smiley: ":,::!~::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "/X~" as Ascii<Flavor.REVO>,
+                    sagitype: "/X~" as Sagitype<Flavor.REVO>,
                     smiley: ":/X~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "!~x" as Ascii<Flavor.EVO>,
+                    sagitype: "!~x" as Sagitype<Flavor.EVO>,
                     smiley: ":!~::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`/X~" as Ascii<Flavor.REVO>,
+                    sagitype: "`/X~" as Sagitype<Flavor.REVO>,
                     smiley: ":`::/X~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`!~x" as Ascii<Flavor.EVO>,
+                    sagitype: "`!~x" as Sagitype<Flavor.EVO>,
                     smiley: ":`::!~::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``/X~" as Ascii<Flavor.REVO>,
+                    sagitype: "``/X~" as Sagitype<Flavor.REVO>,
                     smiley: ":``::/X~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``!~x" as Ascii<Flavor.EVO>,
+                    sagitype: "``!~x" as Sagitype<Flavor.EVO>,
                     smiley: ":``::!~::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(X(" as Ascii<Flavor.REVO>,
+                    sagitype: ",(X(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(X(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",~!(x" as Ascii<Flavor.EVO>,
+                    sagitype: ",~!(x" as Sagitype<Flavor.EVO>,
                     smiley: ":,::~!(::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(X(" as Ascii<Flavor.REVO>,
+                    sagitype: "(X(" as Sagitype<Flavor.REVO>,
                     smiley: ":(X(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~!(x" as Ascii<Flavor.EVO>,
+                    sagitype: "~!(x" as Sagitype<Flavor.EVO>,
                     smiley: ":~!(::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(X(" as Ascii<Flavor.REVO>,
+                    sagitype: "`(X(" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(X(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`~!(x" as Ascii<Flavor.EVO>,
+                    sagitype: "`~!(x" as Sagitype<Flavor.EVO>,
                     smiley: ":`::~!(::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``(X(" as Ascii<Flavor.REVO>,
+                    sagitype: "``(X(" as Sagitype<Flavor.REVO>,
                     smiley: ":``::(X(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``~!(x" as Ascii<Flavor.EVO>,
+                    sagitype: "``~!(x" as Sagitype<Flavor.EVO>,
                     smiley: ":``::~!(::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",'(X(" as Ascii<Flavor.REVO>,
+                    sagitype: ",'(X(" as Sagitype<Flavor.REVO>,
                     smiley: ":,::'::(X(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",'~!(x" as Ascii<Flavor.EVO>,
+                    sagitype: ",'~!(x" as Sagitype<Flavor.EVO>,
                     smiley: ":,::'::~!(::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'(X(" as Ascii<Flavor.REVO>,
+                    sagitype: "'(X(" as Sagitype<Flavor.REVO>,
                     smiley: ":'::(X(:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'~!(x" as Ascii<Flavor.EVO>,
+                    sagitype: "'~!(x" as Sagitype<Flavor.EVO>,
                     smiley: ":'::~!(::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "~X\\" as Ascii<Flavor.REVO>,
+                    sagitype: "~X\\" as Sagitype<Flavor.REVO>,
                     smiley: ":~X\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")~!x" as Ascii<Flavor.EVO>,
+                    sagitype: ")~!x" as Sagitype<Flavor.EVO>,
                     smiley: ":)~!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ".//X" as Ascii<Flavor.REVO>,
+                    sagitype: ".//X" as Sagitype<Flavor.REVO>,
                     smiley: ":.::/ /X:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".)!(x" as Ascii<Flavor.EVO>,
+                    sagitype: ".)!(x" as Sagitype<Flavor.EVO>,
                     smiley: ":.::)!(::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`.//X" as Ascii<Flavor.REVO>,
+                    sagitype: "`.//X" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::/ /X:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.)!(x" as Ascii<Flavor.EVO>,
+                    sagitype: "`.)!(x" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::)!(::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,//X" as Ascii<Flavor.REVO>,
+                    sagitype: ",,//X" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::/ /X:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,)!(x" as Ascii<Flavor.EVO>,
+                    sagitype: ",,)!(x" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::)!(::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",//X" as Ascii<Flavor.REVO>,
+                    sagitype: ",//X" as Sagitype<Flavor.REVO>,
                     smiley: ":,::/ /X:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)!(x" as Ascii<Flavor.EVO>,
+                    sagitype: ",)!(x" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)!(::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "//X" as Ascii<Flavor.REVO>,
+                    sagitype: "//X" as Sagitype<Flavor.REVO>,
                     smiley: ":/ /X:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")!(x" as Ascii<Flavor.EVO>,
+                    sagitype: ")!(x" as Sagitype<Flavor.EVO>,
                     smiley: ":)!(::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`//X" as Ascii<Flavor.REVO>,
+                    sagitype: "`//X" as Sagitype<Flavor.REVO>,
                     smiley: ":`::/ /X:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)!(x" as Ascii<Flavor.EVO>,
+                    sagitype: "`)!(x" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)!(::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ")//X" as Ascii<Flavor.REVO>,
+                    sagitype: ")//X" as Sagitype<Flavor.REVO>,
                     smiley: ":)/ /X:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "~!x" as Ascii<Flavor.EVO>,
+                    sagitype: "~!x" as Sagitype<Flavor.EVO>,
                     smiley: ":~!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`)//X" as Ascii<Flavor.REVO>,
+                    sagitype: "`)//X" as Sagitype<Flavor.REVO>,
                     smiley: ":`::)/ /X:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`~!x" as Ascii<Flavor.EVO>,
+                    sagitype: "`~!x" as Sagitype<Flavor.EVO>,
                     smiley: ":`::~!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "./X)" as Ascii<Flavor.REVO>,
+                    sagitype: "./X)" as Sagitype<Flavor.REVO>,
                     smiley: ":.::/X):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".!(x" as Ascii<Flavor.EVO>,
+                    sagitype: ".!(x" as Sagitype<Flavor.EVO>,
                     smiley: ":.::!(::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`./X)" as Ascii<Flavor.REVO>,
+                    sagitype: "`./X)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::.::/X):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`.!(x" as Ascii<Flavor.EVO>,
+                    sagitype: "`.!(x" as Sagitype<Flavor.EVO>,
                     smiley: ":`::.::!(::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "')//X" as Ascii<Flavor.REVO>,
+                    sagitype: "')//X" as Sagitype<Flavor.REVO>,
                     smiley: ":'::)/ /X:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "'~!x" as Ascii<Flavor.EVO>,
+                    sagitype: "'~!x" as Sagitype<Flavor.EVO>,
                     smiley: ":'::~!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",/X)" as Ascii<Flavor.REVO>,
+                    sagitype: ",/X)" as Sagitype<Flavor.REVO>,
                     smiley: ":,::/X):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",!(x" as Ascii<Flavor.EVO>,
+                    sagitype: ",!(x" as Sagitype<Flavor.EVO>,
                     smiley: ":,::!(::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "/X)" as Ascii<Flavor.REVO>,
+                    sagitype: "/X)" as Sagitype<Flavor.REVO>,
                     smiley: ":/X):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "!(x" as Ascii<Flavor.EVO>,
+                    sagitype: "!(x" as Sagitype<Flavor.EVO>,
                     smiley: ":!(::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`/X)" as Ascii<Flavor.REVO>,
+                    sagitype: "`/X)" as Sagitype<Flavor.REVO>,
                     smiley: ":`::/X):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`!(x" as Ascii<Flavor.EVO>,
+                    sagitype: "`!(x" as Sagitype<Flavor.EVO>,
                     smiley: ":`::!(::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "``/X)" as Ascii<Flavor.REVO>,
+                    sagitype: "``/X)" as Sagitype<Flavor.REVO>,
                     smiley: ":``::/X):" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "``!(x" as Ascii<Flavor.EVO>,
+                    sagitype: "``!(x" as Sagitype<Flavor.EVO>,
                     smiley: ":``::!(::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,(X~" as Ascii<Flavor.REVO>,
+                    sagitype: ",,(X~" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::(X~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,)!x" as Ascii<Flavor.EVO>,
+                    sagitype: ",,)!x" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::)!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",(X~" as Ascii<Flavor.REVO>,
+                    sagitype: ",(X~" as Sagitype<Flavor.REVO>,
                     smiley: ":,::(X~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",)!x" as Ascii<Flavor.EVO>,
+                    sagitype: ",)!x" as Sagitype<Flavor.EVO>,
                     smiley: ":,::)!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "(X~" as Ascii<Flavor.REVO>,
+                    sagitype: "(X~" as Sagitype<Flavor.REVO>,
                     smiley: ":(X~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ")!x" as Ascii<Flavor.EVO>,
+                    sagitype: ")!x" as Sagitype<Flavor.EVO>,
                     smiley: ":)!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "`(X~" as Ascii<Flavor.REVO>,
+                    sagitype: "`(X~" as Sagitype<Flavor.REVO>,
                     smiley: ":`::(X~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "`)!x" as Ascii<Flavor.EVO>,
+                    sagitype: "`)!x" as Sagitype<Flavor.EVO>,
                     smiley: ":`::)!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",./X\\" as Ascii<Flavor.REVO>,
+                    sagitype: ",./X\\" as Sagitype<Flavor.REVO>,
                     smiley: ":,::.::/X\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",.!x" as Ascii<Flavor.EVO>,
+                    sagitype: ",.!x" as Sagitype<Flavor.EVO>,
                     smiley: ":,::.::!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "./X\\" as Ascii<Flavor.REVO>,
+                    sagitype: "./X\\" as Sagitype<Flavor.REVO>,
                     smiley: ":.::/X\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ".!x" as Ascii<Flavor.EVO>,
+                    sagitype: ".!x" as Sagitype<Flavor.EVO>,
                     smiley: ":.::!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "'(X~" as Ascii<Flavor.REVO>,
+                    sagitype: "'(X~" as Sagitype<Flavor.REVO>,
                     smiley: ":'::(X~:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "')!x" as Ascii<Flavor.EVO>,
+                    sagitype: "')!x" as Sagitype<Flavor.EVO>,
                     smiley: ":'::)!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",,/X\\" as Ascii<Flavor.REVO>,
+                    sagitype: ",,/X\\" as Sagitype<Flavor.REVO>,
                     smiley: ":,,::/X\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",,!x" as Ascii<Flavor.EVO>,
+                    sagitype: ",,!x" as Sagitype<Flavor.EVO>,
                     smiley: ":,,::!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: ",/X\\" as Ascii<Flavor.REVO>,
+                    sagitype: ",/X\\" as Sagitype<Flavor.REVO>,
                     smiley: ":,::/X\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: ",!x" as Ascii<Flavor.EVO>,
+                    sagitype: ",!x" as Sagitype<Flavor.EVO>,
                     smiley: ":,::!::x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },
             },
             {
                 revo: {
-                    ascii: "/X\\" as Ascii<Flavor.REVO>,
+                    sagitype: "/X\\" as Sagitype<Flavor.REVO>,
                     smiley: ":/X\\:" as Smiley<Flavor.REVO>,
                     unicode: "" as Unicode<Flavor.REVO>,
                 },
                 evo: {
-                    ascii: "x" as Ascii<Flavor.EVO>,
+                    sagitype: "x" as Sagitype<Flavor.EVO>,
                     smiley: ":x:" as Smiley<Flavor.EVO>,
                     unicode: "" as Unicode<Flavor.EVO>,
                 },

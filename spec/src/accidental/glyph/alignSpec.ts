@@ -1,14 +1,14 @@
-import {alignAscii, Ascii} from "../../../../src"
+import {alignSagitype, Sagitype} from "../../../../src"
 
-describe("alignAscii", (): void => {
-    it("shifts the ASCII so that its shaft aligns with all the others' shafts, making it 8 total chars wide                  ", (): void => {
-        expect(alignAscii(",,)//|" as Ascii)).toEqual(",,)//|  ")
-        expect(alignAscii(",)|)" as Ascii)).toEqual("   ,)|) ")
-        expect(alignAscii("|\\" as Ascii)).toEqual("     |\\ ")
-        expect(alignAscii(")|\\\\" as Ascii)).toEqual("    )|\\\\")
+describe("alignSagitype", (): void => {
+    it("shifts the Sagitype so that its shaft aligns with all the others' shafts, making it 8 total chars wide                  ", (): void => {
+        expect(alignSagitype(",,)//|" as Sagitype)).toEqual(",,)//|  ")
+        expect(alignSagitype(",)|)" as Sagitype)).toEqual("   ,)|) ")
+        expect(alignSagitype("|\\" as Sagitype)).toEqual("     |\\ ")
+        expect(alignSagitype(")|\\\\" as Sagitype)).toEqual("    )|\\\\")
     })
 
     it("centers the parenthetical natural symbol in a different way", (): void => {
-        expect(alignAscii("(|//|)" as Ascii)).toEqual(" (|//|) ")
+        expect(alignSagitype("(|//|)" as Sagitype)).toEqual(" (|//|) ")
     })
 })

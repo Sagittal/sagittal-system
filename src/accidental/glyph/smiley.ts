@@ -2,27 +2,27 @@ import {deepEquals, isUndefined, join, Maybe, sumTexts} from "@sagittal/general"
 import {Accent, Arm} from "../flacco"
 import {Accidental, Compatible, Flavor} from "../flavor"
 import {Core, Sagittal} from "../sagittal"
-import {computeAccentAscii, computeCompatibleAscii, computeCoreAscii} from "./ascii"
-import {BLANK_ASCII, BLANK_SMILEY, PARENTHETICAL_NATURAL_SMILEY} from "./constants"
-import {Ascii, Smiley} from "./types"
+import {computeAccentSagitype, computeCompatibleSagitype, computeCoreSagitype} from "./sagitype"
+import {BLANK_SAGITYPE, BLANK_SMILEY, PARENTHETICAL_NATURAL_SMILEY} from "./constants"
+import {Sagitype, Smiley} from "./types"
 
-const convertAsciiToSmiley = (ascii: Ascii): Smiley => {
-    const massagedAscii = ascii
+const convertSagitypeToSmiley = (sagitype: Sagitype): Smiley => {
+    const massagedSagitype = sagitype
         .replace("|//|", "h")
         .replace(/\/\//g, "/ /")
         .replace(/\\\\/g, "\\ \\")
 
-    return `:${massagedAscii}:` as Smiley
+    return `:${massagedSagitype}:` as Smiley
 }
 
 const computeCoreSmiley = (core: Core): Smiley =>
-    convertAsciiToSmiley(computeCoreAscii(core))
+    convertSagitypeToSmiley(computeCoreSagitype(core))
 
 const computeCompatibleSmiley = (compatible: Compatible): Smiley =>
-    convertAsciiToSmiley(computeCompatibleAscii(compatible))
+    convertSagitypeToSmiley(computeCompatibleSagitype(compatible))
 
 const computeAccentSmiley = (accent: Accent, down?: boolean): Smiley =>
-    convertAsciiToSmiley(computeAccentAscii(accent, down))
+    convertSagitypeToSmiley(computeAccentSagitype(accent, down))
 
 const computeSagittalSmiley = (sagittal: Maybe<Sagittal>): Smiley => {
     if (isUndefined(sagittal)) return PARENTHETICAL_NATURAL_SMILEY
@@ -37,7 +37,7 @@ const computeSagittalSmiley = (sagittal: Maybe<Sagittal>): Smiley => {
 const computeArmSmiley = (arm: Arm, down?: boolean): Smiley =>
     join(
         arm.map((accent: Accent): Smiley => computeAccentSmiley(accent, down)),
-        BLANK_ASCII,
+        BLANK_SAGITYPE,
     )
 
 const computeAccidentalSmiley = <T extends Maybe<Flavor> = undefined>(

@@ -1,4 +1,4 @@
-import {computeAccidentalAscii, computeAccidentalSmiley, computeAccidentalUnicode} from "../../../../../src/accidental"
+import {computeAccidentalSagitype, computeAccidentalSmiley, computeAccidentalUnicode} from "../../../../../src/accidental"
 import {computeEvoAccidentalFromCaptureZone} from "../../../../../src/accidental/flavor/evo"
 import {computeRevoAccidentalFromCaptureZone} from "../../../../../src/accidental/flavor/revo"
 import {CaptureZone} from "../../../../../src/notation"
@@ -8,14 +8,14 @@ const computeFlavorsExpectation = ({symbolClassId, section}: CaptureZone): Flavo
     const evoAccidental = computeEvoAccidentalFromCaptureZone(symbolClassId, section)
     const evo = {
         unicode: computeAccidentalUnicode(evoAccidental),
-        ascii: computeAccidentalAscii(evoAccidental),
+        sagitype: computeAccidentalSagitype(evoAccidental),
         smiley: computeAccidentalSmiley(evoAccidental),
     }
 
     const revoAccidental = computeRevoAccidentalFromCaptureZone(symbolClassId, section)
     const revo = {
         unicode: computeAccidentalUnicode(revoAccidental),
-        ascii: computeAccidentalAscii(revoAccidental),
+        sagitype: computeAccidentalSagitype(revoAccidental),
         smiley: computeAccidentalSmiley(revoAccidental),
     }
 

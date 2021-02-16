@@ -2,13 +2,13 @@ import {Maybe} from "@sagittal/general"
 import {Compatible, computeCoreUnicode} from "../../../../../src"
 import {AccentId, HeadId} from "../../../../../src/accidental"
 import {
-    computeAccentAscii,
+    computeAccentSagitype,
     computeAccentSmiley,
     computeAccentUnicode,
-    computeCompatibleAscii,
+    computeCompatibleSagitype,
     computeCompatibleSmiley,
     computeCompatibleUnicode,
-    computeCoreAscii,
+    computeCoreSagitype,
     computeCoreSmiley,
 } from "../../../../../src/accidental/glyph"
 import {getCore, Shafts} from "../../../../../src/accidental/sagittal"
@@ -22,7 +22,7 @@ const computeCoreGlyphExpectation = (
         const core = getCore(headId, {shafts, down})
 
         return {
-            ascii: computeCoreAscii(core),
+            sagitype: computeCoreSagitype(core),
             unicode: computeCoreUnicode(core),
             smiley: computeCoreSmiley(core),
         }
@@ -33,14 +33,14 @@ const computeCoreGlyphExpectation = (
 
 const computeAccentGlyphExpectation = (accentId: AccentId, {anti = false}: {anti?: boolean} = {}): GlyphExpectation =>
     ({
-        ascii: computeAccentAscii({id: accentId, anti}),
+        sagitype: computeAccentSagitype({id: accentId, anti}),
         unicode: computeAccentUnicode({id: accentId, anti}),
         smiley: computeAccentSmiley({id: accentId, anti}),
     })
 
 const computeCompatibleGlyphExpectation = (compatible: Compatible): GlyphExpectation =>
     ({
-        ascii: computeCompatibleAscii(compatible),
+        sagitype: computeCompatibleSagitype(compatible),
         unicode: computeCompatibleUnicode(compatible),
         smiley: computeCompatibleSmiley(compatible),
     })

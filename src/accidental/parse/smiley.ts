@@ -1,10 +1,10 @@
 import {BLANK} from "@sagittal/general"
 import {Accidental} from "../flavor"
-import {Ascii, Smiley} from "../glyph"
-import {parseAscii} from "./ascii"
+import {Sagitype, Smiley} from "../glyph"
+import {parseSagitype} from "./sagitype"
 
 const parseSmiley = (smiley: Smiley): Accidental =>
-    parseAscii(smiley.replace(/:/g, BLANK).replace(/ /g, BLANK) as Ascii)
+    parseSagitype(smiley.replace(/:/g, BLANK).replace(/ /g, BLANK) as Sagitype)
 
 export {
     parseSmiley,

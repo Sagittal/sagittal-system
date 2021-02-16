@@ -10,20 +10,20 @@ export {
 export {Core, Sagittal, computeSagittalFromFlacco, computeSagittalFromSymbolClassId} from "./sagittal"
 export {Accidental, Flavor, Compatible, EMPTY_ACCIDENTAL} from "./flavor"
 export {
-    alignAscii,
-    Ascii,
+    alignSagitype,
+    Sagitype,
     Smiley,
     Unicode,
-    computeAccidentalAscii,
+    computeAccidentalSagitype,
     computeAccidentalUnicode,
     computeCoreUnicode,
     computeAccidentalSmiley,
-    computeSagittalAscii,
+    computeSagittalSagitype,
     computeSagittalUnicode,
     formatAccidental,
     Glyph,
-    BLANK_ASCII,
+    BLANK_SAGITYPE,
 } from "./glyph"
 export {computeJiPitchFromAccidental} from "./pitch"
 export {computeAccidental} from "./accidental"
-export {parseAccidental, parseAscii} from "./parse"
+export {parseAccidental, parseSagitype} from "./parse"

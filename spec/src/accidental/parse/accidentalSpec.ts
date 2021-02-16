@@ -3,7 +3,7 @@ import {ArmId, Compatible, computeAccidental, HeadId, parseAccidental} from "../
 import {Shafts} from "../../../../src/accidental/sagittal"
 
 describe("parseAccidental", (): void => {
-    it("works for ASCII format", (): void => {
+    it("works for Sagitype format", (): void => {
         const accidentalIo = ",'/|)" as Io
 
         const actual = parseAccidental(accidentalIo)

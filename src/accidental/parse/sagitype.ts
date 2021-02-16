@@ -1,18 +1,18 @@
 import {BLANK, Char, Count, increment, isEmpty, shallowClone} from "@sagittal/general"
 import {AccentId, Arm, FlagId} from "../flacco"
 import {Accidental, Compatible, EMPTY_ACCIDENTAL} from "../flavor"
-import {Ascii, BLANK_ASCII, PARENTHETICAL_NATURAL_ASCII} from "../glyph"
+import {Sagitype, BLANK_SAGITYPE, PARENTHETICAL_NATURAL_SAGITYPE} from "../glyph"
 import {Shafts} from "../sagittal"
 
-const computeDown = (ascii: Ascii): boolean =>
-    !ascii.match(/[|!XY]/g) ?
-        !ascii.match(/[`']/) :
-        !ascii.match(/[|X]/g)
+const computeDown = (sagitype: Sagitype): boolean =>
+    !sagitype.match(/[|!XY]/g) ?
+        !sagitype.match(/[`']/) :
+        !sagitype.match(/[|X]/g)
 
-const parseAscii = (ascii: Ascii): Accidental => {
-    if (ascii === PARENTHETICAL_NATURAL_ASCII) return EMPTY_ACCIDENTAL
+const parseSagitype = (sagitype: Sagitype): Accidental => {
+    if (sagitype === PARENTHETICAL_NATURAL_SAGITYPE) return EMPTY_ACCIDENTAL
 
-    const down = computeDown(ascii)
+    const down = computeDown(sagitype)
 
     let pastShaft = false
 
@@ -24,18 +24,18 @@ const parseAscii = (ascii: Ascii): Accidental => {
     const left = [] as FlagId[]
     const right = [] as FlagId[]
 
-    let accidentalText = shallowClone(ascii)
+    let accidentalText = shallowClone(sagitype)
     if (accidentalText.match(/``/)) {
         down ?
             arm.push({id: AccentId.BIRD, anti: true}) :
             arm.push({id: AccentId.BIRD})
-        accidentalText = accidentalText.replace(/``/, BLANK_ASCII) as Ascii
+        accidentalText = accidentalText.replace(/``/, BLANK_SAGITYPE) as Sagitype
     }
     if (accidentalText.match(/,,/)) {
         down ?
             arm.push({id: AccentId.BIRD}) :
             arm.push({id: AccentId.BIRD, anti: true})
-        accidentalText = accidentalText.replace(/,,/, BLANK_ASCII) as Ascii
+        accidentalText = accidentalText.replace(/,,/, BLANK_SAGITYPE) as Sagitype
     }
 
     if (accidentalText.match(/bb/)) {
@@ -123,5 +123,5 @@ const parseAscii = (ascii: Ascii): Accidental => {
 }
 
 export {
-    parseAscii,
+    parseSagitype,
 }

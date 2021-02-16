@@ -10,12 +10,12 @@ export {
     DOWN_ACCENT_TO_UNICODE_MAP,
 } from "./unicode"
 export {
-    computeCoreAscii,
-    computeAccidentalAscii,
-    computeSagittalAscii,
-    computeCompatibleAscii,
-    computeAccentAscii,
-} from "./ascii"
+    computeCoreSagitype,
+    computeAccidentalSagitype,
+    computeSagittalSagitype,
+    computeCompatibleSagitype,
+    computeAccentSagitype,
+} from "./sagitype"
 export {
     computeCoreSmiley,
     computeAccidentalSmiley,
@@ -23,7 +23,7 @@ export {
     computeCompatibleSmiley,
     computeAccentSmiley,
 } from "./smiley"
-export {alignAscii} from "./align"
-export {Ascii, Unicode, Smiley, Glyph} from "./types"
+export {alignSagitype} from "./align"
+export {Sagitype, Unicode, Smiley, Glyph} from "./types"
 export {formatAccidental} from "./format"
-export {PARENTHETICAL_NATURAL_ASCII, BLANK_ASCII} from "./constants"
+export {PARENTHETICAL_NATURAL_SAGITYPE, BLANK_SAGITYPE} from "./constants"

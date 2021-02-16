@@ -1,30 +1,30 @@
 import {Formatted, shallowClone} from "@sagittal/general"
-import {PARENTHETICAL_NATURAL_ASCII} from "./constants"
-import {Ascii} from "./types"
+import {PARENTHETICAL_NATURAL_SAGITYPE} from "./constants"
+import {Sagitype} from "./types"
 
-const alignAscii = (ascii: Ascii): Formatted<Ascii> => {
-    if (ascii === PARENTHETICAL_NATURAL_ASCII) {
-        return ` ${PARENTHETICAL_NATURAL_ASCII} ` as Formatted<Ascii>
+const alignSagitype = (sagitype: Sagitype): Formatted<Sagitype> => {
+    if (sagitype === PARENTHETICAL_NATURAL_SAGITYPE) {
+        return ` ${PARENTHETICAL_NATURAL_SAGITYPE} ` as Formatted<Sagitype>
     }
 
-    const shaftIndex = ascii.indexOf("|")
+    const shaftIndex = sagitype.indexOf("|")
 
     let spacesToPrepend = 5 - shaftIndex
 
-    let formattedAscii: Formatted<Ascii> = shallowClone(ascii) as string as Formatted<Ascii>
+    let formattedSagitype: Formatted<Sagitype> = shallowClone(sagitype) as string as Formatted<Sagitype>
 
     while (spacesToPrepend > 0) {
-        formattedAscii = " " + formattedAscii as Formatted<Ascii>
+        formattedSagitype = " " + formattedSagitype as Formatted<Sagitype>
         spacesToPrepend -= 1
     }
 
-    while (formattedAscii.length < 8) {
-        formattedAscii = formattedAscii + " " as Formatted<Ascii>
+    while (formattedSagitype.length < 8) {
+        formattedSagitype = formattedSagitype + " " as Formatted<Sagitype>
     }
 
-    return formattedAscii as Formatted<Ascii>
+    return formattedSagitype as Formatted<Sagitype>
 }
 
 export {
-    alignAscii,
+    alignSagitype,
 }

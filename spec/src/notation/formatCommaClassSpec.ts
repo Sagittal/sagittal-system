@@ -4,7 +4,7 @@ import {CommaClassId, formatCommaClass} from "../../../src"
 describe("formatCommaClass", (): void => {
     const commaClassId = CommaClassId._65_V_7_M
 
-    it("returns the comma class as its representative sagittal's long ASCII form by default (or configured for display on a terminal)", (): void => {
+    it("returns the comma class as its representative sagittal's Sagitype form by default (or configured for display on a terminal)", (): void => {
         const actual = formatCommaClass(commaClassId)
 
         const expected = "  ,(/|  " as Io

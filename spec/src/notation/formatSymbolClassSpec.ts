@@ -4,7 +4,7 @@ import {formatSymbolClass, SymbolClassId} from "../../../src"
 describe("formatSymbolClass", (): void => {
     const symbolClassId = SymbolClassId.ANTIWING_AND_LEFT_ARC_AND_BARB
 
-    it("returns the symbol class as its flacco's sagittal long ASCII form by default (or configured for display on a terminal)", (): void => {
+    it("returns the symbol class as its flacco's sagittal Sagitype form by default (or configured for display on a terminal)", (): void => {
         const actual = formatSymbolClass(symbolClassId)
 
         const expected = "  ,(/|  " as Io
