@@ -2,16 +2,16 @@ import {
     Comma,
     compute23FreeClass,
     computeRationalQuotientSmoothness,
-    computeRationalScamonFromRationalMonzo,
-    computeRationalScamonFromRationalQuotient,
+    computeRationalSpevFromRationalPev,
+    computeRationalSpevFromRationalQuotient,
     FIVE_SMOOTHNESS,
     increment,
     isUndefined,
     Maybe,
-    Monzo,
+    Pev,
 } from "@sagittal/general"
 import {computeN2D3P9} from "../badness"
-import {computeRationalMonzoInZone, findNotatingCommas} from "../find"
+import {computeRationalPevInZone, findNotatingCommas} from "../find"
 import {computeSizeCategoryZone} from "./sizeCategoryZone"
 import {ParsedCommaName, SizeCategory} from "./types"
 
@@ -20,20 +20,20 @@ const compute3LimitCommaInSizeCategory = (sizeCategory: SizeCategory): Comma => 
     const zone = computeSizeCategoryZone(sizeCategory)
 
     while (true) {
-        let rationalMonzoInZone: Maybe<Monzo<{rational: true}>> = computeRationalMonzoInZone(
-            [0, threeExponent] as Monzo<{rational: true, rough: 3}>,
+        let rationalPevInZone: Maybe<Pev<{rational: true}>> = computeRationalPevInZone(
+            [0, threeExponent] as Pev<{rational: true, rough: 3}>,
             zone,
         )
-        if (!isUndefined(rationalMonzoInZone)) {
-            return computeRationalScamonFromRationalMonzo(rationalMonzoInZone) as Comma
+        if (!isUndefined(rationalPevInZone)) {
+            return computeRationalSpevFromRationalPev(rationalPevInZone) as Comma
         }
 
-        rationalMonzoInZone = computeRationalMonzoInZone(
-            [0, -threeExponent] as Monzo<{rational: true, rough: 3}>,
+        rationalPevInZone = computeRationalPevInZone(
+            [0, -threeExponent] as Pev<{rational: true, rough: 3}>,
             zone,
         )
-        if (!isUndefined(rationalMonzoInZone)) {
-            return computeRationalScamonFromRationalMonzo(rationalMonzoInZone) as Comma
+        if (!isUndefined(rationalPevInZone)) {
+            return computeRationalSpevFromRationalPev(rationalPevInZone) as Comma
         }
 
         threeExponent = increment(threeExponent)
@@ -52,7 +52,7 @@ const computeCommaFromCommaName = (
     // No real choice but to go with the defaults here, unless we majorly refactor
     // It would be cool if we could use the search options the user provides here, but it creates a
     // Chicken-and-egg problem since we need to use this method itself as part of parsing said options!
-    const commas = findNotatingCommas(computeRationalScamonFromRationalQuotient(commaNameQuotient), {zone})
+    const commas = findNotatingCommas(computeRationalSpevFromRationalQuotient(commaNameQuotient), {zone})
 
     let mostPopularComma = undefined
     let bestPopularity = Infinity

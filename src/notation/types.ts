@@ -1,4 +1,4 @@
-import {Comma, NumericProperties, Scamon} from "@sagittal/general"
+import {Comma, NumericProperties, Spev} from "@sagittal/general"
 import {FlaccoId} from "../accidental"
 
 // State of the art plans described here: http://forum.sagittal.org/viewtopic.php?p=2492#p2492
@@ -146,7 +146,7 @@ enum BoundClassId {
 }
 
 type BoundClass<T extends NumericProperties = {}> = {
-    pitch: Scamon<T & {rational: false}>,
+    pitch: Spev<T & {rational: false}>,
 }
 
 // TODO: COMMA CLASS IDS USE SAME PATTERN DEVISED IN STAFF CODE

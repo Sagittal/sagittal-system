@@ -1,8 +1,8 @@
-import {APOTOME, deepEquals, Maybe, Scamon} from "@sagittal/general"
+import {APOTOME, deepEquals, Maybe, Spev} from "@sagittal/general"
 import {Section, SECTION_N1T, SECTION_N2A, SECTION_N2T, SECTION_P1T, SECTION_P2A, SECTION_P2T} from "../../notation"
 import {APOTOME_DOWN, DOUBLE_APOTOME, DOUBLE_APOTOME_DOWN} from "./constants"
 
-const computeApotomicPitchAlterationFromSection = (section: Section): Maybe<Scamon<{rational: true}>> => {
+const computeApotomicPitchAlterationFromSection = (section: Section): Maybe<Spev<{rational: true}>> => {
     if (deepEquals(section, SECTION_P1T) || deepEquals(section, SECTION_P2A)) {
         return APOTOME
     } else if (deepEquals(section, SECTION_P2T)) {

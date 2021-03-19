@@ -1,8 +1,8 @@
-import {Cents, computeCentsFromPitch, halveScamon} from "@sagittal/general"
+import {Cents, computeCentsFromPitch, halveSpev} from "@sagittal/general"
 import {computeCentsError, TINA} from "../../../../../src"
 
 describe("computeCentsError", (): void => {
-    const centUnit = computeCentsFromPitch(halveScamon(TINA))   // Semitina cents
+    const centUnit = computeCentsFromPitch(halveSpev(TINA))   // Semitina cents
 
     it("checks out against Dave's spreadsheet", (): void => {
         const cents = 0.081 as Cents

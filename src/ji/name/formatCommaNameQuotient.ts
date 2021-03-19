@@ -3,7 +3,7 @@ import {
     computeRationalDecimalCopf,
     computeRationalDecimalCopfr,
     computeRationalDecimalGpf,
-    computeRationalMonzoFromRationalDecimal,
+    computeRationalPevFromRationalDecimal,
     Decimal,
     DOT_OPERATOR,
     Exponent,
@@ -21,13 +21,13 @@ const formatFactoredCommaNameQuotientPart = (
 ): string => {
     if (commaNameQuotientPart === 1) return "1"
 
-    const integerMonzo = computeRationalMonzoFromRationalDecimal(commaNameQuotientPart)
+    const integerPev = computeRationalPevFromRationalDecimal(commaNameQuotientPart)
 
     const factoredTerms: string[] = []
 
     const primes = computePrimes()
 
-    integerMonzo.forEach(
+    integerPev.forEach(
         (
             primeExponent: Decimal<{integer: true}> & Exponent<Prime>,
             primeExponentIndex: number,

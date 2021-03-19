@@ -1,22 +1,22 @@
 import {
     Comma,
-    computeQuotientFromMonzo,
-    computeRationalMonzoFromRationalScamon,
-    computeRoughRationalMonzo,
-    computeSuperScamon,
+    computeQuotientFromPev,
+    computeRationalPevFromRationalSpev,
+    computeRoughRationalPev,
+    computeSuperSpev,
     Direction,
-    Monzo,
+    Pev,
     Quotient,
     TWO_3_FREE,
 } from "@sagittal/general"
 import {CommaNameQuotient} from "./types"
 
 const computeCommaNameQuotient = (comma: Comma): CommaNameQuotient => {
-    const superComma = computeSuperScamon(comma) as Comma<{rational: true, direction: Direction.SUPER}>
-    const superMonzo = computeRationalMonzoFromRationalScamon(superComma)
-    const two3FreeSuperMonzo = computeRoughRationalMonzo(superMonzo, TWO_3_FREE) as Monzo<{rational: true, rough: 5}>
+    const superComma = computeSuperSpev(comma) as Comma<{rational: true, direction: Direction.SUPER}>
+    const superPev = computeRationalPevFromRationalSpev(superComma)
+    const two3FreeSuperPev = computeRoughRationalPev(superPev, TWO_3_FREE) as Pev<{rational: true, rough: 5}>
 
-    return computeQuotientFromMonzo(two3FreeSuperMonzo) as Quotient<{rational: true}> as CommaNameQuotient
+    return computeQuotientFromPev(two3FreeSuperPev) as Quotient<{rational: true}> as CommaNameQuotient
 }
 
 export {

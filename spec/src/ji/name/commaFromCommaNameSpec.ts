@@ -1,15 +1,15 @@
-import {Comma, Direction, Monzo} from "@sagittal/general"
+import {Comma, Direction, Pev} from "@sagittal/general"
 import {computeCommaFromCommaName} from "../../../../src"
 import {CommaNameQuotient, SizeCategory} from "../../../../src/ji/name/types"
 
 describe("computeCommaFromCommaName", (): void => {
-    it("gives you the monzo for the comma with the given name", (): void => {
+    it("gives you the pev for the comma with the given name", (): void => {
         const commaNameQuotient: CommaNameQuotient = [1, 91] as CommaNameQuotient
         const sizeCategory: SizeCategory = SizeCategory.SCHISMA
 
         const actual = computeCommaFromCommaName({commaNameQuotient, sizeCategory})
 
-        const expected = {monzo: [-3, 6, 0, -1, 0, -1]} as Comma
+        const expected = {pev: [-3, 6, 0, -1, 0, -1]} as Comma
         expect(actual).toEqual(expected)
     })
 
@@ -19,7 +19,7 @@ describe("computeCommaFromCommaName", (): void => {
 
         const actual = computeCommaFromCommaName({commaNameQuotient, sizeCategory})
 
-        const expected = {monzo: [-13, 9, -1, 1, 1, 0, 0, 0, 0, 0, 0, -1] as Monzo<{rational: true}>} as Comma
+        const expected = {pev: [-13, 9, -1, 1, 1, 0, 0, 0, 0, 0, 0, -1] as Pev<{rational: true}>} as Comma
         expect(actual).toEqual(expected)
     })
 
@@ -29,7 +29,7 @@ describe("computeCommaFromCommaName", (): void => {
 
         const actual = computeCommaFromCommaName({commaNameQuotient, sizeCategory})
 
-        const expected = {monzo: [-4, 4, -1] as Monzo<{rational: true}>} as Comma
+        const expected = {pev: [-4, 4, -1] as Pev<{rational: true}>} as Comma
         expect(actual).toEqual(expected)
     })
 
@@ -39,7 +39,7 @@ describe("computeCommaFromCommaName", (): void => {
 
         const actual = computeCommaFromCommaName({commaNameQuotient, sizeCategory})
 
-        const expected = {monzo: [-12, 5, 0, 0, 0, 0, 1] as Monzo<{rational: true}>} as Comma
+        const expected = {pev: [-12, 5, 0, 0, 0, 0, 1] as Pev<{rational: true}>} as Comma
         expect(actual).toEqual(expected)
     })
 
@@ -49,7 +49,7 @@ describe("computeCommaFromCommaName", (): void => {
 
         const actual = computeCommaFromCommaName({commaNameQuotient, sizeCategory})
 
-        const expected = {monzo: [485, -306] as Monzo<{rational: true}>} as Comma
+        const expected = {pev: [485, -306] as Pev<{rational: true}>} as Comma
         expect(actual).toEqual(expected)
     })
 
@@ -57,8 +57,8 @@ describe("computeCommaFromCommaName", (): void => {
     // tslint:disable-next-line:ban
     xdescribe("uses direction of the comma name quotient to indicate direction of the comma (not the prime content), but you can override either direction in the comma name quotient by suffixing 'up' or 'down'", (): void => {
         const sizeCategory: SizeCategory = SizeCategory.COMMA
-        const down = {monzo: [4, -4, 1]} as Comma
-        const up = {monzo: [-4, 4, -1]} as Comma
+        const down = {pev: [4, -4, 1]} as Comma
+        const up = {pev: [-4, 4, -1]} as Comma
 
         it("when super quotient, no direction", (): void => {
             expect(computeCommaFromCommaName({

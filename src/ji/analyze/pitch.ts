@@ -1,18 +1,18 @@
 import {
     compute23FreeClass,
     computeCentsFromPitch,
-    computeDecimalFromMonzo,
-    computeQuotientFromMonzo,
-    Scamon,
+    computeDecimalFromPev,
+    computeQuotientFromPev,
+    Spev,
 } from "@sagittal/general"
 import {computeAas, computeApotomeSlope, computeAte} from "../badness"
 import {analyze23FreeClass} from "./two3FreeClass"
 import {JiPitchAnalysis} from "./types"
 
-const analyzeJiPitch = (jiPitch: Scamon<{rational: true}>): JiPitchAnalysis => {
-    const monzo = jiPitch.monzo
-    const quotient = computeQuotientFromMonzo(monzo)
-    const decimal = computeDecimalFromMonzo(monzo)
+const analyzeJiPitch = (jiPitch: Spev<{rational: true}>): JiPitchAnalysis => {
+    const pev = jiPitch.pev
+    const quotient = computeQuotientFromPev(pev)
+    const decimal = computeDecimalFromPev(pev)
 
     const apotomeSlope = computeApotomeSlope(jiPitch)
     const cents = computeCentsFromPitch(jiPitch)
@@ -25,7 +25,7 @@ const analyzeJiPitch = (jiPitch: Scamon<{rational: true}>): JiPitchAnalysis => {
 
     return {
         pitch: jiPitch,
-        monzo,
+        pev,
         quotient,
         cents,
         decimal,

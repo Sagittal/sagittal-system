@@ -1,7 +1,7 @@
 export {
-    CommasFrom23FreeMonzoOptions,
+    CommasFrom23FreePevOptions,
     findNotatingCommas,
-    computeCommasFrom23FreeRationalMonzo,
+    computeCommasFrom23FreeRationalPev,
     DEFAULT_MAX_AAS,
     DEFAULT_MAX_ATE,
     DEFAULT_UPPER_BOUND,

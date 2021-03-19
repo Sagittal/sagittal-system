@@ -1,4 +1,4 @@
-import {isScamonGreater, isUndefined, Max, Maybe, Min, Scamon, UNISON, Zone} from "@sagittal/general"
+import {isSpevGreater, isUndefined, Max, Maybe, Min, Spev, UNISON, Zone} from "@sagittal/general"
 import {CommaClass, CommaClassId, formatCommaClass, getCommaClass} from "../../notation"
 import {formatJiNotationLevel} from "./formatLevel"
 import {getIntroducingJiNotationLevel} from "./introducingJiNotationLevel"
@@ -27,16 +27,16 @@ const computeJiNotationCaptureZone = (
 
     const indexOfBoundClassJustAboveCommaAtThisLevel = jiNotationLevelBoundClasses
         .findIndex((jiNotationBoundClass: JiNotationBoundClass): boolean => {
-            return isScamonGreater(jiNotationBoundClass.pitch, commaClass.pitch)
+            return isSpevGreater(jiNotationBoundClass.pitch, commaClass.pitch)
         })
     const indexOfJiNotationBoundJustBelowCommaClassAtThisLevel = indexOfBoundClassJustAboveCommaAtThisLevel - 1
 
     const lowerBoundClass = jiNotationLevelBoundClasses[indexOfJiNotationBoundJustBelowCommaClassAtThisLevel]
     const lowerBoundClassPitch = isUndefined(lowerBoundClass) ?
         UNISON :
-        lowerBoundClass.pitch as Scamon as Min<Scamon>
+        lowerBoundClass.pitch as Spev as Min<Spev>
     const upperBoundClassPitch =
-        jiNotationLevelBoundClasses[indexOfBoundClassJustAboveCommaAtThisLevel].pitch as Scamon as Max<Scamon>
+        jiNotationLevelBoundClasses[indexOfBoundClassJustAboveCommaAtThisLevel].pitch as Spev as Max<Spev>
 
     return {extrema: [lowerBoundClassPitch, upperBoundClassPitch]} as Zone<{of: CommaClass}>
 }

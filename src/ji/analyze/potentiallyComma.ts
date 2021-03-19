@@ -1,10 +1,10 @@
-import {Comma, Scamon} from "@sagittal/general"
+import {Comma, Spev} from "@sagittal/general"
 import {CommaNameOptions, computeCommaName, computeSizeCategoryIndex} from "../name"
 import {analyzeJiPitch} from "./pitch"
 import {PotentiallyCommaAnalysis} from "./types"
 
 const analyzePotentiallyComma = (
-    jiPitch: Scamon<{rational: true}>,
+    jiPitch: Spev<{rational: true}>,
     options: CommaNameOptions = {},
 ): PotentiallyCommaAnalysis => {
     let name

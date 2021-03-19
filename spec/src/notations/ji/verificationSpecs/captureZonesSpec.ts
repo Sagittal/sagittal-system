@@ -1,4 +1,4 @@
-import {computeIrrationalDecimalFromScamon, Decimal, Extrema, Maybe, Zone} from "@sagittal/general"
+import {computeIrrationalDecimalFromSpev, Decimal, Extrema, Maybe, Zone} from "@sagittal/general"
 import {
     CommaClassId,
     computeJiNotationCaptureZone,
@@ -27,8 +27,8 @@ describe("capture zones", (): void => {
             [{decimal: 1.030027}, {decimal: 1.033378}], // [{ cents: 51.219540 }, { cents: 56.842503 }],
         ] as Array<Extrema<{of: {decimal: Decimal}}>>
         expected.forEach((extrema: Extrema<{of: {decimal: Decimal}}>, index: number): void => {
-            expect(computeIrrationalDecimalFromScamon(actual[index]!.extrema[0]!)).toBeCloseTo(extrema[0].decimal!)
-            expect(computeIrrationalDecimalFromScamon(actual[index]!.extrema[1]!)).toBeCloseTo(extrema[1].decimal!)
+            expect(computeIrrationalDecimalFromSpev(actual[index]!.extrema[0]!)).toBeCloseTo(extrema[0].decimal!)
+            expect(computeIrrationalDecimalFromSpev(actual[index]!.extrema[1]!)).toBeCloseTo(extrema[1].decimal!)
         })
     })
 
@@ -68,8 +68,8 @@ describe("capture zones", (): void => {
             [{decimal: 1.032791}, {decimal: 1.033965}], // [{ cents: 55.858825 }, { cents: 56.842503 }],
         ] as Array<Extrema<{of: {decimal: Decimal}}>>
         expected.forEach((extrema: Extrema<{of: {decimal: Decimal}}>, index: number): void => {
-            expect(computeIrrationalDecimalFromScamon(actual[index]!.extrema[0]!)).toBeCloseTo(extrema[0].decimal!)
-            expect(computeIrrationalDecimalFromScamon(actual[index]!.extrema[1]!)).toBeCloseTo(extrema[1].decimal!)
+            expect(computeIrrationalDecimalFromSpev(actual[index]!.extrema[0]!)).toBeCloseTo(extrema[0].decimal!)
+            expect(computeIrrationalDecimalFromSpev(actual[index]!.extrema[1]!)).toBeCloseTo(extrema[1].decimal!)
         })
     })
 
@@ -129,8 +129,8 @@ describe("capture zones", (): void => {
             [{decimal: 1.032791}, {decimal: 1.033965}], // [{ cents: 55.858825 }, { cents: 56.842503 }],
         ] as Array<Extrema<{of: {decimal: Decimal}}>>
         expected.forEach((extrema: Extrema<{of: {decimal: Decimal}}>, index: number): void => {
-            expect(computeIrrationalDecimalFromScamon(actual[index]!.extrema[0]!)).toBeCloseTo(extrema[0].decimal!)
-            expect(computeIrrationalDecimalFromScamon(actual[index]!.extrema[1]!)).toBeCloseTo(extrema[1].decimal!)
+            expect(computeIrrationalDecimalFromSpev(actual[index]!.extrema[0]!)).toBeCloseTo(extrema[0].decimal!)
+            expect(computeIrrationalDecimalFromSpev(actual[index]!.extrema[1]!)).toBeCloseTo(extrema[1].decimal!)
         })
     })
 
@@ -266,8 +266,8 @@ describe("capture zones", (): void => {
             [{decimal: 1.033126}, {decimal: 1.033378}], // [{ cents: 56.420926 }, { cents: 56.842503 }],
         ] as Array<Extrema<{of: {decimal: Decimal}}>>
         expected.forEach((extrema: Extrema<{of: {decimal: Decimal}}>, index: number): void => {
-            expect(computeIrrationalDecimalFromScamon(actual[index]!.extrema[0]!)).toBeCloseTo(extrema[0].decimal!)
-            expect(computeIrrationalDecimalFromScamon(actual[index]!.extrema[1]!)).toBeCloseTo(extrema[1].decimal!)
+            expect(computeIrrationalDecimalFromSpev(actual[index]!.extrema[0]!)).toBeCloseTo(extrema[0].decimal!)
+            expect(computeIrrationalDecimalFromSpev(actual[index]!.extrema[1]!)).toBeCloseTo(extrema[1].decimal!)
         })
     })
 })

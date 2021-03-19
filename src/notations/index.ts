@@ -25,7 +25,7 @@ export {
     JiNotationBound,
     JiNotationBoundClassEntry,
     computeJiNotationCaptureZone,
-    INSANE_ZETA_PEAK_VAL,
+    INSANE_ZETA_PEAK_MAPPING,
     MEDINA_CENTS,
     HIGHINA_CENTS,
     ULTRINA_CENTS,

@@ -1,4 +1,4 @@
-import {Scamon} from "@sagittal/general"
+import {Spev} from "@sagittal/general"
 import {ArmId, Compatible, computeAccidental, computeJiPitchFromAccidental, HeadId} from "../../../../src"
 
 describe("computeJiPitchFromAccidental", (): void => {
@@ -14,7 +14,7 @@ describe("computeJiPitchFromAccidental", (): void => {
         // ``)|# =
         // ``)|  [  -7  -1   1   1   1 ⟩    +
         //     # [ -11   7             ⟩
-        const expected = {monzo: [-18, 6, 1, 1, 1]} as Scamon<{rational: true}>
+        const expected = {pev: [-18, 6, 1, 1, 1]} as Spev<{rational: true}>
         expect(actual).toEqual(expected)
     })
 
@@ -26,7 +26,7 @@ describe("computeJiPitchFromAccidental", (): void => {
 
         const actual = computeJiPitchFromAccidental(accidental)
 
-        const expected = {monzo: [-4, 9, -2, -2]} as Scamon<{rational: true}>
+        const expected = {pev: [-4, 9, -2, -2]} as Spev<{rational: true}>
         expect(actual).toEqual(expected)
     })
 })

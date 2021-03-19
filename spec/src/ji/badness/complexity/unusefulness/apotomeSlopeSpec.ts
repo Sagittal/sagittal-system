@@ -1,9 +1,9 @@
-import {Scamon} from "@sagittal/general"
+import {Spev} from "@sagittal/general"
 import {ApotomeSlope, computeApotomeSlope} from "../../../../../../src"
 
 describe("computeApotomeSlope", (): void => {
     it("gives the amount that the comma changes by when tempering the apotome", (): void => {
-        const jiPitch = {monzo: [-15, 8, 1]} as Scamon<{rational: true}>
+        const jiPitch = {pev: [-15, 8, 1]} as Spev<{rational: true}>
 
         const actual = computeApotomeSlope(jiPitch)
 
@@ -11,8 +11,8 @@ describe("computeApotomeSlope", (): void => {
         expect(actual).toBeCloseToTyped(expected)
     })
 
-    it("works for monzos without three exponents", (): void => {
-        const jiPitch = {monzo: [] as unknown[]} as Scamon<{rational: true}>
+    it("works for pevs without three exponents", (): void => {
+        const jiPitch = {pev: [] as unknown[]} as Spev<{rational: true}>
 
         const actual = computeApotomeSlope(jiPitch)
 

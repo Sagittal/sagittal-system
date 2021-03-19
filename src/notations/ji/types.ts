@@ -1,4 +1,4 @@
-import {Cents, CommaMean, Name, NumericProperties, Scamon} from "@sagittal/general"
+import {Cents, CommaMean, Name, NumericProperties, Spev} from "@sagittal/general"
 import {SizeCategoryBound} from "../../ji"
 import {BoundClass, BoundClassId} from "../../notation"
 
@@ -26,7 +26,7 @@ enum JiNotationLevelId {
 
 type InaMidpoint<T extends NumericProperties = {}> = {
     name: Name<InaMidpoint>,
-    pitch: Scamon<T & {rational: false}>,
+    pitch: Spev<T & {rational: false}>,
 }
 
 type JiNotationBound<T extends NumericProperties = {}> = InaMidpoint<T> | CommaMean<T> | SizeCategoryBound<T>

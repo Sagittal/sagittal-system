@@ -4,7 +4,7 @@ import {Unpopularity} from "../../../../../../src/ji/badness/complexity/unpopula
 
 describe("computeSopfgtt", (): void => {
     it("returns the sum of prime factors greater than three", (): void => {
-        const two3FreeClass = {monzo: [0, 0, 2, 0, 0, 0, 0, 0, -1]} as Two3FreeClass  // {25/23}₂,₃
+        const two3FreeClass = {pev: [0, 0, 2, 0, 0, 0, 0, 0, -1]} as Two3FreeClass  // {25/23}₂,₃
 
         const actual = computeSopfgtt(two3FreeClass)
 

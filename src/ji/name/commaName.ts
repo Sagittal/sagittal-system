@@ -3,12 +3,12 @@ import {
     Comma,
     computeCentsFromPitch,
     computeSubQuotient,
-    computeSuperScamon,
+    computeSuperSpev,
     Direction,
     formatCents,
-    isRationalScamonSmooth,
-    isRationalScamonSub,
-    isRationalScamonUnison,
+    isRationalSpevSmooth,
+    isRationalSpevSub,
+    isRationalSpevUnison,
     Name,
     stringify,
     THREE_SMOOTHNESS,
@@ -37,14 +37,14 @@ const computeCommaName = (comma: Comma, options: CommaNameOptions = {}): Name<Co
 
     const maybeHyphen = abbreviated ? BLANK : "-"
 
-    const maybeDown = isRationalScamonSub(comma) ? " down" : BLANK
+    const maybeDown = isRationalSpevSub(comma) ? " down" : BLANK
 
-    const superComma = computeSuperScamon(comma) as Comma<{rational: true, direction: Direction.SUPER}>
+    const superComma = computeSuperSpev(comma) as Comma<{rational: true, direction: Direction.SUPER}>
     const sizeCategory: SizeCategory = computeSizeCategory(superComma)
     const sizeCategoryText = abbreviated ? SIZE_CATEGORY_ABBREVIATIONS[sizeCategory] : SIZE_CATEGORY_NAMES[sizeCategory]
 
     let formattedCommaNameQuotient
-    if (isRationalScamonSmooth(comma, THREE_SMOOTHNESS) && !isRationalScamonUnison(comma)) {
+    if (isRationalSpevSmooth(comma, THREE_SMOOTHNESS) && !isRationalSpevUnison(comma)) {
         formattedCommaNameQuotient = "3"
     } else {
         const commaNameQuotient = computeCommaNameQuotient(comma)

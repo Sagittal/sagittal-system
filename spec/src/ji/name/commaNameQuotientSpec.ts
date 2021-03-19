@@ -4,7 +4,7 @@ import {CommaNameQuotient} from "../../../../src/ji/name/types"
 
 describe("computeCommaNameQuotient", (): void => {
     it("works for a complex comma", (): void => {
-        const comma = {monzo: [-53, 32, 1]} as Comma
+        const comma = {pev: [-53, 32, 1]} as Comma
 
         const actual = computeCommaNameQuotient(comma)
 

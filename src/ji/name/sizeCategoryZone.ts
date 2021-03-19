@@ -1,4 +1,4 @@
-import {Max, Min, Scamon, Zone} from "@sagittal/general"
+import {Max, Min, Spev, Zone} from "@sagittal/general"
 import {EXCLUDE_LOWER_BOUND} from "../constants"
 import {SIZE_CATEGORY_BOUNDS} from "./sizeCategoryBounds"
 import {computeSizeCategoryIndexFromSizeCategory} from "./sizeCategoryIndex"
@@ -9,8 +9,8 @@ const computeSizeCategoryZone = (sizeCategory: SizeCategory): Zone<{of: SizeCate
 
     return {
         extrema: [
-            SIZE_CATEGORY_BOUNDS[sizeCategoryIndex ? sizeCategoryIndex - 1 : 0].pitch as Scamon as Min<Scamon>,
-            SIZE_CATEGORY_BOUNDS[sizeCategoryIndex].pitch as Scamon as Max<Scamon>,
+            SIZE_CATEGORY_BOUNDS[sizeCategoryIndex ? sizeCategoryIndex - 1 : 0].pitch as Spev as Min<Spev>,
+            SIZE_CATEGORY_BOUNDS[sizeCategoryIndex].pitch as Spev as Max<Spev>,
         ],
         exclusive: EXCLUDE_LOWER_BOUND,
     } as Zone<{of: SizeCategoryBound}>

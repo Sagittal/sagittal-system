@@ -1,7 +1,7 @@
 export {findNotatingCommas} from "./notatingCommas"
-export {computeRationalMonzoInZone} from "./monzoInZone"
-export {computeCommasFrom23FreeRationalMonzo} from "./commasFrom23FreeMonzo"
-export {CommasFrom23FreeMonzoOptions} from "./types"
+export {computeRationalPevInZone} from "./pevInZone"
+export {computeCommasFrom23FreeRationalPev} from "./commasFrom23FreePev"
+export {CommasFrom23FreePevOptions} from "./types"
 export {
     DEFAULT_MAX_AAS,
     DEFAULT_MAX_ATE,

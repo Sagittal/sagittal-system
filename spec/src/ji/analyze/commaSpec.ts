@@ -7,7 +7,7 @@ import {
     Direction,
     Index,
     Max,
-    Monzo,
+    Pev,
     Name,
     Prime,
     Quotient,
@@ -17,15 +17,15 @@ import {
 import {analyzeComma, ApotomeSlope, Ate, N2D3P9, SizeCategory} from "../../../../src"
 
 describe("analyzeComma", (): void => {
-    it("returns an analysis of a comma, given its monzo", (): void => {
-        const comma = {monzo: [-8, -6, 3, 5, -1]} as Comma
+    it("returns an analysis of a comma, given its pev", (): void => {
+        const comma = {pev: [-8, -6, 3, 5, -1]} as Comma
 
         const actual = analyzeComma(comma)
 
         const expected = {
             pitch: comma,
             cents: 40.022726 as Cents,
-            monzo: [-8, -6, 3, 5, -1] as Monzo<{rational: true}>,
+            pev: [-8, -6, 3, 5, -1] as Pev<{rational: true}>,
             quotient: [2100875, 2052864] as Quotient<{rational: true}>,
             decimal: 1.023387 as Decimal<{rational: true}>,
             name: "5³⋅7⁵/11S" as Name<Comma>,
@@ -40,7 +40,7 @@ describe("analyzeComma", (): void => {
                 two3FreeSopfr: 61 as Sopfr<{rough: 5}>,
                 n2d3p9: 36777.470341 as N2D3P9,
                 two3FreeClass: {
-                    monzo: [0, 0, 3, 5, -1] as Monzo<{rational: true, rough: 5, direction: Direction.SUPER}>,
+                    pev: [0, 0, 3, 5, -1] as Pev<{rational: true, rough: 5, direction: Direction.SUPER}>,
                 } as Two3FreeClass,
             },
         }

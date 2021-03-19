@@ -1,7 +1,7 @@
 import {Abs, Max, Prime, Zone} from "@sagittal/general"
 import {ApotomeSlope, Ate, N2D3P9} from "../badness"
 
-type CommasFrom23FreeMonzoOptions = Partial<{
+type CommasFrom23FreePevOptions = Partial<{
     zone: Zone,
     maxAte: Max<Ate>,
     maxAas: Max<Abs<ApotomeSlope>>,
@@ -10,5 +10,5 @@ type CommasFrom23FreeMonzoOptions = Partial<{
 }>
 
 export {
-    CommasFrom23FreeMonzoOptions,
+    CommasFrom23FreePevOptions,
 }

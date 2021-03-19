@@ -1,7 +1,7 @@
 import {
     compute23FreeClass,
     computeArithmeticMean,
-    computeRationalScamonSopfr,
+    computeRationalSpevSopfr,
     Mean,
     MeanType,
     Sopfr,
@@ -17,7 +17,7 @@ describe("average 2,3-free SoPFR", (): void => {
                 const commaClass = getCommaClass(commaClassId)
                 const two3FreeClass = compute23FreeClass(commaClass.pitch)
 
-                return computeRationalScamonSopfr(two3FreeClass)
+                return computeRationalSpevSopfr(two3FreeClass)
             })
 
         expect(computeArithmeticMean(...two3FreeSopfrs)).toBeCloseToTyped(AVERAGE_2_3_FREE_SOPFR)

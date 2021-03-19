@@ -1,4 +1,4 @@
-import {computeIrrationalDecimalFromScamon, Decimal, Extrema} from "@sagittal/general"
+import {computeIrrationalDecimalFromSpev, Decimal, Extrema} from "@sagittal/general"
 import {computeSecondaryCommaZone, JI_NOTATION_COMMA_CLASS_IDS} from "../../../../../src"
 
 describe("secondary comma zones", (): void => {
@@ -131,8 +131,8 @@ describe("secondary comma zones", (): void => {
             [{decimal: 1.032791}, {decimal: 1.033965}], // [{ cents: 55.858825 }, { cents: 56.842503 }],
         ] as Array<Extrema<{of: {decimal: Decimal}}>>
         expected.forEach((extrema: Extrema<{of: {decimal: Decimal}}>, index: number): void => {
-            expect(computeIrrationalDecimalFromScamon(actual[index]!.extrema[0]!)).toBeCloseTo(extrema[0].decimal!)
-            expect(computeIrrationalDecimalFromScamon(actual[index]!.extrema[1]!)).toBeCloseTo(extrema[1].decimal!)
+            expect(computeIrrationalDecimalFromSpev(actual[index]!.extrema[0]!)).toBeCloseTo(extrema[0].decimal!)
+            expect(computeIrrationalDecimalFromSpev(actual[index]!.extrema[1]!)).toBeCloseTo(extrema[1].decimal!)
         })
     })
 })

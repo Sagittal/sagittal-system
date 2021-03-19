@@ -1,4 +1,4 @@
-import {Comma, formatPitch, isScamonGreater, isUndefined} from "@sagittal/general"
+import {Comma, formatPitch, isSpevGreater, isUndefined} from "@sagittal/general"
 import {SIZE_CATEGORY_BOUNDS} from "./sizeCategoryBounds"
 import {SizeCategory, SizeCategoryBound} from "./types"
 
@@ -7,7 +7,7 @@ const computeSizeCategory = (comma: Comma): SizeCategory => {
     let sizeCategory = sizeCategories[0]
 
     SIZE_CATEGORY_BOUNDS.forEach((sizeCategoryBound: SizeCategoryBound, index: number): void => {
-        if (isScamonGreater(comma, sizeCategoryBound.pitch)) {
+        if (isSpevGreater(comma, sizeCategoryBound.pitch)) {
             sizeCategory = sizeCategories[index + 1]
         }
     })

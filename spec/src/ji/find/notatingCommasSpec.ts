@@ -1,57 +1,57 @@
-import {Abs, Comma, computeScamonFromDecimal, Decimal, Max, Min, Scamon, UNISON, Zone} from "@sagittal/general"
+import {Abs, Comma, computeSpevFromDecimal, Decimal, Max, Min, Spev, UNISON, Zone} from "@sagittal/general"
 import {ApotomeSlope, findNotatingCommas} from "../../../../src"
 
 describe("findNotatingCommas", (): void => {
     it("given a JI pitch, returns a list of the commas that notate it", (): void => {
-        const jiPitch = {monzo: [0, 0, 0, 0, 1]} as Scamon<{rational: true}>
+        const jiPitch = {pev: [0, 0, 0, 0, 1]} as Spev<{rational: true}>
 
         const actual = findNotatingCommas(jiPitch)
 
         const expected = [
-            {monzo: [14, -11, 0, 0, 1]},
-            {monzo: [-5, 1, 0, 0, 1]},
-            {monzo: [32, -18, 0, 0, -1]},
-            {monzo: [13, -6, 0, 0, -1]},
+            {pev: [14, -11, 0, 0, 1]},
+            {pev: [-5, 1, 0, 0, 1]},
+            {pev: [32, -18, 0, 0, -1]},
+            {pev: [13, -6, 0, 0, -1]},
         ] as Comma[]
         expect(actual).toEqual(expected)
     })
 
     it("can filter", (): void => {
-        const jiPitch = {monzo: [0, 0, 0, 0, 1]} as Scamon<{rational: true}>
+        const jiPitch = {pev: [0, 0, 0, 0, 1]} as Spev<{rational: true}>
         const maxAas = 9 as Max<Abs<ApotomeSlope>>
-        const upperBound = computeScamonFromDecimal(1.032279 as Decimal) as Max<Scamon>
-        const zone: Zone = {extrema: [UNISON as Scamon as Min<Scamon>, upperBound]}
+        const upperBound = computeSpevFromDecimal(1.032279 as Decimal) as Max<Spev>
+        const zone: Zone = {extrema: [UNISON as Spev as Min<Spev>, upperBound]}
 
         const actual = findNotatingCommas(jiPitch, {maxAas, zone})
 
         const expected = [
-            {monzo: [-5, 1, 0, 0, 1]},
-            {monzo: [13, -6, 0, 0, -1]},
+            {pev: [-5, 1, 0, 0, 1]},
+            {pev: [13, -6, 0, 0, -1]},
         ] as Comma[]
         expect(actual).toEqual(expected)
     })
 
     it("when given the unison, does not return duplicates", (): void => {
-        const jiPitch = {monzo: [] as unknown[]} as Scamon<{rational: true}>
+        const jiPitch = {pev: [] as unknown[]} as Spev<{rational: true}>
 
         const actual = findNotatingCommas(jiPitch)
 
         const expected = [
-            {monzo: []},
-            {monzo: [-19, 12]},
+            {pev: []},
+            {pev: [-19, 12]},
         ] as Comma[]
         expect(actual).toEqual(expected)
     })
 
     it("an edge case, with large N2D3P9", (): void => {
-        const jiPitch = {monzo: [0, 0, -1, 1, 1, 0, 0, 0, 0, 0, 0, -1]} as Scamon<{rational: true}>
+        const jiPitch = {pev: [0, 0, -1, 1, 1, 0, 0, 0, 0, 0, 0, -1]} as Spev<{rational: true}>
 
         const actual = findNotatingCommas(jiPitch)
 
         const expected = [
-            {monzo: [-13, 9, -1, 1, 1, 0, 0, 0, 0, 0, 0, -1]},
-            {monzo: [-6, 3, 1, -1, -1, 0, 0, 0, 0, 0, 0, 1]},
-            {monzo: [-25, 15, 1, -1, -1, 0, 0, 0, 0, 0, 0, 1]},
+            {pev: [-13, 9, -1, 1, 1, 0, 0, 0, 0, 0, 0, -1]},
+            {pev: [-6, 3, 1, -1, -1, 0, 0, 0, 0, 0, 0, 1]},
+            {pev: [-25, 15, 1, -1, -1, 0, 0, 0, 0, 0, 0, 1]},
         ] as Comma[]
         expect(actual).toEqual(expected)
     })

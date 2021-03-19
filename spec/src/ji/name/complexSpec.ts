@@ -4,7 +4,7 @@ import {computeMaybeComplex} from "../../../../src/ji/name/complex"
 
 describe("computeMaybeComplex", (): void => {
     it("returns blank for a comma which is the simplest comma with its (undirected) quotient and size category           ", (): void => {
-        const comma = {monzo: [-4, 4, -1]} as Comma
+        const comma = {pev: [-4, 4, -1]} as Comma
         const sizeCategory = SizeCategory.COMMA
         const abbreviated = false
 
@@ -14,7 +14,7 @@ describe("computeMaybeComplex", (): void => {
     })
 
     it("works for a comma that is more complex than another with its same (undirected) quotient and size category          ", (): void => {
-        const comma = {monzo: [-34, 20, 1]} as Comma
+        const comma = {pev: [-34, 20, 1]} as Comma
         const sizeCategory = SizeCategory.COMMA
         const abbreviated = false
 
@@ -24,7 +24,7 @@ describe("computeMaybeComplex", (): void => {
     })
 
     it("works for a supercomplex comma", (): void => {
-        const comma = {monzo: [50, -33, 1]} as Comma
+        const comma = {pev: [50, -33, 1]} as Comma
         const sizeCategory = SizeCategory.COMMA
         const abbreviated = true
 
@@ -34,7 +34,7 @@ describe("computeMaybeComplex", (): void => {
     })
 
     it("works for a hypercomplex comma", (): void => {
-        const comma = {monzo: [80, -49, -1]} as Comma
+        const comma = {pev: [80, -49, -1]} as Comma
         const sizeCategory = SizeCategory.COMMA
         const abbreviated = true
 
@@ -44,7 +44,7 @@ describe("computeMaybeComplex", (): void => {
     })
 
     it("works for an ultracomplex comma", (): void => {
-        const comma = {monzo: [-88, 57, -1]} as Comma
+        const comma = {pev: [-88, 57, -1]} as Comma
         const sizeCategory = SizeCategory.COMMA
         const abbreviated = true
 
@@ -54,7 +54,7 @@ describe("computeMaybeComplex", (): void => {
     })
 
     it("works for a 5-complex comma", (): void => {
-        const comma = {monzo: [-118, 73, 1]} as Comma
+        const comma = {pev: [-118, 73, 1]} as Comma
         const sizeCategory = SizeCategory.COMMA
         const abbreviated = true
 
@@ -66,7 +66,7 @@ describe("computeMaybeComplex", (): void => {
     it("works for a 6-complex comma", (): void => {
         onlyRunInCi()
 
-        const comma = {monzo: [134, -86, 1]} as Comma
+        const comma = {pev: [134, -86, 1]} as Comma
         const sizeCategory = SizeCategory.COMMA
         const abbreviated = true
 
@@ -76,7 +76,7 @@ describe("computeMaybeComplex", (): void => {
     })
 
     it("returns blank for a comma which is the simplest 3-limit comma in its size category", (): void => {
-        const comma = {monzo: [-84, 53]} as Comma
+        const comma = {pev: [-84, 53]} as Comma
         const sizeCategory = SizeCategory.SCHISMA
         const abbreviated = false
 
@@ -88,7 +88,7 @@ describe("computeMaybeComplex", (): void => {
     it("works for a comma that is more complex than another 3-limit comma in its size category, prefixing it with the EDO which tempers it out (which is equal to the 3-exponent)", (): void => {
         onlyRunInCi()
 
-        const comma = {monzo: [-569, 359]} as Comma
+        const comma = {pev: [-569, 359]} as Comma
         const sizeCategory = SizeCategory.SCHISMA
         const abbreviated = false
 
@@ -100,7 +100,7 @@ describe("computeMaybeComplex", (): void => {
     it("can abbreviate the complexity for 3-limit commas", (): void => {
         onlyRunInCi()
 
-        const comma = {monzo: [970, -612]} as Comma
+        const comma = {pev: [970, -612]} as Comma
         const sizeCategory = SizeCategory.SCHISMA
         const abbreviated = true
 

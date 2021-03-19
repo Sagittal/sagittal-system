@@ -17,24 +17,24 @@ import {FlavorsExpectation} from "../../../../helpers/src/accidental/flavor/type
 /*
 // const computePrimaryComma = ({ commaClassId, commaDirection, apotomeCount }: PrimaryCommaOptions): Comma => {
 //     const comma = getCommaClass(commaClassId).pitch
-//     const commaticAlteration: Comma = commaDirection === Direction.SUPER ? comma : invertScamon(comma) as Comma
-//     const apotomeBase: Comma = multiplyScamon(
+//     const commaticAlteration: Comma = commaDirection === Direction.SUPER ? comma : invertSpev(comma) as Comma
+//     const apotomeBase: Comma = multiplySpev(
 //         APOTOME,
 //         apotomeCount as Decimal<{ integer: true }> as Decimal<{ integer: true }> & Multiplier,
 //     ) as Comma
 //
-//     return addScamons(apotomeBase, commaticAlteration) as Scamon as Comma
+//     return addSpevs(apotomeBase, commaticAlteration) as Spev as Comma
 // }
 //
 // const computeCaptureZone = ({ boundClassId, commaDirection, apotomeCount }: CaptureZoneOptions): Zone => {
 //     const bound = getBoundClass(boundClassId).pitch
-//     const boundAlteration = commaDirection === Direction.SUPER ? bound : invertScamon(bound)
-//     const apotomeBase = multiplyScamon(
+//     const boundAlteration = commaDirection === Direction.SUPER ? bound : invertSpev(bound)
+//     const apotomeBase = multiplySpev(
 //         APOTOME,
 //         apotomeCount as Decimal<{ integer: true }> as Decimal<{ integer: true }> & Multiplier,
 //     ) as Comma
 //
-//     return addScamons(apotomeBase, boundAlteration)
+//     return addSpevs(apotomeBase, boundAlteration)
 // }
  */
 

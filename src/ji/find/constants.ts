@@ -1,9 +1,9 @@
-import {Abs, Copfr, Exclusive, Max, Min, Prime, Scamon, Sopfr, Zone} from "@sagittal/general"
+import {Abs, Copfr, Exclusive, Max, Min, Prime, Sopfr, Spev, Zone} from "@sagittal/general"
 import {HALF_APOTOME} from "../../constants"
 import {ApotomeSlope, Ate, MAX_N2D3P9_FOR_WHICH_POSSIBLE_NUMERATORS_ARE_KNOWN} from "../badness"
 
-const DEFAULT_LOWER_BOUND = {monzo: [] as unknown[]} as Min<Scamon>                                //  0.0000000000¢
-const DEFAULT_UPPER_BOUND = HALF_APOTOME as Scamon as Max<Scamon>                                  // 56.8425030289¢
+const DEFAULT_LOWER_BOUND = {pev: [] as unknown[]} as Min<Spev>                                //  0.0000000000¢
+const DEFAULT_UPPER_BOUND = HALF_APOTOME as Spev as Max<Spev>                                  // 56.8425030289¢
 const DEFAULT_EXCLUSIVE: Exclusive = false
 const DEFAULT_ZONE = {
     extrema: [DEFAULT_LOWER_BOUND, DEFAULT_UPPER_BOUND],

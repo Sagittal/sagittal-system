@@ -1,9 +1,9 @@
-import {Direction, Name, NumericProperties, Quotient, Scamon} from "@sagittal/general"
+import {Direction, Name, NumericProperties, Quotient, Spev} from "@sagittal/general"
 import {Complexity} from "../badness"
 
 type SizeCategoryBound<T extends NumericProperties = {}> = {
     name: Name<SizeCategoryBound>,
-    pitch: Scamon<T & {rational: false}>,
+    pitch: Spev<T & {rational: false}>,
 }
 
 enum FactoringMode {

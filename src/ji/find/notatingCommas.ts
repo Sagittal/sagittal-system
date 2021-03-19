@@ -1,30 +1,30 @@
 import {
-    areMonzosEqual,
+    arePevsEqual,
     Comma,
-    computeRoughRationalMonzo,
-    invertMonzo,
-    Monzo,
+    computeRoughRationalPev,
+    invertPev,
     NumericProperties,
-    Scamon,
+    Pev,
+    Spev,
     TWO_3_FREE,
 } from "@sagittal/general"
-import {computeCommasFrom23FreeRationalMonzo} from "./commasFrom23FreeMonzo"
-import {CommasFrom23FreeMonzoOptions} from "./types"
+import {computeCommasFrom23FreeRationalPev} from "./commasFrom23FreePev"
+import {CommasFrom23FreePevOptions} from "./types"
 
 const findNotatingCommas = <T extends NumericProperties>(
-    {monzo}: Scamon<T & {rational: true}>,
-    options?: CommasFrom23FreeMonzoOptions,
+    {pev}: Spev<T & {rational: true}>,
+    options?: CommasFrom23FreePevOptions,
 ): Comma[] => {
-    const two3FreeRationalMonzo: Monzo<{rational: true, rough: 5}> =
-        computeRoughRationalMonzo(monzo, TWO_3_FREE) as Monzo<{rational: true, rough: 5}>
+    const two3FreeRationalPev: Pev<{rational: true, rough: 5}> =
+        computeRoughRationalPev(pev, TWO_3_FREE) as Pev<{rational: true, rough: 5}>
 
-    if (areMonzosEqual(two3FreeRationalMonzo, [])) {
-        return computeCommasFrom23FreeRationalMonzo(two3FreeRationalMonzo, options)
+    if (arePevsEqual(two3FreeRationalPev, [])) {
+        return computeCommasFrom23FreeRationalPev(two3FreeRationalPev, options)
     }
 
     return [
-        ...computeCommasFrom23FreeRationalMonzo(two3FreeRationalMonzo, options),
-        ...computeCommasFrom23FreeRationalMonzo(invertMonzo(two3FreeRationalMonzo), options),
+        ...computeCommasFrom23FreeRationalPev(two3FreeRationalPev, options),
+        ...computeCommasFrom23FreeRationalPev(invertPev(two3FreeRationalPev), options),
     ]
 }
 

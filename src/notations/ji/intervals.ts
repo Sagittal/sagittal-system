@@ -7,30 +7,30 @@ import {
     Ed,
     ONE,
     Quotient,
-    scaleScamon,
-    Scamon,
+    scaleSpev,
+    Spev,
 } from "@sagittal/general"
 import {EXTREME_EDA, HIGH_EDA, INSANE_EDA, JI_NOTATION_LEVEL_EDAS, MEDIUM_EDA, ULTRA_EDA} from "./levelEdas"
 import {JI_NOTATION_LEVELS} from "./levels"
 import {JiNotationLevelId} from "./types"
 
-const TINA: Scamon<{rational: false}> = scaleScamon(
+const TINA: Spev<{rational: false}> = scaleSpev(
     APOTOME,
     [ONE, INSANE_EDA as Decimal<{integer: true}>] as Quotient<{rational: true}>,
 )
-const MINA: Scamon<{rational: false}> = scaleScamon(
+const MINA: Spev<{rational: false}> = scaleSpev(
     APOTOME,
     [ONE, EXTREME_EDA as Decimal<{integer: true}>] as Quotient<{rational: true}>,
 )
-const ULTRINA: Scamon<{rational: false}> = scaleScamon(
+const ULTRINA: Spev<{rational: false}> = scaleSpev(
     APOTOME,
     [ONE, ULTRA_EDA as Decimal<{integer: true}>] as Quotient<{rational: true}>,
 )
-const HIGHINA: Scamon<{rational: false}> = scaleScamon(
+const HIGHINA: Spev<{rational: false}> = scaleSpev(
     APOTOME,
     [ONE, HIGH_EDA as Decimal<{integer: true}>] as Quotient<{rational: true}>,
 )
-const MEDINA: Scamon<{rational: false}> = scaleScamon(
+const MEDINA: Spev<{rational: false}> = scaleSpev(
     APOTOME,
     [ONE, MEDIUM_EDA as Decimal<{integer: true}>] as Quotient<{rational: true}>,
 )

@@ -1,11 +1,11 @@
-import {isUndefined, Scamon, sumRationalScamons, UNISON} from "@sagittal/general"
+import {isUndefined, Spev, sumRationalSpevs, UNISON} from "@sagittal/general"
 import {Accidental} from "../flavor"
 import {computeApotomicPitchAlterationFromSection} from "./apotomicPitchAlteration"
 import {computeCommaticPitchAlterationFromSymbolClassIdAndSection} from "./commaticPitchAlteration"
 import {computePitchAlterationFromCompatible} from "./compatiblePitchAlteration"
 import {computeSymbolClassIdAndSectionFromSagittal} from "./symbolClassIdAndSectionFromSagittal"
 
-const computeJiPitchFromAccidental = (accidental: Accidental): Scamon<{rational: true}> => {
+const computeJiPitchFromAccidental = (accidental: Accidental): Spev<{rational: true}> => {
     if (isUndefined(accidental)) return UNISON
 
     const {compatible, ...sagittal} = accidental
@@ -14,7 +14,7 @@ const computeJiPitchFromAccidental = (accidental: Accidental): Scamon<{rational:
 
     const pitchAlterations = [
         computeCommaticPitchAlterationFromSymbolClassIdAndSection([symbolClassId, section]),
-    ] as Array<Scamon<{rational: true}>>
+    ] as Array<Spev<{rational: true}>>
 
     const apotomePitchAlteration = computeApotomicPitchAlterationFromSection(section)
     if (!isUndefined(apotomePitchAlteration)) {
@@ -25,7 +25,7 @@ const computeJiPitchFromAccidental = (accidental: Accidental): Scamon<{rational:
         pitchAlterations.push(computePitchAlterationFromCompatible(compatible))
     }
 
-    return sumRationalScamons(...pitchAlterations)
+    return sumRationalSpevs(...pitchAlterations)
 }
 
 export {

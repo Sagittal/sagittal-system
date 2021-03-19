@@ -213,7 +213,7 @@ describe("parseCommaName", (): void => {
     it("uses direction of the comma name quotient to indicate direction of the comma (not the prime content), but you can override either direction in the comma name quotient by suffixing 'up' or 'down'", (): void => {
         // todo this is unnecessarily complex, this should JUST test that it gets the direction out
         // but something like this test might be what we want for something that integrates through parsing the comma name and then computing the comma from that
-        // which is uniquley weird about comma name option vs. quotient, monzo, etc. in the ji-pitch script group and would be nice to have i think
+        // which is uniquley weird about comma name option vs. quotient, pev, etc. in the ji-pitch script group and would be nice to have i think
         const sizeCategory = SizeCategory.COMMA
 
         expect(parseCommaName("5C" as Io))

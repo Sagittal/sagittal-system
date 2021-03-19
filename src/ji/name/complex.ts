@@ -2,18 +2,18 @@ import {
     Abs,
     BLANK,
     Comma,
-    computeRationalMonzoFromRationalScamon,
-    computeRationalScamonSmoothness,
-    computeRoughRationalMonzo,
-    computeSuperScamon,
+    computeRationalPevFromRationalSpev,
+    computeRationalSpevSmoothness,
+    computeRoughRationalPev,
+    computeSuperSpev,
     decrement,
     FIVE_ROUGHNESS,
-    invertMonzo,
+    invertPev,
     Max,
-    Scamon,
+    Spev,
 } from "@sagittal/general"
 import {ApotomeSlope, Ate, computeAte} from "../badness"
-import {computeCommasFrom23FreeRationalMonzo} from "../find"
+import {computeCommasFrom23FreeRationalPev} from "../find"
 import {computeSizeCategoryZone} from "./sizeCategoryZone"
 import {MaybeComplexOptions} from "./types"
 
@@ -55,14 +55,14 @@ const computeMaybeComplex = (comma: Comma, {sizeCategory, abbreviated}: MaybeCom
 
     const zone = computeSizeCategoryZone(sizeCategory)
     const maxAas = Infinity as Max<Abs<ApotomeSlope>>
-    const two3FreeRationalMonzo = computeRoughRationalMonzo(
-        computeRationalMonzoFromRationalScamon(computeSuperScamon(comma) as Scamon<{rational: true}>),
+    const two3FreeRationalPev = computeRoughRationalPev(
+        computeRationalPevFromRationalSpev(computeSuperSpev(comma) as Spev<{rational: true}>),
         FIVE_ROUGHNESS,
     )
-    const maxPrimeLimit = computeRationalScamonSmoothness(comma)
+    const maxPrimeLimit = computeRationalSpevSmoothness(comma)
     const options = {zone, maxPrimeLimit, maxAas, maxAte}
-    const sameDirectionCommas = computeCommasFrom23FreeRationalMonzo(two3FreeRationalMonzo, options)
-    const otherDirectionCommas = computeCommasFrom23FreeRationalMonzo(invertMonzo(two3FreeRationalMonzo), options)
+    const sameDirectionCommas = computeCommasFrom23FreeRationalPev(two3FreeRationalPev, options)
+    const otherDirectionCommas = computeCommasFrom23FreeRationalPev(invertPev(two3FreeRationalPev), options)
     const commas = [...sameDirectionCommas, ...otherDirectionCommas]
 
     if (commas.length === 0) return BLANK

@@ -7,13 +7,13 @@ import {
     Index,
     Max,
     Maybe,
-    Monzo,
     Name,
     NumericProperties,
+    Pev,
     Prime,
     Quotient,
-    Scamon,
     Sopfr,
+    Spev,
     Two3FreeClass,
 } from "@sagittal/general"
 import {ApotomeSlope, Ate, N2D3P9} from "../badness"
@@ -23,7 +23,7 @@ interface JiPitchAnalysisProperties<T extends NumericProperties = {}> {
     apotomeSlope: ApotomeSlope,
     ate: Ate,
     aas: Abs<ApotomeSlope>,
-    monzo: Monzo<T & {rational: true}>,
+    pev: Pev<T & {rational: true}>,
     quotient: Quotient<T & {rational: true}>,
     decimal: Decimal<T & {rational: true}>,
     cents: Cents,
@@ -36,11 +36,11 @@ type CommaAnalysis<T extends NumericProperties = {}, U extends Comma<T> = Comma<
 
 type JiPitchAnalysis<T extends NumericProperties = {}> =
     JiPitchAnalysisProperties<T>
-    & {pitch: Scamon<T & {rational: true}>}
+    & {pitch: Spev<T & {rational: true}>}
 
 type PotentiallyCommaAnalysis<T extends NumericProperties = {}> =
     JiPitchAnalysisProperties<T>
-    & {name: Maybe<Name<Comma>>, sizeCategory: Maybe<Index<SizeCategory>>, pitch: Scamon<T & {rational: true}>}
+    & {name: Maybe<Name<Comma>>, sizeCategory: Maybe<Index<SizeCategory>>, pitch: Spev<T & {rational: true}>}
 
 type Two3FreeClassAnalysis = {
     two3FreeClass: Two3FreeClass,
