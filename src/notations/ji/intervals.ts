@@ -26,11 +26,11 @@ const ULTRINA: Spev<{rational: false}> = scaleSpev(
     APOTOME,
     [ONE, ULTRA_EDA as Decimal<{integer: true}>] as Quotient<{rational: true}>,
 )
-const HIGHINA: Spev<{rational: false}> = scaleSpev(
+const HINA: Spev<{rational: false}> = scaleSpev(
     APOTOME,
     [ONE, HIGH_EDA as Decimal<{integer: true}>] as Quotient<{rational: true}>,
 )
-const MEDINA: Spev<{rational: false}> = scaleSpev(
+const ATHINA: Spev<{rational: false}> = scaleSpev(
     APOTOME,
     [ONE, MEDIUM_EDA as Decimal<{integer: true}>] as Quotient<{rational: true}>,
 )
@@ -51,19 +51,19 @@ const INA_CENTS_SIZES: Record<JiNotationLevelId, Cents> = JI_NOTATION_LEVEL_EDAS
 const TINA_CENTS: Cents = computeCentsFromPitch(TINA)
 const MINA_CENTS: Cents = computeCentsFromPitch(MINA)
 const ULTRINA_CENTS: Cents = computeCentsFromPitch(ULTRINA)
-const HIGHINA_CENTS: Cents = computeCentsFromPitch(HIGHINA)
-const MEDINA_CENTS: Cents = computeCentsFromPitch(MEDINA)
+const HINA_CENTS: Cents = computeCentsFromPitch(HINA)
+const ATHINA_CENTS: Cents = computeCentsFromPitch(ATHINA)
 
 export {
     TINA,
     MINA,
     ULTRINA,
-    HIGHINA,
-    MEDINA,
+    HINA,
+    ATHINA,
     INA_CENTS_SIZES,
     TINA_CENTS,
     MINA_CENTS,
     ULTRINA_CENTS,
-    HIGHINA_CENTS,
-    MEDINA_CENTS,
+    HINA_CENTS,
+    ATHINA_CENTS,
 }

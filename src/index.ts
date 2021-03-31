@@ -111,8 +111,8 @@ export {
     ULTRA_EDA,
     EXTREME_EDA,
     INSANE_EDA,
-    HIGHINA_CENTS,
-    MEDINA_CENTS,
+    HINA_CENTS,
+    ATHINA_CENTS,
     ULTRINA_CENTS,
     MINA_CENTS,
 } from "./notations"

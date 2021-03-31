@@ -1,12 +1,12 @@
 import {Cents} from "@sagittal/general"
 import {computeCentsFromTinas, Minas, Tinas} from "../../../../src"
 import {
-    computeCentsFromHighinas,
-    computeCentsFromMedinas,
+    computeCentsFromAthinas,
+    computeCentsFromHinas,
     computeCentsFromMinas,
     computeCentsFromUltrinas,
 } from "../../../../src/notations/ji/inaCents"
-import {Highinas, Medinas, Ultrinas} from "../../../../src/notations/ji/types"
+import {Athinas, Hinas, Ultrinas} from "../../../../src/notations/ji/types"
 
 describe("computeCentsFromTinas", (): void => {
     it("computes the cents from tinas", (): void => {
@@ -41,22 +41,22 @@ describe("computeCentsFromUltrinas", (): void => {
     })
 })
 
-describe("computeCentsFromHighinas", (): void => {
-    it("computes the cents from highinas", (): void => {
-        const highinas = 1 as Highinas
+describe("computeCentsFromHinas", (): void => {
+    it("computes the cents from hinas", (): void => {
+        const hinas = 1 as Hinas
 
-        const actual = computeCentsFromHighinas(highinas)
+        const actual = computeCentsFromHinas(hinas)
 
         const expected = 2.418830 as Cents
         expect(actual).toBeCloseTo(expected)
     })
 })
 
-describe("computeCentsFromMedinas", (): void => {
-    it("computes the cents from highinas", (): void => {
-        const medinas = 1 as Medinas
+describe("computeCentsFromAthinas", (): void => {
+    it("computes the cents from athinas", (): void => {
+        const athinas = 1 as Athinas
 
-        const actual = computeCentsFromMedinas(medinas)
+        const actual = computeCentsFromAthinas(athinas)
 
         const expected = 5.413572 as Cents
         expect(actual).toBeCloseTo(expected)

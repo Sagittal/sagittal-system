@@ -11,10 +11,10 @@ enum BoundType {
 type Tinas = Cents & {_InaBrand: "Tina"}
 type Minas = Cents & {_InaBrand: "Mina"}
 type Ultrinas = Cents & {_InaBrand: "Ultrina"}
-type Highinas = Cents & {_InaBrand: "Highina"}
-type Medinas = Cents & {_InaBrand: "Medina"}
+type Hinas = Cents & {_InaBrand: "Hina"}
+type Athinas = Cents & {_InaBrand: "Athina"}
 
-type Ina = Cents & {_InaBrand: "Tina" | "Mina" | "Ultrina" | "Highina" | "Medina"}
+type Ina = Cents & {_InaBrand: "Tina" | "Mina" | "Ultrina" | "Hina" | "Athina"}
 
 enum JiNotationLevelId {
     MEDIUM = "medium",          // Corresponds closely with Athenian symbol subset
@@ -48,8 +48,8 @@ export {
     Tinas,
     Minas,
     Ultrinas,
-    Highinas,
-    Medinas,
+    Hinas,
+    Athinas,
     JiNotationLevelId,
     JiNotationBound,
     JiNotationBoundClass,

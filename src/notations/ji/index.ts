@@ -3,7 +3,7 @@ export {computeCentsFromTinas} from "./inaCents"
 export {formatJiNotationLevel} from "./formatLevel"
 export {computeSecondaryCommaZone} from "./secondaryCommaZone"
 export {
-    INA_CENTS_SIZES, TINA, MINA, TINA_CENTS, MINA_CENTS, HIGHINA_CENTS, MEDINA_CENTS, ULTRINA_CENTS,
+    INA_CENTS_SIZES, TINA, MINA, TINA_CENTS, MINA_CENTS, HINA_CENTS, ATHINA_CENTS, ULTRINA_CENTS,
 } from "./intervals"
 export {JI_NOTATION_BOUND_CLASS_ENTRIES, JI_NOTATION_BOUND_CLASSES} from "./boundClasses"
 export {getMinaName} from "./minaName"
