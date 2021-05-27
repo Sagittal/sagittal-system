@@ -2,7 +2,7 @@ import {Comma} from "@sagittal/general"
 import {computeCommaName, FactoringMode} from "../../../../src"
 
 describe("computeCommaName", (): void => {
-    it("given a comma will return its Secor-Keenan systematic name", (): void => {
+    it("given a comma will return its sized comma name", (): void => {
         const comma = {pev: [5, -7, -1, 3]} as Comma
 
         const actual = computeCommaName(comma)

@@ -26,7 +26,7 @@ const removeParentheses = (string: string): string =>
         .replace("(", BLANK)
         .replace(")", BLANK)
 
-// "Secor-Keenan systematic name" or "Sagittal name"
+// "Sized comma name"
 
 const computeCommaName = (comma: Comma, options: CommaNameOptions = {}): Name<Comma> => {
     if (!isCommaSized(comma)) {
