@@ -12,7 +12,6 @@ describe("JI_NOTATION_LEVELS_COMMA_CLASS_IDS", (): void => {
     // TODO: POST-NOTATION-GENERATION: IDS VS INDICES
     //  I expect this test to not make any sense any more... but I still want to protect that this works
     //  It's because they need to be sorted by their indices, not their IDs
-    // tslint:disable-next-line ban
     xit("keeps the comma class IDs in each level sorted", (): void => {
         expect(JI_NOTATION_LEVELS_COMMA_CLASS_IDS[JiNotationLevelId.MEDIUM]).toEqual(
             sort(shallowClone(JI_NOTATION_LEVELS_COMMA_CLASS_IDS[JiNotationLevelId.MEDIUM])),

@@ -1,7 +1,6 @@
 import {Sagitype, computeSagittalSagitype, SYMBOL_SUBSETS, SymbolSubsetId} from "../../../src"
 import {computeSagittalFromSymbolClassId} from "../../../src/accidental"
 
-// tslint:disable-next-line ban
 xdescribe("SYMBOL_SUBSETS", (): void => {
     const subject = (symbolSubsetId: SymbolSubsetId): Sagitype[] => SYMBOL_SUBSETS[symbolSubsetId]
         .map(computeSagittalFromSymbolClassId)

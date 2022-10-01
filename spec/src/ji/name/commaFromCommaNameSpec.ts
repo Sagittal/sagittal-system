@@ -54,7 +54,6 @@ describe("computeCommaFromCommaName", (): void => {
     })
 
     // todo finish this
-    // tslint:disable-next-line:ban
     xdescribe("uses direction of the comma name quotient to indicate direction of the comma (not the prime content), but you can override either direction in the comma name quotient by suffixing 'up' or 'down'", (): void => {
         const sizeCategory: SizeCategory = SizeCategory.COMMA
         const down = {pev: [4, -4, 1]} as Comma

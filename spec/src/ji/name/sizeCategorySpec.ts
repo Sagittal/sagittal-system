@@ -1,5 +1,3 @@
-// tslint:disable max-line-length
-
 import {Cents, Comma, computePitchFromCents, Spev} from "@sagittal/general"
 import {computeSizeCategory, SizeCategory} from "../../../../src"
 

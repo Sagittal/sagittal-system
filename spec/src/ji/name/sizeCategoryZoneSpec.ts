@@ -1,5 +1,3 @@
-// tslint:disable max-line-length
-
 import {Cents, computeCentsFromPitch} from "@sagittal/general"
 import {SizeCategory} from "../../../../src"
 import {computeSizeCategoryZone} from "../../../../src/ji/name/sizeCategoryZone"

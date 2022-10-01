@@ -1,5 +1,3 @@
-// tslint:disable no-reaching-imports
-
 import {Filename, NEWLINE, readLines, setupScriptAndIo} from "@sagittal/general"
 
 setupScriptAndIo("tmp" as Filename)

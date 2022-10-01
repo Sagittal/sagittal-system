@@ -1,5 +1,3 @@
-//tslint:disable comment-format
-
 import {APOTOME, invertSpev, Spev, SYNTONIC_COMMA, UNISON} from "@sagittal/general"
 import {Compatible} from "../flavor"
 import {APOTOME_DOWN, DOUBLE_APOTOME, DOUBLE_APOTOME_DOWN} from "./constants"
