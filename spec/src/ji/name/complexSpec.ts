@@ -1,4 +1,4 @@
-import {BLANK, Comma, onlyRunInCi} from "@sagittal/general"
+import {BLANK, Comma, slowTestOnlyRunInFullSuite} from "@sagittal/general"
 import {SizeCategory} from "../../../../src"
 import {computeMaybeComplex} from "../../../../src/ji/name/complex"
 
@@ -64,7 +64,7 @@ describe("computeMaybeComplex", (): void => {
     })
 
     it("works for a 6-complex comma", (): void => {
-        onlyRunInCi()
+        slowTestOnlyRunInFullSuite()
 
         const comma = {pev: [134, -86, 1]} as Comma
         const sizeCategory = SizeCategory.COMMA
@@ -86,7 +86,7 @@ describe("computeMaybeComplex", (): void => {
     })
 
     it("works for a comma that is more complex than another 3-limit comma in its size category, prefixing it with the EDO which tempers it out (which is equal to the 3-exponent)", (): void => {
-        onlyRunInCi()
+        slowTestOnlyRunInFullSuite()
 
         const comma = {pev: [-569, 359]} as Comma
         const sizeCategory = SizeCategory.SCHISMA
@@ -98,7 +98,7 @@ describe("computeMaybeComplex", (): void => {
     })
 
     it("can abbreviate the complexity for 3-limit commas", (): void => {
-        onlyRunInCi()
+        slowTestOnlyRunInFullSuite()
 
         const comma = {pev: [970, -612]} as Comma
         const sizeCategory = SizeCategory.SCHISMA

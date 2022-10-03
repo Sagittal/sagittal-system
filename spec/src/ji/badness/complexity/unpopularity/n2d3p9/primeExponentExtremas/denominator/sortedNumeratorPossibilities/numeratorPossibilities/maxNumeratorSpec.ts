@@ -1,10 +1,10 @@
-import {Decimal, Max, Numerator, onlyRunInCi} from "@sagittal/general"
+import {Decimal, Max, Numerator, slowTestOnlyRunInFullSuite} from "@sagittal/general"
 import {N2D3P9} from "../../../../../../../../../../../src"
 import {computeMaxNumeratorGivenMaxN2D3P9} from "../../../../../../../../../../../src/ji/badness/complexity/unpopularity/n2d3p9/primeExponentExtremas/denominator/sortedNumeratorPossibilities/numeratorPossibilities/maxNumerator"
 
 describe("computeMaxNumeratorGivenMaxN2D3P9", (): void => {
     it("works for 136, for which the max numerator is a simple power of a single prime", (): void => {
-        onlyRunInCi()
+        slowTestOnlyRunInFullSuite()
 
         const maxN2D3P9: Max<N2D3P9> = 136 as Max<N2D3P9>
 

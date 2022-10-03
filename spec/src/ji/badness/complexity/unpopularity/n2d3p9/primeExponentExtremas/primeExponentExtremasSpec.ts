@@ -1,4 +1,4 @@
-import {Decimal, Exponent, Extrema, Max, onlyRunInCi, Prime} from "@sagittal/general"
+import {Decimal, Exponent, Extrema, Max, slowTestOnlyRunInFullSuite, Prime} from "@sagittal/general"
 import {computePrimeExponentExtremasGivenMaxN2D3P9, N2D3P9} from "../../../../../../../../src"
 
 describe("computePrimeExponentExtremasGivenMaxN2D3P9", (): void => {
@@ -43,7 +43,7 @@ describe("computePrimeExponentExtremasGivenMaxN2D3P9", (): void => {
     })
 
     it("works for 136, verifying the hardcoded table we first developed on the forum", (): void => {
-        onlyRunInCi()
+        slowTestOnlyRunInFullSuite()
 
         const maxN2D3P9 = 136 as Max<N2D3P9>
 
