@@ -4,7 +4,7 @@ Implementations of Sagittal notations, accidental parsing, useful metrics, comma
 
 ## development
 
-`npm run build` builds two versions of this package: one with CJS and one with ESM.
+`make build` builds two versions of this package: one with CJS and one with ESM.
 
 This is so the project can be used isomorphically (in both Node and the browser).
 
