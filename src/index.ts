@@ -75,6 +75,7 @@ export {
     ArmId,
     HeadId,
     computeAccidental,
+    Flavor,
 } from "./accidental"
 export {
     computeMaybeCommaClassId,
