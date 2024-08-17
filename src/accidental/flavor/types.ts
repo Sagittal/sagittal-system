@@ -27,7 +27,7 @@ enum Compatible {
     DOUBLE_FLAT = "doubleFlat",
 }
 
-type Accidental<T extends Maybe<Flavor> = undefined> = Sagittal
+type Accidental<T extends Maybe<Flavor> = undefined> = Maybe<Sagittal>
     & {compatible?: Compatible}
     & (T extends Flavor ? {_FlavorBrand: T} : {})
 
