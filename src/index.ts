@@ -76,6 +76,10 @@ export {
     HeadId,
     computeAccidental,
     Flavor,
+    Sagittal,
+    Shafts,
+    computeApotomeComplement,
+    computeRevoAccidentalFromCaptureZone,
 } from "./accidental"
 export {
     computeMaybeCommaClassId,
@@ -134,5 +138,14 @@ export {
     SymbolClass,
     formatSymbolClass,
     Notation,
+    Section,
+    SECTION_N1A,
+    SECTION_N1T,
+    SECTION_N2A,
+    SECTION_N2T,
+    SECTION_P1A,
+    SECTION_P1T,
+    SECTION_P2A,
+    SECTION_P2T
 } from "./notation"
 export {HALF_APOTOME} from "./constants"

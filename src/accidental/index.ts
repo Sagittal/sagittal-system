@@ -7,8 +7,21 @@ export {
     ArmId,
     HeadId,
 } from "./flacco"
-export {Core, Sagittal, computeSagittalFromFlacco, computeSagittalFromSymbolClassId} from "./sagittal"
-export {Accidental, Flavor, Compatible, EMPTY_ACCIDENTAL} from "./flavor"
+export {
+    Core,
+    Sagittal,
+    Shafts,
+    computeApotomeComplement,
+    computeSagittalFromFlacco,
+    computeSagittalFromSymbolClassId,
+} from "./sagittal"
+export {
+    Accidental,
+    Flavor,
+    Compatible,
+    EMPTY_ACCIDENTAL,
+    computeRevoAccidentalFromCaptureZone,
+} from "./flavor"
 export {
     alignSagitype,
     Sagitype,
@@ -24,6 +37,7 @@ export {
     Glyph,
     BLANK_SAGITYPE,
 } from "./glyph"
-export {computeJiPitchFromAccidental} from "./pitch"
-export {computeAccidental} from "./accidental"
-export {parseAccidental, parseSagitype} from "./parse"
+export { computeJiPitchFromAccidental, computeSymbolClassIdAndSectionFromSagittal } from "./pitch"
+export { computeAccidental } from "./accidental"
+export { parseAccidental, parseSagitype } from "./parse"
+

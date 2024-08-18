@@ -1,1 +1,2 @@
-export {computeJiPitchFromAccidental} from "./jiPitchFromAccidental"
+export { computeJiPitchFromAccidental } from "./jiPitchFromAccidental"
+export { computeSymbolClassIdAndSectionFromSagittal } from "./symbolClassIdAndSectionFromSagittal"

@@ -25,4 +25,6 @@ export {
     SECTION_P1T,
     SECTION_P2A,
     SECTION_P2T,
+    SECTION_N1A,
+    SECTION_P1A,
 } from "./sections"
