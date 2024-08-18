@@ -5,9 +5,9 @@ import {getSymbolClassEntry} from "./symbolClassEntry"
 
 const computeSymbolClassIdAndSectionFromSagittal = (sagittal: Maybe<Sagittal>): [SymbolClassId, Section] => {
     const section = {negated: false, shifted: false, mirrored: false}
-    let inputSagittal = sagittal
 
-    if (isUndefined(inputSagittal)) return [SymbolClassId.NULL, section]
+    if (isUndefined(sagittal)) return [SymbolClassId.NULL, section]
+    let inputSagittal = { ...sagittal }
 
     if (inputSagittal.shafts === Shafts.TRIPLE) {
         inputSagittal.shafts = Shafts.SINGLE
@@ -26,9 +26,7 @@ const computeSymbolClassIdAndSectionFromSagittal = (sagittal: Maybe<Sagittal>): 
 
     if (isUndefined(symbolClassEntry)) {
         section.mirrored = true
-        inputSagittal = computeApotomeComplement(inputSagittal)
-
-        symbolClassEntry = getSymbolClassEntry(inputSagittal)
+        symbolClassEntry = getSymbolClassEntry(computeApotomeComplement(inputSagittal))
     }
 
     if (isUndefined(symbolClassEntry)) {
