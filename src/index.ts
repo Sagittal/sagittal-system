@@ -80,6 +80,7 @@ export {
     Shafts,
     computeApotomeComplement,
     computeRevoAccidentalFromCaptureZone,
+    computeSymbolClassIdAndSectionFromSagittal,
 } from "./accidental"
 export {
     computeMaybeCommaClassId,
