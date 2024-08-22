@@ -81,6 +81,7 @@ export {
     computeApotomeComplement,
     computeRevoAccidentalFromCaptureZone,
     computeSymbolClassIdAndSectionFromSagittal,
+    FlagId,
 } from "./accidental"
 export {
     computeMaybeCommaClassId,
