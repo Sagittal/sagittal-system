@@ -90,6 +90,7 @@ describe("computeApotomeComplement", (): void => {
         expect(actual).toEqual(expected)
     })
 
+    // https://forum.sagittal.org/viewtopic.php?p=1308#p1308
     it("has the correct apotome complements for symbols with the core which is its own apotome complement and therefore things get tricky with its arms which are not symmetrical about the half apotome mirror", (): void => {
         const core = getCore(HeadId.LEFT_SCROLL_AND_DOUBLE_BARB)
         expect(computeApotomeComplement({
