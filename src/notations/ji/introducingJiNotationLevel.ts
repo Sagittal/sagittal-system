@@ -1,4 +1,4 @@
-import {CommaClassId} from "../../notation"
+import {CommaClassId, formatCommaClass} from "../../notation"
 import {JI_NOTATION_LEVELS_COMMA_CLASS_IDS} from "./levelCommaClassIds"
 import {JI_NOTATION_LEVELS} from "./levels"
 import {JiNotationLevelId} from "./types"
@@ -10,7 +10,7 @@ const getIntroducingJiNotationLevel = (commaClassId: CommaClassId): JiNotationLe
         }
     }
 
-    throw new Error(`Comma class ID ${commaClassId} does not appear in a JI notation level.`)
+    throw new Error(`Comma class ID ${formatCommaClass(commaClassId)} does not appear in a JI notation level.`)
 }
 
 export {

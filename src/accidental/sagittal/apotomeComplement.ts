@@ -127,7 +127,7 @@ const computeMaybeArmForSelfComplementingCore = (maybeArm: Maybe<Arm>): Maybe<Ar
     } else if (deepEquals(maybeArm, getArm(ArmId.BIRD))) {
         return getArm(ArmId.WING, {anti: true})
     } else {
-        throw new Error(`Did not find arm for self-complementing core with arm ${maybeArm}.`)
+        throw new Error(`Did not find arm for self-complementing core with arm ${stringify(maybeArm)}.`)
     }
 }
 

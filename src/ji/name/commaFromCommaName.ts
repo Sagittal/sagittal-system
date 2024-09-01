@@ -9,6 +9,7 @@ import {
     isUndefined,
     Maybe,
     Pev,
+    stringify,
 } from "@sagittal/general"
 import {computeN2D3P9} from "../badness"
 import {computeRationalPevInZone, findNotatingCommas} from "../find"
@@ -69,7 +70,7 @@ const computeCommaFromCommaName = (
     })
 
     if (isUndefined(mostPopularComma)) {
-        throw new Error(`For whatever reason the number of commas notating the comma name quotient ${commaNameQuotient} within the bounds of its size category ${sizeCategory} was not 1. It was ${commas.length}. Perhaps you need to expand the search parameters, e.g. raise the max ATE, AAS, or 2,3-free sopfr.`)
+        throw new Error(`For whatever reason the number of commas notating the comma name quotient ${stringify(commaNameQuotient)} within the bounds of its size category ${sizeCategory} was not 1. It was ${commas.length}. Perhaps you need to expand the search parameters, e.g. raise the max ATE, AAS, or 2,3-free sopfr.`)
     }
 
     return mostPopularComma
