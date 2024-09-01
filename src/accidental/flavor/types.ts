@@ -3,6 +3,7 @@ import {Sagittal} from "../sagittal"
 
 enum Flavor {
     EVO = "evo",
+    EVO_SZ = "evo-sz",
     REVO = "revo",
 }
 
