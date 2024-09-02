@@ -57,6 +57,8 @@ export {
     FLACCOS,
     computeAccidental,
     BoundType,
+    JI_NOTATION,
+    getMinaName,
 } from "./class"
 export {
     Ina,

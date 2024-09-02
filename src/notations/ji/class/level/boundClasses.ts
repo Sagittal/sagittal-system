@@ -1,7 +1,7 @@
 import { CommaMean, Name } from "@sagittal/general"
 import { SizeCategoryBound } from "../../../../ji"
 import { getBoundClass, BoundType, BoundClassId } from "../bound"
-import { JiNotationBoundClass, JiNotationLevelId } from "./types"
+import { JiNotationBoundClass, JiNotationBoundClassEntry, JiNotationLevelId } from "./types"
 import { InaMidpoint } from "../../types"
 
 const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
