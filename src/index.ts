@@ -142,10 +142,7 @@ export {
     computeSymbolClassIdAndSectionFromSagittal,
     computeAccidental,
     Edo, 
-    Nominal, 
     EdoStepNotation, 
-    Link, 
-    Whorl, 
     EdoStep, 
     NonSubsetEdoNotationDefinition, 
     EdoNotationDefinition, 
@@ -168,3 +165,8 @@ export {
     TINA_CENTS,
     MINA_CENTS,
 } from "./intervals"
+export {
+    Nominal, 
+    Link, 
+    Whorl, 
+} from "./types"
