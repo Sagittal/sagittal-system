@@ -1,5 +1,5 @@
 import {BLANK} from "@sagittal/general"
-import {Accidental} from "../flavor"
+import {Accidental} from "../types"
 import {Sagitype, Smiley} from "../glyph"
 import {parseSagitype} from "./sagitype"
 

@@ -1,5 +1,5 @@
 import {Io, Maybe} from "@sagittal/general"
-import {Flavor} from "../flavor"
+import {Flavor} from "../types"
 
 type Sagitype<T extends Maybe<Flavor> = undefined> =
     Io

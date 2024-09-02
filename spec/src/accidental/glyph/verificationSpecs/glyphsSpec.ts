@@ -1,13 +1,13 @@
-import {camelCaseToConstantCase, isUndefined} from "@sagittal/general"
-import {Sagitype, Compatible, Smiley, Unicode} from "../../../../../src"
-import {AccentId, HeadId} from "../../../../../src/accidental"
-import {Shafts} from "../../../../../src/accidental/sagittal"
+import { camelCaseToConstantCase, isUndefined } from "@sagittal/general"
+import { Sagitype, Compatible, Smiley, Unicode } from "../../../../../src"
+import { AccentId, HeadId } from "../../../../../src/accidental"
+import { Shafts } from "../../../../../src/accidental/sagittal"
 import {
     computeAccentGlyphExpectation,
     computeCompatibleGlyphExpectation,
     computeCoreGlyphExpectation,
 } from "../../../../helpers/src/accidental/glyph/glyphExpectation"
-import {GlyphExpectation} from "../../../../helpers/src/accidental/glyph/types"
+import { GlyphExpectation } from "../../../../helpers/src/accidental/glyph/types"
 
 describe("glyphs", (): void => {
     it("has the correct core glyphs and computes their IO correctly", (): void => {
@@ -16,7 +16,7 @@ describe("glyphs", (): void => {
         Object.values(HeadId).forEach((headId: HeadId): void => {
             Object.values(Shafts).forEach((shafts: Shafts): void => {
                 [false, true].forEach((down: boolean): void => {
-                    const coreGlyphExpectation = computeCoreGlyphExpectation(headId, {shafts, down})
+                    const coreGlyphExpectation = computeCoreGlyphExpectation(headId, { shafts, down })
                     const nameArray = [camelCaseToConstantCase(headId)] as string[]
                     if (shafts !== Shafts.SINGLE) nameArray.push(camelCaseToConstantCase(shafts))
                     if (down) nameArray.push("DOWN")
@@ -1166,7 +1166,7 @@ describe("glyphs", (): void => {
             ): Record<AccentId, GlyphExpectation> => {
                 return {
                     ...accentGlyphExpectations,
-                    [accentId]: computeAccentGlyphExpectation(accentId, {anti: true}),
+                    [accentId]: computeAccentGlyphExpectation(accentId, { anti: true }),
                 }
             },
             {} as Record<AccentId, GlyphExpectation>,

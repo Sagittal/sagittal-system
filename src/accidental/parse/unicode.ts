@@ -1,6 +1,6 @@
 import {deepEquals, isUndefined} from "@sagittal/general"
 import {Accent, AccentId} from "../flacco"
-import {Accidental, Compatible} from "../flavor"
+import {Accidental, Compatible} from "../types"
 import {
     ACCENT_TO_UNICODE_MAP,
     COMPATIBLE_TO_UNICODE_MAP,

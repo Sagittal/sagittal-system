@@ -1,5 +1,5 @@
 import {Formatted, ioSettings, TableFormat} from "@sagittal/general"
-import {Accidental} from "../flavor"
+import {Accidental} from "../types"
 import {alignSagitype} from "./align"
 import {computeAccidentalSagitype} from "./sagitype"
 import {computeAccidentalSmiley} from "./smiley"

@@ -1,6 +1,6 @@
-import {Maybe} from "@sagittal/general"
-import {Compatible, computeCoreUnicode} from "../../../../../src"
-import {AccentId, HeadId} from "../../../../../src/accidental"
+import { Maybe } from "@sagittal/general"
+import { Compatible, computeCoreUnicode } from "../../../../../src"
+import { AccentId, HeadId } from "../../../../../src/accidental"
 import {
     computeAccentSagitype,
     computeAccentSmiley,
@@ -11,15 +11,15 @@ import {
     computeCoreSagitype,
     computeCoreSmiley,
 } from "../../../../../src/accidental/glyph"
-import {getCore, Shafts} from "../../../../../src/accidental/sagittal"
-import {GlyphExpectation} from "./types"
+import { getCore, Shafts } from "../../../../../src/accidental/sagittal"
+import { GlyphExpectation } from "./types"
 
 const computeCoreGlyphExpectation = (
     headId: HeadId,
-    {shafts = Shafts.SINGLE, down = false}: {shafts?: Shafts, down?: boolean} = {},
+    { shafts = Shafts.SINGLE, down = false }: { shafts?: Shafts, down?: boolean } = {},
 ): Maybe<GlyphExpectation> => {
     try {
-        const core = getCore(headId, {shafts, down})
+        const core = getCore(headId, { shafts, down })
 
         return {
             sagitype: computeCoreSagitype(core),
@@ -31,19 +31,19 @@ const computeCoreGlyphExpectation = (
     }
 }
 
-const computeAccentGlyphExpectation = (accentId: AccentId, {anti = false}: {anti?: boolean} = {}): GlyphExpectation =>
-    ({
-        sagitype: computeAccentSagitype({id: accentId, anti}),
-        unicode: computeAccentUnicode({id: accentId, anti}),
-        smiley: computeAccentSmiley({id: accentId, anti}),
-    })
+const computeAccentGlyphExpectation = (accentId: AccentId, { anti = false }: { anti?: boolean } = {}): GlyphExpectation =>
+({
+    sagitype: computeAccentSagitype({ id: accentId, anti }),
+    unicode: computeAccentUnicode({ id: accentId, anti }),
+    smiley: computeAccentSmiley({ id: accentId, anti }),
+})
 
 const computeCompatibleGlyphExpectation = (compatible: Compatible): GlyphExpectation =>
-    ({
-        sagitype: computeCompatibleSagitype(compatible),
-        unicode: computeCompatibleUnicode(compatible),
-        smiley: computeCompatibleSmiley(compatible),
-    })
+({
+    sagitype: computeCompatibleSagitype(compatible),
+    unicode: computeCompatibleUnicode(compatible),
+    smiley: computeCompatibleSmiley(compatible),
+})
 
 export {
     computeCoreGlyphExpectation,

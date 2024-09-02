@@ -1,10 +1,10 @@
-import {Unicode} from "../../../../../src"
-import {Sagitype, Flavor, Smiley} from "../../../../../src/accidental"
-import {CaptureZone} from "../../../../../src/notation"
-import {computeCaptureZones} from "../../../../../src/notation/captureZones"
-import {EXTREME_NOTATION} from "../../../../../src/notations/ji/notations"
-import {computeFlavorsExpectation} from "../../../../helpers/src/accidental/flavor/accidentalExpectation"
-import {FlavorsExpectation} from "../../../../helpers/src/accidental/flavor/types"
+import { Unicode } from "../../../../../src"
+import { Sagitype, Flavor, Smiley } from "../../../../../src/accidental"
+import { CaptureZone } from "../../../../../src/notations/ji/types"
+import { computeCaptureZones } from "../../../../../src/notations/ji/class/captureZone/captureZones"
+import { EXTREME_NOTATION } from "../../../../../src/notations/ji/class/level/notations"
+import { computeFlavorsExpectation } from "../../../../helpers/src/notations/ji/class/flavor/accidentalExpectation"
+import { FlavorsExpectation } from "../../../../helpers/src/notations/ji/class/flavor/types"
 
 // TODO: POST-NOTATION-GENERATION: ACCIDENTAL, PRIMARY COMMA, ZONE STUFF
 //  So I could either imagine having totally separate specs for verifying the bounds & commas of the capture zones

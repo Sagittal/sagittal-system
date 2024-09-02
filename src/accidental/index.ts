@@ -2,10 +2,13 @@ export {
     Flacco,
     AccentId,
     FlagId,
-    FlaccoId,
-    getFlacco,
     ArmId,
     HeadId,
+    getArm,
+    getHead,
+    Head,
+    Arm,
+    Accent,
 } from "./flacco"
 export {
     Core,
@@ -13,15 +16,14 @@ export {
     Shafts,
     computeApotomeComplement,
     computeSagittalFromFlacco,
-    computeSagittalFromSymbolClassId,
+    flipSagittal,
+    apotomeShift,
+    APOTOME_CORE,
+    areShaftsEven,
+    getCore,
+    isMultiShaft,
 } from "./sagittal"
-export {
-    Accidental,
-    Flavor,
-    Compatible,
-    EMPTY_ACCIDENTAL,
-    computeRevoAccidentalFromCaptureZone,
-} from "./flavor"
+export { EMPTY_ACCIDENTAL } from "./constants"
 export {
     alignSagitype,
     Sagitype,
@@ -37,7 +39,5 @@ export {
     Glyph,
     BLANK_SAGITYPE,
 } from "./glyph"
-export { computeJiPitchFromAccidental, computeSymbolClassIdAndSectionFromSagittal } from "./pitch"
-export { computeAccidental } from "./accidental"
 export { parseAccidental, parseSagitype } from "./parse"
-
+export { Accidental, Flavor, Compatible, AccidentalOptions } from "./types"

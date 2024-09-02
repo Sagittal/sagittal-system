@@ -1,6 +1,6 @@
 import {BLANK, deepEquals, isUndefined, join, Maybe, sumTexts} from "@sagittal/general"
 import {Accent, AccentId, Arm, FlagId} from "../flacco"
-import {Accidental, Compatible, Flavor} from "../flavor"
+import {Accidental, Compatible, Flavor} from "../types"
 import {Core, Sagittal, Shafts} from "../sagittal"
 import {BLANK_SAGITYPE, PARENTHETICAL_NATURAL_SAGITYPE} from "./constants"
 import {Sagitype} from "./types"

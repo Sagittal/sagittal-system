@@ -1,5 +1,7 @@
 import {ArmId, computeAccidental, HeadId} from "../../../../src"
-import {computeSagittalFromFlacco, Flacco, FlaccoId, getFlacco} from "../../../../src/accidental"
+import {computeSagittalFromFlacco, Flacco} from "../../../../src/accidental"
+import { getFlacco } from "../../../../src/notations"
+import { FlaccoId } from "../../../../src/notations/ji/class/flacco"
 
 describe("computeSagittalFromFlacco", (): void => {
     it("takes a combo of flags and arm and returns the full Sagittal symbol", (): void => {

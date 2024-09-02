@@ -1,5 +1,5 @@
 import {Cents, computeCentsFromPitch, Spev} from "@sagittal/general"
-import {MINA_CENTS} from "../../notations"
+import {MINA_CENTS} from "../../intervals"
 import {computeLpe} from "./complexity"
 import {LPEI_U} from "./constants"
 import {computeCentsError} from "./error"

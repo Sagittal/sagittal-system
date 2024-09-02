@@ -1,0 +1,5 @@
+export { getCommaClass } from "./constants"
+export { CommaClass, CommaClassId } from "./types"
+export { formatCommaClass } from "./format"
+export { getRepresentativeSagittal } from "./representativeSagittal"
+export { computeMaybeCommaClassId } from "./maybeCommaClassId"

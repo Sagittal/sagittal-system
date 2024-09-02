@@ -1,9 +1,9 @@
 import {IDENTIFYING_ACCIDENTAL_CHARS, Io} from "@sagittal/general"
-import {Accidental} from "../flavor"
 import {Sagitype, Smiley, Unicode} from "../glyph"
 import {parseSagitype} from "./sagitype"
 import {parseSmiley} from "./smiley"
 import {parseUnicode} from "./unicode"
+import { Accidental } from "../types"
 
 const parseAccidental = (accidentalIo: Io): Accidental => {
     if (accidentalIo.match(/[:]/)) {

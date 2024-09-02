@@ -1,8 +1,9 @@
 import {BLANK, Char, Count, increment, isEmpty, shallowClone} from "@sagittal/general"
 import {AccentId, Arm, FlagId} from "../flacco"
-import {Accidental, Compatible, EMPTY_ACCIDENTAL} from "../flavor"
+import {Accidental, Compatible} from "../types"
 import {Sagitype, BLANK_SAGITYPE, PARENTHETICAL_NATURAL_SAGITYPE} from "../glyph"
 import {Shafts} from "../sagittal"
+import { EMPTY_ACCIDENTAL } from "../constants"
 
 const computeDown = (sagitype: Sagitype): boolean =>
     !sagitype.match(/[|!XY]/g) ?
