@@ -64,3 +64,23 @@ export {
     FLACCOS,
     computeAccidental,
 } from "./ji"
+export {
+    Edo, 
+    Nominal, 
+    EdoStepNotation, 
+    Link, 
+    Whorl, 
+    EdoStep, 
+    NonSubsetEdoNotationDefinition, 
+    EdoNotationDefinition, 
+    computeFifthStep, 
+    computeSharpStep, 
+    EDO_NOTATION_DEFINITIONS, 
+    NOMINALS, 
+    SAGITTAL_HALF_FLAT, 
+    SAGITTAL_HALF_SHARP, 
+    isSubsetNotation, 
+    computeSubsetSagitypes, 
+    computeSubsetEdoStepNotations, 
+    computeSagittals,
+} from "./edo"
