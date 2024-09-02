@@ -66,10 +66,7 @@ export {
 } from "./ji"
 export {
     Edo, 
-    Nominal, 
     EdoStepNotation, 
-    Link, 
-    Whorl, 
     EdoStep, 
     NonSubsetEdoNotationDefinition, 
     EdoNotationDefinition, 
