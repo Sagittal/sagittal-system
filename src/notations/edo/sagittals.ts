@@ -1,7 +1,7 @@
 import { Count } from "@sagittal/general"
 import { EdoStep } from "./types";
-import { SAGITTAL_SHARP } from "./constants"
 import { computeApotomeComplement, Flavor, parseSagitype, Sagittal, Sagitype, Shafts } from "../../accidental";
+import { SAGITTAL_SHARP } from "../../accidental/sagittal/constants";
 
 const computeRequiredRevoSagittalCount = (sharpStep: EdoStep): Count<Sagittal> => sharpStep % 2 == 0 ?
     Math.floor(sharpStep / 2) - 1 as Count<Sagittal> :

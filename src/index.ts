@@ -78,6 +78,8 @@ export {
     Shafts,
     computeApotomeComplement,
     FlagId,
+    SAGITTAL_HALF_FLAT, 
+    SAGITTAL_HALF_SHARP, 
 } from "./accidental"
 export {
     computeMaybeCommaClassId,
@@ -150,15 +152,12 @@ export {
     computeFifthStep, 
     computeSharpStep, 
     EDO_NOTATION_DEFINITIONS, 
-    NOMINALS, 
-    SAGITTAL_HALF_FLAT, 
-    SAGITTAL_HALF_SHARP, 
     isSubsetNotation, 
     computeSubsetSagitypes, 
     computeSubsetEdoStepNotations, 
     computeSagittals,
 } from "./notations"
-export {HALF_APOTOME} from "./constants"
+export {HALF_APOTOME, NOMINALS} from "./constants"
 export {
     INA_CENTS_SIZES,
     TINA,

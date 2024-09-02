@@ -1,5 +1,6 @@
 import { Decimal, Ed, Index, Window } from "@sagittal/general"
 import { Sagittal, Sagitype } from "../../accidental"
+import { Link } from "../../types"
 
 type EdoStep = Decimal<{ integer: true }> & { _EdoStepBrand: boolean }
 
@@ -21,37 +22,10 @@ interface EdoStepNotation {
     sagittalIndex: Index<Sagittal>      // 0 is none, 1 is the first sagittal in the sequence
 }
 
-// for convenience, these values the ones used by StaffCode
-enum Whorl {
-    DOUBLE_FLAT = "bb",
-    FLAT = "b",
-    NATURAL = "",
-    SHARP = "#",
-    DOUBLE_SHARP = "X",
-}
-
-enum Nominal {
-    F = "f",
-    C = "c",
-    G = "g",
-    D = "d",
-    A = "a",
-    E = "e",
-    B = "b",
-}
-
-interface Link {
-    nominal: Nominal,
-    whorl: Whorl
-}
-
 export {
     Edo,
     EdoStep,
     EdoStepNotation,
-    Whorl,
-    Nominal,
-    Link,
     EdoNotationDefinition,
     SubsetEdoNotationDefinition,
     NonSubsetEdoNotationDefinition,
