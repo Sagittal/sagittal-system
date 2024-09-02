@@ -1,4 +1,4 @@
-export { Edo, Nominal, EdoStepNotation, Link, Whorl, EdoStep, NonSubsetEdoNotationDefinition, EdoNotationDefinition } from "./types"
+export { Edo, EdoStepNotation, EdoStep, NonSubsetEdoNotationDefinition, EdoNotationDefinition } from "./types"
 export { computeFifthStep, computeSharpStep } from "./steps"
 export { EDO_NOTATION_DEFINITIONS } from "./definitions"
 export { isSubsetNotation, computeSubsetSagitypes, computeSubsetEdoStepNotations } from "./subset"
