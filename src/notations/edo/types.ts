@@ -22,6 +22,8 @@ interface EdoStepNotation {
     sagittalIndex: Index<Sagittal>      // 0 is none, 1 is the first sagittal in the sequence
 }
 
+type SubsetFactor = Decimal<{ integer: true }> & { _SubsetFactorStepBrand: boolean }
+
 export {
     Edo,
     EdoStep,
@@ -29,4 +31,5 @@ export {
     EdoNotationDefinition,
     SubsetEdoNotationDefinition,
     NonSubsetEdoNotationDefinition,
+    SubsetFactor,
 }

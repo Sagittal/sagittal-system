@@ -153,6 +153,8 @@ export {
     computeSubsetSagitypes,
     computeSubsetEdoStepNotations,
     computeSagittals,
+    SubsetFactor,
+    computeSubsetFactor,
 } from "./notations"
 export { HALF_APOTOME, NOMINALS } from "./constants"
 export {

@@ -77,4 +77,6 @@ export {
     computeSubsetSagitypes, 
     computeSubsetEdoStepNotations, 
     computeSagittals,
+    SubsetFactor,
+    computeSubsetFactor,
 } from "./edo"

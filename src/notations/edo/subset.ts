@@ -4,6 +4,7 @@ import {
     SubsetEdoNotationDefinition,
     EdoNotationDefinition,
     NonSubsetEdoNotationDefinition,
+    SubsetFactor,
 } from "./types"
 import { EDO_NOTATION_DEFINITIONS } from "./definitions"
 import { Sagitype } from "../../accidental"
@@ -17,19 +18,14 @@ const computeSubsetSagitypes = (edoNotationDefinition: SubsetEdoNotationDefiniti
     return nonSubsetEdoNotationDefinition.sagitypes
 }
 
-const computeSubsetEdoStepNotations = (
-    { edo, subsetEdo, edoStepNotations }: {
-        edo: Edo,
-        subsetEdo: Edo,
-        edoStepNotations: EdoStepNotation[]
-    }): EdoStepNotation[] => {
-    const subsetFactor = edo / subsetEdo
+const computeSubsetEdoStepNotations = ({ edoStepNotations, subsetFactor }: { edoStepNotations: EdoStepNotation[], subsetFactor: SubsetFactor }): EdoStepNotation[] => 
+    edoStepNotations.filter((_: EdoStepNotation, index: number): boolean => index % subsetFactor == 0)
 
-    return edoStepNotations.filter((_: EdoStepNotation, index: number): boolean => index % subsetFactor == 0)
-}
+const computeSubsetFactor = ({ edo, supersetEdo }: { edo: Edo, supersetEdo: Edo }): SubsetFactor => supersetEdo / edo as SubsetFactor
 
 export {
     isSubsetNotation,
     computeSubsetSagitypes,
     computeSubsetEdoStepNotations,
+    computeSubsetFactor,
 }
