@@ -79,4 +79,6 @@ export {
     computeSagittals,
     SubsetFactor,
     computeSubsetFactor,
+    computeWholeToneStep,
+    computeLimmaStep,
 } from "./edo"

@@ -1,5 +1,5 @@
 export { Edo, EdoStepNotation, EdoStep, NonSubsetEdoNotationDefinition, EdoNotationDefinition, SubsetFactor } from "./types"
-export { computeFifthStep, computeSharpStep } from "./steps"
+export { computeFifthStep, computeSharpStep, computeWholeToneStep, computeLimmaStep } from "./steps"
 export { EDO_NOTATION_DEFINITIONS } from "./definitions"
 export { isSubsetNotation, computeSubsetSagitypes, computeSubsetEdoStepNotations, computeSubsetFactor } from "./subset"
 export { computeSagittals } from "./sagittals"
