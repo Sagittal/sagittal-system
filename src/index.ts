@@ -78,8 +78,8 @@ export {
     Shafts,
     computeApotomeComplement,
     FlagId,
-    SAGITTAL_HALF_FLAT, 
-    SAGITTAL_HALF_SHARP, 
+    SAGITTAL_SEMIFLAT,
+    SAGITTAL_SEMISHARP,
 } from "./accidental"
 export {
     computeMaybeCommaClassId,
@@ -141,20 +141,20 @@ export {
     computeJiPitchFromAccidental,
     computeSymbolClassIdAndSectionFromSagittal,
     computeAccidental,
-    Edo, 
-    EdoStepNotation, 
-    EdoStep, 
-    NonSubsetEdoNotationDefinition, 
-    EdoNotationDefinition, 
-    computeFifthStep, 
-    computeSharpStep, 
-    EDO_NOTATION_DEFINITIONS, 
-    isSubsetNotation, 
-    computeSubsetSagitypes, 
-    computeSubsetEdoStepNotations, 
+    Edo,
+    EdoStepNotation,
+    EdoStep,
+    NonSubsetEdoNotationDefinition,
+    EdoNotationDefinition,
+    computeFifthStep,
+    computeSharpStep,
+    EDO_NOTATION_DEFINITIONS,
+    isSubsetNotation,
+    computeSubsetSagitypes,
+    computeSubsetEdoStepNotations,
     computeSagittals,
 } from "./notations"
-export {HALF_APOTOME, NOMINALS} from "./constants"
+export { HALF_APOTOME, NOMINALS } from "./constants"
 export {
     INA_CENTS_SIZES,
     TINA,
@@ -166,7 +166,7 @@ export {
     MINA_CENTS,
 } from "./intervals"
 export {
-    Nominal, 
-    Link, 
-    Whorl, 
+    Nominal,
+    Link,
+    Whorl,
 } from "./types"

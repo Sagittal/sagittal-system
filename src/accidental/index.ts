@@ -22,8 +22,8 @@ export {
     areShaftsEven,
     getCore,
     isMultiShaft,
-    SAGITTAL_HALF_FLAT, 
-    SAGITTAL_HALF_SHARP, 
+    SAGITTAL_SEMIFLAT,
+    SAGITTAL_SEMISHARP,
 } from "./sagittal"
 export { EMPTY_ACCIDENTAL } from "./constants"
 export {
