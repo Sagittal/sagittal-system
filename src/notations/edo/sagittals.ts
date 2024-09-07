@@ -27,7 +27,7 @@ const computeSagittals = (
         .slice(0, computeRequiredRevoSagittalCount(sharpStep))
         .reverse()
         .forEach((sagittal: Sagittal): void => {
-            sagittals.push(computeApotomeComplement(sagittal) as Sagittal)
+            sagittals.push(computeApotomeComplement(sagittal) as Sagittal<Flavor.REVO>)
         })
 
     sagittals.push(SAGITTAL_SHARP)
