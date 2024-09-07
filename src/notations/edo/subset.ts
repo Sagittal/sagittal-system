@@ -8,6 +8,7 @@ import {
 } from "./types"
 import { EDO_NOTATION_DEFINITIONS } from "./definitions"
 import { Sagitype } from "../../accidental"
+import { mod } from "@sagittal/general"
 
 const isSubsetNotation = (edoNotationDefinition: EdoNotationDefinition): edoNotationDefinition is SubsetEdoNotationDefinition =>
     (<SubsetEdoNotationDefinition>edoNotationDefinition).supersetEdo !== undefined
@@ -19,7 +20,7 @@ const computeSubsetSagitypes = (edoNotationDefinition: SubsetEdoNotationDefiniti
 }
 
 const computeSubsetEdoStepNotations = ({ edoStepNotations, subsetFactor }: { edoStepNotations: EdoStepNotation[], subsetFactor: SubsetFactor }): EdoStepNotation[] => 
-    edoStepNotations.filter((_: EdoStepNotation, index: number): boolean => index % subsetFactor == 0)
+    edoStepNotations.filter((_: EdoStepNotation, index: number): boolean => mod(index, subsetFactor) === 0)
 
 const computeSubsetFactor = ({ edo, supersetEdo }: { edo: Edo, supersetEdo: Edo }): SubsetFactor => supersetEdo / edo as SubsetFactor
 

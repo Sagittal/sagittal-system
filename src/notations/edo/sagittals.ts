@@ -1,15 +1,15 @@
-import { Count } from "@sagittal/general"
+import { Count, mod } from "@sagittal/general"
 import { EdoStep } from "./types";
 import { computeApotomeComplement, Flavor, parseSagitype, Sagittal, Sagitype, Shafts } from "../../accidental";
 import { SAGITTAL_SHARP } from "../../accidental/sagittal/constants";
 
-const computeRequiredRevoSagittalCount = (sharpStep: EdoStep): Count<Sagittal> => sharpStep % 2 == 0 ?
+const computeRequiredRevoSagittalCount = (sharpStep: EdoStep): Count<Sagittal> => mod(sharpStep, 2) === 0 ?
     Math.floor(sharpStep / 2) - 1 as Count<Sagittal> :
     Math.floor(sharpStep / 2) as Count<Sagittal>
 
 const shiftedSagittal = (sagittal: Sagittal): Sagittal => ({
     ...sagittal,
-    shafts: sagittal.shafts == Shafts.SINGLE ?
+    shafts: sagittal.shafts === Shafts.SINGLE ?
         Shafts.TRIPLE :
         Shafts.EX
 })
@@ -19,7 +19,7 @@ const computeSagittals = (
 ): Sagittal[] => {
     let sagittals: Sagittal[] = sagitypes.map(parseSagitype)
 
-    if (flavor == Flavor.EVO) {
+    if (flavor === Flavor.EVO) {
         return sagittals
     }
 

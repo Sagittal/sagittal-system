@@ -60,7 +60,7 @@ const checkAccidentalWithCompatibleValidity = (accidental: Accidental): void => 
     }
 
     if (
-        (compatible === Compatible.SHARP || compatible == Compatible.DOUBLE_SHARP)
+        (compatible === Compatible.SHARP || compatible === Compatible.DOUBLE_SHARP)
         && (down && headContributesAdditionalValue(head))
     ) {
         const apotomeComplement = computeApotomeComplementHandlingAsymmetricalSelfComplement({ ...head, shafts })
@@ -68,7 +68,7 @@ const checkAccidentalWithCompatibleValidity = (accidental: Accidental): void => 
             throw new Error(`You are using too large of a single-shaft symbol against this Sagittal-compatible: ${formatAccidental(accidental, { align: false })} You should instead use the compatible closer to the natural and a single-shaft symbol which goes in its same direction`)
         }
     } else if (
-        (compatible === Compatible.FLAT || compatible == Compatible.DOUBLE_FLAT)
+        (compatible === Compatible.FLAT || compatible === Compatible.DOUBLE_FLAT)
         && (!down && headContributesAdditionalValue(head))
     ) {
         const apotomeComplement = computeApotomeComplementHandlingAsymmetricalSelfComplement({ ...head, shafts })

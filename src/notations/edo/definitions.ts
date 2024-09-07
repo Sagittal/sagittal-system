@@ -36,7 +36,7 @@ const EDO_NOTATION_DEFINITIONS: Record<Edo, EdoNotationDefinition> = {
     37: { sagitypes: [")|", "/|", "(|\\"] },
     38: { sagitypes: ["/|\\"] },
     39: { sagitypes: ["/|", "/|\\"] },
-    40: { isLimmaFraction: true, sagitypes: ["|(", "|)"] },
+    40: { isLimmaFraction: true, sagitypes: ["|(", "|)", "(|\\"] },
     41: { sagitypes: ["/|", "/|\\"] },
     42: { sagitypes: [")|", "/|", "/|)"] },
     43: { sagitypes: ["|)"] },
