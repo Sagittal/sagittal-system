@@ -1,9 +1,9 @@
-import { Count, mod } from "@sagittal/general"
+import { Count, isEven } from "@sagittal/general"
 import { EdoStep } from "./types";
 import { computeApotomeComplement, Flavor, parseSagitype, Sagittal, Sagitype, Shafts } from "../../accidental";
 import { SAGITTAL_SHARP } from "../../accidental/sagittal/constants";
 
-const computeRequiredRevoSagittalCount = (sharpStep: EdoStep): Count<Sagittal> => mod(sharpStep, 2) === 0 ?
+const computeRequiredRevoSagittalCount = (sharpStep: EdoStep): Count<Sagittal> => isEven(sharpStep) ?
     Math.floor(sharpStep / 2) - 1 as Count<Sagittal> :
     Math.floor(sharpStep / 2) as Count<Sagittal>
 

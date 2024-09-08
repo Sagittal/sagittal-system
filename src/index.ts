@@ -150,8 +150,6 @@ export {
     computeSharpStep,
     EDO_NOTATION_DEFINITIONS,
     isSubsetNotation,
-    computeSubsetSagitypes,
-    computeSubsetEdoStepNotations,
     computeSagittals,
     SubsetFactor,
     computeSubsetFactor,
