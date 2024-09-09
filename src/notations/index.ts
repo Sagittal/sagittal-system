@@ -66,7 +66,6 @@ export {
 } from "./ji"
 export {
     Edo,
-    EdoStepNotation,
     EdoStep,
     NonSubsetEdoNotationDefinition,
     EdoNotationDefinition,

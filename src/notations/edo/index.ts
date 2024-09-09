@@ -1,4 +1,4 @@
-export { Edo, EdoStepNotation, EdoStep, NonSubsetEdoNotationDefinition, EdoNotationDefinition, SubsetFactor } from "./types"
+export { Edo, EdoStep, NonSubsetEdoNotationDefinition, EdoNotationDefinition, SubsetFactor } from "./types"
 export { computeFifthStep, computeSharpStep, computeWholeToneStep, computeLimmaStep } from "./steps"
 export { EDO_NOTATION_DEFINITIONS } from "./definitions"
 export { isSubsetNotation, computeSubsetFactor } from "./subset"

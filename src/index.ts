@@ -142,7 +142,6 @@ export {
     computeSymbolClassIdAndSectionFromSagittal,
     computeAccidental,
     Edo,
-    EdoStepNotation,
     EdoStep,
     NonSubsetEdoNotationDefinition,
     EdoNotationDefinition,

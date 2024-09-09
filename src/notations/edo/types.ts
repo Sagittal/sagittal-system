@@ -17,17 +17,11 @@ interface NonSubsetEdoNotationDefinition {
 
 type EdoNotationDefinition = SubsetEdoNotationDefinition | NonSubsetEdoNotationDefinition
 
-interface EdoStepNotation {
-    linkIndex: Index<Link>              // 35 possibilities, -17 to 17, for FCGDAEB flanked by sharps and flats and doubles thereof
-    sagittalIndex: Index<Sagittal>      // 0 is none, 1 is the first sagittal in the sequence
-}
-
 type SubsetFactor = Decimal<{ integer: true }> & { _SubsetFactorStepBrand: boolean }
 
 export {
     Edo,
     EdoStep,
-    EdoStepNotation,
     EdoNotationDefinition,
     SubsetEdoNotationDefinition,
     NonSubsetEdoNotationDefinition,
