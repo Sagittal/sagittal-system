@@ -1,6 +1,6 @@
 import { Maybe } from "@sagittal/general"
 import { computeSagittalFromFlacco, Sagittal } from "../../../../accidental"
-import { getCommaClass } from "./constants"
+import { getCommaClass } from "./commaClass"
 import { CommaClassId } from "./types"
 import { getFlacco } from "../flacco/flacco"
 
