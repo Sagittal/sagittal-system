@@ -1,7 +1,7 @@
 import { Formatted, SPACE } from "@sagittal/general"
 import { EMPTY_ACCIDENTAL, formatAccidental } from "../../../../accidental"
 import { computeCommaName } from "../../../../ji"
-import { getCommaClass } from "../comma/constants"
+import { getCommaClass } from "../comma"
 import { getSymbolClass } from "./symbolClass"
 import { SymbolClass, SymbolClassId } from "./types"
 import { computeSagittalFromSymbolClassId } from "./from"
