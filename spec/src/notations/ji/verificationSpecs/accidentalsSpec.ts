@@ -1,6 +1,6 @@
 import { Unicode } from "../../../../../src"
 import { Sagitype, Flavor, Smiley } from "../../../../../src/accidental"
-import { CaptureZone } from "../../../../../src/notations/ji/types"
+import { CaptureZone } from "../../../../../src/notations"
 import { computeCaptureZones } from "../../../../../src/notations/ji/class/captureZone/captureZones"
 import { EXTREME_NOTATION } from "../../../../../src/notations/ji/class/level/notations"
 import { computeFlavorsExpectation } from "../../../../helpers/src/notations/ji/class/flavor/accidentalExpectation"
