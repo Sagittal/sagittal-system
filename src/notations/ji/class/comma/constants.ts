@@ -506,9 +506,6 @@ const COMMA_CLASSES: Record<CommaClassId, CommaClass> = {
     },
 }
 
-const getCommaClass = (commaClassId: CommaClassId): CommaClass =>
-    COMMA_CLASSES[commaClassId]
-
 export {
-    getCommaClass,
+    COMMA_CLASSES,
 }

@@ -1,4 +1,4 @@
-export { getCommaClass } from "./constants"
+export { getCommaClass } from "./commaClass"
 export { CommaClass, CommaClassId } from "./types"
 export { formatCommaClass } from "./format"
 export { getRepresentativeSagittal } from "./representativeSagittal"
