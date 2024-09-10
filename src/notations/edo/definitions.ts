@@ -67,7 +67,7 @@ const EDO_NOTATION_DEFINITIONS: Record<Edo, EdoNotationDefinition> = {
     68: { sagitypes: ["|\\", "/|", "/|\\", "(|\\"] },
     69: { sagitypes: ["/|)", "/|\\"] },
     70: { sagitypes: ["/|", "|\\", "/|\\"] },
-    71: { sagitypes: ["|\\", ")~|", "/|", "/|)"] },
+    71: { sagitypes: ["|\\", ")~|", "/|", "/|\\", "/|)"] },
     72: { sagitypes: ["/|", "|)", "/|\\"] },
     75: { sagitypes: ["|\\", "/|", "/|\\", "(|\\"] },
     76: { supersetEdo: 152 },
