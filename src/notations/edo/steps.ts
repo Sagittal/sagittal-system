@@ -5,7 +5,7 @@ import {
     computeRange,
     mod,
 } from "@sagittal/general"
-import { Edo, EdoStep } from "./types"
+import { Edo, EdoStep, StepWithError } from "./types"
 
 const FIFTHS_UNTIL_SHARP: Count = 7 as Count
 const FIFTHS_UNTIL_WHOLE_TONE: Count = 2 as Count
@@ -19,23 +19,17 @@ const computeFifthStep = (
     useSecondBestFifth: boolean = false,
 ): EdoStep => {
     const stepSize: Cents = (CENTS_PER_OCTAVE / edo) as Cents
-    const stepSizes: Cents[] = computeRange(edo as Edo).map(
-        (step: EdoStep): Cents => (step * stepSize) as Cents,
-    )
 
-    let bestFifthError: Cents = CENTS_PER_OCTAVE
-    let bestFifthStep: EdoStep = edo
-    let secondBestFifthStep: EdoStep = edo
-    stepSizes.forEach((stepSize: Cents, step: number): void => {
-        const fifthError: Cents = Math.abs(JI_FIFTH_SIZE - stepSize) as Cents
-        if (fifthError < bestFifthError) {
-            bestFifthError = fifthError
-            secondBestFifthStep = bestFifthStep
-            bestFifthStep = step as EdoStep
-        }
-    })
+    const stepsWithError: StepWithError[] = computeRange(edo as Edo)
+        .map(
+            (step: EdoStep): StepWithError => ({
+                step,
+                error: Math.abs(JI_FIFTH_SIZE - step * stepSize) as Cents,
+            }),
+        )
+        .sort((a: StepWithError, b: StepWithError): number => a.error - b.error)
 
-    return useSecondBestFifth ? secondBestFifthStep : bestFifthStep
+    return useSecondBestFifth ? stepsWithError[1].step : stepsWithError[0].step
 }
 
 const computeSharpStep = (edo: Edo, fifthStep: EdoStep) =>
@@ -44,8 +38,16 @@ const computeSharpStep = (edo: Edo, fifthStep: EdoStep) =>
 const computeWholeToneStep = (edo: Edo, fifthStep: EdoStep) =>
     mod(fifthStep * FIFTHS_UNTIL_WHOLE_TONE, edo) as EdoStep
 
-const computeLimmaStep = (edo: Edo, fifthStep: EdoStep) =>
-    mod(fifthStep * FIFTHS_UNTIL_LIMMA, edo) as EdoStep
+const computeLimmaStep = (edo: Edo, fifthStep: EdoStep): EdoStep => {
+    const possiblyShouldBeNegativeLimma: EdoStep = mod(
+        fifthStep * FIFTHS_UNTIL_LIMMA,
+        edo,
+    ) as EdoStep
+
+    return possiblyShouldBeNegativeLimma > fifthStep
+        ? ((possiblyShouldBeNegativeLimma - edo) as EdoStep)
+        : possiblyShouldBeNegativeLimma
+}
 
 export {
     computeFifthStep,

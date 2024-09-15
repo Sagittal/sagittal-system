@@ -1,4 +1,4 @@
-import { Decimal, Ed, Index, Window } from "@sagittal/general"
+import { Cents, Decimal, Ed, Index, Window } from "@sagittal/general"
 import { Sagittal, Sagitype } from "../../accidental"
 import { Link } from "../../types"
 
@@ -19,6 +19,11 @@ type EdoNotationDefinition = SubsetEdoNotationDefinition | NonSubsetEdoNotationD
 
 type SubsetFactor = Decimal<{ integer: true }> & { _SubsetFactorStepBrand: boolean }
 
+interface StepWithError {
+    step: EdoStep
+    error: Cents
+}
+
 export {
     Edo,
     EdoStep,
@@ -26,4 +31,5 @@ export {
     SubsetEdoNotationDefinition,
     NonSubsetEdoNotationDefinition,
     SubsetFactor,
+    StepWithError,
 }
