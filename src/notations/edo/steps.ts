@@ -16,7 +16,7 @@ const JI_FIFTH_SIZE: Cents = 701.955000865 as Cents
 
 const computeFifthStep = (
     edo: Edo,
-    useSecondBestFifth: boolean = false,
+    useSecondBestFifth: boolean,
 ): EdoStep => {
     const stepSize: Cents = (CENTS_PER_OCTAVE / edo) as Cents
 
