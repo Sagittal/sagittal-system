@@ -170,4 +170,5 @@ export {
     Nominal,
     Link,
     Whorl,
+    Spelling
 } from "./types"
