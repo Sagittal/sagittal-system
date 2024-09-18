@@ -14,10 +14,7 @@ const FIFTHS_UNTIL_LIMMA: Count = (FIFTHS_UNTIL_WHOLE_TONE -
 
 const JI_FIFTH_SIZE: Cents = 701.955000865 as Cents
 
-const computeFifthStep = (
-    edo: Edo,
-    useSecondBestFifth: boolean,
-): EdoStep => {
+const computeFifthStep = (edo: Edo, useSecondBestFifth: boolean): EdoStep => {
     const stepSize: Cents = (CENTS_PER_OCTAVE / edo) as Cents
 
     const stepsWithError: StepWithError[] = computeRange(edo as Edo)
@@ -32,22 +29,28 @@ const computeFifthStep = (
     return useSecondBestFifth ? stepsWithError[1].step : stepsWithError[0].step
 }
 
+const ensureCorrectAbsoluteValue = (
+    edoStep: EdoStep,
+    { edo, fifthStep }: { edo: Edo; fifthStep: EdoStep },
+) => (edoStep > fifthStep ? ((edoStep - edo) as EdoStep) : edoStep)
+
 const computeSharpStep = (edo: Edo, fifthStep: EdoStep) =>
-    mod(fifthStep * FIFTHS_UNTIL_SHARP, edo) as EdoStep
+    ensureCorrectAbsoluteValue(
+        mod(fifthStep * FIFTHS_UNTIL_SHARP, edo) as EdoStep,
+        { edo, fifthStep },
+    )
 
 const computeWholeToneStep = (edo: Edo, fifthStep: EdoStep) =>
-    mod(fifthStep * FIFTHS_UNTIL_WHOLE_TONE, edo) as EdoStep
+    ensureCorrectAbsoluteValue(
+        mod(fifthStep * FIFTHS_UNTIL_WHOLE_TONE, edo) as EdoStep,
+        { edo, fifthStep },
+    )
 
-const computeLimmaStep = (edo: Edo, fifthStep: EdoStep): EdoStep => {
-    const possiblyShouldBeNegativeLimma: EdoStep = mod(
-        fifthStep * FIFTHS_UNTIL_LIMMA,
-        edo,
-    ) as EdoStep
-
-    return possiblyShouldBeNegativeLimma > fifthStep
-        ? ((possiblyShouldBeNegativeLimma - edo) as EdoStep)
-        : possiblyShouldBeNegativeLimma
-}
+const computeLimmaStep = (edo: Edo, fifthStep: EdoStep): EdoStep =>
+    ensureCorrectAbsoluteValue(
+        mod(fifthStep * FIFTHS_UNTIL_LIMMA, edo) as EdoStep,
+        { edo, fifthStep },
+    )
 
 export {
     computeFifthStep,
