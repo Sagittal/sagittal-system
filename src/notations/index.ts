@@ -78,4 +78,5 @@ export {
     computeSubsetFactor,
     computeWholeToneStep,
     computeLimmaStep,
+    computeSectionColor,
 } from "./edo"

@@ -154,6 +154,7 @@ export {
     computeSubsetFactor,
     computeWholeToneStep,
     computeLimmaStep,
+    computeSectionColor,
 } from "./notations"
 export { HALF_APOTOME, NOMINALS } from "./constants"
 export {

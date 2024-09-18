@@ -24,6 +24,19 @@ interface StepWithError {
     error: Cents
 }
 
+enum SectionColor {
+    GOLD = "#CCA800",
+    GREEN = "#00FF00",
+    BLUE = "#00B6FF",
+    MAGENTA = "#FF73FF",
+    GREY = "#ABABAB",
+    ORANGE = "#FF8F00",
+    YELLOW = "#FFFF00",
+    CYAN = "#00FFFF",
+    MAUVE = "#B39CFF",
+    ROSE = "#FF8888",
+}
+
 export {
     Edo,
     EdoStep,
@@ -32,4 +45,5 @@ export {
     NonSubsetEdoNotationDefinition,
     SubsetFactor,
     StepWithError,
+    SectionColor,
 }
