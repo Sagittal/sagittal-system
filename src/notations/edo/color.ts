@@ -13,6 +13,7 @@ groupNumber
 */
 
 const BEST_FIFTH_SECTION_COLORS: Record<SectionColor, Edo[]> = {
+    [SectionColor.BLACK]: [],
     [SectionColor.GOLD]: [
         5, 6, 8, 10, 13, 15, 18, 20, 25, 30, 32, 37, 42,
     ] as Edo[],
@@ -21,25 +22,30 @@ const BEST_FIFTH_SECTION_COLORS: Record<SectionColor, Edo[]> = {
     [SectionColor.MAGENTA]: [29, 58, 70] as Edo[],
     [SectionColor.GREY]: [41, 53, 65] as Edo[],
     [SectionColor.ORANGE]: [12, 24, 36, 48, 60, 72] as Edo[],
+    [SectionColor.PINK]: [],
     [SectionColor.YELLOW]: [43, 55, 67] as Edo[],
     [SectionColor.CYAN]: [19, 31, 38, 50, 57, 62, 69] as Edo[],
-    [SectionColor.MAUVE]: [26, 45, 52, 64] as Edo[],
+    [SectionColor.PURPLE]: [26, 45, 52, 64] as Edo[],
     [SectionColor.ROSE]: [
         7, 9, 11, 14, 16, 21, 23, 28, 33, 35, 40, 47,
     ] as Edo[],
+    [SectionColor.WHITE]: [],
 }
 
 const SECOND_BEST_FIFTH_SECTION_COLORS: Record<SectionColor, Edo[]> = {
+    [SectionColor.BLACK]: [],
     [SectionColor.GOLD]: [23, 35, 47, 64] as Edo[],
     [SectionColor.GREEN]: [] as Edo[],
     [SectionColor.BLUE]: [] as Edo[],
     [SectionColor.MAGENTA]: [] as Edo[],
     [SectionColor.GREY]: [] as Edo[],
     [SectionColor.ORANGE]: [] as Edo[],
+    [SectionColor.PINK]: [],
     [SectionColor.YELLOW]: [] as Edo[],
     [SectionColor.CYAN]: [] as Edo[],
-    [SectionColor.MAUVE]: [59, 71] as Edo[],
+    [SectionColor.PURPLE]: [59, 71] as Edo[],
     [SectionColor.ROSE]: [30, 42] as Edo[],
+    [SectionColor.WHITE]: [],
 }
 
 const switchSlicingToBeByEdoThenColor = (
@@ -58,9 +64,8 @@ const switchSlicingToBeByEdoThenColor = (
         {} as Record<Edo, SectionColor>,
     )
 
-const BEST_FIFTH_SECTION_COLORS_BY_EDO: Record<Edo, SectionColor> = switchSlicingToBeByEdoThenColor(
-    BEST_FIFTH_SECTION_COLORS,
-)
+const BEST_FIFTH_SECTION_COLORS_BY_EDO: Record<Edo, SectionColor> =
+    switchSlicingToBeByEdoThenColor(BEST_FIFTH_SECTION_COLORS)
 
 const SECOND_BEST_FIFTH_SECTION_COLORS_BY_EDO: Record<Edo, SectionColor> =
     switchSlicingToBeByEdoThenColor(SECOND_BEST_FIFTH_SECTION_COLORS)

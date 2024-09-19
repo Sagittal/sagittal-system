@@ -1,6 +1,5 @@
-import { Cents, Decimal, Ed, Index, Window } from "@sagittal/general"
-import { Sagittal, Sagitype } from "../../accidental"
-import { Link } from "../../types"
+import { Cents, Decimal, Ed, Window } from "@sagittal/general"
+import { Sagitype } from "../../accidental"
 
 type EdoStep = Decimal<{ integer: true }> & { _EdoStepBrand: boolean }
 
@@ -11,13 +10,17 @@ interface SubsetEdoNotationDefinition {
 }
 
 interface NonSubsetEdoNotationDefinition {
-    isLimmaFraction?: boolean,
-    sagitypes: Sagitype[],
+    isLimmaFraction?: boolean
+    sagitypes: Sagitype[]
 }
 
-type EdoNotationDefinition = SubsetEdoNotationDefinition | NonSubsetEdoNotationDefinition
+type EdoNotationDefinition =
+    | SubsetEdoNotationDefinition
+    | NonSubsetEdoNotationDefinition
 
-type SubsetFactor = Decimal<{ integer: true }> & { _SubsetFactorStepBrand: boolean }
+type SubsetFactor = Decimal<{ integer: true }> & {
+    _SubsetFactorStepBrand: boolean
+}
 
 interface StepWithError {
     step: EdoStep
@@ -25,16 +28,19 @@ interface StepWithError {
 }
 
 enum SectionColor {
+    BLACK = "#000000", // currently there are none of these
     GOLD = "#CCA800",
     GREEN = "#00FF00",
     BLUE = "#00B6FF",
     MAGENTA = "#FF73FF",
     GREY = "#ABABAB",
     ORANGE = "#FF8F00",
+    PINK = "FFD4D4", // currently there are none of these
     YELLOW = "#FFFF00",
     CYAN = "#00FFFF",
-    MAUVE = "#B39CFF",
+    PURPLE = "#B39CFF",
     ROSE = "#FF8888",
+    WHITE = "#FFFFFF", // currently there are none of these
 }
 
 export {
