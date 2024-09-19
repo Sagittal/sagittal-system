@@ -1,4 +1,8 @@
+import { Index } from "@sagittal/general"
 import { Edo, EdoNotationDefinition } from "./types"
+
+const BEST_FIFTH_EDO_NOTATION_DEFINITION_INDEX: Index<EdoNotationDefinition> = 0 as Index<EdoNotationDefinition>
+const SECOND_BEST_FIFTH_EDO_NOTATION_DEFINITION_INDEX: Index<EdoNotationDefinition> = 1 as Index<EdoNotationDefinition>
 
 const EDO_NOTATION_DEFINITIONS: Record<Edo, EdoNotationDefinition[]> = {
     5: [{ sagitypes: [] }],
@@ -108,6 +112,19 @@ const EDO_NOTATION_DEFINITIONS: Record<Edo, EdoNotationDefinition[]> = {
     581: [{ sagitypes: ["'|", "|(", "'|(", ")|(", "')|(", ".|~", "|~", ".~~|", "~~|", "./|", "/|", ".|)", "|)", ".|\\", "|\\", ".(|", "(|", "'(|", "(|(", "'(|(", ".//|", "//|", "./|)", "/|)", "./|\\", "/|\\", ".)/|\\", ")/|\\"] }], // https://forum.sagittal.org/viewtopic.php?p=741#p741
 } as Record<Edo, EdoNotationDefinition[]>
 
+const computeEdoNotationDefinition = (
+    edo: Edo,
+    useSecondBestFifth: boolean,
+): EdoNotationDefinition =>
+    EDO_NOTATION_DEFINITIONS[edo][
+        useSecondBestFifth
+            ? SECOND_BEST_FIFTH_EDO_NOTATION_DEFINITION_INDEX
+            : BEST_FIFTH_EDO_NOTATION_DEFINITION_INDEX
+    ]
+
 export {
+    computeEdoNotationDefinition,
+    BEST_FIFTH_EDO_NOTATION_DEFINITION_INDEX,
+    SECOND_BEST_FIFTH_EDO_NOTATION_DEFINITION_INDEX,
     EDO_NOTATION_DEFINITIONS,
 }

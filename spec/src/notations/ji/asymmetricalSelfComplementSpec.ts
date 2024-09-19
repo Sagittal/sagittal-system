@@ -29,7 +29,7 @@ describe("computeApotomeComplementHandlingAsymmetricalSelfComplement", (): void 
         })
     })
 
-    describe("it otherwsie behaves like computeApotomeComplement", () => {
+    describe("it otherwsie behaves like computeApotomeComplement", (): void => {
         it("returns the apotome complement of the given symbol", (): void => {
             const sagittal = computeAccidental({headId: HeadId.LEFT_BARB})                                       //  /|
     
