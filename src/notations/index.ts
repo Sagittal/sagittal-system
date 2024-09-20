@@ -80,4 +80,5 @@ export {
     computeWholeToneStep,
     computeLimmaStep,
     computeSectionColor,
+    parseEdoName,
 } from "./edo"

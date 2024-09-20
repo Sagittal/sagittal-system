@@ -156,6 +156,7 @@ export {
     computeWholeToneStep,
     computeLimmaStep,
     computeSectionColor,
+    parseEdoName,
 } from "./notations"
 export { HALF_APOTOME, NOMINALS } from "./constants"
 export {
