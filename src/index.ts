@@ -1,4 +1,41 @@
 export {
+    alignSagitype,
+    Sagitype,
+    Smiley,
+    Unicode,
+    computeAccidentalSagitype,
+    computeAccidentalUnicode,
+    computeCoreUnicode,
+    computeSagittalSagitype,
+    computeSagittalUnicode,
+    parseSagitype,
+    Glyph,
+    Accidental,
+    parseAccidental,
+    BLANK_SAGITYPE,
+    Compatible,
+    ArmId,
+    HeadId,
+    Flavor,
+    Sagittal,
+    Shafts,
+    computeApotomeComplement,
+    FlagId,
+    SAGITTAL_SEMIFLAT,
+    SAGITTAL_SEMISHARP,
+} from "./accidental"
+export { HALF_APOTOME, NOMINALS } from "./constants"
+export {
+    INA_CENTS_SIZES,
+    TINA,
+    MINA,
+    ATHINA_CENTS,
+    HINA_CENTS,
+    ULTRINA_CENTS,
+    TINA_CENTS,
+    MINA_CENTS,
+} from "./intervals"
+export {
     analyzeComma,
     JiPitchAnalysis,
     CommaAnalysis,
@@ -55,32 +92,6 @@ export {
     PotentiallyCommaAnalysis,
     SizeCategory,
 } from "./ji"
-export {
-    alignSagitype,
-    Sagitype,
-    Smiley,
-    Unicode,
-    computeAccidentalSagitype,
-    computeAccidentalUnicode,
-    computeCoreUnicode,
-    computeSagittalSagitype,
-    computeSagittalUnicode,
-    parseSagitype,
-    Glyph,
-    Accidental,
-    parseAccidental,
-    BLANK_SAGITYPE,
-    Compatible,
-    ArmId,
-    HeadId,
-    Flavor,
-    Sagittal,
-    Shafts,
-    computeApotomeComplement,
-    FlagId,
-    SAGITTAL_SEMIFLAT,
-    SAGITTAL_SEMISHARP,
-} from "./accidental"
 export {
     computeMaybeCommaClassId,
     JiNotationBoundClass,
@@ -159,17 +170,6 @@ export {
     parseEdoName,
     formatEdoName,
 } from "./notations"
-export { HALF_APOTOME, NOMINALS } from "./constants"
-export {
-    INA_CENTS_SIZES,
-    TINA,
-    MINA,
-    ATHINA_CENTS,
-    HINA_CENTS,
-    ULTRINA_CENTS,
-    TINA_CENTS,
-    MINA_CENTS,
-} from "./intervals"
 export {
     Nominal,
     Link,
