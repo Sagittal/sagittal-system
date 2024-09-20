@@ -1,5 +1,6 @@
 import { HexColor } from "@sagittal/general"
-import { Edo, SectionColor } from "./types"
+import { Edo, EdoName, SectionColor } from "./types"
+import { parseEdoName } from "./name"
 
 // TODO: eventually use a formula, and this hardcoded thing is just the test.
 /*
@@ -70,9 +71,15 @@ const BEST_FIFTH_SECTION_COLORS_BY_EDO: Record<Edo, SectionColor> =
 const SECOND_BEST_FIFTH_SECTION_COLORS_BY_EDO: Record<Edo, SectionColor> =
     switchSlicingToBeByEdoThenColor(SECOND_BEST_FIFTH_SECTION_COLORS)
 
-const computeSectionColor = (edo: Edo, useSecondBestFifth: boolean): HexColor =>
-    (useSecondBestFifth
+const computeSectionColor = (edoName: EdoName): HexColor => {
+    const {
+        edo,
+        useSecondBestFifth,
+    }: { edo: Edo; useSecondBestFifth: boolean } = parseEdoName(edoName)
+
+    return (useSecondBestFifth
         ? SECOND_BEST_FIFTH_SECTION_COLORS_BY_EDO[edo]
         : BEST_FIFTH_SECTION_COLORS_BY_EDO[edo]) as HexColor
+}
 
 export { computeSectionColor }
