@@ -13,7 +13,7 @@ export {
     computeLimmaStep,
 } from "./steps"
 export { EDO_NOTATION_DEFINITIONS } from "./definitions"
-export { parseEdoName } from "./name"
+export { parseEdoName, formatEdoName } from "./name"
 export { isSubsetNotation, computeSubsetFactor } from "./subset"
 export { computeSagittals } from "./sagittals"
 export { computeSectionColor } from "./color"

@@ -13,4 +13,7 @@ const parseEdoName = (
     return { edo, useSecondBestFifth }
 }
 
-export { parseEdoName }
+const formatEdoName = (edo: Edo, useSecondBestFifth: boolean): EdoName =>
+    `${edo}${useSecondBestFifth ? "b" : ""}` as EdoName
+
+export { parseEdoName, formatEdoName }

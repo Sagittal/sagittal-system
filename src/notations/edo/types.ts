@@ -8,7 +8,7 @@ type Edo = Ed<{ of: Window<{ of: 2 }> }> & EdoStep
 type EdoName = string & { _EdoNameBrand: boolean }
 
 interface SubsetEdoNotationDefinition {
-    supersetEdo: Edo
+    supersetEdoName: EdoName
 }
 
 interface NonSubsetEdoNotationDefinition {

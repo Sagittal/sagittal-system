@@ -81,4 +81,5 @@ export {
     computeLimmaStep,
     computeSectionColor,
     parseEdoName,
+    formatEdoName,
 } from "./edo"
