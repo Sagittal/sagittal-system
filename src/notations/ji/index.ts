@@ -59,6 +59,7 @@ export {
     BoundType,
     JI_NOTATION,
     getMinaName,
+    computeSagittalFromSymbolClassId,
 } from "./class"
 export {
     Ina,

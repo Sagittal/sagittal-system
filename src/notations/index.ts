@@ -63,6 +63,7 @@ export {
     getFlacco,
     FLACCOS,
     computeAccidental,
+    computeSagittalFromSymbolClassId,
 } from "./ji"
 export {
     Edo,

@@ -169,6 +169,7 @@ export {
     computeSectionColor,
     parseEdoName,
     formatEdoName,
+    computeSagittalFromSymbolClassId,
 } from "./notations"
 export {
     Nominal,

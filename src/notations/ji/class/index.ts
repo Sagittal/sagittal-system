@@ -24,7 +24,7 @@ export {
     JI_NOTATION_COMMA_CLASS_IDS,
     Notation,
 } from "./level"
-export { SymbolClassId, SymbolClass, formatSymbolClass, getSymbolClass, SYMBOL_CLASSES } from "./symbol"
+export { SymbolClassId, SymbolClass, formatSymbolClass, getSymbolClass, SYMBOL_CLASSES, computeSagittalFromSymbolClassId } from "./symbol"
 export { BoundClassId, BoundClass, getBoundClass, BoundType } from "./bound"
 export { CommaClass, CommaClassId, getCommaClass, computeMaybeCommaClassId, formatCommaClass, getRepresentativeSagittal } from "./comma"
 export {
