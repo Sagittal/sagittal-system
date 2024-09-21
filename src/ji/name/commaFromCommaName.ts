@@ -59,8 +59,7 @@ const computeCommaFromCommaName = (
     let bestPopularity = Infinity
     commas.forEach((comma: Comma): void => {
         const popularity = computeN2D3P9(compute23FreeClass(comma))
-        // console.log('checking', comma, popularity)
-        // todo: okay so this is just kind of random,
+        // TODO: okay so this is just kind of random,
         //  if you give it 1/5 then -4 4 1 is first
         //  and if you give it 5/1 then -34 20 1 is first
         if (popularity < bestPopularity) {
