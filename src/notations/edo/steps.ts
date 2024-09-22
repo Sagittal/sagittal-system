@@ -1,12 +1,7 @@
-import {
-    Cents,
-    Count,
-    CENTS_PER_OCTAVE,
-    computeRange,
-    mod,
-} from "@sagittal/general"
+import { Cents, Count, computeRange, mod } from "@sagittal/general"
 import { Edo, EdoName, EdoStep, StepWithError } from "./types"
 import { parseEdoName } from "./name"
+import { computeStepSize } from "./size"
 
 const FIFTHS_UNTIL_SHARP: Count = 7 as Count
 const FIFTHS_UNTIL_WHOLE_TONE: Count = 2 as Count
@@ -21,7 +16,7 @@ const computeFifthStep = (edoName: EdoName): EdoStep => {
         useSecondBestFifth,
     }: { edo: Edo; useSecondBestFifth: boolean } = parseEdoName(edoName)
 
-    const stepSize: Cents = (CENTS_PER_OCTAVE / edo) as Cents
+    const stepSize: Cents = computeStepSize(edo)
 
     const stepsWithError: StepWithError[] = computeRange(edo as Edo)
         .map(

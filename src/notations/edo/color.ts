@@ -1,85 +1,92 @@
-import { HexColor } from "@sagittal/general"
-import { Edo, EdoName, SectionColor } from "./types"
+import { Cents, CENTS_PER_OCTAVE, HexColor, PHI } from "@sagittal/general"
+import { Edo, EdoName, EdoStep, SectionColor } from "./types"
 import { parseEdoName } from "./name"
+import { computeFifthStep } from "./steps"
+import { computeStepSize } from "./size"
 
-// TODO: eventually use a formula, and this hardcoded thing is just the test.
-/*
-The non-linear function is in two-pieces.
-left = (fifthCents-700)/(100/7)
-right = (700-fifthCents)/(100/5)
-groupNumber
-= IF(fifthCents>700,
-10 - 72/7 * left/(left+1),
-10 + 72/5 * right/(right+1))
-*/
-
-const BEST_FIFTH_SECTION_COLORS: Record<SectionColor, Edo[]> = {
-    [SectionColor.BLACK]: [],
-    [SectionColor.GOLD]: [
-        5, 6, 8, 10, 13, 15, 18, 20, 25, 30, 32, 37, 42,
-    ] as Edo[],
-    [SectionColor.GREEN]: [22, 27, 44, 49, 54, 59, 61, 66, 71] as Edo[],
-    [SectionColor.BLUE]: [17, 34, 39, 46, 51, 56, 63, 68] as Edo[],
-    [SectionColor.MAGENTA]: [29, 58, 70] as Edo[],
-    [SectionColor.GREY]: [41, 53, 65] as Edo[],
-    [SectionColor.ORANGE]: [12, 24, 36, 48, 60, 72] as Edo[],
-    [SectionColor.PINK]: [],
-    [SectionColor.YELLOW]: [43, 55, 67] as Edo[],
-    [SectionColor.CYAN]: [19, 31, 38, 50, 57, 62, 69] as Edo[],
-    [SectionColor.PURPLE]: [26, 45, 52, 64] as Edo[],
-    [SectionColor.ROSE]: [
-        7, 9, 11, 14, 16, 21, 23, 28, 33, 35, 40, 47,
-    ] as Edo[],
-    [SectionColor.WHITE]: [],
-}
-
-const SECOND_BEST_FIFTH_SECTION_COLORS: Record<SectionColor, Edo[]> = {
-    [SectionColor.BLACK]: [],
-    [SectionColor.GOLD]: [23, 35, 47, 64] as Edo[],
-    [SectionColor.GREEN]: [] as Edo[],
-    [SectionColor.BLUE]: [] as Edo[],
-    [SectionColor.MAGENTA]: [] as Edo[],
-    [SectionColor.GREY]: [] as Edo[],
-    [SectionColor.ORANGE]: [] as Edo[],
-    [SectionColor.PINK]: [],
-    [SectionColor.YELLOW]: [] as Edo[],
-    [SectionColor.CYAN]: [] as Edo[],
-    [SectionColor.PURPLE]: [59, 71] as Edo[],
-    [SectionColor.ROSE]: [30, 42] as Edo[],
-    [SectionColor.WHITE]: [],
-}
-
-const switchSlicingToBeByEdoThenColor = (
-    sectionColors: Record<SectionColor, Edo[]>,
-): Record<Edo, SectionColor> =>
-    Object.entries(sectionColors).reduce(
-        (
-            sectionColorsByEdo: Record<Edo, SectionColor>,
-            [sectionColor, edoList]: [string, Edo[]],
-        ): Record<Edo, SectionColor> => {
-            edoList.forEach((edo: Edo): void => {
-                sectionColorsByEdo[edo] = sectionColor as SectionColor
-            })
-            return sectionColorsByEdo
-        },
-        {} as Record<Edo, SectionColor>,
-    )
-
-const BEST_FIFTH_SECTION_COLORS_BY_EDO: Record<Edo, SectionColor> =
-    switchSlicingToBeByEdoThenColor(BEST_FIFTH_SECTION_COLORS)
-
-const SECOND_BEST_FIFTH_SECTION_COLORS_BY_EDO: Record<Edo, SectionColor> =
-    switchSlicingToBeByEdoThenColor(SECOND_BEST_FIFTH_SECTION_COLORS)
+const GOLD_UPPER_BOUNDARY: number = (1 + 2 * PHI) / (1 + 3 * PHI)
+const GREEN_UPPER_BOUNDARY: number = (13 + 3 * PHI) / (22 + 5 * PHI)
+const BLUE_UPPER_BOUNDARY: number = (10 + 13 * PHI) / (17 + 22 * PHI)
+const MAGENTA_UPPER_BOUNDARY: number = (10 + 17 * PHI) / (17 + 29 * PHI)
+const GREY_UPPER_BOUNDARY: number = (17 + 24 * PHI) / (29 + 41 * PHI)
+const ORANGE_UPPER_BOUNDARY: number = (66 + 7 * PHI) / (113 + 12 * PHI)
+const PINK_UPPER_BOUNDARY: number = (60 + 7 * PHI) / (103 + 12 * PHI)
+const YELLOW_UPPER_BOUNDARY: number = (46 + 53 * PHI) / (79 + 91 * PHI)
+const CYAN_UPPER_BOUNDARY: number = (18 + 25 * PHI) / (31 + 43 * PHI)
+const PURPLE_UPPER_BOUNDARY: number = (26 + 11 * PHI) / (45 + 19 * PHI)
+const ROSE_UPPER_BOUNDARY: number = (4 + 15 * PHI) / (7 + 26 * PHI)
+const WHITE_UPPER_BOUNDARY: number = (5 + 1 * PHI) / (9 + 2 * PHI)
 
 const computeSectionColor = (edoName: EdoName): HexColor => {
-    const {
-        edo,
-        useSecondBestFifth,
-    }: { edo: Edo; useSecondBestFifth: boolean } = parseEdoName(edoName)
+    const fifthStep: EdoStep = computeFifthStep(edoName)
+    const edo: Edo = parseEdoName(edoName).edo
+    const fifthSize: Cents = computeStepSize(edo, fifthStep)
+    const fifthFractionOfOctave: number = fifthSize / CENTS_PER_OCTAVE
 
-    return (useSecondBestFifth
-        ? SECOND_BEST_FIFTH_SECTION_COLORS_BY_EDO[edo]
-        : BEST_FIFTH_SECTION_COLORS_BY_EDO[edo]) as HexColor
+    if (fifthFractionOfOctave < GOLD_UPPER_BOUNDARY) {
+        if (fifthFractionOfOctave < GREEN_UPPER_BOUNDARY) {
+            if (fifthFractionOfOctave < BLUE_UPPER_BOUNDARY) {
+                if (fifthFractionOfOctave < MAGENTA_UPPER_BOUNDARY) {
+                    if (fifthFractionOfOctave < GREY_UPPER_BOUNDARY) {
+                        if (fifthFractionOfOctave < ORANGE_UPPER_BOUNDARY) {
+                            if (fifthFractionOfOctave < PINK_UPPER_BOUNDARY) {
+                                if (
+                                    fifthFractionOfOctave <
+                                    YELLOW_UPPER_BOUNDARY
+                                ) {
+                                    if (
+                                        fifthFractionOfOctave <
+                                        CYAN_UPPER_BOUNDARY
+                                    ) {
+                                        if (
+                                            fifthFractionOfOctave <
+                                            PURPLE_UPPER_BOUNDARY
+                                        ) {
+                                            if (
+                                                fifthFractionOfOctave <
+                                                ROSE_UPPER_BOUNDARY
+                                            ) {
+                                                if (
+                                                    fifthFractionOfOctave <
+                                                    WHITE_UPPER_BOUNDARY
+                                                ) {
+                                                    return SectionColor.WHITE as HexColor
+                                                } else {
+                                                    return SectionColor.ROSE as HexColor
+                                                }
+                                            } else {
+                                                return SectionColor.PURPLE as HexColor
+                                            }
+                                        } else {
+                                            return SectionColor.CYAN as HexColor
+                                        }
+                                    } else {
+                                        return SectionColor.YELLOW as HexColor
+                                    }
+                                } else {
+                                    return SectionColor.PINK as HexColor
+                                }
+                            } else {
+                                return SectionColor.ORANGE as HexColor
+                            }
+                        } else {
+                            return SectionColor.GREY as HexColor
+                        }
+                    } else {
+                        return SectionColor.MAGENTA as HexColor
+                    }
+                } else {
+                    return SectionColor.BLUE as HexColor
+                }
+            } else {
+                return SectionColor.GREEN as HexColor
+            }
+        } else {
+            return SectionColor.GOLD as HexColor
+        }
+    } else {
+        return SectionColor.BLACK as HexColor
+    }
 }
 
 export { computeSectionColor }
