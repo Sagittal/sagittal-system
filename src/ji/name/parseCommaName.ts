@@ -28,6 +28,7 @@ import {CommaNameQuotient, ParsedCommaName, SizeCategory, SizeCategoryName} from
 //  Most recent questions here: http://forum.sagittal.org/viewtopic.php?p=2980#p2980
 //  1c3C = c3C = 41e3C and
 //  0c3C = 3C = 12e3C.
+//  more about 5²·7S vs 25·7S....
 
 const parseCommaName = (commaNameIo: Io): ParsedCommaName => {
     const commaNameParts = commaNameIo.match(/(.*c)?([0-9⁰¹²³⁴⁵⁶⁷⁸⁹.⋅*^]+[:\/]?\(?[0-9⁰¹²³⁴⁵⁶⁷⁸⁹.⋅*^]*\)?)-?([a-zA-Z-+]+)\s?(up|down)?/)
