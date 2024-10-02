@@ -29,6 +29,10 @@ import {CommaNameQuotient, ParsedCommaName, SizeCategory, SizeCategoryName} from
 //  1c3C = c3C = 41e3C and
 //  0c3C = 3C = 12e3C.
 //  more about 5²·7S vs 25·7S....
+//  I don't know if we previously agreed on [i]how [/i]to factor them, as opposed to when. 
+//  But I now think the way is to first separate them into prime powers (as integers, not exponential expressions), 
+//  in prime order. e.g. 25·7, 125·7, 5·49, 5·7·11. 
+//  Then if any prime power individually exceeds the factoring criteria, turn it into an exponential expression.
 
 const parseCommaName = (commaNameIo: Io): ParsedCommaName => {
     const commaNameParts = commaNameIo.match(/(.*c)?([0-9⁰¹²³⁴⁵⁶⁷⁸⁹.⋅*^]+[:\/]?\(?[0-9⁰¹²³⁴⁵⁶⁷⁸⁹.⋅*^]*\)?)-?([a-zA-Z-+]+)\s?(up|down)?/)
