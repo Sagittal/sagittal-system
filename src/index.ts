@@ -159,7 +159,7 @@ export {
     computeFifthStep,
     computeSharpStep,
     EDO_NOTATION_DEFINITIONS,
-    EdoName,
+    EdoNotationName,
     isSubsetNotation,
     computeSagittals,
     SubsetFactor,
@@ -167,13 +167,8 @@ export {
     computeWholeToneStep,
     computeLimmaStep,
     computeSectionColor,
-    parseEdoName,
-    formatEdoName,
+    parseEdoNotationName,
+    formatEdoNotationName,
     computeSagittalFromSymbolClassId,
 } from "./notations"
-export {
-    Nominal,
-    Link,
-    Whorl,
-    Spelling
-} from "./types"
+export { Nominal, Link, Whorl, Spelling } from "./types"

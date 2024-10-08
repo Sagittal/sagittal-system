@@ -1,19 +1,25 @@
-import { Edo, EdoName } from "./types"
+import { Edo, EdoNotationName } from "./types"
 
-const parseEdoName = (
-    edoName: EdoName,
+const parseEdoNotationName = (
+    edoNotationName: EdoNotationName,
 ): { edo: Edo; useSecondBestFifth: boolean } => {
     let useSecondBestFifth: boolean = false
-    if (edoName.match(/b/)) {
-        edoName = edoName.slice(0, edoName.length - 1) as EdoName
+    if (edoNotationName.match(/b/)) {
+        edoNotationName = edoNotationName.slice(
+            0,
+            edoNotationName.length - 1,
+        ) as EdoNotationName
         useSecondBestFifth = true
     }
-    const edo: Edo = parseInt(edoName) as Edo
+    const edo: Edo = parseInt(edoNotationName) as Edo
 
     return { edo, useSecondBestFifth }
 }
 
-const formatEdoName = (edo: Edo, useSecondBestFifth: boolean): EdoName =>
-    `${edo}${useSecondBestFifth ? "b" : ""}` as EdoName
+const formatEdoNotationName = (
+    edo: Edo,
+    useSecondBestFifth: boolean,
+): EdoNotationName =>
+    `${edo}${useSecondBestFifth ? "b" : ""}` as EdoNotationName
 
-export { parseEdoName, formatEdoName }
+export { parseEdoNotationName, formatEdoNotationName }

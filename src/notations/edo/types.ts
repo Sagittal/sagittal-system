@@ -5,10 +5,10 @@ type EdoStep = Decimal<{ integer: true }> & { _EdoStepBrand: boolean }
 
 type Edo = Ed<{ of: Window<{ of: 2 }> }> & EdoStep
 
-type EdoName = string & { _EdoNameBrand: boolean }
+type EdoNotationName = string & { _EdoNotationNameBrand: boolean }
 
 interface SubsetEdoNotationDefinition {
-    supersetEdoName: EdoName
+    supersetEdoNotationName: EdoNotationName
 }
 
 interface NonSubsetEdoNotationDefinition {
@@ -54,5 +54,5 @@ export {
     SubsetFactor,
     StepWithError,
     SectionColor,
-    EdoName,
+    EdoNotationName,
 }

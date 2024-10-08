@@ -73,7 +73,7 @@ export {
     computeFifthStep,
     computeSharpStep,
     EDO_NOTATION_DEFINITIONS,
-    EdoName,
+    EdoNotationName,
     isSubsetNotation,
     computeSagittals,
     SubsetFactor,
@@ -81,6 +81,6 @@ export {
     computeWholeToneStep,
     computeLimmaStep,
     computeSectionColor,
-    parseEdoName,
-    formatEdoName,
+    parseEdoNotationName,
+    formatEdoNotationName,
 } from "./edo"

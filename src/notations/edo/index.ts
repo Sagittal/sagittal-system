@@ -4,7 +4,7 @@ export {
     NonSubsetEdoNotationDefinition,
     EdoNotationDefinition,
     SubsetFactor,
-    EdoName,
+    EdoNotationName,
 } from "./types"
 export {
     computeFifthStep,
@@ -13,7 +13,7 @@ export {
     computeLimmaStep,
 } from "./steps"
 export { EDO_NOTATION_DEFINITIONS } from "./definitions"
-export { parseEdoName, formatEdoName } from "./name"
+export { parseEdoNotationName, formatEdoNotationName } from "./name"
 export { isSubsetNotation, computeSubsetFactor } from "./subset"
 export { computeSagittals } from "./sagittals"
 export { computeSectionColor } from "./color"

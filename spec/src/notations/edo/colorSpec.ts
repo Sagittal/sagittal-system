@@ -2,12 +2,15 @@ import { HexColor } from "@sagittal/general"
 import {
     computeSectionColor,
     EDO_NOTATION_DEFINITIONS,
-    EdoName,
-    parseEdoName,
+    EdoNotationName,
+    parseEdoNotationName,
 } from "../../../../src"
 import { SectionColor } from "../../../../src/notations/edo/types"
 
-const BEST_FIFTH_SECTION_COLORS_FROM_PT: Record<SectionColor, EdoName[]> = {
+const BEST_FIFTH_SECTION_COLORS_FROM_PT: Record<
+    SectionColor,
+    EdoNotationName[]
+> = {
     [SectionColor.BLACK]: [],
     [SectionColor.GOLD]: [
         "5",
@@ -27,7 +30,7 @@ const BEST_FIFTH_SECTION_COLORS_FROM_PT: Record<SectionColor, EdoName[]> = {
         "42",
         "47b",
         "64b",
-    ] as EdoName[],
+    ] as EdoNotationName[],
     [SectionColor.GREEN]: [
         "22",
         "27",
@@ -38,7 +41,7 @@ const BEST_FIFTH_SECTION_COLORS_FROM_PT: Record<SectionColor, EdoName[]> = {
         "61",
         "66",
         "71",
-    ] as EdoName[],
+    ] as EdoNotationName[],
     [SectionColor.BLUE]: [
         "17",
         "34",
@@ -48,12 +51,19 @@ const BEST_FIFTH_SECTION_COLORS_FROM_PT: Record<SectionColor, EdoName[]> = {
         "56",
         "63",
         "68",
-    ] as EdoName[],
-    [SectionColor.MAGENTA]: ["29", "58", "70"] as EdoName[],
-    [SectionColor.GREY]: ["41", "53", "65"] as EdoName[],
-    [SectionColor.ORANGE]: ["12", "24", "36", "48", "60", "72"] as EdoName[],
+    ] as EdoNotationName[],
+    [SectionColor.MAGENTA]: ["29", "58", "70"] as EdoNotationName[],
+    [SectionColor.GREY]: ["41", "53", "65"] as EdoNotationName[],
+    [SectionColor.ORANGE]: [
+        "12",
+        "24",
+        "36",
+        "48",
+        "60",
+        "72",
+    ] as EdoNotationName[],
     [SectionColor.PINK]: [],
-    [SectionColor.YELLOW]: ["43", "55", "67"] as EdoName[],
+    [SectionColor.YELLOW]: ["43", "55", "67"] as EdoNotationName[],
     [SectionColor.CYAN]: [
         "19",
         "31",
@@ -62,8 +72,15 @@ const BEST_FIFTH_SECTION_COLORS_FROM_PT: Record<SectionColor, EdoName[]> = {
         "57",
         "62",
         "69",
-    ] as EdoName[],
-    [SectionColor.PURPLE]: ["26", "45", "52", "59b", "64", "71b"] as EdoName[],
+    ] as EdoNotationName[],
+    [SectionColor.PURPLE]: [
+        "26",
+        "45",
+        "52",
+        "59b",
+        "64",
+        "71b",
+    ] as EdoNotationName[],
     [SectionColor.ROSE]: [
         "7",
         "9",
@@ -79,31 +96,33 @@ const BEST_FIFTH_SECTION_COLORS_FROM_PT: Record<SectionColor, EdoName[]> = {
         "40",
         "42b",
         "47",
-    ] as EdoName[],
+    ] as EdoNotationName[],
     [SectionColor.WHITE]: [],
 }
 
-const switchSlicingToBeByEdoNameThenColorAsHexColor = (
-    sectionColors: Record<SectionColor, EdoName[]>,
-): Record<EdoName, HexColor> =>
+const switchSlicingToBeByEdoNotationNameThenColorAsHexColor = (
+    sectionColors: Record<SectionColor, EdoNotationName[]>,
+): Record<EdoNotationName, HexColor> =>
     Object.entries(sectionColors).reduce(
         (
-            sectionColorsAsHexColorByEdoName: Record<EdoName, HexColor>,
-            [sectionColor, edoNames]: [string, EdoName[]],
-        ): Record<EdoName, HexColor> => {
-            edoNames.forEach((edoName: EdoName): void => {
-                sectionColorsAsHexColorByEdoName[edoName] =
-                    sectionColor as HexColor
-            })
-            return sectionColorsAsHexColorByEdoName
+            sectionColorsAsHexColorByEdoNotationName: Record<EdoNotationName, HexColor>,
+            [sectionColor, edoNotationNames]: [string, EdoNotationName[]],
+        ): Record<EdoNotationName, HexColor> => {
+            edoNotationNames.forEach(
+                (edoNotationName: EdoNotationName): void => {
+                    sectionColorsAsHexColorByEdoNotationName[edoNotationName] =
+                        sectionColor as HexColor
+                },
+            )
+            return sectionColorsAsHexColorByEdoNotationName
         },
-        {} as Record<EdoName, HexColor>,
+        {} as Record<EdoNotationName, HexColor>,
     )
 
 const BEST_FIFTH_SECTION_COLORS_FROM_PT_BY_EDO_NAME_AND_AS_HEX_COLOR: Record<
-    EdoName,
+    EdoNotationName,
     HexColor
-> = switchSlicingToBeByEdoNameThenColorAsHexColor(
+> = switchSlicingToBeByEdoNotationNameThenColorAsHexColor(
     BEST_FIFTH_SECTION_COLORS_FROM_PT,
 )
 
@@ -114,22 +133,22 @@ const sectionColorFromHexColor = (hexColor: HexColor) =>
 
 describe("computeSectionColor", (): void => {
     it("chooses the correct colors for all the EDOs", (): void => {
-        const edoNames: EdoName[] = Object.keys(
+        const edoNotationNames: EdoNotationName[] = Object.keys(
             EDO_NOTATION_DEFINITIONS,
-        ) as EdoName[]
+        ) as EdoNotationName[]
 
-        edoNames.forEach((edoName: EdoName): void => {
-            if (parseEdoName(edoName).edo > 72) return
+        edoNotationNames.forEach((edoNotationName: EdoNotationName): void => {
+            if (parseEdoNotationName(edoNotationName).edo > 72) return
 
-            const actual: HexColor = computeSectionColor(edoName)
+            const actual: HexColor = computeSectionColor(edoNotationName)
             const expected: HexColor =
                 BEST_FIFTH_SECTION_COLORS_FROM_PT_BY_EDO_NAME_AND_AS_HEX_COLOR[
-                    edoName
+                    edoNotationName
                 ]
 
             expect(actual)
                 .withContext(
-                    `Expected ${edoName} to be ${sectionColorFromHexColor(
+                    `Expected ${edoNotationName} to be ${sectionColorFromHexColor(
                         expected,
                     )}, but was instead ${sectionColorFromHexColor(actual)}`,
                 )

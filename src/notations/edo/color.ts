@@ -1,6 +1,6 @@
 import { Cents, CENTS_PER_OCTAVE, HexColor, PHI } from "@sagittal/general"
-import { Edo, EdoName, EdoStep, SectionColor } from "./types"
-import { parseEdoName } from "./name"
+import { Edo, EdoNotationName, EdoStep, SectionColor } from "./types"
+import { parseEdoNotationName } from "./name"
 import { computeFifthStep } from "./steps"
 import { computeStepSize } from "./size"
 
@@ -17,9 +17,9 @@ const PURPLE_UPPER_BOUNDARY: number = (26 + 11 * PHI) / (45 + 19 * PHI)
 const ROSE_UPPER_BOUNDARY: number = (4 + 15 * PHI) / (7 + 26 * PHI)
 const WHITE_UPPER_BOUNDARY: number = (5 + 1 * PHI) / (9 + 2 * PHI)
 
-const computeSectionColor = (edoName: EdoName): HexColor => {
-    const fifthStep: EdoStep = computeFifthStep(edoName)
-    const edo: Edo = parseEdoName(edoName).edo
+const computeSectionColor = (edoNotationName: EdoNotationName): HexColor => {
+    const fifthStep: EdoStep = computeFifthStep(edoNotationName)
+    const edo: Edo = parseEdoNotationName(edoNotationName).edo
     const fifthSize: Cents = computeStepSize(edo, fifthStep)
     const fifthFractionOfOctave: number = fifthSize / CENTS_PER_OCTAVE
 
