@@ -5,6 +5,7 @@ export {
     EdoNotationDefinition,
     SubsetFactor,
     EdoNotationName,
+    SectionColor,
 } from "./types"
 export {
     computeFifthStep,
