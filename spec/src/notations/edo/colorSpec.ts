@@ -29,6 +29,7 @@ const BEST_FIFTH_SECTION_COLORS_FROM_PT: Record<
         "37",
         "42",
         "47b",
+        "59",
         "64b",
     ] as EdoNotationName[],
     [SectionColor.GREEN]: [
@@ -37,7 +38,6 @@ const BEST_FIFTH_SECTION_COLORS_FROM_PT: Record<
         "44",
         "49",
         "54",
-        "59",
         "61",
         "66",
         "71",

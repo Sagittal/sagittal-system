@@ -5,7 +5,7 @@ import { computeFifthStep } from "./steps"
 import { computeStepSize } from "./size"
 
 const GOLD_UPPER_BOUNDARY: number = (1 + 2 * PHI) / (1 + 3 * PHI)
-const GREEN_UPPER_BOUNDARY: number = (13 + 3 * PHI) / (22 + 5 * PHI)
+const GREEN_UPPER_BOUNDARY: number = (6 + 13 * PHI) / (10 + 22 * PHI)
 const BLUE_UPPER_BOUNDARY: number = (10 + 13 * PHI) / (17 + 22 * PHI)
 const MAGENTA_UPPER_BOUNDARY: number = (10 + 17 * PHI) / (17 + 29 * PHI)
 const GREY_UPPER_BOUNDARY: number = (17 + 24 * PHI) / (29 + 41 * PHI)
