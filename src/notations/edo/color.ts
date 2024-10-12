@@ -17,7 +17,7 @@ const PURPLE_UPPER_BOUNDARY: number = (26 + 11 * PHI) / (45 + 19 * PHI)
 const ROSE_UPPER_BOUNDARY: number = (4 + 15 * PHI) / (7 + 26 * PHI)
 const WHITE_UPPER_BOUNDARY: number = (5 + 1 * PHI) / (9 + 2 * PHI)
 
-const computeSectionColor = (edoNotationName: EdoNotationName): HexColor => {
+const computeSectionColor = (edoNotationName: EdoNotationName): SectionColor | HexColor => {
     const fifthStep: EdoStep = computeFifthStep(edoNotationName)
     const edo: Edo = parseEdoNotationName(edoNotationName).edo
     const fifthSize: Cents = computeStepSize(edo, fifthStep)
