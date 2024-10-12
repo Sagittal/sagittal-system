@@ -19,7 +19,7 @@ const computeFifthStep = (edoNotationName: EdoNotationName): EdoStep => {
 
     const stepSize: Cents = computeStepSize(edo)
 
-    const stepsWithError: StepWithError[] = computeRange(edo as Edo)
+    const stepsWithError: StepWithError[] = computeRange((edo + 1) as Edo)
         .map(
             (step: EdoStep): StepWithError => ({
                 step,
