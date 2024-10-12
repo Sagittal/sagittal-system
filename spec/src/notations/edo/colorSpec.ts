@@ -140,8 +140,8 @@ describe("computeSectionColor", (): void => {
         edoNotationNames.forEach((edoNotationName: EdoNotationName): void => {
             if (parseEdoNotationName(edoNotationName).edo > 72) return
 
-            const actual: HexColor = computeSectionColor(edoNotationName)
-            const expected: HexColor =
+            const actual: SectionColor | HexColor = computeSectionColor(edoNotationName)
+            const expected: SectionColor | HexColor =
                 BEST_FIFTH_SECTION_COLORS_FROM_PT_BY_EDO_NAME_AND_AS_HEX_COLOR[
                     edoNotationName
                 ]
@@ -150,7 +150,7 @@ describe("computeSectionColor", (): void => {
                 .withContext(
                     `Expected ${edoNotationName} to be ${sectionColorFromHexColor(
                         expected,
-                    )}, but was instead ${sectionColorFromHexColor(actual)}`,
+                    )}, but was instead ${sectionColorFromHexColor(actual as HexColor)}`,
                 )
                 .toEqual(expected)
         })
