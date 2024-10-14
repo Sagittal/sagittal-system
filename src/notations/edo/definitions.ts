@@ -80,7 +80,7 @@ const EDO_NOTATION_DEFINITIONS: Record<EdoNotationName, EdoNotationDefinition> =
         "72": { sagitypes: ["/|", "|)", "/|\\"] },
         "73": { sagitypes: ["|)", "/|", "(|(", "/|\\"] },
         "74": { sagitypes: ["|)", "/|", "/|\\", "(|\\"] },
-        "75": { sagitypes: ["|\\", "/|", "/|\\", "(|\\"] },
+        "75": { sagitypes: ["|)", "/|", "/|\\", "(|\\"] },
         "76": { sagitypes: ["/|)", ")/|\\"] },
         "77": { sagitypes: ["/|", "|)", "/|\\"] },
         "79": { sagitypes: ["/|", "|)", "/|\\"] },
