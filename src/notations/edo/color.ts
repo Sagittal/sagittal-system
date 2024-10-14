@@ -5,7 +5,7 @@ import { computeFifthStep } from "./steps"
 import { computeStepSize } from "./size"
 
 const BLACK_GOLD_BOUNDARY: number = (1 + 2 * PHI) / (1 + 3 * PHI)
-const GOLD_GREEN_BOUNDARY: number = (6 + 13 * PHI) / (10 + 22 * PHI)
+const GOLD_GREEN_BOUNDARY: number = (13 + 3 * PHI) / (22 + 5 * PHI)
 const GREEN_BLUE_BOUNDARY: number = (10 + 13 * PHI) / (17 + 22 * PHI)
 const BLUE_MAGENTA_BOUNDARY: number = (10 + 17 * PHI) / (17 + 29 * PHI)
 const MAGENTA_GREY_BOUNDARY: number = (17 + 24 * PHI) / (29 + 41 * PHI)
