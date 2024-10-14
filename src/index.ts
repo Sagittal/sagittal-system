@@ -171,5 +171,6 @@ export {
     formatEdoNotationName,
     computeSagittalFromSymbolClassId,
     SectionColor,
+    computeSagitypes,
 } from "./notations"
 export { Nominal, Link, Whorl, Spelling } from "./types"

@@ -84,4 +84,5 @@ export {
     parseEdoNotationName,
     formatEdoNotationName,
     SectionColor,
+    computeSagitypes,
 } from "./edo"
