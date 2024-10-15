@@ -6,6 +6,8 @@ export {
     SubsetFactor,
     EdoNotationName,
     SectionColor,
+    StepDefinition,
+    NonJiMeaning,
 } from "./types"
 export {
     computeFifthStep,

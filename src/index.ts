@@ -172,5 +172,7 @@ export {
     computeSagittalFromSymbolClassId,
     SectionColor,
     computeSagitypes,
+    StepDefinition,
+    NonJiMeaning,
 } from "./notations"
 export { Nominal, Link, Whorl, Spelling } from "./types"

@@ -1,4 +1,4 @@
-import { Cents, Decimal, Ed, Window } from "@sagittal/general"
+import { Cents, Comma, Decimal, Ed, Name, Window } from "@sagittal/general"
 import { Sagitype } from "../../accidental"
 
 type EdoStep = Decimal<{ integer: true }> & { _EdoStepBrand: boolean }
@@ -11,9 +11,17 @@ interface SubsetEdoNotationDefinition {
     supersetEdoNotationName: EdoNotationName
 }
 
+type NonJiMeaning = string & { _NonJiMeaningBrand: boolean }
+
+interface StepDefinition {
+    sagitype: Sagitype
+    validCommas?: Name<Comma>[]
+    nonJiMeaning?: NonJiMeaning
+}
+
 interface NonSubsetEdoNotationDefinition {
     isLimmaFraction?: boolean
-    sagitypes: Sagitype[]
+    stepDefinitions: StepDefinition[]
 }
 
 type EdoNotationDefinition =
@@ -55,4 +63,6 @@ export {
     StepWithError,
     SectionColor,
     EdoNotationName,
+    StepDefinition,
+    NonJiMeaning,
 }

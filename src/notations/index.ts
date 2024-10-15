@@ -85,4 +85,6 @@ export {
     formatEdoNotationName,
     SectionColor,
     computeSagitypes,
+    StepDefinition,
+    NonJiMeaning,
 } from "./edo"
