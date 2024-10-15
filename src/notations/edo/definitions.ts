@@ -367,7 +367,7 @@ const EDO_NOTATION_DEFINITIONS: Record<EdoNotationName, EdoNotationDefinition> =
                 { sagitype: "/|", validCommas: ["5C"] },
                 { sagitype: "|)", validCommas: ["7C"] },
                 { sagitype: "/|\\", validCommas: ["11M"] },
-            ], // TODO: gotta change max-edo to 77 for some tests
+            ],
         },
         "79": {
             stepDefinitions: [
