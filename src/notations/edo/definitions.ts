@@ -223,7 +223,7 @@ const EDO_NOTATION_DEFINITIONS: Record<EdoNotationName, EdoNotationDefinition> =
         },
         "59": {
             stepDefinitions: [
-                { sagitype: ")|", nonJiMeaning: "3A/9 ( ⁹√(2187/2048))" },
+                { sagitype: ")|", nonJiMeaning: "(~3A)/9 ((~2187/2048)/9)" },
                 { sagitype: ")~|", validCommas: ["143C"] },
                 { sagitype: "/|", validCommas: ["5C"] },
                 { sagitype: "/|)", validCommas: [undefined, "13M"] },
