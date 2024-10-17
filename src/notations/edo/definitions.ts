@@ -28,7 +28,13 @@ const EDO_NOTATION_DEFINITIONS: Record<EdoNotationName, EdoNotationDefinition> =
             isLimmaFraction: true,
             stepDefinitions: [{ sagitype: "|)" }, { sagitype: "|\\" }],
         },
-        "23b": { stepDefinitions: [")|", "/|", "(|\\"] },
+        "23b": {
+            stepDefinitions: [
+                { sagitype: ")|" },
+                { sagitype: "/|" },
+                { sagitype: "(|\\" },
+            ],
+        },
         "24": { stepDefinitions: [{ sagitype: "/|\\", validCommas: ["11M"] }] },
         "25": {
             stepDefinitions: [{ sagitype: ")~|" }, { sagitype: "/|" }],
