@@ -4,47 +4,69 @@ import {
     computeRationalQuotientSmoothness,
     computeRationalSpevFromRationalPev,
     computeRationalSpevFromRationalQuotient,
+    Direction,
     FIVE_SMOOTHNESS,
     increment,
     isUndefined,
     Maybe,
     Pev,
     stringify,
+    TWO_3_FREE,
 } from "@sagittal/general"
-import {computeN2D3P9} from "../badness"
-import {computeRationalPevInZone, findNotatingCommas} from "../find"
-import {computeSizeCategoryZone} from "./sizeCategoryZone"
-import {ParsedCommaName, SizeCategory} from "./types"
+import { computeN2D3P9 } from "../badness"
+import { computeRationalPevInZone, findNotatingCommas } from "../find"
+import { computeSizeCategoryZone } from "./sizeCategoryZone"
+import { ParsedCommaName, SizeCategory } from "./types"
+import {
+    computeRationalSpevCopfr,
+    computeRoughRationalPev,
+    invertSpev,
+    isPevSub,
+    isQuotientSub,
+    isSpevSub,
+} from "@sagittal/general/dist/cjs/math"
 
-const compute3LimitCommaInSizeCategory = (sizeCategory: SizeCategory): Comma => {
+const compute3LimitCommaInSizeCategory = (
+    sizeCategory: SizeCategory,
+): Comma => {
     let threeExponent = 0
     const zone = computeSizeCategoryZone(sizeCategory)
 
     while (true) {
-        let rationalPevInZone: Maybe<Pev<{rational: true}>> = computeRationalPevInZone(
-            [0, threeExponent] as Pev<{rational: true, rough: 3}>,
-            zone,
-        )
+        let rationalPevInZone: Maybe<Pev<{ rational: true }>> =
+            computeRationalPevInZone(
+                [0, threeExponent] as Pev<{ rational: true; rough: 3 }>,
+                zone,
+            )
         if (!isUndefined(rationalPevInZone)) {
-            return computeRationalSpevFromRationalPev(rationalPevInZone) as Comma
+            return computeRationalSpevFromRationalPev(
+                rationalPevInZone,
+            ) as Comma
         }
 
         rationalPevInZone = computeRationalPevInZone(
-            [0, -threeExponent] as Pev<{rational: true, rough: 3}>,
+            [0, -threeExponent] as Pev<{ rational: true; rough: 3 }>,
             zone,
         )
         if (!isUndefined(rationalPevInZone)) {
-            return computeRationalSpevFromRationalPev(rationalPevInZone) as Comma
+            return computeRationalSpevFromRationalPev(
+                rationalPevInZone,
+            ) as Comma
         }
 
         threeExponent = increment(threeExponent)
     }
 }
 
-const computeCommaFromCommaName = (
-    {complexity, commaNameQuotient, sizeCategory, direction}: ParsedCommaName,
-): Comma => {
-    if (computeRationalQuotientSmoothness(commaNameQuotient) < FIVE_SMOOTHNESS) {
+const computeCommaFromCommaName = ({
+    complexity,
+    commaNameQuotient,
+    sizeCategory,
+    direction,
+}: ParsedCommaName): Comma => {
+    if (
+        computeRationalQuotientSmoothness(commaNameQuotient) < FIVE_SMOOTHNESS
+    ) {
         return compute3LimitCommaInSizeCategory(sizeCategory)
     }
 
@@ -53,28 +75,49 @@ const computeCommaFromCommaName = (
     // No real choice but to go with the defaults here, unless we majorly refactor
     // It would be cool if we could use the search options the user provides here, but it creates a
     // Chicken-and-egg problem since we need to use this method itself as part of parsing said options!
-    const commas = findNotatingCommas(computeRationalSpevFromRationalQuotient(commaNameQuotient), {zone})
+    const commas = findNotatingCommas(
+        computeRationalSpevFromRationalQuotient(commaNameQuotient),
+        { zone },
+    )
 
-    let mostPopularComma = undefined
+    let mostPopularComma: Maybe<Comma>
     let bestPopularity = Infinity
     commas.forEach((comma: Comma): void => {
         const popularity = computeN2D3P9(compute23FreeClass(comma))
-        // TODO: okay so this is just kind of random,
-        //  if you give it 1/5 then -4 4 1 is first
-        //  and if you give it 5/1 then -34 20 1 is first
-        if (popularity < bestPopularity) {
+
+        if (
+            popularity < bestPopularity ||
+            (popularity === bestPopularity &&
+                computeRationalSpevCopfr(comma) <
+                    computeRationalSpevCopfr(mostPopularComma!))
+        ) {
             bestPopularity = popularity
             mostPopularComma = comma
         }
     })
 
     if (isUndefined(mostPopularComma)) {
-        throw new Error(`For whatever reason the number of commas notating the comma name quotient ${stringify(commaNameQuotient)} within the bounds of its size category ${sizeCategory} was not 1. It was ${commas.length}. Perhaps you need to expand the search parameters, e.g. raise the max ATE, AAS, or 2,3-free sopfr.`)
+        throw new Error(
+            `For whatever reason the number of commas notating the comma name quotient ${stringify(
+                commaNameQuotient,
+            )} within the bounds of its size category ${sizeCategory} was not 1. It was ${
+                commas.length
+            }. Perhaps you need to expand the search parameters, e.g. raise the max ATE, AAS, or 2,3-free sopfr.`,
+        )
     }
 
-    return mostPopularComma
+    const shouldCommaBeDown: boolean = isUndefined(direction)
+        ? isQuotientSub(commaNameQuotient) !== isPevSub(computeRoughRationalPev(mostPopularComma.pev, TWO_3_FREE))
+        : direction === Direction.SUB
+    const isCommaDown: boolean = isSpevSub(mostPopularComma)
+
+    return shouldCommaBeDown
+        ? isCommaDown
+            ? mostPopularComma
+            : (invertSpev(mostPopularComma) as unknown as Comma)
+        : isCommaDown
+        ? (invertSpev(mostPopularComma) as unknown as Comma)
+        : mostPopularComma
 }
 
-export {
-    computeCommaFromCommaName,
-}
+export { computeCommaFromCommaName }

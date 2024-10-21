@@ -2,13 +2,12 @@ import { Cents, Count, computeRange, mod } from "@sagittal/general"
 import { Edo, EdoNotationName, EdoStep, StepWithError } from "./types"
 import { parseEdoNotationName } from "./name"
 import { computeStepSize } from "./size"
+import { JI_FIFTH_SIZE } from "./constants"
 
 const FIFTHS_UNTIL_SHARP: Count = 7 as Count
 const FIFTHS_UNTIL_WHOLE_TONE: Count = 2 as Count
 const FIFTHS_UNTIL_LIMMA: Count = (FIFTHS_UNTIL_WHOLE_TONE -
     FIFTHS_UNTIL_SHARP) as Count
-
-const JI_FIFTH_SIZE: Cents = 701.955000865 as Cents
 
 const computeFifthStep = (edoNotationName: EdoNotationName): EdoStep => {
     const {

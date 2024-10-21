@@ -1,4 +1,4 @@
-import { EdoNotationName, EdoNotationDefinition } from "./types"
+import { EdoNotationName, EdoNotationDefinition, TEMPERED_THREES_ONLY_METHOD } from "./types"
 
 const EDO_NOTATION_DEFINITIONS: Record<EdoNotationName, EdoNotationDefinition> =
     {
@@ -43,7 +43,7 @@ const EDO_NOTATION_DEFINITIONS: Record<EdoNotationName, EdoNotationDefinition> =
         "27": {
             stepDefinitions: [
                 { sagitype: "/|", validCommas: ["5C"] },
-                { sagitype: "(|\\", validCommas: [undefined, "13L"] },
+                { sagitype: "(|\\", validCommas: ["35L", "13L"], alternativeJustifications: [TEMPERED_THREES_ONLY_METHOD] },
             ],
         },
         "28": {
@@ -139,7 +139,15 @@ const EDO_NOTATION_DEFINITIONS: Record<EdoNotationName, EdoNotationDefinition> =
                 { sagitype: "(|\\", validCommas: [undefined, "13L"] },
             ],
         },
-        "45": { stepDefinitions: [{ sagitype: "/|)", validCommas: ["35M"] }] },
+        "45": {
+            stepDefinitions: [
+                {
+                    sagitype: "/|)",
+                    validCommas: ["35M", "13M"],
+                    alternativeJustifications: [TEMPERED_THREES_ONLY_METHOD],
+                },
+            ],
+        },
         "46": {
             stepDefinitions: [
                 { sagitype: "/|", validCommas: ["5C"] },
@@ -191,13 +199,17 @@ const EDO_NOTATION_DEFINITIONS: Record<EdoNotationName, EdoNotationDefinition> =
         "53": {
             stepDefinitions: [
                 { sagitype: "/|", validCommas: ["5C"] },
-                { sagitype: "//|", validCommas: ["25S"] },
+                { sagitype: "//|", validCommas: ["25S", "13/5S"] },
             ],
         },
         "54": {
             stepDefinitions: [
                 { sagitype: ")|", validCommas: ["19s"] },
-                { sagitype: "/|", validCommas: ["5C"] },
+                {
+                    sagitype: "/|",
+                    validCommas: ["5C"],
+                    alternativeJustifications: ["54c"],
+                },
                 { sagitype: "/|\\", validCommas: ["11M"] },
                 { sagitype: "(|\\", validCommas: [undefined, "13L"] },
             ],
@@ -238,7 +250,11 @@ const EDO_NOTATION_DEFINITIONS: Record<EdoNotationName, EdoNotationDefinition> =
         "59b": { stepDefinitions: [{ sagitype: "/|)", validCommas: ["35M"] }] },
         "60": {
             stepDefinitions: [
-                { sagitype: "(|", validCommas: ["11/7C"] },
+                {
+                    sagitype: "(|",
+                    validCommas: ["11/7C"],
+                    alternativeJustifications: [TEMPERED_THREES_ONLY_METHOD],
+                },
                 { sagitype: "/|~", validCommas: ["23/5S"] },
             ],
         },
@@ -295,7 +311,7 @@ const EDO_NOTATION_DEFINITIONS: Record<EdoNotationName, EdoNotationDefinition> =
         "67": {
             stepDefinitions: [
                 { sagitype: ")|(", validCommas: ["11/7k"] },
-                { sagitype: "/|)", validCommas: ["35M"] },
+                { sagitype: "/|)", validCommas: ["35M", "13M"] },
             ],
         },
         "68": {
@@ -308,8 +324,12 @@ const EDO_NOTATION_DEFINITIONS: Record<EdoNotationName, EdoNotationDefinition> =
         },
         "69": {
             stepDefinitions: [
-                { sagitype: "/|)", validCommas: [undefined, "13M"] }, // TODO: remember, some of these are going to require kludge maps when you write the test
-                { sagitype: "/|\\", validCommas: [undefined, "25·11/7M"] },
+                { sagitype: "/|)", validCommas: [undefined, "13M"] },
+                {
+                    sagitype: "/|\\",
+                    validCommas: [undefined, "11M"],
+                    alternativeJustifications: [undefined, "69e"],
+                },
             ],
         },
         "70": {
@@ -322,7 +342,11 @@ const EDO_NOTATION_DEFINITIONS: Record<EdoNotationName, EdoNotationDefinition> =
         "71": {
             stepDefinitions: [
                 { sagitype: "|\\", validCommas: ["55C"] },
-                { sagitype: ")~|", validCommas: ["143C"] },
+                {
+                    sagitype: ")~|",
+                    validCommas: ["143C"],
+                    alternativeJustifications: [TEMPERED_THREES_ONLY_METHOD],
+                },
                 { sagitype: "/|", validCommas: ["5C"] },
                 { sagitype: "/|\\", validCommas: ["11M"] },
                 { sagitype: "(|\\", validCommas: [undefined, "13L"] },
@@ -365,7 +389,7 @@ const EDO_NOTATION_DEFINITIONS: Record<EdoNotationName, EdoNotationDefinition> =
         "76": {
             stepDefinitions: [
                 { sagitype: "/|)", validCommas: [undefined, "13M"] },
-                { sagitype: "/|\\", validCommas: [undefined, "25·11/7M"] },
+                { sagitype: "/|\\", validCommas: [undefined, "25⋅11/7M"] },
             ],
         },
         "77": {

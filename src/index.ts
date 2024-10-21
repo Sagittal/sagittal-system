@@ -116,7 +116,7 @@ export {
     JiNotationBound,
     JiNotationBoundClassEntry,
     computeJiNotationCaptureZone,
-    INSANE_ZETA_PEAK_MAPPING,
+    INSANE_ZETA_PEAK_MAP,
     computeCentsFromTinas,
     MEDIUM_EDA,
     HIGH_EDA,

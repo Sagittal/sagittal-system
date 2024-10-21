@@ -2,7 +2,8 @@ import { computeKeyPath, Index, sort } from "@sagittal/general"
 import { SymbolSubsetId } from "./types"
 import { SymbolClassId } from "../symbol"
 
-// TODO: Obviously this would be better if it was up at the notation level, 
+// TODO: POST-NOTATION-GENERATION: RE-ORG SYMBOL CLASS ID
+// Obviously this would be better if it was up at the notation level, 
 // but because it's bound with this limiting SymbolClassId concept, 
 // gotta be trapped in here with the JI notation for now
 

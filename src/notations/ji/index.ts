@@ -1,5 +1,5 @@
 export { computeCentsFromTinas } from "./inaCents"
-export { INSANE_ZETA_PEAK_MAPPING } from "./zetaPeakMappings"
+export { INSANE_ZETA_PEAK_MAP } from "./zetaPeakMaps"
 export {
     JI_NOTATION_COMMA_CLASS_IDS,
     computeMaybeCommaClassId,
@@ -61,9 +61,4 @@ export {
     getMinaName,
     computeSagittalFromSymbolClassId,
 } from "./class"
-export {
-    Ina,
-    Minas,
-    Tinas,
-    InaMidpoint,
-} from "./types"
+export { Ina, Minas, Tinas, InaMidpoint } from "./types"
