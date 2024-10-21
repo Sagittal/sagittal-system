@@ -9,3 +9,4 @@ export {
     SECTION_P2T,
 } from "./constants"
 export { Section } from "./types"
+export { computeApotomicPitchAlterationFromSection } from "./apotomicPitchAlteration"

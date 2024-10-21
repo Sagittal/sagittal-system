@@ -1,4 +1,4 @@
-import { SymbolClassId } from "../symbol/types"
+import { SymbolClassId } from "../symbol"
 import { SIZE_SORTED_SYMBOL_SUBSET_IDS, SYMBOL_SUBSETS } from "./constants"
 import { SymbolSubsetId } from "./types"
 

@@ -8,7 +8,7 @@ import {
     Sagitype,
     Shafts,
 } from "../../accidental"
-import { SAGITTAL_SHARP } from "../../accidental/sagittal/constants"
+import { SAGITTAL_SHARP } from "../../accidental"
 
 const computeRequiredRevoSagittalCount = (
     sharpStep: EdoStep,

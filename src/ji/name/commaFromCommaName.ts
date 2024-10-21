@@ -12,19 +12,17 @@ import {
     Pev,
     stringify,
     TWO_3_FREE,
-} from "@sagittal/general"
-import { computeN2D3P9 } from "../badness"
-import { computeRationalPevInZone, findNotatingCommas } from "../find"
-import { computeSizeCategoryZone } from "./sizeCategoryZone"
-import { ParsedCommaName, SizeCategory } from "./types"
-import {
     computeRationalSpevCopfr,
     computeRoughRationalPev,
     invertSpev,
     isPevSub,
     isQuotientSub,
     isSpevSub,
-} from "@sagittal/general/dist/cjs/math"
+} from "@sagittal/general"
+import { computeN2D3P9 } from "../badness"
+import { computeRationalPevInZone, findNotatingCommas } from "../find"
+import { computeSizeCategoryZone } from "./sizeCategoryZone"
+import { ParsedCommaName, SizeCategory } from "./types"
 
 const compute3LimitCommaInSizeCategory = (
     sizeCategory: SizeCategory,

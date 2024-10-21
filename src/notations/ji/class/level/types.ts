@@ -3,7 +3,7 @@ import { BoundClassId } from "../bound"
 import { SymbolClassId } from "../symbol"
 import { InaMidpoint } from "../../types"
 import { SizeCategoryBound } from "../../../../ji"
-import { BoundClass, BoundType } from "../bound/types"
+import { BoundClass, BoundType } from "../bound"
 
 // State of the art plans described here: http://forum.sagittal.org/viewtopic.php?p=2492#p2492
 

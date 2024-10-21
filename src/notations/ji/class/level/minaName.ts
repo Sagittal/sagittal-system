@@ -1,6 +1,6 @@
 import { Name, RecordKey } from "@sagittal/general"
 import { Minas } from "../../types"
-import { CommaClassId } from "../comma/types"
+import { CommaClassId } from "../comma"
 
 const EXTREME_NOTATION_MINAS: Record<RecordKey<CommaClassId>, Name<Minas>> = {
     [CommaClassId._1_u]: "0" as Name<Minas>,                //  (|//|)

@@ -1,8 +1,7 @@
 import { increment, isUndefined, Maybe, negative } from "@sagittal/general"
 import { Accidental, Compatible, Flavor, flipSagittal, Shafts } from "../../../../accidental"
 import { computeApotomeComplementHandlingAsymmetricalSelfComplement } from "../../asymmetricalSelfComplement"
-import { computeSagittalFromSymbolClassId } from "../symbol/from"
-import { SymbolClassId } from "../symbol"
+import { computeSagittalFromSymbolClassId, SymbolClassId } from "../symbol"
 import { Section } from "../section"
 
 const computeEvoAccidentalFromCaptureZone = (

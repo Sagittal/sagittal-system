@@ -24,6 +24,7 @@ export {
     isMultiShaft,
     SAGITTAL_SEMIFLAT,
     SAGITTAL_SEMISHARP,
+    SAGITTAL_SHARP,
 } from "./sagittal"
 export { EMPTY_ACCIDENTAL } from "./constants"
 export {
