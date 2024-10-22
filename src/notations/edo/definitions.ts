@@ -327,8 +327,8 @@ const EDO_NOTATION_DEFINITIONS: Record<EdoNotationName, EdoNotationDefinition> =
                 { sagitype: "/|)", validCommas: [undefined, "13M"] },
                 {
                     sagitype: "/|\\",
-                    validCommas: [undefined, "11M"],
-                    alternativeJustifications: [undefined, "69e"],
+                    validCommas: ["11M"],
+                    alternativeJustifications: ["69e"],
                 },
             ],
         },
