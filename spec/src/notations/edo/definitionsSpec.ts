@@ -10,11 +10,11 @@ import {
     Decimal,
     Exponent,
     Index,
-    Io,
     isUndefined,
     Map,
     Max,
     Maybe,
+    Name,
     Prime,
     round,
     Step,
@@ -22,7 +22,6 @@ import {
 } from "@sagittal/general"
 import {
     analyzeComma,
-    analyzeJiPitch,
     CommaAnalysis,
     computeCommaFromCommaName,
     computeFifthStep,
@@ -52,7 +51,11 @@ import {
 } from "@sagittal/general/dist/cjs/io"
 import { JI_FIFTH_SIZE } from "../../../../src/notations/edo/constants"
 
-// TODO: make an Error type which is a nominally typed Cents
+// TODO: what of this in scripts/edoStaves belongs back up here in @sagittal/system/notation/edo?
+
+// TODO: figure out what the difference between Step and EdoStep is
+
+// TODO: in @sagittal/general make an Error type which is a nominally typed Cents
 // (btw am a mis - thinking of error as inherently abs val somewhere ?)
 // and EdoStep should actually be an alias for like Generator<{ rank: 1 }>
 // and figure out what's the relationship between Step and EdoStep
@@ -63,7 +66,7 @@ type Octaves = number & { _OctavesBrand: true }
 
 const WART_ALPHABET: string = "abcdefghijklmno"
 
-// TODO: could be a @general helper for indexOf that preserves type, 
+// TODO: could be a @sagittal/general helper for indexOf that preserves type, 
 // that could be used a couple times below here
 
 // TODO: note this is a lot like computeSimpleMap in the @sagittal/general repo.
@@ -101,7 +104,7 @@ const computeStepCount = (
     prime: Prime,
     stepSize: Cents,
     isPrimeWarted: boolean,
-) => {
+): Count<Step> => {
     const jiPrimeSize = computeCentsFromPitch(computeSpevFromDecimal(prime))
 
     let currentBestApproximationCandidate: Cents = 0 as Cents
@@ -152,9 +155,9 @@ const expectStepDefinition = (
     if (isUndefined(validCommas)) return
 
     validCommas.forEach(
-        (maybeSupposedlyValidCommaName: Maybe<Io>, index: number): void => {
+        (maybeSupposedlyValidCommaName: Maybe<Name<Comma>>, index: number): void => {
             if (isUndefined(maybeSupposedlyValidCommaName)) return
-            const supposedlyValidCommaName: Io = maybeSupposedlyValidCommaName
+            const supposedlyValidCommaName: Name<Comma> = maybeSupposedlyValidCommaName
             const parsedCommaName: ParsedCommaName = parseCommaName(
                 `${supposedlyValidCommaName} up`,
             )
@@ -186,7 +189,7 @@ const expectValidComma = (
         sagittalIndex,
         alternativeJustification,
     }: {
-        supposedlyValidCommaName: Io
+        supposedlyValidCommaName: Name<Comma>
         sagitype: Sagitype
         edoNotationName: EdoNotationName
         sagittalIndex: Index<Sagittal>
@@ -231,7 +234,7 @@ const expectValidCommaByMapMethod = (
         sagittalIndex,
         edoNotationName,
     }: {
-        supposedlyValidCommaName: Io
+        supposedlyValidCommaName: Name<Comma>
         sagitype: Sagitype
         sagittalIndex: Index<Sagittal>
         edoNotationName: EdoNotationName
@@ -274,7 +277,7 @@ const expectValidCommaByTemperedThreesOnlyMethod = (
         sagittalIndex,
         edoNotationName,
     }: {
-        supposedlyValidCommaName: Io
+        supposedlyValidCommaName: Name<Comma>
         edoNotationName: EdoNotationName
         sagitype: Sagitype
         sagittalIndex: Index<Sagittal>
