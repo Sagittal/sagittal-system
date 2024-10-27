@@ -1,6 +1,6 @@
 export { findNotatingCommas } from "./notatingCommas"
 export { computeRationalVectorInZone } from "./vectorInZone"
-export { computeCommasFrom23FreeRationalVector } from "./commasFrom23FreeScaledVector"
+export { computeCommasFrom23FreeRationalVector } from "./commasFrom23FreeVector"
 export { CommasFrom23FreeVectorOptions } from "./types"
 export {
     DEFAULT_MAX_AAS,

@@ -8,7 +8,7 @@ import {
     ScaledVector,
     TWO_3_FREE,
 } from "@sagittal/general"
-import { computeCommasFrom23FreeRationalVector } from "./commasFrom23FreeScaledVector"
+import { computeCommasFrom23FreeRationalVector } from "./commasFrom23FreeVector"
 import { CommasFrom23FreeVectorOptions } from "./types"
 
 const findNotatingCommas = <T extends NumericProperties>(
