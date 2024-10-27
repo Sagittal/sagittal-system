@@ -1,7 +1,5 @@
 import {
     computePrimes,
-    Decimal,
-    Exponent,
     increment,
     Index,
     Max,
