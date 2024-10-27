@@ -1,4 +1,5 @@
-import { computeFifthStep, EdoNotationName, EdoStep } from "../../../../src"
+import { EdoStep } from "@sagittal/general"
+import { computeFifthStep, EdoNotationName } from "../../../../src"
 
 describe("computeFifthStep", (): void => {
     it("chooses the correct fifth step for 17-EDO and its second-best fifth notation", (): void => {
