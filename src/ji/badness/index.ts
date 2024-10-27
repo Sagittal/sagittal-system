@@ -18,7 +18,7 @@ export {
     computeKnownRationalQuotients,
     Ate,
 } from "./complexity"
-export { computeCentsAbsError } from "./error"
+export { computeAbsError } from "./error"
 export { computeLpei } from "./lpei"
 export { Badness } from "./types"
 

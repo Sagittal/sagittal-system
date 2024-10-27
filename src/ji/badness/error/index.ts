@@ -1,1 +1,1 @@
-export { computeCentsAbsError } from "./error"
+export { computeAbsError } from "./error"
