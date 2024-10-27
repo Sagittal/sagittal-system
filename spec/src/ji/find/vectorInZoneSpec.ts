@@ -93,7 +93,7 @@ describe("computeRationalVectorInZone", (): void => {
 
         computeRationalVectorInZone(twoFreeVector, { extrema: [lowerBound, upperBound], exclusive })
 
-        const expected = [0, -6, 3, 5, -1] as Vector<{ rational: true }>
+        const expected = [0, -6, 3, 5, -1] as Vector<{ rational: true; rough: 3 }>
         expect(twoFreeVector).toEqual(expected)
     })
 

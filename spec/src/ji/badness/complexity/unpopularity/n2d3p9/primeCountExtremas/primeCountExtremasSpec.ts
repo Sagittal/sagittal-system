@@ -1,4 +1,4 @@
-import { Decimal, Exponent, Extrema, Max, slowTestOnlyRunInFullSuite, Prime, Count } from "@sagittal/general"
+import { Extrema, Max, slowTestOnlyRunInFullSuite, PrimeCount } from "@sagittal/general"
 import { computePrimeCountExtremasGivenMaxN2D3P9, N2D3P9 } from "../../../../../../../../src"
 
 describe("computePrimeCountExtremasGivenMaxN2D3P9", (): void => {
