@@ -3,11 +3,10 @@ import {
     computePrimes,
     computeRationalVectorSmoothness,
     computeTrimmedArray,
-    Exponent,
     formatVector,
     isVectorSub,
     NumericProperties,
-    Prime,
+    PrimeCount,
     THREE_PRIME_INDEX,
     Two3FreeClass,
     TWO_PRIME_INDEX,
@@ -38,7 +37,7 @@ const computeN2D3P9 = <T extends NumericProperties>(two3FreeClass: Two3FreeClass
 
     const primes = computePrimes()
 
-    return (rationalVector.reduce((n2d3p9: N2D3P9, primeCount: Exponent<Prime>, index: number): N2D3P9 => {
+    return (rationalVector.reduce((n2d3p9: N2D3P9, primeCount: PrimeCount, index: number): N2D3P9 => {
         const prime = primes[index]
         const divisor = primeCount < 0 ? 3 : 2
 

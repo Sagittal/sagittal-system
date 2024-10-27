@@ -1,4 +1,4 @@
-import { Decimal, Denominator, Exponent, Max, Min, Numerator, Of, Prime } from "@sagittal/general"
+import { Decimal, Denominator, Exponent, Max, Min, Numerator, Of, Prime, PrimeCount } from "@sagittal/general"
 import { computeMinN2PForPossibleMaxDenominatorPrimeCountGivenMaxN2D3P9 } from "../../../../../../../../../src/ji/badness/complexity/unpopularity/n2d3p9/primeCountExtremas/denominator/minN2P"
 import {
     N2,
@@ -11,9 +11,7 @@ describe("computeMinN2PForPossibleMaxDenominatorPrimeCountGivenMaxN2D3P9", (): v
     it("finds the min N2P out of the numerator possibilities where the GPF is greater than the denominator prime, and the min N2P out of the numerator possibilities where the GPF is lesser than the denominator prime, and then returns the min of those two", (): void => {
         // So the possible max denominator power will be 7^2 = 49
         const denominatorPrime = 7 as Prime & Of<Denominator>
-        const possibleMaxDenominatorPrimeCountGivenMaxN2D3P9 = 2 as Max<
-            Denominator & Decimal<{ integer: true }> & Exponent<Prime>
-        >
+        const possibleMaxDenominatorPrimeCountGivenMaxN2D3P9 = 2 as Max<Denominator & PrimeCount>
 
         const sortedNumeratorPossibilitiesForDenominatorPrimeGivenMaxN2D3P9 = {
             sortedNumeratorPossibilitiesGivenMaxN2D3P9WithLesserGpfThanDenominatorPrimeSortedByN2: [
@@ -77,9 +75,7 @@ describe("computeMinN2PForPossibleMaxDenominatorPrimeCountGivenMaxN2D3P9", (): v
     it("another example where the min N2P from the list with the numerator possibilities with gcp < denominator prime is the one which gets picked", (): void => {
         // So the possible max denominator power will be 7^2 = 49
         const denominatorPrime = 7 as Prime & Of<Denominator>
-        const possibleMaxDenominatorPrimeCountGivenMaxN2D3P9 = 2 as Max<
-            Denominator & Decimal<{ integer: true }> & Exponent<Prime>
-        >
+        const possibleMaxDenominatorPrimeCountGivenMaxN2D3P9 = 2 as Max<Denominator & PrimeCount>
 
         const sortedNumeratorPossibilitiesForDenominatorPrimeGivenMaxN2D3P9 = {
             sortedNumeratorPossibilitiesGivenMaxN2D3P9WithLesserGpfThanDenominatorPrimeSortedByN2: [

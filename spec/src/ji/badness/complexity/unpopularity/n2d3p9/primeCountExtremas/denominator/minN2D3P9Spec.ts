@@ -1,4 +1,4 @@
-import { Decimal, Denominator, Exponent, Max, Min, Of, Prime } from "@sagittal/general"
+import { Denominator, Max, Min, Of, Prime, PrimeCount } from "@sagittal/general"
 import { N2D3P9 } from "../../../../../../../../../src"
 import * as d39 from "../../../../../../../../../src/ji/badness/complexity/unpopularity/n2d3p9/primeCountExtremas/denominator/d39"
 import { computeMinN2D3P9ForPossibleMaxDenominatorPrimeCountGivenMaxN2D3P9 } from "../../../../../../../../../src/ji/badness/complexity/unpopularity/n2d3p9/primeCountExtremas/denominator/minN2D3P9"
@@ -13,9 +13,7 @@ describe("computeMinN2D3P9ForPossibleMaxDenominatorPrimeCountGivenMaxN2D3P9", ()
             sortedNumeratorPossibilitiesGivenMaxN2D3P9WithGreaterGpfThanDenominatorPrimeSortedByN2P: [],
         }
         const denominatorPrime = 7 as Prime & Of<Denominator>
-        const possibleMaxDenominatorPrimeCountGivenMaxN2D3P9 = 2 as Max<
-            Denominator & Decimal<{ integer: true }> & Exponent<Prime>
-        >
+        const possibleMaxDenominatorPrimeCountGivenMaxN2D3P9 = 2 as Max<Denominator & PrimeCount>
 
         const minN2PForPossibleMaxDenominatorPrimeCountGivenMaxN2D3P9 = 15.5 as Min<N2P>
         const d39ForPossibleMaxDenominatorPrimeCount = 3 as D39

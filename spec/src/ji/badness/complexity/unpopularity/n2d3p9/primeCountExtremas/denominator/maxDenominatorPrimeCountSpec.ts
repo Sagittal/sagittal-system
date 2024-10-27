@@ -1,4 +1,4 @@
-import { Decimal, Denominator, Exponent, Max, Min, Numerator, Of, Prime } from "@sagittal/general"
+import { Decimal, Denominator, Max, Min, Numerator, Of, Prime, PrimeCount } from "@sagittal/general"
 import { N2D3P9 } from "../../../../../../../../../src"
 import {
     computeMaxDenominatorPrimeCountGivenMaxN2D3P9,
@@ -36,7 +36,7 @@ describe("computeMaxDenominatorPrimeCountGivenMaxN2D3P9", (): void => {
             numeratorPossibilitiesForDenominatorGivenMaxN2D3P9,
         )
 
-        const expected = 2 as Max<Denominator & Decimal<{ integer: true }> & Exponent<Prime>>
+        const expected = 2 as Max<Denominator & PrimeCount>
         expect(actual).toBe(expected)
     })
 
@@ -93,20 +93,16 @@ describe("computeMaxDenominatorPrimeCountGivenMaxN2D3P9", (): void => {
         ).toHaveBeenCalledWith({
             sortedNumeratorPossibilitiesForDenominatorPrimeGivenMaxN2D3P9,
             denominatorPrime,
-            possibleMaxDenominatorPrimeCountGivenMaxN2D3P9: 1 as Max<
-                Denominator & Decimal<{ integer: true }> & Exponent<Prime>
-            >,
+            possibleMaxDenominatorPrimeCountGivenMaxN2D3P9: 1 as Max<Denominator & PrimeCount>,
         })
         expect(
             minN2D3P9.computeMinN2D3P9ForPossibleMaxDenominatorPrimeCountGivenMaxN2D3P9,
         ).toHaveBeenCalledWith({
             sortedNumeratorPossibilitiesForDenominatorPrimeGivenMaxN2D3P9,
             denominatorPrime,
-            possibleMaxDenominatorPrimeCountGivenMaxN2D3P9: 2 as Max<
-                Denominator & Decimal<{ integer: true }> & Exponent<Prime>
-            >,
+            possibleMaxDenominatorPrimeCountGivenMaxN2D3P9: 2 as Max<Denominator & PrimeCount>,
         })
-        const expected = 2 as Max<Denominator & Decimal<{ integer: true }> & Exponent<Prime>>
+        const expected = 2 as Max<Denominator & PrimeCount>
         expect(actual).toBe(expected)
     })
 })

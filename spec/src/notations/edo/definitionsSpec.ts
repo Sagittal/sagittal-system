@@ -18,6 +18,7 @@ import {
     Maybe,
     Name,
     Prime,
+    PrimeCount,
     round,
     ZERO_ONE_INDEX_DIFF,
 } from "@sagittal/general"
@@ -106,7 +107,7 @@ const computeStepCount = (
 
 const temperComma = (comma: Comma, simpleMap: Map): EdoStep => {
     return comma.vector.reduce(
-        (edoStep: EdoStep, primeCount: Exponent<Prime>, primeIndex: number): EdoStep =>
+        (edoStep: EdoStep, primeCount: PrimeCount, primeIndex: number): EdoStep =>
             (edoStep + simpleMap[primeIndex] * primeCount) as EdoStep,
         0 as EdoStep,
     )

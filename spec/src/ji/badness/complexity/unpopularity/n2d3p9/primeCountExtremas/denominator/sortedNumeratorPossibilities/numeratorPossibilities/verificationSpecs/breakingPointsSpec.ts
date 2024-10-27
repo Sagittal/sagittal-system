@@ -8,6 +8,7 @@ import {
     Numerator,
     Of,
     Prime,
+    PrimeCount,
 } from "@sagittal/general"
 import { N2D3P9 } from "../../../../../../../../../../../../src"
 
@@ -83,7 +84,7 @@ describe("breaking points of max N2D3P9 per numerator prime", (): void => {
     it("okay, here is where we are going to figure this out", (): void => {
         const computeMaxN2D3P9GivenMaxNumeratorPrimeCount = (
             prime: Prime,
-            maxNumeratorPrimeCount: Max<Numerator & Decimal<{ integer: true }> & Exponent<Prime>>,
+            maxNumeratorPrimeCount: Max<Numerator & PrimeCount>,
         ): Max<N2D3P9> => {
             return maxNumeratorPrimeCount === 0
                 ? (1 as Max<N2D3P9>)
@@ -101,7 +102,7 @@ describe("breaking points of max N2D3P9 per numerator prime", (): void => {
             breakingPoints.push([] as Array<Max<N2D3P9>>)
             const numeratorPrime = primes[primeIndex] as Prime & Of<Numerator>
 
-            let maxNumeratorPrimeCount = 0 as Max<Numerator & Decimal<{ integer: true }> & Exponent<Prime>>
+            let maxNumeratorPrimeCount = 0 as Max<Numerator & PrimeCount>
             while (true) {
                 const maxN2D3P9 = computeMaxN2D3P9GivenMaxNumeratorPrimeCount(
                     numeratorPrime,
