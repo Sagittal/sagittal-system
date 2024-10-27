@@ -1,4 +1,4 @@
-import { Cents, Count, computeRange, mod, Edo, EdoStep } from "@sagittal/general"
+import { Cents, Count, computeRange, mod, Edo, EdoStep, abs } from "@sagittal/general"
 import { EdoNotationName, StepWithError } from "./types"
 import { parseEdoNotationName } from "./name"
 import { computeStepSize } from "./size"
@@ -22,7 +22,7 @@ const computeFifthStep = (edoNotationName: EdoNotationName): EdoStep => {
         .map(
             (step: EdoStep): StepWithError => ({
                 step,
-                error: Math.abs(JI_FIFTH_SIZE - step * stepSize) as Cents,
+                error: abs(JI_FIFTH_SIZE - step * stepSize as Cents),
             }),
         )
         .sort((a: StepWithError, b: StepWithError): number => a.error - b.error)

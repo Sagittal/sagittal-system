@@ -1,13 +1,10 @@
-import {abs, Cents, round} from "@sagittal/general"
-import {Err} from "./types"
+import { abs, Cents, round, Error, Abs } from "@sagittal/general"
 
-const computeCentsError = (cents: Cents, centUnit: Cents): Err<Cents> => {
+const computeCentsAbsError = (cents: Cents, centUnit: Cents): Abs<Error<Cents>> => {
     const unrounded = cents / centUnit
     const rounded = round(unrounded)
 
-    return abs(unrounded - rounded) as number as Err<Cents>
+    return abs(unrounded - rounded) as number as Error<Cents>
 }
 
-export {
-    computeCentsError,
-}
+export { computeCentsAbsError }

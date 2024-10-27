@@ -18,8 +18,8 @@ export {
     computeKnownRationalQuotients,
     Ate,
 } from "./complexity"
-export {computeCentsError} from "./error"
-export {computeLpei} from "./lpei"
-export {Badness} from "./types"
+export { computeCentsAbsError } from "./error"
+export { computeLpei } from "./lpei"
+export { Badness } from "./types"
 
 // See: http://forum.sagittal.org/viewtopic.php?f=4&t=493&p=2597#metric-hierarchy

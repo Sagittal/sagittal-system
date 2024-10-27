@@ -1,13 +1,13 @@
 import { Cents, computeCentsFromPitch, halveScaledVector } from "@sagittal/general"
-import { computeCentsError, TINA } from "../../../../../src"
+import { computeCentsAbsError, TINA } from "../../../../../src"
 
-describe("computeCentsError", (): void => {
+describe("computeCentsAbsError", (): void => {
     const centUnit = computeCentsFromPitch(halveScaledVector(TINA)) // Semitina cents
 
     it("checks out against Dave's spreadsheet", (): void => {
         const cents = 0.081 as Cents
 
-        const actual = computeCentsError(cents, centUnit)
+        const actual = computeCentsAbsError(cents, centUnit)
 
         const expected = 0.15282
         expect(actual).toBeCloseTo(expected)
@@ -16,7 +16,7 @@ describe("computeCentsError", (): void => {
     it("another example, close to the max", (): void => {
         const cents = 0.106 as Cents
 
-        const actual = computeCentsError(cents, centUnit)
+        const actual = computeCentsAbsError(cents, centUnit)
 
         const expected = 0.491372
         expect(actual).toBeCloseTo(expected)
@@ -25,7 +25,7 @@ describe("computeCentsError", (): void => {
     it("another example, almost exactly a semitina", (): void => {
         const cents = 0.492 as Cents
 
-        const actual = computeCentsError(cents, centUnit)
+        const actual = computeCentsAbsError(cents, centUnit)
 
         const expected = 0.002313
         expect(actual).toBeCloseTo(expected)

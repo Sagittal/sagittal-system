@@ -6,6 +6,7 @@ import {
     EdoStep,
     Name,
     Maybe,
+    Abs,
 } from "@sagittal/general"
 import { Sagitype } from "../../accidental"
 
@@ -42,7 +43,7 @@ type SubsetFactor = Decimal<{ integer: true }> & {
 
 interface StepWithError {
     step: EdoStep
-    error: Cents
+    error: Abs<Cents>
 }
 
 enum SectionColor {
