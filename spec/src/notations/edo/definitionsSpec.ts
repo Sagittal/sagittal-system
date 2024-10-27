@@ -38,10 +38,7 @@ import {
     StepDefinition,
 } from "../../../../src"
 import { computeStepSize } from "../../../../src/notations/edo/size"
-import {
-    TEMPERED_THREES_ONLY_METHOD,
-    TemperedThreesOnlyMethod,
-} from "../../../../src/notations/edo/types"
+import { TEMPERED_THREES_ONLY_METHOD, TemperedThreesOnlyMethod } from "../../../../src/notations/edo/types"
 import { formatMap, formatVector, formatQuotient } from "@sagittal/general/dist/cjs/io"
 import { JI_FIFTH_SIZE } from "../../../../src/notations/edo/constants"
 import { EtStep, Per } from "@sagittal/general/dist/cjs/music/rtt/types"
@@ -75,11 +72,7 @@ const computeMap = (etName: EtName, primeLimit: Max<Prime>): Map => {
     const primes: Prime[] = allPrimes.slice(0, maxPrimeIndex + ZERO_ONE_INDEX_DIFF)
 
     return primes.map((prime: Prime, primeIndex: number): Per<Count<EtStep>, Prime> => {
-        return computeStepCount(
-            prime,
-            stepSize,
-            wartedPrimeIndices.includes(primeIndex as Index<Prime>),
-        )
+        return computeStepCount(prime, stepSize, wartedPrimeIndices.includes(primeIndex as Index<Prime>))
     })
 }
 
@@ -113,8 +106,8 @@ const computeStepCount = (
 
 const temperComma = (comma: Comma, simpleMap: Map): EdoStep => {
     return comma.vector.reduce(
-        (edoStep: EdoStep, primeExponent: Exponent<Prime>, primeIndex: number): EdoStep =>
-            (edoStep + simpleMap[primeIndex] * primeExponent) as EdoStep,
+        (edoStep: EdoStep, primeCount: Exponent<Prime>, primeIndex: number): EdoStep =>
+            (edoStep + simpleMap[primeIndex] * primeCount) as EdoStep,
         0 as EdoStep,
     )
 }
@@ -131,30 +124,26 @@ const expectStepDefinition = (
 ): void => {
     if (isUndefined(validCommas)) return
 
-    validCommas.forEach(
-        (maybeSupposedlyValidCommaName: Maybe<Name<Comma>>, index: number): void => {
-            if (isUndefined(maybeSupposedlyValidCommaName)) return
-            const supposedlyValidCommaName: Name<Comma> = maybeSupposedlyValidCommaName
-            const parsedCommaName: ParsedCommaName = parseCommaName(
-                `${supposedlyValidCommaName} up`,
-            )
-            const comma: Comma = computeCommaFromCommaName(parsedCommaName)
+    validCommas.forEach((maybeSupposedlyValidCommaName: Maybe<Name<Comma>>, index: number): void => {
+        if (isUndefined(maybeSupposedlyValidCommaName)) return
+        const supposedlyValidCommaName: Name<Comma> = maybeSupposedlyValidCommaName
+        const parsedCommaName: ParsedCommaName = parseCommaName(`${supposedlyValidCommaName} up`)
+        const comma: Comma = computeCommaFromCommaName(parsedCommaName)
 
-            const alternativeJustification: Maybe<EtName | TemperedThreesOnlyMethod> = isUndefined(
-                alternativeJustifications,
-            )
-                ? undefined
-                : alternativeJustifications[index]
+        const alternativeJustification: Maybe<EtName | TemperedThreesOnlyMethod> = isUndefined(
+            alternativeJustifications,
+        )
+            ? undefined
+            : alternativeJustifications[index]
 
-            expectValidComma(comma, {
-                supposedlyValidCommaName,
-                sagitype,
-                edoNotationName,
-                sagittalIndex,
-                alternativeJustification,
-            })
-        },
-    )
+        expectValidComma(comma, {
+            supposedlyValidCommaName,
+            sagitype,
+            edoNotationName,
+            sagittalIndex,
+            alternativeJustification,
+        })
+    })
 }
 
 const expectValidComma = (
@@ -235,9 +224,7 @@ const expectValidCommaByMapMethod = (
                 map,
             )}, but instead found that ${supposedlyValidCommaName} up (${formatQuotient(
                 computeQuotientFromVector(comma.vector),
-            )}, ${formatVector(
-                comma.vector,
-            )}) tempers to ${temperedCommaSteps}\\${edoNotationName}`,
+            )}, ${formatVector(comma.vector)}) tempers to ${temperedCommaSteps}\\${edoNotationName}`,
         )
         .toBe(sagittalIndex as number as EdoStep)
 }
@@ -275,31 +262,26 @@ const expectValidCommaByTemperedThreesOnlyMethod = (
         .withContext(
             `Because ${sagitype} notates ${sagittalIndex}\\${edoNotationName} and claims ${supposedlyValidCommaName} up to be one of its meanings, expected that claim to be valid, i.e. expected that comma to temper to that step count using the tempered-3's-only method, but instead found that ${supposedlyValidCommaName} up (${formatQuotient(
                 computeQuotientFromVector(comma.vector),
-            )}, ${formatVector(
-                comma.vector,
-            )}) tempers to ${temperedCommaSteps}\\${edoNotationName}`,
+            )}, ${formatVector(comma.vector)}) tempers to ${temperedCommaSteps}\\${edoNotationName}`,
         )
         .toBe(sagittalIndex as number as EdoStep)
 }
 
 describe("EDO notation definitions", (): void => {
     it("all valid commas noted for an EDO's sagittal are tempered by that EDO's simple map to the step count that sagittal notates", (): void => {
-        const EDO_NOTATION_DEFINITIONS_ENTRIES: [EdoNotationName, EdoNotationDefinition][] =
-            Object.entries(EDO_NOTATION_DEFINITIONS) as [EdoNotationName, EdoNotationDefinition][]
+        const EDO_NOTATION_DEFINITIONS_ENTRIES: [EdoNotationName, EdoNotationDefinition][] = Object.entries(
+            EDO_NOTATION_DEFINITIONS,
+        ) as [EdoNotationName, EdoNotationDefinition][]
 
         EDO_NOTATION_DEFINITIONS_ENTRIES.forEach(
-            ([edoNotationName, edoNotationDefinition]: [
-                EdoNotationName,
-                EdoNotationDefinition,
-            ]): void => {
+            ([edoNotationName, edoNotationDefinition]: [EdoNotationName, EdoNotationDefinition]): void => {
                 if (isSubsetNotation(edoNotationDefinition)) return
 
                 edoNotationDefinition.stepDefinitions.forEach(
                     (stepDefinition: StepDefinition, sagittalIndexMinusOne: number): void =>
                         expectStepDefinition(stepDefinition, {
                             edoNotationName,
-                            sagittalIndex: (sagittalIndexMinusOne +
-                                ZERO_ONE_INDEX_DIFF) as Index<Sagittal>,
+                            sagittalIndex: (sagittalIndexMinusOne + ZERO_ONE_INDEX_DIFF) as Index<Sagittal>,
                         }),
                 )
             },

@@ -6,9 +6,8 @@ import {
     computeRationalVectorFromRationalDecimal,
     Decimal,
     DOT_OPERATOR,
-    Exponent,
     formatDecimalAsSuperscript,
-    Prime,
+    PrimeCount,
     Quotient,
     QuotientPart,
 } from "@sagittal/general"
@@ -27,27 +26,20 @@ const formatFactoredCommaNameQuotientPart = (
 
     const primes = computePrimes()
 
-    integerVector.forEach(
-        (
-            primeExponent: Decimal<{ integer: true }> & Exponent<Prime>,
-            primeExponentIndex: number,
-        ): void => {
-            if (primeExponent === 0) {
-                return
-            }
+    integerVector.forEach((primeCount: PrimeCount, primeCountIndex: number): void => {
+        if (primeCount === 0) {
+            return
+        }
 
-            if (primeExponent === 1) {
-                factoredTerms.push(`${primes[primeExponentIndex]}`)
-            }
+        if (primeCount === 1) {
+            factoredTerms.push(`${primes[primeCountIndex]}`)
+        }
 
-            if (primeExponent > 1) {
-                const exponent = ascii
-                    ? `^${primeExponent}`
-                    : formatDecimalAsSuperscript(primeExponent)
-                factoredTerms.push(`${primes[primeExponentIndex]}${exponent}`)
-            }
-        },
-    )
+        if (primeCount > 1) {
+            const exponent = ascii ? `^${primeCount}` : formatDecimalAsSuperscript(primeCount)
+            factoredTerms.push(`${primes[primeCountIndex]}${exponent}`)
+        }
+    })
 
     const operator = ascii ? "*" : DOT_OPERATOR
     const joinedFactoredTerms = factoredTerms.join(operator)
@@ -61,11 +53,8 @@ const formatUnfactoredCommaNameQuotientPart = (
     commaNameQuotientPart: QuotientPart & Decimal<{ integer: true }>,
 ): string => commaNameQuotientPart.toString()
 
-const computeShouldFactor = (
-    commaNameQuotientPart: QuotientPart & Decimal<{ integer: true }>,
-): boolean => {
-    if (computeRationalDecimalCopfr(commaNameQuotientPart) > 2 && commaNameQuotientPart !== 125)
-        return true
+const computeShouldFactor = (commaNameQuotientPart: QuotientPart & Decimal<{ integer: true }>): boolean => {
+    if (computeRationalDecimalCopfr(commaNameQuotientPart) > 2 && commaNameQuotientPart !== 125) return true
 
     return (
         computeRationalDecimalGpf(commaNameQuotientPart) > 11 &&
@@ -103,11 +92,7 @@ const formatCommaNameQuotient = (
                   quotientPart: QuotientPart & Decimal<{ integer: true }>,
                   quotientPartIndex: number,
               ): string => {
-                  return formatMaybeFactoredCommaNameQuotientPart(
-                      quotientPart,
-                      quotientPartIndex,
-                      ascii,
-                  )
+                  return formatMaybeFactoredCommaNameQuotientPart(quotientPart, quotientPartIndex, ascii)
               },
           )
 

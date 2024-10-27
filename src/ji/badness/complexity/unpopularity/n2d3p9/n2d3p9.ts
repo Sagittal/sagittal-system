@@ -38,15 +38,12 @@ const computeN2D3P9 = <T extends NumericProperties>(two3FreeClass: Two3FreeClass
 
     const primes = computePrimes()
 
-    return (rationalVector.reduce(
-        (n2d3p9: N2D3P9, primeExponent: Exponent<Prime>, index: number): N2D3P9 => {
-            const prime = primes[index]
-            const divisor = primeExponent < 0 ? 3 : 2
+    return (rationalVector.reduce((n2d3p9: N2D3P9, primeCount: Exponent<Prime>, index: number): N2D3P9 => {
+        const prime = primes[index]
+        const divisor = primeCount < 0 ? 3 : 2
 
-            return (n2d3p9 * (prime / divisor) ** abs(primeExponent)) as N2D3P9
-        },
-        1 as N2D3P9,
-    ) *
+        return (n2d3p9 * (prime / divisor) ** abs(primeCount)) as N2D3P9
+    }, 1 as N2D3P9) *
         computeRationalVectorSmoothness(rationalVector) *
         (1 / 9)) as N2D3P9
 }

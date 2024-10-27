@@ -20,7 +20,7 @@ const findNotatingCommas = <T extends NumericProperties>(
         TWO_3_FREE,
     ) as Vector<{ rational: true; rough: 5 }>
 
-    if (areVectorsEqual(two3FreeRationalVector, [])) {
+    if (areVectorsEqual(two3FreeRationalVector, [] as unknown[] as Vector)) {
         return computeCommasFrom23FreeRationalVector(two3FreeRationalVector, options)
     }
 

@@ -13,7 +13,7 @@ import {
     shallowClone,
     THREE_PRIME_INDEX,
     TWO_PRIME_INDEX,
-    Count,
+    PrimeCount,
 } from "@sagittal/general"
 import { analyzeComma, CommaAnalysis } from "../analyze"
 import {
@@ -28,19 +28,17 @@ import { CommasFrom23FreeVectorOptions } from "./types"
 
 const compute2FreeRationalVector = (
     two3FreeRationalVector: Vector<{ rational: true; rough: 5 }>,
-    threeExponent: Count<3 & Prime> & Exponent<3 & Prime> & { integer: true },
+    threeExponent: Exponent<3 & Prime> & PrimeCount<{ rational: true; rough: 5 }>,
 ): Vector<{ rational: true; rough: 3 }> => {
-    const twoFreeRationalVector: Vector<{ rational: true; rough: 3 }> = shallowClone(
-        two3FreeRationalVector,
-    ) as Vector<{ rational: true }> as Vector<{ rational: true; rough: 3 }>
+    const twoFreeRationalVector = shallowClone(two3FreeRationalVector)
     twoFreeRationalVector[THREE_PRIME_INDEX] = threeExponent
 
     if (isUndefined(twoFreeRationalVector[TWO_PRIME_INDEX])) {
-        twoFreeRationalVector[TWO_PRIME_INDEX] = 0 as Count<Prime> &
-            Exponent<Prime> & { integer: true }
+        twoFreeRationalVector[TWO_PRIME_INDEX] = 0 as Exponent<3 & Prime> &
+            PrimeCount<{ rational: true; rough: 5 }>
     }
 
-    return twoFreeRationalVector
+    return twoFreeRationalVector as Vector<{ rational: true }> as Vector<{ rational: true; rough: 3 }>
 }
 
 const computeCommasFrom23FreeRationalVector = (
@@ -61,15 +59,16 @@ const computeCommasFrom23FreeRationalVector = (
         (threeExponent: Decimal<{ integer: true }> & Exponent<3 & Prime>): void => {
             const twoFreeRationalVector = compute2FreeRationalVector(
                 two3FreeRationalVector,
-                threeExponent as Count<3 & Prime> & Exponent<3 & Prime> & { integer: true },
+                threeExponent as Exponent<3 & Prime> as Exponent<3 & Prime> &
+                    PrimeCount<{ rational: true; rough: 5 }>,
             )
-            const rationalVectorInZone: Maybe<Vector<{ rational: true }>> =
-                computeRationalVectorInZone(twoFreeRationalVector, zone)
+            const rationalVectorInZone: Maybe<Vector<{ rational: true }>> = computeRationalVectorInZone(
+                twoFreeRationalVector,
+                zone,
+            )
 
             if (rationalVectorInZone) {
-                const comma = computeRationalScaledVectorFromRationalVector(
-                    rationalVectorInZone,
-                ) as Comma
+                const comma = computeRationalScaledVectorFromRationalVector(rationalVectorInZone) as Comma
 
                 const commaAnalysis: CommaAnalysis = analyzeComma(comma)
                 if (
