@@ -1,10 +1,10 @@
-import {Spev} from "@sagittal/general"
-import {computeLpei} from "../../../../src"
-import {LPEI} from "../../../../src/ji/badness/types"
+import { ScaledVector } from "@sagittal/general"
+import { computeLpei } from "../../../../src"
+import { LPEI } from "../../../../src/ji/badness/types"
 
 describe("computeLpei", (): void => {
     it("computes badness according to LPEI (lb compressed N2D3P9, power function expanded AAS, and exponential function expanded ATE, and 'identity' (non-expanded or compressed) function error (by default of minas))", (): void => {
-        const jiPitch = {pev: [21, -5, -2, -3]} as Spev<{rational: true}>
+        const jiPitch = { vector: [21, -5, -2, -3] } as ScaledVector<{ rational: true }>
 
         const actual = computeLpei(jiPitch)
 
@@ -13,7 +13,7 @@ describe("computeLpei", (): void => {
     })
 
     it("another example", (): void => {
-        const jiPitch = {pev: [-3, 2, 0, 0, 0, 0, 1, -1]} as Spev<{rational: true}>
+        const jiPitch = { vector: [-3, 2, 0, 0, 0, 0, 1, -1] } as ScaledVector<{ rational: true }>
 
         const actual = computeLpei(jiPitch)
 

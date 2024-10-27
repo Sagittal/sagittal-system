@@ -1,9 +1,9 @@
-import {Comma} from "@sagittal/general"
-import {CommaClassId, computeMaybeCommaClassId} from "../../../../../../src"
+import { Comma } from "@sagittal/general"
+import { CommaClassId, computeMaybeCommaClassId } from "../../../../../../src"
 
 describe("computeMaybeCommaClassId", (): void => {
     it("if the comma is a primary comma in the Sagittal JI notation, returns the comma class ID of the comma class with that primary comma", (): void => {
-        const comma: Comma = {pev: [-5, 1, 0, 0, 1]} as Comma
+        const comma: Comma = { vector: [-5, 1, 0, 0, 1] } as Comma
 
         const actual = computeMaybeCommaClassId(comma)
 
@@ -12,7 +12,7 @@ describe("computeMaybeCommaClassId", (): void => {
     })
 
     it("returns nothing otherwise", (): void => {
-        const comma: Comma = {pev: [20, -12, -1, 2, 0, 0, 0, -1]} as Comma
+        const comma: Comma = { vector: [20, -12, -1, 2, 0, 0, 0, -1] } as Comma
 
         const actual = computeMaybeCommaClassId(comma)
 

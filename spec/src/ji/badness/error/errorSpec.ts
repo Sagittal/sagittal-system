@@ -1,15 +1,15 @@
-import {Cents, computeCentsFromPitch, halveSpev} from "@sagittal/general"
-import {computeCentsError, TINA} from "../../../../../src"
+import { Cents, computeCentsFromPitch, halveScaledVector } from "@sagittal/general"
+import { computeCentsError, TINA } from "../../../../../src"
 
 describe("computeCentsError", (): void => {
-    const centUnit = computeCentsFromPitch(halveSpev(TINA))   // Semitina cents
+    const centUnit = computeCentsFromPitch(halveScaledVector(TINA)) // Semitina cents
 
     it("checks out against Dave's spreadsheet", (): void => {
         const cents = 0.081 as Cents
 
         const actual = computeCentsError(cents, centUnit)
 
-        const expected = 0.152820
+        const expected = 0.15282
         expect(actual).toBeCloseTo(expected)
     })
 

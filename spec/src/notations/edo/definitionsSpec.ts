@@ -4,10 +4,12 @@ import {
     Comma,
     computeCentsFromPitch,
     computePrimes,
-    computeQuotientFromPev,
-    computeSpevFromDecimal,
+    computeQuotientFromVector,
+    computeScaledVectorFromDecimal,
     Count,
-    Decimal,
+    Edo,
+    EdoStep,
+    EtName,
     Exponent,
     Index,
     isUndefined,
@@ -17,7 +19,6 @@ import {
     Name,
     Prime,
     round,
-    Step,
     ZERO_ONE_INDEX_DIFF,
 } from "@sagittal/general"
 import {
@@ -25,11 +26,9 @@ import {
     CommaAnalysis,
     computeCommaFromCommaName,
     computeFifthStep,
-    Edo,
     EDO_NOTATION_DEFINITIONS,
     EdoNotationDefinition,
     EdoNotationName,
-    EdoStep,
     isSubsetNotation,
     parseCommaName,
     ParsedCommaName,
@@ -40,58 +39,42 @@ import {
 } from "../../../../src"
 import { computeStepSize } from "../../../../src/notations/edo/size"
 import {
-    EtName,
     TEMPERED_THREES_ONLY_METHOD,
     TemperedThreesOnlyMethod,
 } from "../../../../src/notations/edo/types"
-import {
-    formatMap,
-    formatPev,
-    formatQuotient,
-} from "@sagittal/general/dist/cjs/io"
+import { formatMap, formatVector, formatQuotient } from "@sagittal/general/dist/cjs/io"
 import { JI_FIFTH_SIZE } from "../../../../src/notations/edo/constants"
-
-// TODO: what of this in scripts/edoStaves belongs back up here in @sagittal/system/notation/edo?
-
-// TODO: figure out what the difference between Step and EdoStep is
+import { EtStep, Per } from "@sagittal/general/dist/cjs/music/rtt/types"
+import { Octaves } from "@sagittal/general/dist/cjs/music"
 
 // TODO: in @sagittal/general make an Error type which is a nominally typed Cents
 // (btw am a mis - thinking of error as inherently abs val somewhere ?)
 // and EdoStep should actually be an alias for like Generator<{ rank: 1 }>
 // and figure out what's the relationship between Step and EdoStep
-
-// TODO: extract this type to @sagittal/general
-// kinda mind-blown that it doesn't exist there yet
-type Octaves = number & { _OctavesBrand: true } 
+//
+// could also be a @sagittal/general helper for indexOf that preserves type,
+// that could be used a couple times below here
+//
+// finally, note this computeMap is a lot like computeSimpleMap in the @sagittal/general repo.
+// dunno if you can effectively DRY them up or anything, though
+// probably @sagittal/general should just be able to make a simple map as a special case of making a warted map, or something
+// map from ET name or something
 
 const WART_ALPHABET: string = "abcdefghijklmno"
 
-// TODO: could be a @sagittal/general helper for indexOf that preserves type, 
-// that could be used a couple times below here
-
-// TODO: note this is a lot like computeSimpleMap in the @sagittal/general repo.
-// dunno if you can effectively DRY them up or anything, though
 const computeMap = (etName: EtName, primeLimit: Max<Prime>): Map => {
     const edo: Edo = parseInt(etName.match(/\d*/)![0]) as Edo
-    const wartedPrimeIndices: Index<Prime>[] = Array.from(
-        etName.match(/[a-z]/g) || [],
-    ).map(
-        (wart: string): Index<Prime> =>
-            WART_ALPHABET.indexOf(wart) as Index<Prime>,
+    const wartedPrimeIndices: Index<Prime>[] = Array.from(etName.match(/[a-z]/g) || []).map(
+        (wart: string): Index<Prime> => WART_ALPHABET.indexOf(wart) as Index<Prime>,
     )
 
     const stepSize: Cents = computeStepSize(edo)
 
     const allPrimes: Prime[] = computePrimes(primeLimit)
-    const maxPrimeIndex: Index<Prime> = allPrimes.indexOf(
-        primeLimit,
-    ) as Index<Prime>
-    const primes: Prime[] = allPrimes.slice(
-        0,
-        maxPrimeIndex + ZERO_ONE_INDEX_DIFF,
-    )
+    const maxPrimeIndex: Index<Prime> = allPrimes.indexOf(primeLimit) as Index<Prime>
+    const primes: Prime[] = allPrimes.slice(0, maxPrimeIndex + ZERO_ONE_INDEX_DIFF)
 
-    return primes.map((prime: Prime, primeIndex: number): Count<Step> => {
+    return primes.map((prime: Prime, primeIndex: number): Per<Count<EtStep>, Prime> => {
         return computeStepCount(
             prime,
             stepSize,
@@ -104,39 +87,33 @@ const computeStepCount = (
     prime: Prime,
     stepSize: Cents,
     isPrimeWarted: boolean,
-): Count<Step> => {
-    const jiPrimeSize = computeCentsFromPitch(computeSpevFromDecimal(prime))
+): Per<Count<EtStep>, Prime> => {
+    const jiPrimeSize = computeCentsFromPitch(computeScaledVectorFromDecimal(prime))
 
     let currentBestApproximationCandidate: Cents = 0 as Cents
     let previousBestApproximationCandidate: Cents = 0 as Cents
-    let currentStep: Count<Step> = 0 as Count<Step>
+    let currentStep: Per<Count<EtStep>, Prime> = 0 as Per<Count<EtStep>, Prime>
     while (currentBestApproximationCandidate < jiPrimeSize) {
         currentStep++
         previousBestApproximationCandidate = currentBestApproximationCandidate
         currentBestApproximationCandidate = (stepSize * currentStep) as Cents
     }
 
-    const wideCandidateError: Cents = (currentBestApproximationCandidate -
-        jiPrimeSize) as Cents
-    const narrowCandidateError: Cents = (jiPrimeSize -
-        previousBestApproximationCandidate) as Cents
+    const wideCandidateError: Cents = (currentBestApproximationCandidate - jiPrimeSize) as Cents
+    const narrowCandidateError: Cents = (jiPrimeSize - previousBestApproximationCandidate) as Cents
 
     return wideCandidateError < narrowCandidateError
         ? isPrimeWarted
-            ? ((currentStep - 1) as Count<Step>)
-            : (currentStep as Count<Step>)
+            ? ((currentStep - 1) as Per<Count<EtStep>, Prime>)
+            : (currentStep as Per<Count<EtStep>, Prime>)
         : isPrimeWarted
-        ? (currentStep as Count<Step>)
-        : ((currentStep - 1) as Count<Step>)
+        ? (currentStep as Per<Count<EtStep>, Prime>)
+        : ((currentStep - 1) as Per<Count<EtStep>, Prime>)
 }
 
 const temperComma = (comma: Comma, simpleMap: Map): EdoStep => {
-    return comma.pev.reduce(
-        (
-            edoStep: EdoStep,
-            primeExponent: Exponent<Prime>,
-            primeIndex: number,
-        ): EdoStep =>
+    return comma.vector.reduce(
+        (edoStep: EdoStep, primeExponent: Exponent<Prime>, primeIndex: number): EdoStep =>
             (edoStep + simpleMap[primeIndex] * primeExponent) as EdoStep,
         0 as EdoStep,
     )
@@ -163,9 +140,9 @@ const expectStepDefinition = (
             )
             const comma: Comma = computeCommaFromCommaName(parsedCommaName)
 
-            const alternativeJustification: Maybe<
-                EtName | TemperedThreesOnlyMethod
-            > = isUndefined(alternativeJustifications)
+            const alternativeJustification: Maybe<EtName | TemperedThreesOnlyMethod> = isUndefined(
+                alternativeJustifications,
+            )
                 ? undefined
                 : alternativeJustifications[index]
 
@@ -257,16 +234,12 @@ const expectValidCommaByMapMethod = (
             } for that EDO, which is ${formatMap(
                 map,
             )}, but instead found that ${supposedlyValidCommaName} up (${formatQuotient(
-                computeQuotientFromPev(comma.pev),
-            )}, ${formatPev(
-                comma.pev,
+                computeQuotientFromVector(comma.vector),
+            )}, ${formatVector(
+                comma.vector,
             )}) tempers to ${temperedCommaSteps}\\${edoNotationName}`,
         )
-        .toBe(
-            sagittalIndex as Decimal<{
-                integer: true
-            }> as EdoStep,
-        )
+        .toBe(sagittalIndex as number as EdoStep)
 }
 
 const expectValidCommaByTemperedThreesOnlyMethod = (
@@ -284,50 +257,35 @@ const expectValidCommaByTemperedThreesOnlyMethod = (
     },
 ) => {
     const commaSize: Cents = computeCentsFromPitch(comma)
-    const threeExponent: Exponent<3> = comma.pev[1] as Exponent<3>
+    const threeExponent: Exponent<3> = comma.vector[1] as Exponent<3>
 
     const fifthStep: EdoStep = computeFifthStep(edoNotationName)
     const edo: Edo = parseEdoNotationName(edoNotationName).edo
     const fifthSize: Cents = computeStepSize(edo, fifthStep)
     const fifthError: Cents = (fifthSize - JI_FIFTH_SIZE) as Cents
 
-    const mistuningFromTemperedThree: Cents = (fifthError *
-        threeExponent) as Cents
-    const temperedCommaSize: Cents = (commaSize +
-        mistuningFromTemperedThree) as Cents
+    const mistuningFromTemperedThree: Cents = (fifthError * threeExponent) as Cents
+    const temperedCommaSize: Cents = (commaSize + mistuningFromTemperedThree) as Cents
 
-    const temperedCommaOctaveFraction: Octaves = (temperedCommaSize /
-        CENTS_PER_OCTAVE) as Octaves
-    const approximateTemperedCommaSteps: number =
-        temperedCommaOctaveFraction * edo
-    const temperedCommaSteps: EdoStep = round(
-        approximateTemperedCommaSteps,
-    ) as EdoStep
+    const temperedCommaOctaveFraction: Octaves = (temperedCommaSize / CENTS_PER_OCTAVE) as Octaves
+    const approximateTemperedCommaSteps: number = temperedCommaOctaveFraction * edo
+    const temperedCommaSteps: EdoStep = round(approximateTemperedCommaSteps) as EdoStep
 
     expect(temperedCommaSteps)
         .withContext(
             `Because ${sagitype} notates ${sagittalIndex}\\${edoNotationName} and claims ${supposedlyValidCommaName} up to be one of its meanings, expected that claim to be valid, i.e. expected that comma to temper to that step count using the tempered-3's-only method, but instead found that ${supposedlyValidCommaName} up (${formatQuotient(
-                computeQuotientFromPev(comma.pev),
-            )}, ${formatPev(
-                comma.pev,
+                computeQuotientFromVector(comma.vector),
+            )}, ${formatVector(
+                comma.vector,
             )}) tempers to ${temperedCommaSteps}\\${edoNotationName}`,
         )
-        .toBe(
-            sagittalIndex as Decimal<{
-                integer: true
-            }> as EdoStep,
-        )
+        .toBe(sagittalIndex as number as EdoStep)
 }
 
 describe("EDO notation definitions", (): void => {
     it("all valid commas noted for an EDO's sagittal are tempered by that EDO's simple map to the step count that sagittal notates", (): void => {
-        const EDO_NOTATION_DEFINITIONS_ENTRIES: [
-            EdoNotationName,
-            EdoNotationDefinition,
-        ][] = Object.entries(EDO_NOTATION_DEFINITIONS) as [
-            EdoNotationName,
-            EdoNotationDefinition,
-        ][]
+        const EDO_NOTATION_DEFINITIONS_ENTRIES: [EdoNotationName, EdoNotationDefinition][] =
+            Object.entries(EDO_NOTATION_DEFINITIONS) as [EdoNotationName, EdoNotationDefinition][]
 
         EDO_NOTATION_DEFINITIONS_ENTRIES.forEach(
             ([edoNotationName, edoNotationDefinition]: [
@@ -337,10 +295,7 @@ describe("EDO notation definitions", (): void => {
                 if (isSubsetNotation(edoNotationDefinition)) return
 
                 edoNotationDefinition.stepDefinitions.forEach(
-                    (
-                        stepDefinition: StepDefinition,
-                        sagittalIndexMinusOne: number,
-                    ): void =>
+                    (stepDefinition: StepDefinition, sagittalIndexMinusOne: number): void =>
                         expectStepDefinition(stepDefinition, {
                             edoNotationName,
                             sagittalIndex: (sagittalIndexMinusOne +

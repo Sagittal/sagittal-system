@@ -1,10 +1,10 @@
-import {Decimal, Exponent, Extrema, Max, Numerator, Prime} from "@sagittal/general"
-import {N2D3P9} from "../../../../../../../../../src"
-import {computeMaxNumeratorWithLessN2D3P9ThanMaxN2D3P9} from "../../../../../../../../../src/ji/badness/complexity/unpopularity/n2d3p9/primeExponentExtremas/denominator/maxNumeratorWithLessN2D3P9"
+import { Decimal, Exponent, Extrema, Max, Numerator, Prime } from "@sagittal/general"
+import { N2D3P9 } from "../../../../../../../../../src"
+import { computeMaxNumeratorWithLessN2D3P9ThanMaxN2D3P9 } from "../../../../../../../../../src/ji/badness/complexity/unpopularity/n2d3p9/primeExponentExtremas/denominator/maxNumeratorWithLessN2D3P9"
 
 describe("computeMaxNumeratorWithLessN2D3P9ThanMaxN2D3P9", (): void => {
     it("chooses the max numerator with less N2D3P9 than the max N2D3P9", (): void => {
-        // The numerator pevs to check are:
+        // The numerator vectors to check are:
         // [],             // N2D3P9(1)  = 1
         // [0, 0, 1],      // N2D3P9(5)  = 1.39
         // [0, 0, 0, 1],   // N2D3P9(7)  = 2.72 (this is the winner: less than 3, but max N2D3P9 otherwise)
@@ -15,7 +15,7 @@ describe("computeMaxNumeratorWithLessN2D3P9ThanMaxN2D3P9", (): void => {
             [0, 0],
             [0, 1],
             [0, 1],
-        ] as Array<Extrema<{of: Decimal<{integer: true}> & Exponent<Prime>}>>
+        ] as Array<Extrema<{ of: Decimal<{ integer: true }> & Exponent<Prime> }>>
         const maxN2D3P9 = 3 as Max<N2D3P9>
 
         const actual = computeMaxNumeratorWithLessN2D3P9ThanMaxN2D3P9(
@@ -23,7 +23,7 @@ describe("computeMaxNumeratorWithLessN2D3P9ThanMaxN2D3P9", (): void => {
             maxN2D3P9,
         )
 
-        const expected = 7 as Max<Numerator & Decimal<{integer: true}>>
+        const expected = 7 as Max<Numerator & Decimal<{ integer: true }>>
         expect(actual).toBe(expected)
     })
 })

@@ -1,7 +1,7 @@
-export {findNotatingCommas} from "./notatingCommas"
-export {computeRationalPevInZone} from "./pevInZone"
-export {computeCommasFrom23FreeRationalPev} from "./commasFrom23FreePev"
-export {CommasFrom23FreePevOptions} from "./types"
+export { findNotatingCommas } from "./notatingCommas"
+export { computeRationalVectorInZone } from "./vectorInZone"
+export { computeCommasFrom23FreeRationalVector } from "./commasFrom23FreeScaledVector"
+export { CommasFrom23FreeVectorOptions } from "./types"
 export {
     DEFAULT_MAX_AAS,
     DEFAULT_MAX_ATE,
@@ -19,4 +19,3 @@ export {
 // But it's all quite intimately connected with the find-commas script.
 // And the sibling module "name" is definitely only for commas, but "analyze" is for comma or any JI pitch.
 // And "badness" works for JI pitch or comma (or 2,3-free class). So I think just leave it open-ended. Let go.
-

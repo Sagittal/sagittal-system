@@ -1,7 +1,7 @@
 export {
-    CommasFrom23FreePevOptions,
+    CommasFrom23FreeVectorOptions,
     findNotatingCommas,
-    computeCommasFrom23FreeRationalPev,
+    computeCommasFrom23FreeRationalVector,
     DEFAULT_MAX_AAS,
     DEFAULT_MAX_ATE,
     DEFAULT_UPPER_BOUND,

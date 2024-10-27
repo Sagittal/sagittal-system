@@ -1,13 +1,13 @@
-import {Comma, formatPitch, isSpevGreater, isUndefined} from "@sagittal/general"
-import {SIZE_CATEGORY_BOUNDS} from "./sizeCategoryBounds"
-import {SizeCategory, SizeCategoryBound} from "./types"
+import { Comma, formatPitch, isScaledVectorGreater, isUndefined } from "@sagittal/general"
+import { SIZE_CATEGORY_BOUNDS } from "./sizeCategoryBounds"
+import { SizeCategory, SizeCategoryBound } from "./types"
 
 const computeSizeCategory = (comma: Comma): SizeCategory => {
     const sizeCategories = Object.values(SizeCategory)
     let sizeCategory = sizeCategories[0]
 
     SIZE_CATEGORY_BOUNDS.forEach((sizeCategoryBound: SizeCategoryBound, index: number): void => {
-        if (isSpevGreater(comma, sizeCategoryBound.pitch)) {
+        if (isScaledVectorGreater(comma, sizeCategoryBound.pitch)) {
             sizeCategory = sizeCategories[index + 1]
         }
     })
@@ -19,6 +19,4 @@ const computeSizeCategory = (comma: Comma): SizeCategory => {
     return sizeCategory
 }
 
-export {
-    computeSizeCategory,
-}
+export { computeSizeCategory }

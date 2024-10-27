@@ -1,5 +1,11 @@
-import {Spev} from "@sagittal/general"
-import {ArmId, Compatible, computeAccidental, computeJiPitchFromAccidental, HeadId} from "../../../../../src"
+import { ScaledVector } from "@sagittal/general"
+import {
+    ArmId,
+    Compatible,
+    computeAccidental,
+    computeJiPitchFromAccidental,
+    HeadId,
+} from "../../../../../src"
 
 describe("computeJiPitchFromAccidental", (): void => {
     it("computes a JI pitch from an accidental", (): void => {
@@ -14,7 +20,7 @@ describe("computeJiPitchFromAccidental", (): void => {
         // ``)|# =
         // ``)|  [  -7  -1   1   1   1 ⟩    +
         //     # [ -11   7             ⟩
-        const expected = {pev: [-18, 6, 1, 1, 1]} as Spev<{rational: true}>
+        const expected = { vector: [-18, 6, 1, 1, 1] } as ScaledVector<{ rational: true }>
         expect(actual).toEqual(expected)
     })
 
@@ -26,7 +32,7 @@ describe("computeJiPitchFromAccidental", (): void => {
 
         const actual = computeJiPitchFromAccidental(accidental)
 
-        const expected = {pev: [-4, 9, -2, -2]} as Spev<{rational: true}>
+        const expected = { vector: [-4, 9, -2, -2] } as ScaledVector<{ rational: true }>
         expect(actual).toEqual(expected)
     })
 })

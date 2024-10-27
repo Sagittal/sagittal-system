@@ -1,33 +1,33 @@
 import {
-    arePevsEqual,
+    areVectorsEqual,
     Comma,
-    computeRoughRationalPev,
-    invertPev,
+    computeRoughRationalVector,
+    invertVector,
     NumericProperties,
-    Pev,
-    Spev,
+    Vector,
+    ScaledVector,
     TWO_3_FREE,
 } from "@sagittal/general"
-import {computeCommasFrom23FreeRationalPev} from "./commasFrom23FreePev"
-import {CommasFrom23FreePevOptions} from "./types"
+import { computeCommasFrom23FreeRationalVector } from "./commasFrom23FreeScaledVector"
+import { CommasFrom23FreeVectorOptions } from "./types"
 
 const findNotatingCommas = <T extends NumericProperties>(
-    {pev}: Spev<T & {rational: true}>,
-    options?: CommasFrom23FreePevOptions,
+    { vector }: ScaledVector<T & { rational: true }>,
+    options?: CommasFrom23FreeVectorOptions,
 ): Comma[] => {
-    const two3FreeRationalPev: Pev<{rational: true, rough: 5}> =
-        computeRoughRationalPev(pev, TWO_3_FREE) as Pev<{rational: true, rough: 5}>
+    const two3FreeRationalVector: Vector<{ rational: true; rough: 5 }> = computeRoughRationalVector(
+        vector,
+        TWO_3_FREE,
+    ) as Vector<{ rational: true; rough: 5 }>
 
-    if (arePevsEqual(two3FreeRationalPev, [])) {
-        return computeCommasFrom23FreeRationalPev(two3FreeRationalPev, options)
+    if (areVectorsEqual(two3FreeRationalVector, [])) {
+        return computeCommasFrom23FreeRationalVector(two3FreeRationalVector, options)
     }
 
     return [
-        ...computeCommasFrom23FreeRationalPev(two3FreeRationalPev, options),
-        ...computeCommasFrom23FreeRationalPev(invertPev(two3FreeRationalPev), options),
+        ...computeCommasFrom23FreeRationalVector(two3FreeRationalVector, options),
+        ...computeCommasFrom23FreeRationalVector(invertVector(two3FreeRationalVector), options),
     ]
 }
 
-export {
-    findNotatingCommas,
-}
+export { findNotatingCommas }

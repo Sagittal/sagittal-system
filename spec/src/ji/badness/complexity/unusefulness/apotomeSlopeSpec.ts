@@ -1,9 +1,9 @@
-import {Spev} from "@sagittal/general"
-import {ApotomeSlope, computeApotomeSlope} from "../../../../../../src"
+import { ScaledVector } from "@sagittal/general"
+import { ApotomeSlope, computeApotomeSlope } from "../../../../../../src"
 
 describe("computeApotomeSlope", (): void => {
     it("gives the amount that the comma changes by when tempering the apotome", (): void => {
-        const jiPitch = {pev: [-15, 8, 1]} as Spev<{rational: true}>
+        const jiPitch = { vector: [-15, 8, 1] } as ScaledVector<{ rational: true }>
 
         const actual = computeApotomeSlope(jiPitch)
 
@@ -11,8 +11,8 @@ describe("computeApotomeSlope", (): void => {
         expect(actual).toBeCloseToTyped(expected)
     })
 
-    it("works for pevs without three exponents", (): void => {
-        const jiPitch = {pev: [] as unknown[]} as Spev<{rational: true}>
+    it("works for vectors without three exponents", (): void => {
+        const jiPitch = { vector: [] as unknown[] } as ScaledVector<{ rational: true }>
 
         const actual = computeApotomeSlope(jiPitch)
 

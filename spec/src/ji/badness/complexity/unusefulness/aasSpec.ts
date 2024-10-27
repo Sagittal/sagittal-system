@@ -1,9 +1,9 @@
-import {Abs, Spev} from "@sagittal/general"
-import {ApotomeSlope, computeAas} from "../../../../../../src"
+import { Abs, ScaledVector } from "@sagittal/general"
+import { ApotomeSlope, computeAas } from "../../../../../../src"
 
 describe("computeAas", (): void => {
     it("returns the AAS (absolute apotome slope) of the JI pitch", (): void => {
-        const jiPitch = {pev: [-1, -3, 1, 0, 1]} as Spev<{rational: true}>
+        const jiPitch = { vector: [-1, -3, 1, 0, 1] } as ScaledVector<{ rational: true }>
 
         const actual = computeAas(jiPitch)
 

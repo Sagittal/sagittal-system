@@ -1,9 +1,9 @@
-import {Spev} from "@sagittal/general"
-import {Ate, computeAte} from "../../../../../../src"
+import { ScaledVector } from "@sagittal/general"
+import { Ate, computeAte } from "../../../../../../src"
 
 describe("computeAte", (): void => {
     it("returns the ATE (abs 3-exponent) of the JI pitch", (): void => {
-        const jiPitch = {pev: [-1, -3, 1, 0, 1]} as Spev<{rational: true}>
+        const jiPitch = { vector: [-1, -3, 1, 0, 1] } as ScaledVector<{ rational: true }>
 
         const actual = computeAte(jiPitch)
 
@@ -11,8 +11,8 @@ describe("computeAte", (): void => {
         expect(actual).toBe(expected)
     })
 
-    it("works for pevs without 3-exponents", (): void => {
-        const jiPitch = {pev: [] as unknown[]} as Spev<{rational: true}>
+    it("works for vectors without 3-exponents", (): void => {
+        const jiPitch = { vector: [] as unknown[] } as ScaledVector<{ rational: true }>
 
         const actual = computeAte(jiPitch)
 

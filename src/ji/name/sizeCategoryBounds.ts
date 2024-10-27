@@ -1,68 +1,68 @@
 import {
     APOTOME,
-    computeRationalSpevGeometricMean,
-    EMPTY_PEV,
+    computeRationalScaledVectorGeometricMean,
+    EMPTY_VECTOR,
     HALF_SCALER,
-    halveSpev,
+    halveScaledVector,
     Name,
-    Pev,
+    Vector,
     PYTHAGOREAN_COMMA,
     PYTHAGOREAN_LARGE_DIESIS,
     PYTHAGOREAN_LIMMA,
     PYTHAGOREAN_SCHISMA,
     PYTHAGOREAN_WHOLE_TONE,
-    Spev,
+    ScaledVector,
     SUPERCOMPLEX_PYTHAGOREAN_KLEISMA,
     THIRTYONE_THREE_COMMA,
 } from "@sagittal/general"
-import {SizeCategoryBound} from "./types"
+import { SizeCategoryBound } from "./types"
 
 const u_n_SIZE_CATEGORY_BOUND = {
     name: "u|n" as Name<SizeCategoryBound>,
-    pitch: {pev: EMPTY_PEV} as Spev<{rational: false}>,
+    pitch: { vector: EMPTY_VECTOR } as ScaledVector<{ rational: false }>,
 }
 const n_s_SIZE_CATEGORY_BOUND = {
     name: "n|s" as Name<SizeCategoryBound>,
-    pitch: halveSpev(PYTHAGOREAN_SCHISMA),
+    pitch: halveScaledVector(PYTHAGOREAN_SCHISMA),
 }
 const s_k_SIZE_CATEGORY_BOUND = {
     name: "s|k" as Name<SizeCategoryBound>,
-    pitch: halveSpev(SUPERCOMPLEX_PYTHAGOREAN_KLEISMA),
+    pitch: halveScaledVector(SUPERCOMPLEX_PYTHAGOREAN_KLEISMA),
 }
 const k_C_SIZE_CATEGORY_BOUND = {
     name: "k|C" as Name<SizeCategoryBound>,
-    pitch: halveSpev(PYTHAGOREAN_COMMA),
+    pitch: halveScaledVector(PYTHAGOREAN_COMMA),
 }
 const C_S_SIZE_CATEGORY_BOUND = {
     name: "C|S" as Name<SizeCategoryBound>,
-    pitch: halveSpev(PYTHAGOREAN_LARGE_DIESIS),
+    pitch: halveScaledVector(PYTHAGOREAN_LARGE_DIESIS),
 }
 const S_M_SIZE_CATEGORY_BOUND = {
     name: "S|M" as Name<SizeCategoryBound>,
-    pitch: halveSpev(PYTHAGOREAN_LIMMA),
+    pitch: halveScaledVector(PYTHAGOREAN_LIMMA),
 }
 const M_L_SIZE_CATEGORY_BOUND = {
     name: "M|L" as Name<SizeCategoryBound>,
-    pitch: halveSpev(APOTOME),
+    pitch: halveScaledVector(APOTOME),
 }
 const L_SS_SIZE_CATEGORY_BOUND = {
     name: "L|SS" as Name<SizeCategoryBound>,
-    pitch: computeRationalSpevGeometricMean(APOTOME, PYTHAGOREAN_COMMA),
+    pitch: computeRationalScaledVectorGeometricMean(APOTOME, PYTHAGOREAN_COMMA),
 }
 const SS_MS_SIZE_CATEGORY_BOUND = {
     name: "SS|MS" as Name<SizeCategoryBound>,
-    pitch: halveSpev(THIRTYONE_THREE_COMMA),
+    pitch: halveScaledVector(THIRTYONE_THREE_COMMA),
 }
 const MS_LS_SIZE_CATEGORY_BOUND = {
     name: "MS|LS" as Name<SizeCategoryBound>,
-    pitch: halveSpev(PYTHAGOREAN_WHOLE_TONE),
+    pitch: halveScaledVector(PYTHAGOREAN_WHOLE_TONE),
 }
 const LS_A_SIZE_CATEGORY_BOUND = {
     name: "LS|A" as Name<SizeCategoryBound>,
     pitch: {
-        pev: [62, -39] as Pev<{rational: true}>,
+        vector: [62, -39] as Vector<{ rational: true }>,
         scaler: HALF_SCALER,
-    } as Spev<{rational: false}>,
+    } as ScaledVector<{ rational: false }>,
 }
 const SIZE_CATEGORY_BOUNDS: SizeCategoryBound[] = [
     u_n_SIZE_CATEGORY_BOUND,
@@ -77,81 +77,81 @@ const SIZE_CATEGORY_BOUNDS: SizeCategoryBound[] = [
     MS_LS_SIZE_CATEGORY_BOUND,
     LS_A_SIZE_CATEGORY_BOUND,
     {
-        name: "A|s+A" as Name<SizeCategoryBound>,                           // Apotome + 1.8075229327¢
+        name: "A|s+A" as Name<SizeCategoryBound>, // Apotome + 1.8075229327¢
         pitch: {
-            pev: [-106, 67] as Pev<{rational: true}>,
+            vector: [-106, 67] as Vector<{ rational: true }>,
             scaler: HALF_SCALER,
-        } as Spev<{rational: false}>,
+        } as ScaledVector<{ rational: false }>,
     },
     {
-        name: "s+A|k+A" as Name<SizeCategoryBound>,                         // Apotome + 4.4999134612584¢
+        name: "s+A|k+A" as Name<SizeCategoryBound>, // Apotome + 4.4999134612584¢
         pitch: {
-            pev: [295, -186] as Pev<{rational: true}>,
+            vector: [295, -186] as Vector<{ rational: true }>,
             scaler: HALF_SCALER,
-        } as Spev<{rational: false}>,
+        } as ScaledVector<{ rational: false }>,
     },
     {
-        name: "k+A|C+A" as Name<SizeCategoryBound>,                         // Apotome + 11.7300051923244¢
+        name: "k+A|C+A" as Name<SizeCategoryBound>, // Apotome + 11.7300051923244¢
         pitch: {
-            pev: [-41, 26] as Pev<{rational: true}>,
+            vector: [-41, 26] as Vector<{ rational: true }>,
             scaler: HALF_SCALER,
-        } as Spev<{rational: false}>,
+        } as ScaledVector<{ rational: false }>,
     },
     {
-        name: "C+A|S+A" as Name<SizeCategoryBound>,                         // Apotome + 33.382492644207¢
+        name: "C+A|S+A" as Name<SizeCategoryBound>, // Apotome + 33.382492644207¢
         pitch: {
-            pev: [5, -3] as Pev<{rational: true}>,
+            vector: [5, -3] as Vector<{ rational: true }>,
             scaler: HALF_SCALER,
-        } as Spev<{rational: false}>,
+        } as ScaledVector<{ rational: false }>,
     },
     {
-        name: "S+A|M+A" as Name<SizeCategoryBound>,                         // Apotome + 45.112497836531¢
+        name: "S+A|M+A" as Name<SizeCategoryBound>, // Apotome + 45.112497836531¢
         pitch: {
-            pev: [-14, 9] as Pev<{rational: true}>,
+            vector: [-14, 9] as Vector<{ rational: true }>,
             scaler: HALF_SCALER,
-        } as Spev<{rational: false}>,
+        } as ScaledVector<{ rational: false }>,
     },
     {
-        name: "M+A|L+A" as Name<SizeCategoryBound>,                         // Apotome + 56.842503028856¢
+        name: "M+A|L+A" as Name<SizeCategoryBound>, // Apotome + 56.842503028856¢
         pitch: {
-            pev: [-33, 21] as Pev<{rational: true}>,
+            vector: [-33, 21] as Vector<{ rational: true }>,
             scaler: HALF_SCALER,
-        } as Spev<{rational: false}>,
+        } as ScaledVector<{ rational: false }>,
     },
     {
-        name: "L+A|SS+A" as Name<SizeCategoryBound>,                        // Apotome + 68.572508221180¢
+        name: "L+A|SS+A" as Name<SizeCategoryBound>, // Apotome + 68.572508221180¢
         pitch: {
-            pev: [-52, 33] as Pev<{rational: true}>,
+            vector: [-52, 33] as Vector<{ rational: true }>,
             scaler: HALF_SCALER,
-        } as Spev<{rational: false}>,
+        } as ScaledVector<{ rational: false }>,
     },
     {
-        name: "SS+A|MS+A" as Name<SizeCategoryBound>,                       // Apotome + 80.302513413505¢
+        name: "SS+A|MS+A" as Name<SizeCategoryBound>, // Apotome + 80.302513413505¢
         pitch: {
-            pev: [-71, 45] as Pev<{rational: true}>,
+            vector: [-71, 45] as Vector<{ rational: true }>,
             scaler: HALF_SCALER,
-        } as Spev<{rational: false}>,
+        } as ScaledVector<{ rational: false }>,
     },
     {
-        name: "MS+A|LS+A" as Name<SizeCategoryBound>,                       // Apotome + 101.95500086539¢
+        name: "MS+A|LS+A" as Name<SizeCategoryBound>, // Apotome + 101.95500086539¢
         pitch: {
-            pev: [-25, 16] as Pev<{rational: true}>,
+            vector: [-25, 16] as Vector<{ rational: true }>,
             scaler: HALF_SCALER,
-        } as Spev<{rational: false}>,
+        } as ScaledVector<{ rational: false }>,
     },
     {
-        name: "LS+A|A+A" as Name<SizeCategoryBound>,                        // Apotome + 111.87748312495¢
+        name: "LS+A|A+A" as Name<SizeCategoryBound>, // Apotome + 111.87748312495¢
         pitch: {
-            pev: [40, -25] as Pev<{rational: true}>,
+            vector: [40, -25] as Vector<{ rational: true }>,
             scaler: HALF_SCALER,
-        } as Spev<{rational: false}>,
+        } as ScaledVector<{ rational: false }>,
     },
     {
-        name: "A+A|" as Name<SizeCategoryBound>,                            // Apotome + apotome
+        name: "A+A|" as Name<SizeCategoryBound>, // Apotome + apotome
         pitch: {
-            pev: [-44, 28] as Pev<{rational: true}>,
+            vector: [-44, 28] as Vector<{ rational: true }>,
             scaler: HALF_SCALER,
-        } as Spev<{rational: false}>,
+        } as ScaledVector<{ rational: false }>,
     },
 ]
 

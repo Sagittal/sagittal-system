@@ -2,20 +2,20 @@ import {
     Abs,
     BLANK,
     Comma,
-    computeRationalPevFromRationalSpev,
-    computeRationalSpevSmoothness,
-    computeRoughRationalPev,
-    computeSuperSpev,
+    computeRationalVectorFromRationalScaledVector,
+    computeRationalScaledVectorSmoothness,
+    computeRoughRationalVector,
+    computeSuperScaledVector,
     decrement,
     FIVE_ROUGHNESS,
-    invertPev,
+    invertVector,
     Max,
-    Spev,
+    ScaledVector,
 } from "@sagittal/general"
-import {ApotomeSlope, Ate, computeAte} from "../badness"
-import {computeCommasFrom23FreeRationalPev} from "../find"
-import {computeSizeCategoryZone} from "./sizeCategoryZone"
-import {MaybeComplexOptions} from "./types"
+import { ApotomeSlope, Ate, computeAte } from "../badness"
+import { computeCommasFrom23FreeRationalVector } from "../find"
+import { computeSizeCategoryZone } from "./sizeCategoryZone"
+import { MaybeComplexOptions } from "./types"
 
 const COMMA_COMPLEXITY_NAMES = [
     "complex",
@@ -49,31 +49,42 @@ const COMMA_COMPLEXITY_ABBREVIATIONS = [
     "13c",
 ]
 
-const computeMaybeComplex = (comma: Comma, {sizeCategory, abbreviated}: MaybeComplexOptions): string => {
+const computeMaybeComplex = (
+    comma: Comma,
+    { sizeCategory, abbreviated }: MaybeComplexOptions,
+): string => {
     const maxAte = decrement(computeAte(comma)) as Max<Ate>
     if (maxAte === -1) return BLANK
 
     const zone = computeSizeCategoryZone(sizeCategory)
     const maxAas = Infinity as Max<Abs<ApotomeSlope>>
-    const two3FreeRationalPev = computeRoughRationalPev(
-        computeRationalPevFromRationalSpev(computeSuperSpev(comma) as Spev<{rational: true}>),
+    const two3FreeRationalVector = computeRoughRationalVector(
+        computeRationalVectorFromRationalScaledVector(
+            computeSuperScaledVector(comma) as ScaledVector<{ rational: true }>,
+        ),
         FIVE_ROUGHNESS,
     )
-    const maxPrimeLimit = computeRationalSpevSmoothness(comma)
-    const options = {zone, maxPrimeLimit, maxAas, maxAte}
-    const sameDirectionCommas = computeCommasFrom23FreeRationalPev(two3FreeRationalPev, options)
-    const otherDirectionCommas = computeCommasFrom23FreeRationalPev(invertPev(two3FreeRationalPev), options)
+    const maxPrimeLimit = computeRationalScaledVectorSmoothness(comma)
+    const options = { zone, maxPrimeLimit, maxAas, maxAte }
+    const sameDirectionCommas = computeCommasFrom23FreeRationalVector(
+        two3FreeRationalVector,
+        options,
+    )
+    const otherDirectionCommas = computeCommasFrom23FreeRationalVector(
+        invertVector(two3FreeRationalVector),
+        options,
+    )
     const commas = [...sameDirectionCommas, ...otherDirectionCommas]
 
     if (commas.length === 0) return BLANK
 
-    return maxPrimeLimit < 5 ?
-        abbreviated ?
-            `${computeAte(comma)}e` :
-            `${computeAte(comma)}-EDO-` :
-        abbreviated ?
-            COMMA_COMPLEXITY_ABBREVIATIONS[commas.length - 1] :
-            `${COMMA_COMPLEXITY_NAMES[commas.length - 1]}-`
+    return maxPrimeLimit < 5
+        ? abbreviated
+            ? `${computeAte(comma)}e`
+            : `${computeAte(comma)}-EDO-`
+        : abbreviated
+        ? COMMA_COMPLEXITY_ABBREVIATIONS[commas.length - 1]
+        : `${COMMA_COMPLEXITY_NAMES[commas.length - 1]}-`
 }
 
 // TODO: COMPLEXITY TIE-BREAKER
@@ -81,6 +92,4 @@ const computeMaybeComplex = (comma: Comma, {sizeCategory, abbreviated}: MaybeCom
 //  I think the conclusion is to just call one greater and one lesser, based on their size
 //  - I still need to realize how two commas with same undirected 2,3-free content share a complexity level, though, too
 
-export {
-    computeMaybeComplex,
-}
+export { computeMaybeComplex }

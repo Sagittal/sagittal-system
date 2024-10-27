@@ -1,5 +1,5 @@
+import { Edo } from "@sagittal/general"
 import {
-    Edo,
     SubsetEdoNotationDefinition,
     EdoNotationDefinition,
     SubsetFactor,

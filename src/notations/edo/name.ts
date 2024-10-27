@@ -1,4 +1,5 @@
-import { Edo, EdoNotationName } from "./types"
+import { Edo } from "@sagittal/general"
+import { EdoNotationName } from "./types"
 
 const parseEdoNotationName = (
     edoNotationName: EdoNotationName,

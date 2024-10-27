@@ -1,6 +1,4 @@
 export {
-    Edo,
-    EdoStep,
     NonSubsetEdoNotationDefinition,
     EdoNotationDefinition,
     SubsetFactor,

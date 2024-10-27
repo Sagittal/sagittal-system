@@ -17,24 +17,24 @@ import { FlavorsExpectation } from "../../../../helpers/src/notations/ji/class/f
 /*
 // const computePrimaryComma = ({ commaClassId, commaDirection, apotomeCount }: PrimaryCommaOptions): Comma => {
 //     const comma = getCommaClass(commaClassId).pitch
-//     const commaticAlteration: Comma = commaDirection === Direction.SUPER ? comma : invertSpev(comma) as Comma
-//     const apotomeBase: Comma = multiplySpev(
+//     const commaticAlteration: Comma = commaDirection === Direction.SUPER ? comma : invertScaledVector(comma) as Comma
+//     const apotomeBase: Comma = multiplyScaledVector(
 //         APOTOME,
 //         apotomeCount as Decimal<{ integer: true }> as Decimal<{ integer: true }> & Multiplier,
 //     ) as Comma
 //
-//     return addSpevs(apotomeBase, commaticAlteration) as Spev as Comma
+//     return addScaledVectors(apotomeBase, commaticAlteration) as ScaledVector as Comma
 // }
 //
 // const computeCaptureZone = ({ boundClassId, commaDirection, apotomeCount }: CaptureZoneOptions): Zone => {
 //     const bound = getBoundClass(boundClassId).pitch
-//     const boundAlteration = commaDirection === Direction.SUPER ? bound : invertSpev(bound)
-//     const apotomeBase = multiplySpev(
+//     const boundAlteration = commaDirection === Direction.SUPER ? bound : invertScaledVector(bound)
+//     const apotomeBase = multiplyScaledVector(
 //         APOTOME,
 //         apotomeCount as Decimal<{ integer: true }> as Decimal<{ integer: true }> & Multiplier,
 //     ) as Comma
 //
-//     return addSpevs(apotomeBase, boundAlteration)
+//     return addScaledVectors(apotomeBase, boundAlteration)
 // }
  */
 
@@ -42,9 +42,11 @@ describe("accidentals", (): void => {
     it("has the correct accidentals for Extreme", (): void => {
         const captureZones = computeCaptureZones(EXTREME_NOTATION)
 
-        const accidentalExpectations = captureZones.map((captureZone: CaptureZone): FlavorsExpectation => {
-            return computeFlavorsExpectation(captureZone)
-        })
+        const accidentalExpectations = captureZones.map(
+            (captureZone: CaptureZone): FlavorsExpectation => {
+                return computeFlavorsExpectation(captureZone)
+            },
+        )
 
         const expectedN1A: FlavorsExpectation[] = [
             {

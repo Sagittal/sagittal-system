@@ -1,9 +1,9 @@
-import {Direction, Name, NumericProperties, Quotient, Spev} from "@sagittal/general"
-import {Complexity} from "../badness"
+import { Direction, Name, NumericProperties, Quotient, ScaledVector } from "@sagittal/general"
+import { Complexity } from "../badness"
 
 type SizeCategoryBound<T extends NumericProperties = {}> = {
-    name: Name<SizeCategoryBound>,
-    pitch: Spev<T & {rational: false}>,
+    name: Name<SizeCategoryBound>
+    pitch: ScaledVector<T & { rational: false }>
 }
 
 enum FactoringMode {
@@ -37,14 +37,14 @@ enum SizeCategory {
     DOUBLE_APOTOME = "doubleApotome",
 }
 
-type SizeCategoryName = string & {_SizeCategoryNameBrand: boolean}
-type SizeCategoryAbbreviation = string & {_SizeCategoryAbbreviationBrand: boolean}
+type SizeCategoryName = string & { _SizeCategoryNameBrand: boolean }
+type SizeCategoryAbbreviation = string & { _SizeCategoryAbbreviationBrand: boolean }
 
 type CommaNameOptions = Partial<{
-    directed: boolean,
-    factoringMode: FactoringMode,
-    abbreviated: boolean,
-    ascii: boolean,
+    directed: boolean
+    factoringMode: FactoringMode
+    abbreviated: boolean
+    ascii: boolean
 }>
 
 // This quotient does not stipulate being super,
@@ -56,20 +56,20 @@ type CommaNameOptions = Partial<{
 // Note, however, that when you return the 2's and 3's to this to make it comma-sized, of the size of its name,
 // It WILL be super! This is a subtle but critical point.
 // You can observe this difference in ordering in commaName.ts and two3FreeClass.ts
-type CommaNameQuotient<T extends NumericProperties = {}> =
-    Quotient<T & {rational: true, rough: 3}>
-    & {_CommaNameQuotientBrand: boolean}
+type CommaNameQuotient<T extends NumericProperties = {}> = Quotient<
+    T & { rational: true; rough: 3 }
+> & { _CommaNameQuotientBrand: boolean }
 
 interface ParsedCommaName {
-    complexity?: Complexity,
-    commaNameQuotient: CommaNameQuotient,
-    sizeCategory: SizeCategory,
-    direction?: Direction,
+    complexity?: Complexity
+    commaNameQuotient: CommaNameQuotient
+    sizeCategory: SizeCategory
+    direction?: Direction
 }
 
 interface MaybeComplexOptions {
-    sizeCategory: SizeCategory,
-    abbreviated: boolean,
+    sizeCategory: SizeCategory
+    abbreviated: boolean
 }
 
 export {

@@ -1,5 +1,5 @@
-import { Cents, CENTS_PER_OCTAVE, HexColor, PHI } from "@sagittal/general"
-import { Edo, EdoNotationName, EdoStep, SectionColor } from "./types"
+import { Cents, CENTS_PER_OCTAVE, HexColor, PHI, Edo, EdoStep } from "@sagittal/general"
+import { EdoNotationName, SectionColor } from "./types"
 import { parseEdoNotationName } from "./name"
 import { computeFifthStep } from "./steps"
 import { computeStepSize } from "./size"

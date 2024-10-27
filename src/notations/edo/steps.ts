@@ -1,5 +1,5 @@
-import { Cents, Count, computeRange, mod } from "@sagittal/general"
-import { Edo, EdoNotationName, EdoStep, StepWithError } from "./types"
+import { Cents, Count, computeRange, mod, Edo, EdoStep } from "@sagittal/general"
+import { EdoNotationName, StepWithError } from "./types"
 import { parseEdoNotationName } from "./name"
 import { computeStepSize } from "./size"
 import { JI_FIFTH_SIZE } from "./constants"

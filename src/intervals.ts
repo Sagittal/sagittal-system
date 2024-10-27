@@ -7,8 +7,8 @@ import {
     Ed,
     ONE,
     Quotient,
-    scaleSpev,
-    Spev,
+    scaleScaledVector,
+    ScaledVector,
 } from "@sagittal/general"
 import {
     JiNotationLevelId,
@@ -18,39 +18,38 @@ import {
     INSANE_EDA,
     JI_NOTATION_LEVEL_EDAS,
     MEDIUM_EDA,
-    ULTRA_EDA
+    ULTRA_EDA,
 } from "./notations"
 
-const TINA: Spev<{ rational: false }> = scaleSpev(
-    APOTOME,
-    [ONE, INSANE_EDA as Decimal<{ integer: true }>] as Quotient<{ rational: true }>,
-)
-const MINA: Spev<{ rational: false }> = scaleSpev(
-    APOTOME,
-    [ONE, EXTREME_EDA as Decimal<{ integer: true }>] as Quotient<{ rational: true }>,
-)
-const ULTRINA: Spev<{ rational: false }> = scaleSpev(
-    APOTOME,
-    [ONE, ULTRA_EDA as Decimal<{ integer: true }>] as Quotient<{ rational: true }>,
-)
-const HINA: Spev<{ rational: false }> = scaleSpev(
-    APOTOME,
-    [ONE, HIGH_EDA as Decimal<{ integer: true }>] as Quotient<{ rational: true }>,
-)
-const ATHINA: Spev<{ rational: false }> = scaleSpev(
-    APOTOME,
-    [ONE, MEDIUM_EDA as Decimal<{ integer: true }>] as Quotient<{ rational: true }>,
-)
+const TINA: ScaledVector<{ rational: false }> = scaleScaledVector(APOTOME, [
+    ONE,
+    INSANE_EDA as Decimal<{ integer: true }>,
+] as Quotient<{ rational: true }>)
+const MINA: ScaledVector<{ rational: false }> = scaleScaledVector(APOTOME, [
+    ONE,
+    EXTREME_EDA as Decimal<{ integer: true }>,
+] as Quotient<{ rational: true }>)
+const ULTRINA: ScaledVector<{ rational: false }> = scaleScaledVector(APOTOME, [
+    ONE,
+    ULTRA_EDA as Decimal<{ integer: true }>,
+] as Quotient<{ rational: true }>)
+const HINA: ScaledVector<{ rational: false }> = scaleScaledVector(APOTOME, [
+    ONE,
+    HIGH_EDA as Decimal<{ integer: true }>,
+] as Quotient<{ rational: true }>)
+const ATHINA: ScaledVector<{ rational: false }> = scaleScaledVector(APOTOME, [
+    ONE,
+    MEDIUM_EDA as Decimal<{ integer: true }>,
+] as Quotient<{ rational: true }>)
 
 const INA_CENTS_SIZES: Record<JiNotationLevelId, Cents> = JI_NOTATION_LEVEL_EDAS.reduce(
     (
         jiNotationLevelEdaStepSizes: Record<JiNotationLevelId, Cents>,
         jiNotationLevelEda: Ed<{ of: Apotome }>,
         index: number,
-    ): Record<JiNotationLevelId, Cents> =>
-    ({
+    ): Record<JiNotationLevelId, Cents> => ({
         ...jiNotationLevelEdaStepSizes,
-        [JI_NOTATION_LEVELS[index]]: computeCentsFromPitch((APOTOME)) / jiNotationLevelEda,
+        [JI_NOTATION_LEVELS[index]]: computeCentsFromPitch(APOTOME) / jiNotationLevelEda,
     }),
     {} as Record<JiNotationLevelId, Cents>,
 )

@@ -66,8 +66,6 @@ export {
     computeSagittalFromSymbolClassId,
 } from "./ji"
 export {
-    Edo,
-    EdoStep,
     NonSubsetEdoNotationDefinition,
     EdoNotationDefinition,
     computeFifthStep,

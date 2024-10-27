@@ -1,10 +1,10 @@
-import {Spev} from "@sagittal/general"
-import {computeSecorComplexity} from "../../../../../src/ji/badness/complexity/secor"
-import {SecorComplexity} from "../../../../../src/ji/badness/complexity/types"
+import { ScaledVector } from "@sagittal/general"
+import { computeSecorComplexity } from "../../../../../src/ji/badness/complexity/secor"
+import { SecorComplexity } from "../../../../../src/ji/badness/complexity/types"
 
 describe("computeSecorComplexity", (): void => {
     it("works per example given on the forum", (): void => {
-        const jiPitch = {pev: [-4, 4, -1]} as Spev<{rational: true}>
+        const jiPitch = { vector: [-4, 4, -1] } as ScaledVector<{ rational: true }>
 
         const actual = computeSecorComplexity(jiPitch)
 

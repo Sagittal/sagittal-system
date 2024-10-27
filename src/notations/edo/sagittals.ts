@@ -1,5 +1,4 @@
-import { Count, isEven } from "@sagittal/general"
-import { EdoStep } from "./types"
+import { Count, isEven, EdoStep } from "@sagittal/general"
 import {
     computeApotomeComplement,
     Flavor,

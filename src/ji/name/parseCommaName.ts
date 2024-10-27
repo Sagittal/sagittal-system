@@ -12,15 +12,10 @@ import {
     SIZE_CATEGORY_NAME_ALTERNATIVES,
     SIZE_CATEGORY_NAMES,
 } from "./sizeCategories"
-import {
-    CommaNameQuotient,
-    ParsedCommaName,
-    SizeCategory,
-    SizeCategoryName,
-} from "./types"
+import { CommaNameQuotient, ParsedCommaName, SizeCategory, SizeCategoryName } from "./types"
 
 // TODO: COMMA NAMES
-//  And there's also some new stuff that needs to be parsed, like scaled pevs, half commas, default commas per size
+//  And there's also some new stuff that needs to be parsed, like scaled vectors, half commas, default commas per size
 //  Category, hyphens v spaces, and preferred outputs http://forum.sagittal.org/viewtopic.php?p=3105#p3105
 //  All answers here now: http://forum.sagittal.org/viewtopic.php?p=3106#p3106
 //  - There's also complex name parsing
@@ -40,8 +35,7 @@ const parseCommaName = (commaNameIo: Io): ParsedCommaName => {
     const commaNameParts = commaNameIo.match(
         /(.*c)?([0-9⁰¹²³⁴⁵⁶⁷⁸⁹.⋅*^]+[:\/]?\(?[0-9⁰¹²³⁴⁵⁶⁷⁸⁹.⋅*^]*\)?)-?([a-zA-Z-+]+)\s?(up|down)?/,
     )
-    if (commaNameParts === null)
-        throw new Error(`Could not parse comma name ${commaNameIo}.`)
+    if (commaNameParts === null) throw new Error(`Could not parse comma name ${commaNameIo}.`)
     const [
         _,
         complexityCommaNamePart,
@@ -50,13 +44,12 @@ const parseCommaName = (commaNameIo: Io): ParsedCommaName => {
         directionCommaNamePart,
     ] = commaNameParts
 
-    const commaNameQuotient: CommaNameQuotient =
-        computeLowestTermsRationalQuotient(
-            parseQuotient(quotientCommaNamePart) as Quotient<{
-                rational: true
-                rough: 3
-            }>,
-        ) as Quotient<{ rational: true; rough: 3 }> as CommaNameQuotient
+    const commaNameQuotient: CommaNameQuotient = computeLowestTermsRationalQuotient(
+        parseQuotient(quotientCommaNamePart) as Quotient<{
+            rational: true
+            rough: 3
+        }>,
+    ) as Quotient<{ rational: true; rough: 3 }> as CommaNameQuotient
 
     let sizeCategory: Maybe<SizeCategory> = undefined
 
@@ -64,8 +57,7 @@ const parseCommaName = (commaNameIo: Io): ParsedCommaName => {
         if (
             sizeCategoryCommaNamePart.toUpperCase() ===
                 SIZE_CATEGORY_NAMES[sizeCategoryValue].toUpperCase() ||
-            sizeCategoryCommaNamePart ===
-                SIZE_CATEGORY_ABBREVIATIONS[sizeCategoryValue] ||
+            sizeCategoryCommaNamePart === SIZE_CATEGORY_ABBREVIATIONS[sizeCategoryValue] ||
             SIZE_CATEGORY_NAME_ALTERNATIVES[sizeCategoryValue].includes(
                 sizeCategoryCommaNamePart as SizeCategoryName,
             )

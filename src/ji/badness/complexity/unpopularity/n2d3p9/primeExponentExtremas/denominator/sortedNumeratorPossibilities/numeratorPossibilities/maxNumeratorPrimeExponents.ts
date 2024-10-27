@@ -1,5 +1,6 @@
 import {
     computePrimes,
+    Count,
     Decimal,
     Exponent,
     FIVE_PRIME_INDEX,
@@ -16,7 +17,7 @@ import {INITIAL_MAX_NUMERATOR_PRIME_EXPONENTS_FOR_TWO_AND_THREE} from "./constan
 
 const computeMaxNumeratorPrimeExponentsGivenMaxN2D3P9 = (
     maxN2D3P9: Max<N2D3P9>,
-): Array<Max<Numerator & Decimal<{integer: true}> & Exponent<Prime>>> => {
+): Array<Max<Numerator & Decimal<{integer: true}> & Count<Prime> & Exponent<Prime>>> => {
     const primes = computePrimes()
 
     let numeratorPrimeIndex = FIVE_PRIME_INDEX

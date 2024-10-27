@@ -1,4 +1,4 @@
-import { NumericProperties, Spev } from "@sagittal/general"
+import { NumericProperties, ScaledVector } from "@sagittal/general"
 
 enum BoundClassId {
     MINA_0 = "mina0",
@@ -127,7 +127,7 @@ enum BoundClassId {
 }
 
 type BoundClass<T extends NumericProperties = {}> = {
-    pitch: Spev<T & {rational: false}>,
+    pitch: ScaledVector<T & { rational: false }>
 }
 
 enum BoundType {
@@ -136,8 +136,4 @@ enum BoundType {
     SIZE_CATEGORY_BOUND = "sizeCategoryBound",
 }
 
-export {
-    BoundClass,
-    BoundClassId,
-    BoundType,
-}
+export { BoundClass, BoundClassId, BoundType }

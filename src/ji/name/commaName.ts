@@ -3,73 +3,94 @@ import {
     Comma,
     computeCentsFromPitch,
     computeSubQuotient,
-    computeSuperSpev,
+    computeSuperScaledVector,
     Direction,
     formatCents,
-    isRationalSpevSmooth,
-    isRationalSpevSub,
-    isRationalSpevUnison,
+    isRationalScaledVectorSmooth,
+    isRationalScaledVectorSub,
+    isRationalScaledVectorUnison,
     Name,
     stringify,
     THREE_SMOOTHNESS,
 } from "@sagittal/general"
-import {computeCommaNameQuotient} from "./commaNameQuotient"
-import {computeMaybeComplex} from "./complex"
-import {formatCommaNameQuotient} from "./formatCommaNameQuotient"
-import {SIZE_CATEGORY_ABBREVIATIONS, SIZE_CATEGORY_NAMES} from "./sizeCategories"
-import {computeSizeCategory} from "./sizeCategory"
-import {isCommaSized} from "./typeGuards"
-import {CommaNameOptions, FactoringMode, SizeCategory} from "./types"
+import { computeCommaNameQuotient } from "./commaNameQuotient"
+import { computeMaybeComplex } from "./complex"
+import { formatCommaNameQuotient } from "./formatCommaNameQuotient"
+import { SIZE_CATEGORY_ABBREVIATIONS, SIZE_CATEGORY_NAMES } from "./sizeCategories"
+import { computeSizeCategory } from "./sizeCategory"
+import { isCommaSized } from "./typeGuards"
+import { CommaNameOptions, FactoringMode, SizeCategory } from "./types"
 
-const removeParentheses = (string: string): string =>
-    string
-        .replace("(", BLANK)
-        .replace(")", BLANK)
+const removeParentheses = (string: string): string => string.replace("(", BLANK).replace(")", BLANK)
 
 // "Sized comma name"
 
 const computeCommaName = (comma: Comma, options: CommaNameOptions = {}): Name<Comma> => {
     if (!isCommaSized(comma)) {
-        throw new Error(`Comma ${stringify(comma)} is outside of comma-sized range and cannot be named: ${formatCents(computeCentsFromPitch(comma))}`)
+        throw new Error(
+            `Comma ${stringify(
+                comma,
+            )} is outside of comma-sized range and cannot be named: ${formatCents(
+                computeCentsFromPitch(comma),
+            )}`,
+        )
     }
 
-    const {directed = true, factoringMode = FactoringMode.THRESHOLD, abbreviated = true, ascii = false} = options
+    const {
+        directed = true,
+        factoringMode = FactoringMode.THRESHOLD,
+        abbreviated = true,
+        ascii = false,
+    } = options
 
     const maybeHyphen = abbreviated ? BLANK : "-"
 
-    const maybeDown = isRationalSpevSub(comma) ? " down" : BLANK
+    const maybeDown = isRationalScaledVectorSub(comma) ? " down" : BLANK
 
-    const superComma = computeSuperSpev(comma) as Comma<{rational: true, direction: Direction.SUPER}>
+    const superComma = computeSuperScaledVector(comma) as Comma<{
+        rational: true
+        direction: Direction.SUPER
+    }>
     const sizeCategory: SizeCategory = computeSizeCategory(superComma)
-    const sizeCategoryText = abbreviated ? SIZE_CATEGORY_ABBREVIATIONS[sizeCategory] : SIZE_CATEGORY_NAMES[sizeCategory]
+    const sizeCategoryText = abbreviated
+        ? SIZE_CATEGORY_ABBREVIATIONS[sizeCategory]
+        : SIZE_CATEGORY_NAMES[sizeCategory]
 
     let formattedCommaNameQuotient
-    if (isRationalSpevSmooth(comma, THREE_SMOOTHNESS) && !isRationalSpevUnison(comma)) {
+    if (
+        isRationalScaledVectorSmooth(comma, THREE_SMOOTHNESS) &&
+        !isRationalScaledVectorUnison(comma)
+    ) {
         formattedCommaNameQuotient = "3"
     } else {
         const commaNameQuotient = computeCommaNameQuotient(comma)
 
         if (directed) {
-            const stringifiedQuotient = formatCommaNameQuotient(commaNameQuotient, {factoringMode, ascii})
+            const stringifiedQuotient = formatCommaNameQuotient(commaNameQuotient, {
+                factoringMode,
+                ascii,
+            })
 
-            formattedCommaNameQuotient = stringifiedQuotient[1] === "1" ?
-                removeParentheses(stringifiedQuotient[0]) :
-                stringifiedQuotient.join("/")
+            formattedCommaNameQuotient =
+                stringifiedQuotient[1] === "1"
+                    ? removeParentheses(stringifiedQuotient[0])
+                    : stringifiedQuotient.join("/")
         } else {
-            const stringifiedQuotient =
-                formatCommaNameQuotient(computeSubQuotient(commaNameQuotient), {factoringMode, ascii})
+            const stringifiedQuotient = formatCommaNameQuotient(
+                computeSubQuotient(commaNameQuotient),
+                { factoringMode, ascii },
+            )
 
-            formattedCommaNameQuotient = stringifiedQuotient[0] === "1" ?
-                removeParentheses(stringifiedQuotient[1]) :
-                removeParentheses(stringifiedQuotient.join(":"))
+            formattedCommaNameQuotient =
+                stringifiedQuotient[0] === "1"
+                    ? removeParentheses(stringifiedQuotient[1])
+                    : removeParentheses(stringifiedQuotient.join(":"))
         }
     }
 
-    const maybeComplex = computeMaybeComplex(comma, {sizeCategory, abbreviated})
+    const maybeComplex = computeMaybeComplex(comma, { sizeCategory, abbreviated })
 
     return `${maybeComplex}${formattedCommaNameQuotient}${maybeHyphen}${sizeCategoryText}${maybeDown}` as Name<Comma>
 }
 
-export {
-    computeCommaName,
-}
+export { computeCommaName }

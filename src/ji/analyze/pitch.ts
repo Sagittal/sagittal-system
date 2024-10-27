@@ -1,18 +1,18 @@
 import {
     compute23FreeClass,
     computeCentsFromPitch,
-    computeDecimalFromPev,
-    computeQuotientFromPev,
-    Spev,
+    computeDecimalFromVector,
+    computeQuotientFromVector,
+    ScaledVector,
 } from "@sagittal/general"
-import {computeAas, computeApotomeSlope, computeAte} from "../badness"
-import {analyze23FreeClass} from "./two3FreeClass"
-import {JiPitchAnalysis} from "./types"
+import { computeAas, computeApotomeSlope, computeAte } from "../badness"
+import { analyze23FreeClass } from "./two3FreeClass"
+import { JiPitchAnalysis } from "./types"
 
-const analyzeJiPitch = (jiPitch: Spev<{rational: true}>): JiPitchAnalysis => {
-    const pev = jiPitch.pev
-    const quotient = computeQuotientFromPev(pev)
-    const decimal = computeDecimalFromPev(pev)
+const analyzeJiPitch = (jiPitch: ScaledVector<{ rational: true }>): JiPitchAnalysis => {
+    const vector = jiPitch.vector
+    const quotient = computeQuotientFromVector(vector)
+    const decimal = computeDecimalFromVector(vector)
 
     const apotomeSlope = computeApotomeSlope(jiPitch)
     const cents = computeCentsFromPitch(jiPitch)
@@ -25,7 +25,7 @@ const analyzeJiPitch = (jiPitch: Spev<{rational: true}>): JiPitchAnalysis => {
 
     return {
         pitch: jiPitch,
-        pev,
+        vector,
         quotient,
         cents,
         decimal,
@@ -36,6 +36,4 @@ const analyzeJiPitch = (jiPitch: Spev<{rational: true}>): JiPitchAnalysis => {
     }
 }
 
-export {
-    analyzeJiPitch,
-}
+export { analyzeJiPitch }
