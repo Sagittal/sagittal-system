@@ -1,4 +1,4 @@
-import { Decimal, Exponent, Extrema, Max, Prime } from "@sagittal/general"
+import { Count, Decimal, Exponent, Extrema, Max, Prime } from "@sagittal/general"
 import { N2D3P9 } from "../../../../../../../../../../../src"
 import { computeNumeratorPrimeExponentExtremasGivenMaxN2D3P9 } from "../../../../../../../../../../../src/ji/badness/complexity/unpopularity/n2d3p9/primeExponentExtremas/denominator/sortedNumeratorPossibilities/numeratorPossibilities/numeratorPrimeExponentExtremas"
 
@@ -23,7 +23,8 @@ describe("computeNumeratorPrimeExponentExtremasGivenMaxN2D3P9", (): void => {
             [0, 0],
             [0, 1],
             [0, 1],
-        ] as Array<Extrema<{ of: Decimal<{ integer: true }> & Exponent<Prime> }>>
+        ] as Array<Extrema<{ of: Decimal<{ integer: true }> & Count<Prime > & Exponent<Prime>
+    }>>
         expect(actual).toEqual(expected)
     })
 })
