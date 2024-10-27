@@ -1,4 +1,4 @@
-import { Decimal, Exponent, Extrema, Max, Numerator, Prime } from "@sagittal/general"
+import { Count, Decimal, Exponent, Extrema, Max, Numerator, Prime } from "@sagittal/general"
 import { N2D3P9 } from "../../../../../../../../../src"
 import { computeMaxNumeratorWithLessN2D3P9ThanMaxN2D3P9 } from "../../../../../../../../../src/ji/badness/complexity/unpopularity/n2d3p9/primeExponentExtremas/denominator/maxNumeratorWithLessN2D3P9"
 
@@ -15,7 +15,7 @@ describe("computeMaxNumeratorWithLessN2D3P9ThanMaxN2D3P9", (): void => {
             [0, 0],
             [0, 1],
             [0, 1],
-        ] as Array<Extrema<{ of: Decimal<{ integer: true }> & Exponent<Prime> }>>
+        ] as Array<Extrema<{ of: Decimal<{ integer: true }> & Count<Prime> & Exponent<Prime> }>>
         const maxN2D3P9 = 3 as Max<N2D3P9>
 
         const actual = computeMaxNumeratorWithLessN2D3P9ThanMaxN2D3P9(
