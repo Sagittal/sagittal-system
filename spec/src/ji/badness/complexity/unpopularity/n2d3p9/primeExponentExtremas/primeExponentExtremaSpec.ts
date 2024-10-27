@@ -1,4 +1,4 @@
-import {Decimal, Exponent, Extrema, Max, Numerator, Prime} from "@sagittal/general"
+import {Count, Decimal, Exponent, Extrema, Max, Numerator, Prime} from "@sagittal/general"
 import {N2D3P9} from "../../../../../../../../src"
 import {computePrimeExponentExtremaGivenMaxN2D3P9} from "../../../../../../../../src/ji/badness/complexity/unpopularity/n2d3p9/primeExponentExtremas/primeExponentExtrema"
 
@@ -25,7 +25,7 @@ describe("computePrimeExponentExtremaGivenMaxN2D3P9", (): void => {
             numeratorPossibilitiesForDenominatorGivenMaxN2D3P9,
         )
 
-        const expected = [-1, 2] as Extrema<{of: Decimal<{integer: true}> & Exponent<Prime>}>
+        const expected = [-1, 2] as Extrema<{of: Decimal<{integer: true}> & Count<Prime> & Exponent<Prime>}>
         expect(actual).toEqual(expected)
     })
 
@@ -37,7 +37,7 @@ describe("computePrimeExponentExtremaGivenMaxN2D3P9", (): void => {
             {mirrored: true},
         )
 
-        const expected = [-2, 2] as Extrema<{of: Decimal<{integer: true}> & Exponent<Prime>}>
+        const expected = [-2, 2] as Extrema<{of: Decimal<{integer: true}> & Count<Prime> & Exponent<Prime>}>
         expect(actual).toEqual(expected)
     })
 })
