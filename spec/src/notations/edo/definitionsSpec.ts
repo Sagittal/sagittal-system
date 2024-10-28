@@ -3,9 +3,7 @@ import {
     CENTS_PER_OCTAVE,
     Comma,
     computeCentsFromPitch,
-    computePrimes,
     computeQuotientFromVector,
-    computeScaledVectorFromDecimal,
     Count,
     Edo,
     EdoStep,
@@ -14,11 +12,10 @@ import {
     Index,
     isUndefined,
     Map,
-    Max,
     Maybe,
     Name,
-    Prime,
-    PrimeCount,
+    computeStepSize,
+    computeMap,
     round,
     ZERO_ONE_INDEX_DIFF,
 } from "@sagittal/general"
@@ -38,75 +35,10 @@ import {
     Sagitype,
     StepDefinition,
 } from "../../../../src"
-import { computeStepSize } from "../../../../src/notations/edo/size"
 import { TEMPERED_THREES_ONLY_METHOD, TemperedThreesOnlyMethod } from "../../../../src/notations/edo/types"
 import { formatMap, formatVector, formatQuotient } from "@sagittal/general/dist/cjs/io"
 import { JI_FIFTH_SIZE } from "../../../../src/notations/edo/constants"
-import { EtStep, Per } from "@sagittal/general/dist/cjs/music/rtt/types"
-import { Octaves } from "@sagittal/general/dist/cjs/music"
-
-// TODO could also be a @sagittal/general helper for indexOf that preserves type,
-// that could be used a couple times below here
-//
-// finally, note this computeMap is a lot like computeSimpleMap in the @sagittal/general repo.
-// dunno if you can effectively DRY them up or anything, though
-// probably @sagittal/general should just be able to make a simple map as a special case of making a warted map, or something
-// map from ET name or something
-
-const WART_ALPHABET: string = "abcdefghijklmno"
-
-const computeMap = (etName: EtName, primeLimit: Max<Prime>): Map => {
-    const edo: Edo = parseInt(etName.match(/\d*/)![0]) as Edo
-    const wartedPrimeIndices: Index<Prime>[] = Array.from(etName.match(/[a-z]/g) || []).map(
-        (wart: string): Index<Prime> => WART_ALPHABET.indexOf(wart) as Index<Prime>,
-    )
-
-    const stepSize: Cents = computeStepSize(edo)
-
-    const allPrimes: Prime[] = computePrimes(primeLimit)
-    const maxPrimeIndex: Index<Prime> = allPrimes.indexOf(primeLimit) as Index<Prime>
-    const primes: Prime[] = allPrimes.slice(0, maxPrimeIndex + ZERO_ONE_INDEX_DIFF)
-
-    return primes.map((prime: Prime, primeIndex: number): Per<Count<EtStep>, Prime> => {
-        return computeStepCount(prime, stepSize, wartedPrimeIndices.includes(primeIndex as Index<Prime>))
-    })
-}
-
-const computeStepCount = (
-    prime: Prime,
-    stepSize: Cents,
-    isPrimeWarted: boolean,
-): Per<Count<EtStep>, Prime> => {
-    const jiPrimeSize = computeCentsFromPitch(computeScaledVectorFromDecimal(prime))
-
-    let currentBestApproximationCandidate: Cents = 0 as Cents
-    let previousBestApproximationCandidate: Cents = 0 as Cents
-    let currentStep: Per<Count<EtStep>, Prime> = 0 as Per<Count<EtStep>, Prime>
-    while (currentBestApproximationCandidate < jiPrimeSize) {
-        currentStep++
-        previousBestApproximationCandidate = currentBestApproximationCandidate
-        currentBestApproximationCandidate = (stepSize * currentStep) as Cents
-    }
-
-    const wideCandidateError: Cents = (currentBestApproximationCandidate - jiPrimeSize) as Cents
-    const narrowCandidateError: Cents = (jiPrimeSize - previousBestApproximationCandidate) as Cents
-
-    return wideCandidateError < narrowCandidateError
-        ? isPrimeWarted
-            ? ((currentStep - 1) as Per<Count<EtStep>, Prime>)
-            : (currentStep as Per<Count<EtStep>, Prime>)
-        : isPrimeWarted
-        ? (currentStep as Per<Count<EtStep>, Prime>)
-        : ((currentStep - 1) as Per<Count<EtStep>, Prime>)
-}
-
-const temperComma = (comma: Comma, simpleMap: Map): EdoStep => {
-    return comma.vector.reduce(
-        (edoStep: EdoStep, primeCount: PrimeCount, primeIndex: number): EdoStep =>
-            (edoStep + simpleMap[primeIndex] * primeCount) as EdoStep,
-        0 as EdoStep,
-    )
-}
+import { EtStep, mapVector, Octaves } from "@sagittal/general/dist/cjs/music"
 
 const expectStepDefinition = (
     { sagitype, validCommas, alternativeJustifications }: StepDefinition,
@@ -206,7 +138,7 @@ const expectValidCommaByMapMethod = (
         two3FreeClassAnalysis: { two3FreePrimeLimit: primeLimit },
     }: CommaAnalysis = analyzeComma(comma)
     const map: Map = computeMap(etName, primeLimit)
-    const temperedCommaSteps: EdoStep = temperComma(comma, map)
+    const temperedCommaSteps: Count<EtStep> = mapVector(comma.vector, map)
 
     expect(temperedCommaSteps)
         .withContext(
@@ -222,7 +154,7 @@ const expectValidCommaByMapMethod = (
                 computeQuotientFromVector(comma.vector),
             )}, ${formatVector(comma.vector)}) tempers to ${temperedCommaSteps}\\${edoNotationName}`,
         )
-        .toBe(sagittalIndex as number as EdoStep)
+        .toBe(sagittalIndex as number as Count<EtStep>)
 }
 
 const expectValidCommaByTemperedThreesOnlyMethod = (

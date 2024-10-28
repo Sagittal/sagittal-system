@@ -1,7 +1,7 @@
 import { Cents, Count, computeRange, mod, Edo, EdoStep, abs, Error } from "@sagittal/general"
 import { EdoNotationName, StepWithError } from "./types"
 import { parseEdoNotationName } from "./name"
-import { computeStepSize } from "./size"
+import { computeStepSize } from "../../../../general/src/music/edo/size"
 import { JI_FIFTH_SIZE } from "./constants"
 
 const FIFTHS_UNTIL_SHARP: Count = 7 as Count
