@@ -45,12 +45,7 @@ import { JI_FIFTH_SIZE } from "../../../../src/notations/edo/constants"
 import { EtStep, Per } from "@sagittal/general/dist/cjs/music/rtt/types"
 import { Octaves } from "@sagittal/general/dist/cjs/music"
 
-// TODO: in @sagittal/general make an Error type which is a nominally typed Cents
-// (btw am a mis - thinking of error as inherently abs val somewhere ?)
-// and EdoStep should actually be an alias for like Generator<{ rank: 1 }>
-// and figure out what's the relationship between Step and EdoStep
-//
-// could also be a @sagittal/general helper for indexOf that preserves type,
+// TODO could also be a @sagittal/general helper for indexOf that preserves type,
 // that could be used a couple times below here
 //
 // finally, note this computeMap is a lot like computeSimpleMap in the @sagittal/general repo.

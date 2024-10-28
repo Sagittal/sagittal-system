@@ -1,5 +1,5 @@
 import {
-    Cents,
+    Error,
     Comma,
     Decimal,
     EtName,
@@ -43,7 +43,7 @@ type SubsetFactor = Decimal<{ integer: true }> & {
 
 interface StepWithError {
     step: EdoStep
-    error: Abs<Cents>
+    error: Abs<Error>
 }
 
 enum SectionColor {
