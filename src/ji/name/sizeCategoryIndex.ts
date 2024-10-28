@@ -1,6 +1,7 @@
-import {Comma, Index} from "@sagittal/general"
-import {computeSizeCategory} from "./sizeCategory"
-import {SizeCategory} from "./types"
+import { Comma, Index } from "@sagittal/general"
+import { computeSizeCategory } from "./sizeCategory"
+import { SizeCategory } from "./types"
+import { indexOf } from "@sagittal/general/dist/cjs/code"
 
 const computeSizeCategoryIndex = (comma: Comma): Index<SizeCategory> => {
     const sizeCategory = computeSizeCategory(comma)
@@ -9,9 +10,6 @@ const computeSizeCategoryIndex = (comma: Comma): Index<SizeCategory> => {
 }
 
 const computeSizeCategoryIndexFromSizeCategory = (sizeCategory: SizeCategory): Index<SizeCategory> =>
-    Object.values(SizeCategory).indexOf(sizeCategory) as Index<SizeCategory>
+    indexOf(Object.values(SizeCategory), sizeCategory)
 
-export {
-    computeSizeCategoryIndex,
-    computeSizeCategoryIndexFromSizeCategory,
-}
+export { computeSizeCategoryIndex, computeSizeCategoryIndexFromSizeCategory }
