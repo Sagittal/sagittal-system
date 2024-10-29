@@ -106,7 +106,7 @@ describe("computeCommaName", (): void => {
         expect(computeCommaName({ vector: [-18, 10, -1, 0, 0, 0, 0, 0, 1] } as Comma)).toBe("23/5L")
     })
 
-    it("says 'down' when the comma is negative", (): void => {
+    it("says 'down' when the comma (not the comma name quotient) is subunison", (): void => {
         const comma = { vector: [-40, 22, 1, 1] } as Comma
 
         const actual = computeCommaName(comma)

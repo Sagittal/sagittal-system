@@ -25,12 +25,12 @@ const removeParentheses = (string: string): string => string.replace("(", BLANK)
 
 // "Sized comma name"
 
+// TODO: here's the plan for these: https://docs.google.com/spreadsheets/d/1MHNYViphoZaQKY-6vgQogdaG2Zxh7ScpRFSPMc9R4M0/edit?gid=1229301338#gid=1229301338
+
 const computeCommaName = (comma: Comma, options: CommaNameOptions = {}): Name<Comma> => {
     if (!isCommaSized(comma)) {
         throw new Error(
-            `Comma ${stringify(
-                comma,
-            )} is outside of comma-sized range and cannot be named: ${formatCents(
+            `Comma ${stringify(comma)} is outside of comma-sized range and cannot be named: ${formatCents(
                 computeCentsFromPitch(comma),
             )}`,
         )
@@ -57,10 +57,7 @@ const computeCommaName = (comma: Comma, options: CommaNameOptions = {}): Name<Co
         : SIZE_CATEGORY_NAMES[sizeCategory]
 
     let formattedCommaNameQuotient
-    if (
-        isRationalScaledVectorSmooth(comma, THREE_SMOOTHNESS) &&
-        !isRationalScaledVectorUnison(comma)
-    ) {
+    if (isRationalScaledVectorSmooth(comma, THREE_SMOOTHNESS) && !isRationalScaledVectorUnison(comma)) {
         formattedCommaNameQuotient = "3"
     } else {
         const commaNameQuotient = computeCommaNameQuotient(comma)
@@ -76,10 +73,10 @@ const computeCommaName = (comma: Comma, options: CommaNameOptions = {}): Name<Co
                     ? removeParentheses(stringifiedQuotient[0])
                     : stringifiedQuotient.join("/")
         } else {
-            const stringifiedQuotient = formatCommaNameQuotient(
-                computeSubQuotient(commaNameQuotient),
-                { factoringMode, ascii },
-            )
+            const stringifiedQuotient = formatCommaNameQuotient(computeSubQuotient(commaNameQuotient), {
+                factoringMode,
+                ascii,
+            })
 
             formattedCommaNameQuotient =
                 stringifiedQuotient[0] === "1"

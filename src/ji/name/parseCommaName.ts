@@ -15,8 +15,8 @@ import {
 import { CommaNameQuotient, ParsedCommaName, SizeCategory, SizeCategoryName } from "./types"
 
 // TODO: COMMA NAMES
-//  And there's also some new stuff that needs to be parsed, like scaled vectors, half commas, default commas per size
-//  Category, hyphens v spaces, and preferred outputs http://forum.sagittal.org/viewtopic.php?p=3105#p3105
+//  And there's also some new stuff that needs to be parsed, like scaled vectors, half commas, 
+//  default commas per size category, hyphens v spaces, and preferred outputs http://forum.sagittal.org/viewtopic.php?p=3105#p3105
 //  All answers here now: http://forum.sagittal.org/viewtopic.php?p=3106#p3106
 //  - There's also complex name parsing
 //  Eventually add a third element to parsedCommaName: complexity, affecting what it returns
@@ -25,6 +25,7 @@ import { CommaNameQuotient, ParsedCommaName, SizeCategory, SizeCategoryName } fr
 //  Most recent questions here: http://forum.sagittal.org/viewtopic.php?p=2980#p2980
 //  1c3C = c3C = 41e3C and
 //  0c3C = 3C = 12e3C.
+// 
 //  more about 5²⋅7S vs 25⋅7S....
 //  I don't know if we previously agreed on how to factor them, as opposed to when.
 //  But I now think the way is to first separate them into prime powers (as integers, not exponential expressions),
