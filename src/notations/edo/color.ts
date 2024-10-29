@@ -1,8 +1,7 @@
-import { Cents, CENTS_PER_OCTAVE, HexColor, PHI, Edo, EdoStep } from "@sagittal/general"
+import { Cents, CENTS_PER_OCTAVE, HexColor, PHI, Edo, EdoStep, computeStepSize } from "@sagittal/general"
 import { EdoNotationName, SectionColor } from "./types"
 import { parseEdoNotationName } from "./name"
 import { computeFifthStep } from "./steps"
-import { computeStepSize } from "../../../../general/src/music/edo/size"
 
 const BLACK_GOLD_BOUNDARY: number = (1 + 2 * PHI) / (1 + 3 * PHI)
 const GOLD_GREEN_BOUNDARY: number = (13 + 3 * PHI) / (22 + 5 * PHI)
