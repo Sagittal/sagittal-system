@@ -75,7 +75,7 @@ describe("computeCommaName", (): void => {
     it("works for a comma which is sub", (): void => {
         const comma = { vector: [-4, 4, -1] } as Comma
 
-        const actual = computeCommaName(comma)
+        const actual = computeCommaName(comma, { directedNumbers: DirectedNumbers.ON })
 
         const expected = "1/5C"
         expect(actual).toBe(expected)
@@ -99,12 +99,12 @@ describe("computeCommaName", (): void => {
     })
 
     it("assigns the correct size category", (): void => {
-        expect(computeCommaName({ vector: [5, -3, 1, -1, -1, 1] } as Comma)).toBe("65/77n")
+        expect(computeCommaName({ vector: [5, -3, 1, -1, -1, 1] } as Comma)).toBe("77/65n up")
         expect(computeCommaName({ vector: [-15, 8, 1] } as Comma)).toBe("5s")
-        expect(computeCommaName({ vector: [-7, 7, 0, 0, 0, 0, -1] } as Comma)).toBe("1/17k")
+        expect(computeCommaName({ vector: [-7, 7, 0, 0, 0, 0, -1] } as Comma)).toBe("17k up")
         expect(computeCommaName({ vector: [-12, 5, 0, 0, 0, 0, 1] } as Comma)).toBe("17C")
         expect(computeCommaName({ vector: [1, -2, -1, 0, 0, 0, 0, 0, 1] } as Comma)).toBe("23/5S")
-        expect(computeCommaName({ vector: [7, -3, 1, 0, 0, 0, 0, 0, -1] } as Comma)).toBe("5/23M")
+        expect(computeCommaName({ vector: [7, -3, 1, 0, 0, 0, 0, 0, -1] } as Comma)).toBe("23/5M up")
         expect(computeCommaName({ vector: [-18, 10, -1, 0, 0, 0, 0, 0, 1] } as Comma)).toBe("23/5L")
     })
 
@@ -152,7 +152,10 @@ describe("computeCommaName", (): void => {
     it("when factoring a denominator, and there is more than one different prime factor, puts the denominator in parentheses to disambiguate order of operations", (): void => {
         const comma = { vector: [12, -2, -1, -1, 0, -1] } as Comma
 
-        const actual = computeCommaName(comma, { factoringMode: FactoringMode.ALWAYS })
+        const actual = computeCommaName(comma, {
+            factoringMode: FactoringMode.ALWAYS,
+            directedNumbers: DirectedNumbers.ON,
+        })
 
         const expected = "1/(5⋅7⋅13)n"
         expect(actual).toBe(expected)
@@ -174,16 +177,16 @@ describe("computeCommaName", (): void => {
     it("when factoring a denominator, and there is more than one prime factor but they're all the same, does not need to put the denominator in parentheses to disambiguate order of operations, so it doesn't", (): void => {
         const comma = { vector: [9, -1, 0, 0, 0, -2] } as Comma
 
-        const actual = computeCommaName(comma)
+        const actual = computeCommaName(comma, { directedNumbers: DirectedNumbers.ON })
 
         const expected = "1/13²C"
         expect(actual).toBe(expected)
     })
 
-    it("the default threshold factoring mode does not factor 125, even though it has > 2 prime factors                    ", (): void => {
+    it("the default threshold factoring mode does not factor 125, even though it has > 2 prime factors", (): void => {
         const comma = { vector: [1, 2, -3, 1] } as Comma
 
-        const actual = computeCommaName(comma)
+        const actual = computeCommaName(comma, { directedNumbers: DirectedNumbers.ON })
 
         const expected = "7/125C"
         expect(actual).toBe(expected)
@@ -192,7 +195,7 @@ describe("computeCommaName", (): void => {
     it("the default threshold factoring mode does not factor 65, even though it has gpf > 11", (): void => {
         const comma = { vector: [1, 1, -1, 0, 1, -1] } as Comma
 
-        const actual = computeCommaName(comma)
+        const actual = computeCommaName(comma, { directedNumbers: DirectedNumbers.ON })
 
         const expected = "11/65C"
         expect(actual).toBe(expected)
@@ -201,7 +204,7 @@ describe("computeCommaName", (): void => {
     it("the default threshold factoring mode does not factor 143, even though it has gpf > 11", (): void => {
         const comma = { vector: [4, 2, 0, 0, -1, -1] } as Comma
 
-        const actual = computeCommaName(comma)
+        const actual = computeCommaName(comma, { directedNumbers: DirectedNumbers.ON })
 
         const expected = "1/143C"
         expect(actual).toBe(expected)
@@ -255,7 +258,7 @@ describe("computeCommaName", (): void => {
     it("has an ASCII option which uses asterisks instead of dot operator symbols and caret operators instead of superscript", (): void => {
         const comma = { vector: [-9, 13, -2, 0, -2] } as Comma
 
-        const actual = computeCommaName(comma, { ascii: true })
+        const actual = computeCommaName(comma, { ascii: true, directedNumbers: DirectedNumbers.ON })
 
         const expected = "1/(5^2*11^2)M"
         expect(actual).toBe(expected)

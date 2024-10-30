@@ -91,6 +91,8 @@ export {
     analyzePotentiallyComma,
     PotentiallyCommaAnalysis,
     SizeCategory,
+    DirectedNumbers,
+    DirectedWord,
 } from "./ji"
 export {
     computeMaybeCommaClassId,

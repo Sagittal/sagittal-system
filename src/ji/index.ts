@@ -28,6 +28,8 @@ export {
     computeSizeCategory,
     computeSizeCategoryIndex,
     SizeCategory,
+    DirectedNumbers,
+    DirectedWord,
 } from "./name"
 export {
     CommaAnalysis,

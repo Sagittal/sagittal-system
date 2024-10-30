@@ -26,18 +26,20 @@ import { CommaNameOptions, DirectedNumbers, DirectedWord, FactoringMode, SizeCat
 
 const removeParentheses = (string: string): string => string.replace("(", BLANK).replace(")", BLANK)
 
+const computeWord = (commaIsDown: boolean): string => commaIsDown ? " down" : " up"
+
 const computeMaybeDown = (
     comma: Comma,
     { directedNumbers, directedWord }: { directedNumbers: DirectedNumbers; directedWord: DirectedWord },
 ): string => {
     const commaIsDown: boolean = isRationalScaledVectorSub(comma)
     if (directedWord === DirectedWord.ALWAYS) {
-        return commaIsDown ? " down" : " up"
+        return computeWord(commaIsDown)
     } else if (directedWord === DirectedWord.NEVER) {
         return ""
     } else {
         if (directedNumbers === DirectedNumbers.OFF_WITH_COLON) {
-            return commaIsDown ? " down" : " up"
+            return computeWord(commaIsDown)
         } else if (directedNumbers === DirectedNumbers.ON) {
             return ""
         } else {
@@ -45,9 +47,7 @@ const computeMaybeDown = (
                 computeCommaNameQuotient(computeSuperScaledVector(comma) as ScaledVector as Comma),
             )
 
-            console.log("commaIsDown", commaIsDown)
-            console.log("commaNameQuotientIsDown", commaNameQuotientIsDown)
-            return commaIsDown === commaNameQuotientIsDown ? "" : commaIsDown ? " down" : " up" // TODO: DRY up these three occurrences of same
+            return commaIsDown === commaNameQuotientIsDown ? "" : computeWord(commaIsDown)
         }
     }
 }
@@ -67,7 +67,7 @@ const computeCommaName = (comma: Comma, options: CommaNameOptions = {}): Name<Co
     }
 
     const {
-        directedNumbers = DirectedNumbers.ON,
+        directedNumbers = DirectedNumbers.OFF,
         directedWord = DirectedWord.CONDITIONALLY,
         factoringMode = FactoringMode.THRESHOLD,
         abbreviated = true,
