@@ -12,11 +12,11 @@ import {
 import { CommaNameQuotient } from "./types"
 
 const computeCommaNameQuotient = (comma: Comma): CommaNameQuotient => {
-    const superComma = computeSuperScaledVector(comma) as Comma<{
-        rational: true
-        direction: Direction.SUPER
-    }>
-    const superVector = computeRationalVectorFromRationalScaledVector(superComma)
+    // const superComma = computeSuperScaledVector(comma) as Comma<{
+    //     rational: true
+    //     direction: Direction.SUPER
+    // }>
+    const superVector = computeRationalVectorFromRationalScaledVector(comma)
     const two3FreeSuperVector = computeRoughRationalVector(superVector, TWO_3_FREE) as Vector<{
         rational: true
         rough: 5

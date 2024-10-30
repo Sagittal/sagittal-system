@@ -1,5 +1,6 @@
-import { Comma } from "@sagittal/general"
+import { Comma, deepClone, invertScaledVector } from "@sagittal/general"
 import { computeCommaName, FactoringMode } from "../../../../src"
+import { DirectedNumbers, DirectedWord } from "../../../../src/ji/name/types"
 
 describe("computeCommaName", (): void => {
     it("given a comma will return its sized comma name", (): void => {
@@ -14,7 +15,10 @@ describe("computeCommaName", (): void => {
     it("can return the name in undirected form", (): void => {
         const comma = { vector: [5, -7, -1, 3] } as Comma
 
-        const actual = computeCommaName(comma, { directed: false })
+        const actual = computeCommaName(comma, {
+            directedNumbers: DirectedNumbers.OFF_WITH_COLON,
+            directedWord: DirectedWord.NEVER,
+        })
 
         const expected = "5:7³k"
         expect(actual).toBe(expected)
@@ -42,11 +46,11 @@ describe("computeCommaName", (): void => {
         const comma = { vector: [5, -7, -1, 3] } as Comma
 
         const actual = computeCommaName(comma, {
-            directed: false,
+            directedNumbers: DirectedNumbers.OFF_WITH_COLON,
             factoringMode: FactoringMode.NEVER,
         })
 
-        const expected = "5:343k"
+        const expected = "5:343k up"
         expect(actual).toBe(expected)
     })
 
@@ -82,9 +86,7 @@ describe("computeCommaName", (): void => {
 
         expect((): void => {
             computeCommaName(comma)
-        }).toThrowError(
-            `Comma {"vector":[1]} is outside of comma-sized range and cannot be named: 1200.000¢`,
-        )
+        }).toThrowError(`Comma {"vector":[1]} is outside of comma-sized range and cannot be named: 1200.000¢`)
     })
 
     it("works when the vector is empty", (): void => {
@@ -106,15 +108,6 @@ describe("computeCommaName", (): void => {
         expect(computeCommaName({ vector: [-18, 10, -1, 0, 0, 0, 0, 0, 1] } as Comma)).toBe("23/5L")
     })
 
-    it("says 'down' when the comma (not the comma name quotient) is subunison", (): void => {
-        const comma = { vector: [-40, 22, 1, 1] } as Comma
-
-        const actual = computeCommaName(comma)
-
-        const expected = "1/35s down"
-        expect(actual).toBe(expected)
-    })
-
     it("assumes (does not show) an 'over one'", (): void => {
         const comma = { vector: [-5, 1, 0, 0, 1] } as Comma
 
@@ -127,7 +120,7 @@ describe("computeCommaName", (): void => {
     it("assumes (does not show) an 'over one', even when it is in undirected mode", (): void => {
         const comma = { vector: [-5, 1, 0, 0, 1] } as Comma
 
-        const actual = computeCommaName(comma, { directed: false })
+        const actual = computeCommaName(comma, { directedNumbers: DirectedNumbers.OFF })
 
         const expected = "11M"
         expect(actual).toBe(expected)
@@ -137,9 +130,10 @@ describe("computeCommaName", (): void => {
         const comma = { vector: [-9, 13, -2, 0, -2] } as Comma
 
         const actual = computeCommaName(comma, {
-            directed: false,
+            directedNumbers: DirectedNumbers.OFF_WITH_COLON,
             abbreviated: false,
             factoringMode: FactoringMode.ALWAYS,
+            directedWord: DirectedWord.NEVER,
         })
 
         const expected = "5²⋅11²-Medium-Diesis"
@@ -169,7 +163,8 @@ describe("computeCommaName", (): void => {
 
         const actual = computeCommaName(comma, {
             factoringMode: FactoringMode.ALWAYS,
-            directed: false,
+            directedNumbers: DirectedNumbers.OFF_WITH_COLON,
+            directedWord: DirectedWord.NEVER,
         })
 
         const expected = "11:5⋅17M"
@@ -264,5 +259,251 @@ describe("computeCommaName", (): void => {
 
         const expected = "1/(5^2*11^2)M"
         expect(actual).toBe(expected)
+    })
+
+    describe("different types of directedness", (): void => {
+        describe("works for a comma whose name's quotient's direction matches its direction", (): void => {
+            const baseComma = { vector: [-4, 4, -1] } as Comma
+
+            it("when the comma is up", (): void => {
+                const comma = deepClone(baseComma)
+
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.ON,
+                        directedWord: DirectedWord.ALWAYS,
+                    }),
+                ).toBe("1/5C up")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.ON,
+                        directedWord: DirectedWord.CONDITIONALLY,
+                    }),
+                ).toBe("1/5C")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.ON,
+                        directedWord: DirectedWord.NEVER,
+                    }),
+                ).toBe("1/5C")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.OFF,
+                        directedWord: DirectedWord.ALWAYS,
+                    }),
+                ).toBe("5C up")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.OFF,
+                        directedWord: DirectedWord.CONDITIONALLY,
+                    }),
+                ).toBe("5C up")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.OFF,
+                        directedWord: DirectedWord.NEVER,
+                    }),
+                ).toBe("5C")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.OFF_WITH_COLON,
+                        directedWord: DirectedWord.ALWAYS,
+                    }),
+                ).toBe("5C up")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.OFF_WITH_COLON,
+                        directedWord: DirectedWord.CONDITIONALLY,
+                    }),
+                ).toBe("5C up")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.OFF_WITH_COLON,
+                        directedWord: DirectedWord.NEVER,
+                    }),
+                ).toBe("5C")
+            })
+
+            it("when the comma is down", (): void => {
+                const comma = invertScaledVector(baseComma) as Comma
+
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.ON,
+                        directedWord: DirectedWord.ALWAYS,
+                    }),
+                ).toBe("5C down")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.ON,
+                        directedWord: DirectedWord.CONDITIONALLY,
+                    }),
+                ).toBe("5C")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.ON,
+                        directedWord: DirectedWord.NEVER,
+                    }),
+                ).toBe("5C")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.OFF,
+                        directedWord: DirectedWord.ALWAYS,
+                    }),
+                ).toBe("5C down")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.OFF,
+                        directedWord: DirectedWord.CONDITIONALLY,
+                    }),
+                ).toBe("5C")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.OFF,
+                        directedWord: DirectedWord.NEVER,
+                    }),
+                ).toBe("5C")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.OFF_WITH_COLON,
+                        directedWord: DirectedWord.ALWAYS,
+                    }),
+                ).toBe("5C down")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.OFF_WITH_COLON,
+                        directedWord: DirectedWord.CONDITIONALLY,
+                    }),
+                ).toBe("5C down")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.OFF_WITH_COLON,
+                        directedWord: DirectedWord.NEVER,
+                    }),
+                ).toBe("5C")
+            })
+        })
+
+        describe("works for a comma whose name's quotient's direction is the opposite of its direction", (): void => {
+            const baseComma = { vector: [5, -4, -1, 0, 0, 1] } as Comma
+
+            it("when the comma is up", (): void => {
+                const comma = deepClone(baseComma)
+
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.ON,
+                        directedWord: DirectedWord.ALWAYS,
+                    }),
+                ).toBe("13/5M up")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.ON,
+                        directedWord: DirectedWord.CONDITIONALLY,
+                    }),
+                ).toBe("13/5M")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.ON,
+                        directedWord: DirectedWord.NEVER,
+                    }),
+                ).toBe("13/5M")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.OFF,
+                        directedWord: DirectedWord.ALWAYS,
+                    }),
+                ).toBe("13/5M up")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.OFF,
+                        directedWord: DirectedWord.CONDITIONALLY,
+                    }),
+                ).toBe("13/5M")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.OFF,
+                        directedWord: DirectedWord.NEVER,
+                    }),
+                ).toBe("13/5M")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.OFF_WITH_COLON,
+                        directedWord: DirectedWord.ALWAYS,
+                    }),
+                ).toBe("5:13M up")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.OFF_WITH_COLON,
+                        directedWord: DirectedWord.CONDITIONALLY,
+                    }),
+                ).toBe("5:13M up")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.OFF_WITH_COLON,
+                        directedWord: DirectedWord.NEVER,
+                    }),
+                ).toBe("5:13M")
+            })
+
+            it("when the comma is down", (): void => {
+                const comma = invertScaledVector(baseComma) as Comma
+
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.ON,
+                        directedWord: DirectedWord.ALWAYS,
+                    }),
+                ).toBe("5/13M down")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.ON,
+                        directedWord: DirectedWord.CONDITIONALLY,
+                    }),
+                ).toBe("5/13M")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.ON,
+                        directedWord: DirectedWord.NEVER,
+                    }),
+                ).toBe("5/13M")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.OFF,
+                        directedWord: DirectedWord.ALWAYS,
+                    }),
+                ).toBe("13/5M down")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.OFF,
+                        directedWord: DirectedWord.CONDITIONALLY,
+                    }),
+                ).toBe("13/5M down")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.OFF,
+                        directedWord: DirectedWord.NEVER,
+                    }),
+                ).toBe("13/5M")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.OFF_WITH_COLON,
+                        directedWord: DirectedWord.ALWAYS,
+                    }),
+                ).toBe("5:13M down")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.OFF_WITH_COLON,
+                        directedWord: DirectedWord.CONDITIONALLY,
+                    }),
+                ).toBe("5:13M down")
+                expect(
+                    computeCommaName(comma, {
+                        directedNumbers: DirectedNumbers.OFF_WITH_COLON,
+                        directedWord: DirectedWord.NEVER,
+                    }),
+                ).toBe("5:13M")
+            })
+        })
     })
 })

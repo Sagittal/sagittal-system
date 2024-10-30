@@ -40,8 +40,21 @@ enum SizeCategory {
 type SizeCategoryName = string & { _SizeCategoryNameBrand: boolean }
 type SizeCategoryAbbreviation = string & { _SizeCategoryAbbreviationBrand: boolean }
 
+enum DirectedNumbers {
+    ON,
+    OFF,
+    OFF_WITH_COLON,
+}
+
+enum DirectedWord {
+    ALWAYS,
+    CONDITIONALLY,
+    NEVER,
+}
+
 type CommaNameOptions = Partial<{
-    directed: boolean
+    directedNumbers: DirectedNumbers
+    directedWord: DirectedWord
     factoringMode: FactoringMode
     abbreviated: boolean
     ascii: boolean
@@ -56,9 +69,9 @@ type CommaNameOptions = Partial<{
 // Note, however, that when you return the 2's and 3's to this to make it comma-sized, of the size of its name,
 // It WILL be super! This is a subtle but critical point.
 // You can observe this difference in ordering in commaName.ts and two3FreeClass.ts
-type CommaNameQuotient<T extends NumericProperties = {}> = Quotient<
-    T & { rational: true; rough: 3 }
-> & { _CommaNameQuotientBrand: boolean }
+type CommaNameQuotient<T extends NumericProperties = {}> = Quotient<T & { rational: true; rough: 3 }> & {
+    _CommaNameQuotientBrand: boolean
+}
 
 interface ParsedCommaName {
     complexity?: Complexity
@@ -82,4 +95,6 @@ export {
     SizeCategoryBound,
     FactoringMode,
     MaybeComplexOptions,
+    DirectedNumbers,
+    DirectedWord,
 }
