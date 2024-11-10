@@ -1,4 +1,4 @@
-import { shallowClone, sort } from "@sagittal/general"
+import { computeKeyPath, shallowClone, sort } from "@sagittal/general"
 import { JI_NOTATION_LEVELS_COMMA_CLASS_IDS, JiNotationLevelId } from "../../../../../../src"
 
 describe("JI_NOTATION_LEVELS_COMMA_CLASS_IDS", (): void => {
@@ -14,16 +14,24 @@ describe("JI_NOTATION_LEVELS_COMMA_CLASS_IDS", (): void => {
     //  It's because they need to be sorted by their indices, not their IDs
     it("keeps the comma class IDs in each level sorted", (): void => {
         expect(JI_NOTATION_LEVELS_COMMA_CLASS_IDS[JiNotationLevelId.MEDIUM]).toEqual(
-            sort(shallowClone(JI_NOTATION_LEVELS_COMMA_CLASS_IDS[JiNotationLevelId.MEDIUM])),
+            sort(shallowClone(JI_NOTATION_LEVELS_COMMA_CLASS_IDS[JiNotationLevelId.MEDIUM]), {
+                by: computeKeyPath(0),
+            }),
         )
         expect(JI_NOTATION_LEVELS_COMMA_CLASS_IDS[JiNotationLevelId.HIGH]).toEqual(
-            sort(shallowClone(JI_NOTATION_LEVELS_COMMA_CLASS_IDS[JiNotationLevelId.HIGH])),
+            sort(shallowClone(JI_NOTATION_LEVELS_COMMA_CLASS_IDS[JiNotationLevelId.HIGH]), {
+                by: computeKeyPath(0),
+            }),
         )
         expect(JI_NOTATION_LEVELS_COMMA_CLASS_IDS[JiNotationLevelId.ULTRA]).toEqual(
-            sort(shallowClone(JI_NOTATION_LEVELS_COMMA_CLASS_IDS[JiNotationLevelId.ULTRA])),
+            sort(shallowClone(JI_NOTATION_LEVELS_COMMA_CLASS_IDS[JiNotationLevelId.ULTRA]), {
+                by: computeKeyPath(0),
+            }),
         )
         expect(JI_NOTATION_LEVELS_COMMA_CLASS_IDS[JiNotationLevelId.EXTREME]).toEqual(
-            sort(shallowClone(JI_NOTATION_LEVELS_COMMA_CLASS_IDS[JiNotationLevelId.EXTREME])),
+            sort(shallowClone(JI_NOTATION_LEVELS_COMMA_CLASS_IDS[JiNotationLevelId.EXTREME]), {
+                by: computeKeyPath(0),
+            }),
         )
     })
 })
