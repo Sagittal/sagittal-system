@@ -10,6 +10,7 @@ import {
     Quotient,
     QuotientPart,
     Rational,
+    stringify,
 } from "@sagittal/general"
 import { FactoringMode } from "./types"
 
@@ -50,7 +51,7 @@ const formatFactoredCommaNameQuotientPart = (
 }
 
 const formatUnfactoredCommaNameQuotientPart = (commaNameQuotientPart: QuotientPart): string =>
-    commaNameQuotientPart.toString()
+    stringify(commaNameQuotientPart)
 
 const computeShouldFactor = (commaNameQuotientPart: QuotientPart): boolean => {
     if (computeRationalDecimalCopfr(commaNameQuotientPart) > 2 && commaNameQuotientPart !== 125) return true

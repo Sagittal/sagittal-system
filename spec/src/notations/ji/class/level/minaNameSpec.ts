@@ -1,4 +1,4 @@
-// Import {ceil, Count, decrement, increment, Name} from "@sagittal/general"
+// Import {ceil, Count, decrement, increment, Name, stringify} from "@sagittal/general"
 // Import {computeRange} from "../../../../../src/general/code"
 // Import {Max} from "../../../../../src/general/math"
 // Import {subtractPitch} from "../../../../../src/general/music"
@@ -31,7 +31,7 @@
 //         Const minaRange = computeRange(MAX_MINA)
 //
 //         MinaRange.forEach((mina: Minas): void => {
-//             Expect(getMinaName(commaClassId)).toBe(mina.toString())
+//             Expect(getMinaName(commaClassId)).toBe(stringify(mina))
 //             CommaClassId = increment(commaClassId)
 //
 //             If (SPLIT_MINAS.includes(mina)) {
