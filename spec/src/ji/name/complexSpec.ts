@@ -3,7 +3,7 @@ import { SizeCategory } from "../../../../src"
 import { computeMaybeComplex } from "../../../../src/ji/name/complex"
 
 describe("computeMaybeComplex", (): void => {
-    it("returns blank for a comma which is the simplest comma with its (undirected) quotient and size category           ", (): void => {
+    it("returns blank for a comma which is the simplest comma with its (undirected) quotient and size category", (): void => {
         const comma = { vector: [-4, 4, -1] } as Comma
         const sizeCategory = SizeCategory.COMMA
         const abbreviated = false
@@ -13,7 +13,7 @@ describe("computeMaybeComplex", (): void => {
         expect(actual).toBe(BLANK)
     })
 
-    it("works for a comma that is more complex than another with its same (undirected) quotient and size category          ", (): void => {
+    it("works for a comma that is more complex than another with its same (undirected) quotient and size category", (): void => {
         const comma = { vector: [-34, 20, 1] } as Comma
         const sizeCategory = SizeCategory.COMMA
         const abbreviated = false

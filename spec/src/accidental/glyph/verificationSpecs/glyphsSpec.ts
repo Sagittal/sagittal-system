@@ -1157,7 +1157,7 @@ describe("glyphs", (): void => {
         expect(accentGlyphExpectations).toEqual(expected)
     })
 
-    it("has the correct accent glyphs and computes their IO correctly (when oriented against, or anti-, their core)              ", (): void => {
+    it("has the correct accent glyphs and computes their IO correctly (when oriented against, or anti-, their core)", (): void => {
         const accentIds = Object.values(AccentId) as AccentId[]
         const accentGlyphExpectations = accentIds.reduce(
             (

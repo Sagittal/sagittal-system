@@ -35,7 +35,7 @@ describe("computeAccidental", (): void => {
         }).toThrowError("Invalid sagittal due to being beyond the double apotome: ,\\Y/")
     })
 
-    it("understands that sagittals way beyond the double apotome are invalid (but catches it at the core level)            ", (): void => {
+    it("understands that sagittals way beyond the double apotome are invalid (but catches it at the core level)", (): void => {
         const headId = HeadId.LEFT_SCROLL_DOUBLE_RIGHT_BARB
         const armId = ArmId.BIRD
         const shafts = Shafts.EX
@@ -68,7 +68,7 @@ describe("computeAccidental", (): void => {
         }).toThrowError("Invalid sagittal due to incorrect flag, arm, and shaft combo: ,,)|(")
     })
 
-    it("has the same validity results for sagittals whether their accents are against (anti-) their apotome or not               ", (): void => {
+    it("has the same validity results for sagittals whether their accents are against (anti-) their apotome or not", (): void => {
         const headId = HeadId.DOUBLE_BARB
         const shafts = Shafts.DOUBLE
 
@@ -104,7 +104,7 @@ describe("computeAccidental", (): void => {
         }).not.toThrow()
     })
 
-    it("understands that some single-shaft symbols can be against their Sagittal-compatible symbols, while others cannot         ", (): void => {
+    it("understands that some single-shaft symbols can be against their Sagittal-compatible symbols, while others cannot", (): void => {
         const headId = HeadId.DOUBLE_ARC
         const compatible = Compatible.SHARP
 
@@ -146,7 +146,7 @@ describe("computeAccidental", (): void => {
         }).toThrowError("Cannot combine Sagittal-compatible symbols with multi-shaft sagittals: ~||)b")
     })
 
-    it("understands that you can't combine a double-sharp or double-flat with sagittals going beyond the double apotome      ", (): void => {
+    it("understands that you can't combine a double-sharp or double-flat with sagittals going beyond the double apotome", (): void => {
         const headId = HeadId.BARE_SHAFT
         const armId = ArmId.WING
 

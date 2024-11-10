@@ -2,7 +2,7 @@ import { JiNotationLevelId } from "../../../../../../src"
 import { isWithinJiNotationLevel } from "../../../../../../src/notations/ji/class/level/isWithinLevel"
 
 describe("isWithinJiNotationLevel", (): void => {
-    it("returns true if the JI notation level is below or at to the target JI notation level, and false otherwise         ", (): void => {
+    it("returns true if the JI notation level is below or at to the target JI notation level, and false otherwise", (): void => {
         expect(isWithinJiNotationLevel(JiNotationLevelId.MEDIUM, JiNotationLevelId.INSANE)).toBeTruthy()
         expect(isWithinJiNotationLevel(JiNotationLevelId.HIGH, JiNotationLevelId.INSANE)).toBeTruthy()
         expect(isWithinJiNotationLevel(JiNotationLevelId.ULTRA, JiNotationLevelId.INSANE)).toBeTruthy()

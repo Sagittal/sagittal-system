@@ -142,7 +142,7 @@ describe("computeEvoAccidentalFromCaptureZone", (): void => {
         expect(actual).toEqual(expected)
     })
 
-    it("works for section N2T, in the area where a downward symbol accompanied by a conventional flat results               ", (): void => {
+    it("works for section N2T, in the area where a downward symbol accompanied by a conventional flat results", (): void => {
         const symbolClassId = SymbolClassId.DOUBLE_BARB
 
         const actual = computeEvoAccidentalFromCaptureZone(symbolClassId, SECTION_N2T)

@@ -81,7 +81,7 @@ describe("computeCommaName", (): void => {
         expect(actual).toBe(expected)
     })
 
-    it("throws an error when there are only 2's in the prime factoring, since it must be outside of comma range             ", (): void => {
+    it("throws an error when there are only 2's in the prime factoring, since it must be outside of comma range", (): void => {
         const comma = { vector: [1] } as Comma
 
         expect((): void => {
