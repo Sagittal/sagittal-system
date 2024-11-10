@@ -16,7 +16,7 @@ import {
 import { FactoringMode } from "./types"
 
 const formatFactoredCommaNameQuotientPart = (
-    commaNameQuotientPart: QuotientPart & Decimal<Integer>,
+    commaNameQuotientPart: QuotientPart,
     quotientPartIndex: number,
     ascii = false,
 ): string => {
@@ -52,10 +52,10 @@ const formatFactoredCommaNameQuotientPart = (
 }
 
 const formatUnfactoredCommaNameQuotientPart = (
-    commaNameQuotientPart: QuotientPart & Decimal<Integer>,
+    commaNameQuotientPart: QuotientPart,
 ): string => commaNameQuotientPart.toString()
 
-const computeShouldFactor = (commaNameQuotientPart: QuotientPart & Decimal<Integer>): boolean => {
+const computeShouldFactor = (commaNameQuotientPart: QuotientPart): boolean => {
     if (computeRationalDecimalCopfr(commaNameQuotientPart) > 2 && commaNameQuotientPart !== 125) return true
 
     return (
@@ -66,7 +66,7 @@ const computeShouldFactor = (commaNameQuotientPart: QuotientPart & Decimal<Integ
 }
 
 const formatMaybeFactoredCommaNameQuotientPart = (
-    commaNameQuotientPart: QuotientPart & Decimal<Integer>,
+    commaNameQuotientPart: QuotientPart,
     quotientPartIndex: number,
     ascii: boolean,
 ): string =>
@@ -80,14 +80,14 @@ const formatCommaNameQuotient = (
 ): string[] =>
     factoringMode === FactoringMode.ALWAYS
         ? commaNameQuotient.map(
-              (quotientPart: QuotientPart & Decimal<Integer>, quotientPartIndex: number): string => {
+              (quotientPart: QuotientPart, quotientPartIndex: number): string => {
                   return formatFactoredCommaNameQuotientPart(quotientPart, quotientPartIndex, ascii)
               },
           )
         : factoringMode === FactoringMode.NEVER
           ? commaNameQuotient.map(formatUnfactoredCommaNameQuotientPart)
           : commaNameQuotient.map(
-                (quotientPart: QuotientPart & Decimal<Integer>, quotientPartIndex: number): string => {
+                (quotientPart: QuotientPart, quotientPartIndex: number): string => {
                     return formatMaybeFactoredCommaNameQuotientPart(quotientPart, quotientPartIndex, ascii)
                 },
             )
