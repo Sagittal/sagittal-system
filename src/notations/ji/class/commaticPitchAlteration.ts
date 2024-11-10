@@ -1,12 +1,12 @@
-import { invertScaledVector, ScaledVector } from "@sagittal/general"
+import { invertScaledVector, Rational, ScaledVector } from "@sagittal/general"
 import { getCommaClass } from "./comma"
-import { getSymbolClass, SymbolClassId } from "./symbol"
 import { Section } from "./section"
+import { getSymbolClass, SymbolClassId } from "./symbol"
 
 const computeCommaticPitchAlterationFromSymbolClassIdAndSection = ([symbolClassId, section]: [
     SymbolClassId,
     Section,
-]): ScaledVector<{ rational: true }> => {
+]): ScaledVector<Rational> => {
     const symbolClass = getSymbolClass(symbolClassId)
     const commaClass = getCommaClass(symbolClass.commaClassId)
     const pitch = commaClass.pitch
@@ -14,10 +14,10 @@ const computeCommaticPitchAlterationFromSymbolClassIdAndSection = ([symbolClassI
     return section.mirrored
         ? section.negated
             ? pitch
-            : (invertScaledVector(pitch) as ScaledVector<{ rational: true }>)
+            : (invertScaledVector(pitch) as ScaledVector<Rational>)
         : section.negated
-        ? (invertScaledVector(pitch) as ScaledVector<{ rational: true }>)
-        : pitch
+          ? (invertScaledVector(pitch) as ScaledVector<Rational>)
+          : pitch
 }
 
 export { computeCommaticPitchAlterationFromSymbolClassIdAndSection }

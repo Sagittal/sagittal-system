@@ -1,20 +1,15 @@
-import {Comma, NumericProperties} from "@sagittal/general"
-import {CommaNameOptions, computeCommaName, computeSizeCategoryIndex} from "../name"
-import {analyzeJiPitch} from "./pitch"
-import {CommaAnalysis} from "./types"
+import { Comma } from "@sagittal/general"
+import { CommaNameOptions, computeCommaName, computeSizeCategoryIndex } from "../name"
+import { analyzeJiPitch } from "./pitch"
+import { CommaAnalysis } from "./types"
 
-const analyzeComma = <T extends NumericProperties, U extends Comma<T>>(
-    comma: U,
-    options: CommaNameOptions = {},
-): CommaAnalysis<T, U> => {
+const analyzeComma = (comma: Comma, options: CommaNameOptions = {}): CommaAnalysis => {
     const name = computeCommaName(comma, options)
     const sizeCategory = computeSizeCategoryIndex(comma)
 
     const jiPitchAnalysis = analyzeJiPitch(comma)
 
-    return {...jiPitchAnalysis, pitch: comma, sizeCategory, name} as CommaAnalysis<T, U>
+    return { ...jiPitchAnalysis, pitch: comma, sizeCategory, name }
 }
 
-export {
-    analyzeComma,
-}
+export { analyzeComma }

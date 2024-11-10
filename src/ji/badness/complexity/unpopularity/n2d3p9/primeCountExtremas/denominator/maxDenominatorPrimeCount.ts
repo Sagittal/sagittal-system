@@ -1,4 +1,4 @@
-import { Decimal, decrement, Denominator, Exponent, increment, Max, Of, Prime, PrimeCount } from "@sagittal/general"
+import { decrement, Denominator, increment, Max, Of, Prime, PrimeCount } from "@sagittal/general"
 import { N2D3P9 } from "../../types"
 import { computeMinN2D3P9ForPossibleMaxDenominatorPrimeCountGivenMaxN2D3P9 } from "./minN2D3P9"
 import {
@@ -26,13 +26,10 @@ const computeMaxDenominatorPrimeCountGivenMaxN2D3P9 = (
     const sortedNumeratorPossibilitiesForDenominatorPrimeGivenMaxN2D3P9 =
         computeSortedNumeratorPossibilitiesForDenominatorPrimeGivenMaxN2D3P9(
             denominatorPrime,
-            maxN2D3P9,
             numeratorPossibilitiesForDenominatorGivenMaxN2D3P9,
         )
 
-    let possibleMaxDenominatorPrimeCountGivenMaxN2D3P9 = 1 as Max<
-        Denominator & PrimeCount
-    >
+    let possibleMaxDenominatorPrimeCountGivenMaxN2D3P9 = 1 as Max<Denominator & PrimeCount>
     while (true) {
         const minN2D3P9ForPossibleMaxDenominatorPrimeCountGivenMaxN2D3P9 =
             computeMinN2D3P9ForPossibleMaxDenominatorPrimeCountGivenMaxN2D3P9({
@@ -53,9 +50,7 @@ const computeMaxDenominatorPrimeCountGivenMaxN2D3P9 = (
         }
     }
 
-    return possibleMaxDenominatorPrimeCountGivenMaxN2D3P9 as Max<
-        Denominator & PrimeCount
-    >
+    return possibleMaxDenominatorPrimeCountGivenMaxN2D3P9
 }
 
 export { computeMaxDenominatorPrimeCountGivenMaxN2D3P9 }

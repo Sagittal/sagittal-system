@@ -62,7 +62,8 @@ describe("computeEvoAccidentalFromCaptureZone", (): void => {
         const actual = computeEvoAccidentalFromCaptureZone(symbolClassId, SECTION_P2T)
 
         const expected = computeAccidental({
-            headId: HeadId.DOUBLE_LEFT_BARB, down: true,
+            headId: HeadId.DOUBLE_LEFT_BARB,
+            down: true,
             compatible: Compatible.DOUBLE_SHARP,
         }) as Accidental<Flavor.EVO>
         expect(actual).toEqual(expected)
@@ -85,7 +86,10 @@ describe("computeEvoAccidentalFromCaptureZone", (): void => {
 
         const actual = computeEvoAccidentalFromCaptureZone(symbolClassId, SECTION_N1A)
 
-        const expected = computeAccidental({ headId: HeadId.DOUBLE_LEFT_BARB, down: true }) as Accidental<Flavor.EVO>
+        const expected = computeAccidental({
+            headId: HeadId.DOUBLE_LEFT_BARB,
+            down: true,
+        }) as Accidental<Flavor.EVO>
         expect(actual).toEqual(expected)
     })
 
@@ -106,7 +110,10 @@ describe("computeEvoAccidentalFromCaptureZone", (): void => {
 
         const actual = computeEvoAccidentalFromCaptureZone(symbolClassId, SECTION_N1T)
 
-        const expected = computeAccidental({ headId: HeadId.DOUBLE_ARC, down: true }) as Accidental<Flavor.EVO>
+        const expected = computeAccidental({
+            headId: HeadId.DOUBLE_ARC,
+            down: true,
+        }) as Accidental<Flavor.EVO>
         expect(actual).toEqual(expected)
     })
 

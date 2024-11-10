@@ -9,6 +9,9 @@ import {
     Quotient,
     scaleScaledVector,
     ScaledVector,
+    Rational,
+    Integer,
+    Irrational,
 } from "@sagittal/general"
 import {
     JiNotationLevelId,
@@ -21,26 +24,26 @@ import {
     ULTRA_EDA,
 } from "./notations"
 
-const TINA: ScaledVector<{ rational: false }> = scaleScaledVector(APOTOME, [
+const TINA: ScaledVector<Irrational> = scaleScaledVector(APOTOME, [
     ONE,
-    INSANE_EDA as Decimal<{ integer: true }>,
-] as Quotient<{ rational: true }>)
-const MINA: ScaledVector<{ rational: false }> = scaleScaledVector(APOTOME, [
+    INSANE_EDA as Decimal<Integer>,
+] as Quotient<Rational>)
+const MINA: ScaledVector<Irrational> = scaleScaledVector(APOTOME, [
     ONE,
-    EXTREME_EDA as Decimal<{ integer: true }>,
-] as Quotient<{ rational: true }>)
-const ULTRINA: ScaledVector<{ rational: false }> = scaleScaledVector(APOTOME, [
+    EXTREME_EDA as Decimal<Integer>,
+] as Quotient<Rational>)
+const ULTRINA: ScaledVector<Irrational> = scaleScaledVector(APOTOME, [
     ONE,
-    ULTRA_EDA as Decimal<{ integer: true }>,
-] as Quotient<{ rational: true }>)
-const HINA: ScaledVector<{ rational: false }> = scaleScaledVector(APOTOME, [
+    ULTRA_EDA as Decimal<Integer>,
+] as Quotient<Rational>)
+const HINA: ScaledVector<Irrational> = scaleScaledVector(APOTOME, [
     ONE,
-    HIGH_EDA as Decimal<{ integer: true }>,
-] as Quotient<{ rational: true }>)
-const ATHINA: ScaledVector<{ rational: false }> = scaleScaledVector(APOTOME, [
+    HIGH_EDA as Decimal<Integer>,
+] as Quotient<Rational>)
+const ATHINA: ScaledVector<Irrational> = scaleScaledVector(APOTOME, [
     ONE,
-    MEDIUM_EDA as Decimal<{ integer: true }>,
-] as Quotient<{ rational: true }>)
+    MEDIUM_EDA as Decimal<Integer>,
+] as Quotient<Rational>)
 
 const INA_CENTS_SIZES: Record<JiNotationLevelId, Cents> = JI_NOTATION_LEVEL_EDAS.reduce(
     (

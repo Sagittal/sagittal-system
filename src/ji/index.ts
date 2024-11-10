@@ -63,3 +63,4 @@ export {
     computeKnownRationalQuotients,
     Ate,
 } from "./badness"
+export { Zone } from "./types"

@@ -1,6 +1,6 @@
-import {isUndefined, Maybe} from "@sagittal/general"
-import {Flacco} from "../flacco"
-import {Sagittal, Shafts} from "./types"
+import { isUndefined, Maybe } from "@sagittal/general"
+import { Flacco } from "../flacco"
+import { Sagittal, Shafts } from "./types"
 
 const computeSagittalFromFlacco = (flacco: Flacco): Maybe<Sagittal> => {
     if (isUndefined(flacco.arm) && isUndefined(flacco.left) && isUndefined(flacco.right)) return
@@ -11,6 +11,4 @@ const computeSagittalFromFlacco = (flacco: Flacco): Maybe<Sagittal> => {
     }
 }
 
-export {
-    computeSagittalFromFlacco,
-}
+export { computeSagittalFromFlacco }

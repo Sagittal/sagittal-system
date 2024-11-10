@@ -5,7 +5,6 @@ import {
     isUndefined,
     Maybe,
     parseQuotient,
-    Quotient,
 } from "@sagittal/general"
 import {
     SIZE_CATEGORY_ABBREVIATIONS,
@@ -15,12 +14,12 @@ import {
 import { CommaNameQuotient, ParsedCommaName, SizeCategory, SizeCategoryName } from "./types"
 
 // TODO: COMMA NAMES
-// 
+//
 //  - new stuff that needs to be parsed, like scaled vectors, half commas
 //
-//  - default commas per size category, hyphens v spaces, and preferred outputs 
+//  - default commas per size category, hyphens v spaces, and preferred outputs
 //  https://forum.sagittal.org/viewtopic.php?p=3085#p3085
-// 
+//
 //  - complex name parsing
 //  http://forum.sagittal.org/viewtopic.php?p=3105#p3105
 //  All answers here now: http://forum.sagittal.org/viewtopic.php?p=3106#p3106
@@ -30,7 +29,7 @@ import { CommaNameQuotient, ParsedCommaName, SizeCategory, SizeCategoryName } fr
 //  Most recent questions here: http://forum.sagittal.org/viewtopic.php?p=2980#p2980
 //  1c3C = c3C = 41e3C and
 //  0c3C = 3C = 12e3C.
-// 
+//
 //  - factoring
 //  more about 5²⋅7S vs 25⋅7S....
 //  I don't know if we previously agreed on how to factor them, as opposed to when.
@@ -40,7 +39,7 @@ import { CommaNameQuotient, ParsedCommaName, SizeCategory, SizeCategoryName } fr
 
 const parseCommaName = (commaNameIo: Io): ParsedCommaName => {
     const commaNameParts = commaNameIo.match(
-        /(.*c)?([0-9⁰¹²³⁴⁵⁶⁷⁸⁹.⋅*^]+[:\/]?\(?[0-9⁰¹²³⁴⁵⁶⁷⁸⁹.⋅*^]*\)?)-?([a-zA-Z-+]+)\s?(up|down)?/,
+        /(.*c)?([0-9⁰¹²³⁴⁵⁶⁷⁸⁹.⋅*^]+[:/]?\(?[0-9⁰¹²³⁴⁵⁶⁷⁸⁹.⋅*^]*\)?)-?([a-zA-Z-+]+)\s?(up|down)?/,
     )
     if (commaNameParts === null) throw new Error(`Could not parse comma name ${commaNameIo}.`)
     const [
@@ -52,11 +51,8 @@ const parseCommaName = (commaNameIo: Io): ParsedCommaName => {
     ] = commaNameParts
 
     const commaNameQuotient: CommaNameQuotient = computeLowestTermsRationalQuotient(
-        parseQuotient(quotientCommaNamePart) as Quotient<{
-            rational: true
-            rough: 3
-        }>,
-    ) as Quotient<{ rational: true; rough: 3 }> as CommaNameQuotient
+        parseQuotient(quotientCommaNamePart),
+    ) as CommaNameQuotient
 
     let sizeCategory: Maybe<SizeCategory> = undefined
 
@@ -86,8 +82,8 @@ const parseCommaName = (commaNameIo: Io): ParsedCommaName => {
         directionCommaNamePart === "up"
             ? Direction.SUPER
             : directionCommaNamePart === "down"
-            ? Direction.SUB
-            : undefined
+              ? Direction.SUB
+              : undefined
     if (!isUndefined(direction)) parsedCommaName.direction = direction
 
     return parsedCommaName

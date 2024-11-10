@@ -1,8 +1,8 @@
 import { increment, isUndefined, Maybe, negative } from "@sagittal/general"
 import { Accidental, Compatible, Flavor, flipSagittal, Shafts } from "../../../../accidental"
 import { computeApotomeComplementHandlingAsymmetricalSelfComplement } from "../../asymmetricalSelfComplement"
-import { computeSagittalFromSymbolClassId, SymbolClassId } from "../symbol"
 import { Section } from "../section"
+import { computeSagittalFromSymbolClassId, SymbolClassId } from "../symbol"
 
 const computeEvoAccidentalFromCaptureZone = (
     symbolClassId: SymbolClassId,
@@ -26,15 +26,15 @@ const computeEvoAccidentalFromCaptureZone = (
         sagittal = flipSagittal(sagittal)
     }
     const compatible: Maybe<Compatible> =
-        apotomeCount === 1 ?
-            Compatible.SHARP :
-            apotomeCount === 2 ?
-                Compatible.DOUBLE_SHARP :
-                apotomeCount === -1 ?
-                    Compatible.FLAT :
-                    apotomeCount === -2 ?
-                        Compatible.DOUBLE_FLAT :
-                        undefined
+        apotomeCount === 1
+            ? Compatible.SHARP
+            : apotomeCount === 2
+              ? Compatible.DOUBLE_SHARP
+              : apotomeCount === -1
+                ? Compatible.FLAT
+                : apotomeCount === -2
+                  ? Compatible.DOUBLE_FLAT
+                  : undefined
 
     if (isUndefined(compatible)) {
         return { ...sagittal } as Accidental<Flavor.EVO>
@@ -43,6 +43,4 @@ const computeEvoAccidentalFromCaptureZone = (
     return { ...sagittal, compatible } as Accidental<Flavor.EVO>
 }
 
-export {
-    computeEvoAccidentalFromCaptureZone,
-}
+export { computeEvoAccidentalFromCaptureZone }

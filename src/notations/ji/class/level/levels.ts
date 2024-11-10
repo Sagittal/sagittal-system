@@ -8,6 +8,4 @@ const JI_NOTATION_LEVELS: JiNotationLevelId[] = [
     JiNotationLevelId.INSANE,
 ]
 
-export {
-    JI_NOTATION_LEVELS,
-}
+export { JI_NOTATION_LEVELS }

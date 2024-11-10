@@ -12,6 +12,4 @@ const getSmallestSymbolSubsetId = (symbolClassId: SymbolClassId): SymbolSubsetId
     throw new Error(`Symbol class ID ${symbolClassId} was not found in any symbol subset.`)
 }
 
-export {
-    getSmallestSymbolSubsetId,
-}
+export { getSmallestSymbolSubsetId }

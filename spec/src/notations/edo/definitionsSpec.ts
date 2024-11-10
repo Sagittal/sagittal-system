@@ -18,7 +18,11 @@ import {
     computeMap,
     round,
     ZERO_ONE_INDEX_DIFF,
+    Max,
+    Prime,
 } from "@sagittal/general"
+import { formatMap, formatVector, formatQuotient } from "@sagittal/general/dist/cjs/io"
+import { EtStep, mapVector, Octaves } from "@sagittal/general/dist/cjs/music"
 import {
     analyzeComma,
     CommaAnalysis,
@@ -35,10 +39,8 @@ import {
     Sagitype,
     StepDefinition,
 } from "../../../../src"
-import { TEMPERED_THREES_ONLY_METHOD, TemperedThreesOnlyMethod } from "../../../../src/notations/edo/types"
-import { formatMap, formatVector, formatQuotient } from "@sagittal/general/dist/cjs/io"
 import { JI_FIFTH_SIZE } from "../../../../src/notations/edo/constants"
-import { EtStep, mapVector, Octaves } from "@sagittal/general/dist/cjs/music"
+import { TEMPERED_THREES_ONLY_METHOD, TemperedThreesOnlyMethod } from "../../../../src/notations/edo/types"
 
 const expectStepDefinition = (
     { sagitype, validCommas, alternativeJustifications }: StepDefinition,
@@ -137,7 +139,7 @@ const expectValidCommaByMapMethod = (
     const {
         two3FreeClassAnalysis: { two3FreePrimeLimit: primeLimit },
     }: CommaAnalysis = analyzeComma(comma)
-    const map: Map = computeMap(etName, primeLimit)
+    const map: Map = computeMap(etName, primeLimit as Max<Prime>)
     const temperedCommaSteps: Count<EtStep> = mapVector(comma.vector, map)
 
     expect(temperedCommaSteps)
@@ -146,8 +148,8 @@ const expectValidCommaByMapMethod = (
                 edoNotationName.match(/b/)
                     ? "the second-best fifth map"
                     : edoNotationName.match(/[a-z]/)
-                    ? "an alternative map"
-                    : "the simple map"
+                      ? "an alternative map"
+                      : "the simple map"
             } for that EDO, which is ${formatMap(
                 map,
             )}, but instead found that ${supposedlyValidCommaName} up (${formatQuotient(

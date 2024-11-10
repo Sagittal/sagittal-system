@@ -1,5 +1,3 @@
 const LPEI_U = 0.8
 
-export {
-    LPEI_U,
-}
+export { LPEI_U }

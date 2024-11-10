@@ -13,13 +13,15 @@ import {
     Vector,
     shallowClone,
     TWO_PRIME_INDEX,
-    Zone,
     PrimeCount,
     NumericProperties,
+    Rational,
+    Rough,
 } from "@sagittal/general"
+import { Zone } from "../types"
 
 const computeInZone = <T extends NumericProperties>(
-    rationalVectorInZone: Vector<T & { rational: true; rough: 3 }>,
+    rationalVectorInZone: Vector<T & Rational & Rough<3>>,
     zone: Zone,
 ): boolean => {
     const {
@@ -31,22 +33,22 @@ const computeInZone = <T extends NumericProperties>(
     const aboveLowerBound = isUndefined(lowerBound)
         ? true
         : lowerExclusive
-        ? isScaledVectorGreater(computeScaledVectorFromVector(rationalVectorInZone), lowerBound)
-        : isScaledVectorGreaterOrEqual(computeScaledVectorFromVector(rationalVectorInZone), lowerBound)
+          ? isScaledVectorGreater(computeScaledVectorFromVector(rationalVectorInZone), lowerBound)
+          : isScaledVectorGreaterOrEqual(computeScaledVectorFromVector(rationalVectorInZone), lowerBound)
 
     const belowUpperBound = isUndefined(upperBound)
         ? true
         : upperExclusive
-        ? isScaledVectorLesser(computeScaledVectorFromVector(rationalVectorInZone), upperBound)
-        : isScaledVectorLesserOrEqual(computeScaledVectorFromVector(rationalVectorInZone), upperBound)
+          ? isScaledVectorLesser(computeScaledVectorFromVector(rationalVectorInZone), upperBound)
+          : isScaledVectorLesserOrEqual(computeScaledVectorFromVector(rationalVectorInZone), upperBound)
 
     return aboveLowerBound && belowUpperBound
 }
 
-const computeRationalVectorInZone = <T extends NumericProperties>(
-    twoFreeRationalVector: Vector<T & { rational: true; rough: 3 }>,
+const computeRationalVectorInZone = (
+    twoFreeRationalVector: Vector<Rational & Rough<3>>,
     zone: Zone,
-): Maybe<Vector<T & { rational: true }>> => {
+): Maybe<Vector<Rational>> => {
     const {
         extrema: [lowerBound, upperBound],
     } = zone
@@ -59,7 +61,7 @@ const computeRationalVectorInZone = <T extends NumericProperties>(
             isScaledVectorGreater(computeScaledVectorFromVector(rationalVectorInZone), upperBound)
         ) {
             rationalVectorInZone[TWO_PRIME_INDEX] = (rationalVectorInZone[TWO_PRIME_INDEX] - 1) as PrimeCount<
-                T & { rational: true; rough: 3 }
+                Rational & Rough<3>
             >
         }
         while (
@@ -67,7 +69,7 @@ const computeRationalVectorInZone = <T extends NumericProperties>(
             isScaledVectorLesser(computeScaledVectorFromVector(rationalVectorInZone), lowerBound)
         ) {
             rationalVectorInZone[TWO_PRIME_INDEX] = (rationalVectorInZone[TWO_PRIME_INDEX] + 1) as PrimeCount<
-                T & { rational: true; rough: 3 }
+                Rational & Rough<3>
             >
         }
     }

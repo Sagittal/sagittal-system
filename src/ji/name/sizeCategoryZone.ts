@@ -1,5 +1,6 @@
-import { Max, Min, ScaledVector, Zone } from "@sagittal/general"
+import { Max, Min, ScaledVector } from "@sagittal/general"
 import { EXCLUDE_LOWER_BOUND } from "../constants"
+import { Zone } from "../types"
 import { SIZE_CATEGORY_BOUNDS } from "./sizeCategoryBounds"
 import { computeSizeCategoryIndexFromSizeCategory } from "./sizeCategoryIndex"
 import { SizeCategory, SizeCategoryBound } from "./types"

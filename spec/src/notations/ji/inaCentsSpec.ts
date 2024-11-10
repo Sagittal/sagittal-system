@@ -1,12 +1,12 @@
-import {Cents} from "@sagittal/general"
-import {computeCentsFromTinas, Minas, Tinas} from "../../../../src"
+import { Cents } from "@sagittal/general"
+import { computeCentsFromTinas, Minas, Tinas } from "../../../../src"
 import {
     computeCentsFromAthinas,
     computeCentsFromHinas,
     computeCentsFromMinas,
     computeCentsFromUltrinas,
 } from "../../../../src/notations/ji/inaCents"
-import {Athinas, Hinas, Ultrinas} from "../../../../src/notations/ji/types"
+import { Athinas, Hinas, Ultrinas } from "../../../../src/notations/ji/types"
 
 describe("computeCentsFromTinas", (): void => {
     it("computes the cents from tinas", (): void => {
@@ -47,7 +47,7 @@ describe("computeCentsFromHinas", (): void => {
 
         const actual = computeCentsFromHinas(hinas)
 
-        const expected = 2.418830 as Cents
+        const expected = 2.41883 as Cents
         expect(actual).toBeCloseTo(expected)
     })
 })

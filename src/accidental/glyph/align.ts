@@ -1,6 +1,6 @@
-import {Formatted, shallowClone} from "@sagittal/general"
-import {PARENTHETICAL_NATURAL_SAGITYPE} from "./constants"
-import {Sagitype} from "./types"
+import { Formatted, shallowClone } from "@sagittal/general"
+import { PARENTHETICAL_NATURAL_SAGITYPE } from "./constants"
+import { Sagitype } from "./types"
 
 const alignSagitype = (sagitype: Sagitype): Formatted<Sagitype> => {
     if (sagitype === PARENTHETICAL_NATURAL_SAGITYPE) {
@@ -14,17 +14,15 @@ const alignSagitype = (sagitype: Sagitype): Formatted<Sagitype> => {
     let formattedSagitype: Formatted<Sagitype> = shallowClone(sagitype) as string as Formatted<Sagitype>
 
     while (spacesToPrepend > 0) {
-        formattedSagitype = " " + formattedSagitype as Formatted<Sagitype>
+        formattedSagitype = (" " + formattedSagitype) as Formatted<Sagitype>
         spacesToPrepend -= 1
     }
 
     while (formattedSagitype.length < 8) {
-        formattedSagitype = formattedSagitype + " " as Formatted<Sagitype>
+        formattedSagitype = (formattedSagitype + " ") as Formatted<Sagitype>
     }
 
-    return formattedSagitype as Formatted<Sagitype>
+    return formattedSagitype
 }
 
-export {
-    alignSagitype,
-}
+export { alignSagitype }

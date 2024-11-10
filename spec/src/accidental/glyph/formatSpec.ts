@@ -1,9 +1,12 @@
-import {Formatted, ioSettings, TableFormat} from "@sagittal/general"
-import {computeAccidental, HeadId} from "../../../../src"
-import {Compatible, formatAccidental, Glyph} from "../../../../src/accidental"
+import { Formatted, ioSettings, TableFormat } from "@sagittal/general"
+import { computeAccidental, HeadId } from "../../../../src"
+import { Compatible, formatAccidental, Glyph } from "../../../../src/accidental"
 
 describe("formatAccidental", (): void => {
-    const accidental = computeAccidental({headId: HeadId.LEFT_SCROLL_DOUBLE_RIGHT_BARB, compatible: Compatible.SHARP})
+    const accidental = computeAccidental({
+        headId: HeadId.LEFT_SCROLL_DOUBLE_RIGHT_BARB,
+        compatible: Compatible.SHARP,
+    })
 
     it("returns Sagitype when formatting for the terminal, and aligns it unless requested otherwise", (): void => {
         ioSettings.tableFormat = TableFormat.TERMINAL

@@ -1,4 +1,4 @@
-import {alignSagitype, Sagitype} from "../../../../src"
+import { alignSagitype, Sagitype } from "../../../../src"
 
 describe("alignSagitype", (): void => {
     it("shifts the Sagitype so that its shaft aligns with all the others' shafts, making it 8 total chars wide                  ", (): void => {

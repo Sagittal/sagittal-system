@@ -1,5 +1,5 @@
-import {Index} from "@sagittal/general"
-import {formatSizeCategory, SizeCategory} from "../../../../src"
+import { Index } from "@sagittal/general"
+import { formatSizeCategory, SizeCategory } from "../../../../src"
 
 describe("formatSizeCategory", (): void => {
     it("takes a size category index and returns the abbreviation", (): void => {

@@ -1,6 +1,6 @@
 import { computeKeyPath, finalElement, Index, sort } from "@sagittal/general"
-import { JiNotationLevelId } from "./types"
 import { CommaClassId } from "../comma"
+import { JiNotationLevelId } from "./types"
 
 // TODO: POST-NOTATION-GENERATION: JI NOTATION CLEAN-UP
 //  So... this whole module should be supplanted once the notation generation is mature? Or it could become a test?
@@ -152,12 +152,12 @@ const EXTREME_LEVEL_COMMA_CLASS_IDS: Array<[Index<CommaClassId>, CommaClassId]> 
     [121 as Index<CommaClassId>, CommaClassId._5_7_17_M],
 ]
 
-const INSANE_LEVEL_COMMA_CLASS_IDS = sort([
-    ...EXTREME_LEVEL_COMMA_CLASS_IDS,
-], { by: computeKeyPath(0) })
+const INSANE_LEVEL_COMMA_CLASS_IDS = sort([...EXTREME_LEVEL_COMMA_CLASS_IDS], { by: computeKeyPath(0) })
 
 const shapeUpIds = (ids: Array<[Index<CommaClassId>, CommaClassId]>): CommaClassId[] =>
-    sort(ids, { by: computeKeyPath(0) }).map(([_, id]: [Index<CommaClassId>, CommaClassId]): CommaClassId => id)
+    sort(ids, { by: computeKeyPath(0) }).map(
+        ([_, id]: [Index<CommaClassId>, CommaClassId]): CommaClassId => id,
+    )
 
 const JI_NOTATION_LEVELS_COMMA_CLASS_IDS: Record<JiNotationLevelId, CommaClassId[]> = {
     [JiNotationLevelId.MEDIUM]: shapeUpIds(MEDIUM_LEVEL_COMMA_CLASS_IDS),
@@ -172,7 +172,4 @@ const JI_NOTATION_COMMA_CLASS_IDS = finalElement(Object.values(JI_NOTATION_LEVEL
 // TODO: POST-NOTATION-GENERATION: ELIMINATE COMMA CLASS IDS FILE
 //  I think that this should be covered by the symbol class IDs that are described for the levels, no?
 
-export {
-    JI_NOTATION_LEVELS_COMMA_CLASS_IDS,
-    JI_NOTATION_COMMA_CLASS_IDS,
-}
+export { JI_NOTATION_LEVELS_COMMA_CLASS_IDS, JI_NOTATION_COMMA_CLASS_IDS }

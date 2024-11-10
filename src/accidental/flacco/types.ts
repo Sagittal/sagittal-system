@@ -13,8 +13,8 @@ enum AccentId {
 }
 
 type Accent = {
-    id: AccentId,
-    anti?: boolean,
+    id: AccentId
+    anti?: boolean
 }
 
 type Arm = Accent[]
@@ -52,8 +52,8 @@ type Flag = {
 // And I prefer having fewer optional fields, because it makes it less likely to get something conflated as your type.
 
 interface Head {
-    left?: FlagId[],
-    right?: FlagId[],
+    left?: FlagId[]
+    right?: FlagId[]
 }
 
 enum HeadId {
@@ -91,19 +91,9 @@ enum HeadId {
     LEFT_SCROLL_DOUBLE_RIGHT_BARB = "leftScrollDoubleRightBarb",
 }
 
-
 // FlagId and AccentId Combination (see: http://forum.sagittal.org/viewtopic.php?p=2474#p2474)
 interface Flacco extends Head {
-    arm?: Arm,
+    arm?: Arm
 }
 
-export {
-    Flacco,
-    FlagId,
-    AccentId,
-    Head,
-    HeadId,
-    Arm,
-    ArmId,
-    Accent,
-}
+export { Flacco, FlagId, AccentId, Head, HeadId, Arm, ArmId, Accent }

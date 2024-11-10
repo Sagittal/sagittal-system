@@ -20,7 +20,7 @@ import { FlavorsExpectation } from "../../../../helpers/src/notations/ji/class/f
 //     const commaticAlteration: Comma = commaDirection === Direction.SUPER ? comma : invertScaledVector(comma) as Comma
 //     const apotomeBase: Comma = multiplyScaledVector(
 //         APOTOME,
-//         apotomeCount as Decimal<{ integer: true }> as Decimal<{ integer: true }> & Multiplier,
+//         apotomeCount as Decimal<Integer> as Decimal<Integer> & Multiplier,
 //     ) as Comma
 //
 //     return addScaledVectors(apotomeBase, commaticAlteration) as ScaledVector as Comma
@@ -31,7 +31,7 @@ import { FlavorsExpectation } from "../../../../helpers/src/notations/ji/class/f
 //     const boundAlteration = commaDirection === Direction.SUPER ? bound : invertScaledVector(bound)
 //     const apotomeBase = multiplyScaledVector(
 //         APOTOME,
-//         apotomeCount as Decimal<{ integer: true }> as Decimal<{ integer: true }> & Multiplier,
+//         apotomeCount as Decimal<Integer> as Decimal<Integer> & Multiplier,
 //     ) as Comma
 //
 //     return addScaledVectors(apotomeBase, boundAlteration)
@@ -42,11 +42,9 @@ describe("accidentals", (): void => {
     it("has the correct accidentals for Extreme", (): void => {
         const captureZones = computeCaptureZones(EXTREME_NOTATION)
 
-        const accidentalExpectations = captureZones.map(
-            (captureZone: CaptureZone): FlavorsExpectation => {
-                return computeFlavorsExpectation(captureZone)
-            },
-        )
+        const accidentalExpectations = captureZones.map((captureZone: CaptureZone): FlavorsExpectation => {
+            return computeFlavorsExpectation(captureZone)
+        })
 
         const expectedN1A: FlavorsExpectation[] = [
             {

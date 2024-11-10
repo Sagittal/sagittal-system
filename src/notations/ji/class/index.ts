@@ -24,9 +24,23 @@ export {
     JI_NOTATION_COMMA_CLASS_IDS,
     Notation,
 } from "./level"
-export { SymbolClassId, SymbolClass, formatSymbolClass, getSymbolClass, SYMBOL_CLASSES, computeSagittalFromSymbolClassId } from "./symbol"
+export {
+    SymbolClassId,
+    SymbolClass,
+    formatSymbolClass,
+    getSymbolClass,
+    SYMBOL_CLASSES,
+    computeSagittalFromSymbolClassId,
+} from "./symbol"
 export { BoundClassId, BoundClass, getBoundClass, BoundType } from "./bound"
-export { CommaClass, CommaClassId, getCommaClass, computeMaybeCommaClassId, formatCommaClass, getRepresentativeSagittal } from "./comma"
+export {
+    CommaClass,
+    CommaClassId,
+    getCommaClass,
+    computeMaybeCommaClassId,
+    formatCommaClass,
+    getRepresentativeSagittal,
+} from "./comma"
 export {
     Section,
     SECTION_N1T,
@@ -39,7 +53,12 @@ export {
     SECTION_P1A,
 } from "./section"
 export { CaptureZone } from "./captureZone"
-export { SymbolSubsetId, getSmallestSymbolSubsetId, SYMBOL_SUBSETS, SIZE_SORTED_SYMBOL_SUBSET_IDS } from "./symbolSubset"
+export {
+    SymbolSubsetId,
+    getSmallestSymbolSubsetId,
+    SYMBOL_SUBSETS,
+    SIZE_SORTED_SYMBOL_SUBSET_IDS,
+} from "./symbolSubset"
 export { computeRevoAccidentalFromCaptureZone } from "./flavor"
 export { computeJiPitchFromAccidental } from "./jiPitchFromAccidental"
 export { getFlacco, FLACCOS } from "./flacco"

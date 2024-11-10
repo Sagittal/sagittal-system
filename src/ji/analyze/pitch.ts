@@ -3,13 +3,14 @@ import {
     computeCentsFromPitch,
     computeDecimalFromVector,
     computeQuotientFromVector,
+    Rational,
     ScaledVector,
 } from "@sagittal/general"
 import { computeAas, computeApotomeSlope, computeAte } from "../badness"
 import { analyze23FreeClass } from "./two3FreeClass"
 import { JiPitchAnalysis } from "./types"
 
-const analyzeJiPitch = (jiPitch: ScaledVector<{ rational: true }>): JiPitchAnalysis => {
+const analyzeJiPitch = (jiPitch: ScaledVector<Rational>): JiPitchAnalysis => {
     const vector = jiPitch.vector
     const quotient = computeQuotientFromVector(vector)
     const decimal = computeDecimalFromVector(vector)

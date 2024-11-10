@@ -1,5 +1,6 @@
-import { Abs, Max, Prime, Zone } from "@sagittal/general"
+import { Abs, Max, Prime } from "@sagittal/general"
 import { ApotomeSlope, Ate, N2D3P9 } from "../badness"
+import { Zone } from "../types"
 
 type CommasFrom23FreeVectorOptions = Partial<{
     zone: Zone

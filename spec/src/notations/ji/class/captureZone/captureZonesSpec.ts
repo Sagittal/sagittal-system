@@ -1,4 +1,11 @@
+import { BoundClassId, CaptureZone, SymbolClassId } from "../../../../../../src/notations"
 import { computeCaptureZones } from "../../../../../../src/notations/ji/class/captureZone/captureZones"
+import {
+    EXTREME_NOTATION,
+    HIGH_NOTATION,
+    MEDIUM_NOTATION,
+    ULTRA_NOTATION,
+} from "../../../../../../src/notations/ji/class/level/notations"
 import {
     SECTION_N1A,
     SECTION_N1T,
@@ -9,8 +16,6 @@ import {
     SECTION_P2A,
     SECTION_P2T,
 } from "../../../../../../src/notations/ji/class/section/constants"
-import { EXTREME_NOTATION, HIGH_NOTATION, MEDIUM_NOTATION, ULTRA_NOTATION } from "../../../../../../src/notations/ji/class/level/notations"
-import { BoundClassId, CaptureZone, SymbolClassId } from "../../../../../../src/notations"
 
 describe("computeCaptureZones", (): void => {
     it("works for the Medium level", (): void => {

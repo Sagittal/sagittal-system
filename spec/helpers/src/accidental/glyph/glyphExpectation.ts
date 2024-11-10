@@ -16,7 +16,7 @@ import { GlyphExpectation } from "./types"
 
 const computeCoreGlyphExpectation = (
     headId: HeadId,
-    { shafts = Shafts.SINGLE, down = false }: { shafts?: Shafts, down?: boolean } = {},
+    { shafts = Shafts.SINGLE, down = false }: { shafts?: Shafts; down?: boolean } = {},
 ): Maybe<GlyphExpectation> => {
     try {
         const core = getCore(headId, { shafts, down })
@@ -31,22 +31,19 @@ const computeCoreGlyphExpectation = (
     }
 }
 
-const computeAccentGlyphExpectation = (accentId: AccentId, { anti = false }: { anti?: boolean } = {}): GlyphExpectation =>
-({
+const computeAccentGlyphExpectation = (
+    accentId: AccentId,
+    { anti = false }: { anti?: boolean } = {},
+): GlyphExpectation => ({
     sagitype: computeAccentSagitype({ id: accentId, anti }),
     unicode: computeAccentUnicode({ id: accentId, anti }),
     smiley: computeAccentSmiley({ id: accentId, anti }),
 })
 
-const computeCompatibleGlyphExpectation = (compatible: Compatible): GlyphExpectation =>
-({
+const computeCompatibleGlyphExpectation = (compatible: Compatible): GlyphExpectation => ({
     sagitype: computeCompatibleSagitype(compatible),
     unicode: computeCompatibleUnicode(compatible),
     smiley: computeCompatibleSmiley(compatible),
 })
 
-export {
-    computeCoreGlyphExpectation,
-    computeAccentGlyphExpectation,
-    computeCompatibleGlyphExpectation,
-}
+export { computeCoreGlyphExpectation, computeAccentGlyphExpectation, computeCompatibleGlyphExpectation }

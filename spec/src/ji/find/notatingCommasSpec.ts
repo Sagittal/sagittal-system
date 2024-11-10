@@ -5,15 +5,16 @@ import {
     Decimal,
     Max,
     Min,
+    Rational,
     ScaledVector,
     UNISON,
-    Zone,
 } from "@sagittal/general"
 import { ApotomeSlope, findNotatingCommas } from "../../../../src"
+import { Zone } from "../../../../src/ji/types"
 
 describe("findNotatingCommas", (): void => {
     it("given a JI pitch, returns a list of the commas that notate it", (): void => {
-        const jiPitch = { vector: [0, 0, 0, 0, 1] } as ScaledVector<{ rational: true }>
+        const jiPitch = { vector: [0, 0, 0, 0, 1] } as ScaledVector<Rational>
 
         const actual = findNotatingCommas(jiPitch)
 
@@ -27,7 +28,7 @@ describe("findNotatingCommas", (): void => {
     })
 
     it("can filter", (): void => {
-        const jiPitch = { vector: [0, 0, 0, 0, 1] } as ScaledVector<{ rational: true }>
+        const jiPitch = { vector: [0, 0, 0, 0, 1] } as ScaledVector<Rational>
         const maxAas = 9 as Max<Abs<ApotomeSlope>>
         const upperBound = computeScaledVectorFromDecimal(1.032279 as Decimal) as Max<ScaledVector>
         const zone: Zone = { extrema: [UNISON as ScaledVector as Min<ScaledVector>, upperBound] }
@@ -39,7 +40,7 @@ describe("findNotatingCommas", (): void => {
     })
 
     it("when given the unison, does not return duplicates", (): void => {
-        const jiPitch = { vector: [] as unknown[] } as ScaledVector<{ rational: true }>
+        const jiPitch = { vector: [] as unknown[] } as ScaledVector<Rational>
 
         const actual = findNotatingCommas(jiPitch)
 
@@ -48,9 +49,7 @@ describe("findNotatingCommas", (): void => {
     })
 
     it("an edge case, with large N2D3P9", (): void => {
-        const jiPitch = { vector: [0, 0, -1, 1, 1, 0, 0, 0, 0, 0, 0, -1] } as ScaledVector<{
-            rational: true
-        }>
+        const jiPitch = { vector: [0, 0, -1, 1, 1, 0, 0, 0, 0, 0, 0, -1] } as ScaledVector<Rational>
 
         const actual = findNotatingCommas(jiPitch)
 

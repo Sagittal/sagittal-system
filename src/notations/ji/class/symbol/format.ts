@@ -2,13 +2,13 @@ import { Formatted, SPACE } from "@sagittal/general"
 import { EMPTY_ACCIDENTAL, formatAccidental } from "../../../../accidental"
 import { computeCommaName } from "../../../../ji"
 import { getCommaClass } from "../comma"
+import { computeSagittalFromSymbolClassId } from "./from"
 import { getSymbolClass } from "./symbolClass"
 import { SymbolClass, SymbolClassId } from "./types"
-import { computeSagittalFromSymbolClassId } from "./from"
 
 const formatSymbolClass = (
     symbolClassId: SymbolClassId,
-    { align, name = false, glyph = true }: { align?: boolean, name?: boolean, glyph?: boolean } = {},
+    { align, name = false, glyph = true }: { align?: boolean; name?: boolean; glyph?: boolean } = {},
 ): Formatted<SymbolClass> => {
     const formattedSymbolClass = []
 
@@ -29,6 +29,4 @@ const formatSymbolClass = (
     return formattedSymbolClass.join(SPACE) as Formatted<SymbolClass>
 }
 
-export {
-    formatSymbolClass,
-}
+export { formatSymbolClass }

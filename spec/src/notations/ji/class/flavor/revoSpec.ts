@@ -1,4 +1,9 @@
-import { computeAccidental, computeRevoAccidentalFromCaptureZone, HeadId, SymbolClassId } from "../../../../../../src"
+import {
+    computeAccidental,
+    computeRevoAccidentalFromCaptureZone,
+    HeadId,
+    SymbolClassId,
+} from "../../../../../../src"
 import { Accidental, Flavor } from "../../../../../../src/accidental"
 import { Shafts } from "../../../../../../src/accidental/sagittal"
 import {

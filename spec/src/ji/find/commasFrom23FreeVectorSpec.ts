@@ -8,12 +8,14 @@ import {
     Vector,
     Prime,
     ScaledVector,
-    Zone,
+    Rational,
+    Rough,
 } from "@sagittal/general"
 import { ApotomeSlope, Ate, computeCommasFrom23FreeRationalVector, N2D3P9 } from "../../../../src"
+import { Zone } from "../../../../src/ji/types"
 
 describe("computeCommasFrom23FreeRationalVector", (): void => {
-    const two3FreeRationalVector = [0, 0, 3, 5, -1] as Vector<{ rational: true; rough: 5 }>
+    const two3FreeRationalVector = [0, 0, 3, 5, -1] as Vector<Rational & Rough<5>>
     const lowerBound = computeScaledVectorFromDecimal(1.023374 as Decimal) as Min<ScaledVector>
     const upperBound = computeScaledVectorFromDecimal(1.023433 as Decimal) as Max<ScaledVector>
     const zone: Zone = { extrema: [lowerBound, upperBound] }
@@ -36,34 +38,28 @@ describe("computeCommasFrom23FreeRationalVector", (): void => {
             const highMaxAas = 10 as Max<Abs<ApotomeSlope>>
             const lowMaxAas = 8 as Max<Abs<ApotomeSlope>>
 
-            const resultWithHighMaxAas = computeCommasFrom23FreeRationalVector(
-                two3FreeRationalVector,
-                {
-                    zone,
-                    maxAte,
-                    maxAas: highMaxAas,
-                    maxN2D3P9,
-                },
-            )
+            const resultWithHighMaxAas = computeCommasFrom23FreeRationalVector(two3FreeRationalVector, {
+                zone,
+                maxAte,
+                maxAas: highMaxAas,
+                maxN2D3P9,
+            })
 
             const expected = [{ vector: [-8, -6, 3, 5, -1] } as Comma]
             expect(resultWithHighMaxAas).toEqual(expected)
 
-            const resultWithLowMaxAas = computeCommasFrom23FreeRationalVector(
-                two3FreeRationalVector,
-                {
-                    zone,
-                    maxAte,
-                    maxAas: lowMaxAas,
-                },
-            )
+            const resultWithLowMaxAas = computeCommasFrom23FreeRationalVector(two3FreeRationalVector, {
+                zone,
+                maxAte,
+                maxAas: lowMaxAas,
+            })
 
             expect(resultWithLowMaxAas).toEqual([])
         })
     })
 
     it("trims the vector if necessary", (): void => {
-        const two3FreeRationalVector = [0, 0, 0] as Vector<{ rational: true; rough: 5 }>
+        const two3FreeRationalVector = [0, 0, 0] as Vector<Rational & Rough<5>>
         const lowerBound = computeScaledVectorFromDecimal(1 as Decimal) as Min<ScaledVector>
         const upperBound = computeScaledVectorFromDecimal(1 as Decimal) as Max<ScaledVector>
         const zone: Zone = { extrema: [lowerBound, upperBound] }
@@ -79,10 +75,7 @@ describe("computeCommasFrom23FreeRationalVector", (): void => {
     })
 
     it("following the trail of this edge case", (): void => {
-        const two3FreeRationalVector = [0, 0, -1, 1, 1, 0, 0, 0, 0, 0, 0, -1] as Vector<{
-            rational: true
-            rough: 5
-        }>
+        const two3FreeRationalVector = [0, 0, -1, 1, 1, 0, 0, 0, 0, 0, 0, -1] as Vector<Rational & Rough<5>>
 
         const actual = computeCommasFrom23FreeRationalVector(two3FreeRationalVector)
 
@@ -91,14 +84,14 @@ describe("computeCommasFrom23FreeRationalVector", (): void => {
     })
 
     it("excludes commas that are beyond the prime limit (I think only important when it is 2)", (): void => {
-        const two3FreeRationalVector = [] as unknown[] as Vector<{ rational: true; rough: 5 }>
+        const two3FreeRationalVector = [] as unknown[] as Vector<Rational & Rough<5>>
         const maxPrimeLimit = 2 as Max<Max<Prime>>
 
         const actual = computeCommasFrom23FreeRationalVector(two3FreeRationalVector, {
             maxPrimeLimit,
         })
 
-        const expected = [{ vector: [] as unknown[] as Vector<{ rational: true }> }] as Comma[]
+        const expected = [{ vector: [] as unknown[] as Vector<Rational> }] as Comma[]
         expect(actual).toEqual(expected)
     })
 })

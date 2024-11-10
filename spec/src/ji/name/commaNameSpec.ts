@@ -1,4 +1,4 @@
-import { Comma, deepClone, invertScaledVector } from "@sagittal/general"
+import { Comma, deepClone, invertScaledVector, Rational, ScaledVector } from "@sagittal/general"
 import { computeCommaName, FactoringMode } from "../../../../src"
 import { DirectedNumbers, DirectedWord } from "../../../../src/ji/name/types"
 
@@ -328,7 +328,7 @@ describe("computeCommaName", (): void => {
             })
 
             it("when the comma is down", (): void => {
-                const comma = invertScaledVector(baseComma) as Comma
+                const comma = invertScaledVector(baseComma) as ScaledVector<Rational> as Comma
 
                 expect(
                     computeCommaName(comma, {
@@ -450,7 +450,7 @@ describe("computeCommaName", (): void => {
             })
 
             it("when the comma is down", (): void => {
-                const comma = invertScaledVector(baseComma) as Comma
+                const comma = invertScaledVector(baseComma) as ScaledVector<Rational> as Comma
 
                 expect(
                     computeCommaName(comma, {

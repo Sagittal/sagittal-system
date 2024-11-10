@@ -18,6 +18,8 @@ import {
     isVectorSub,
     isQuotientSub,
     isScaledVectorSub,
+    Rational,
+    Rough,
 } from "@sagittal/general"
 import { computeN2D3P9 } from "../badness"
 import { computeRationalVectorInZone, findNotatingCommas } from "../find"
@@ -29,8 +31,8 @@ const compute3LimitCommaInSizeCategory = (sizeCategory: SizeCategory): Comma => 
     const zone = computeSizeCategoryZone(sizeCategory)
 
     while (true) {
-        let rationalVectorInZone: Maybe<Vector<{ rational: true }>> = computeRationalVectorInZone(
-            [0, threeExponent] as Vector<{ rational: true; rough: 3 }>,
+        let rationalVectorInZone: Maybe<Vector<Rational>> = computeRationalVectorInZone(
+            [0, threeExponent] as Vector<Rational & Rough<3>>,
             zone,
         )
         if (!isUndefined(rationalVectorInZone)) {
@@ -38,7 +40,7 @@ const compute3LimitCommaInSizeCategory = (sizeCategory: SizeCategory): Comma => 
         }
 
         rationalVectorInZone = computeRationalVectorInZone(
-            [0, -threeExponent] as Vector<{ rational: true; rough: 3 }>,
+            [0, -threeExponent] as Vector<Rational & Rough<3>>,
             zone,
         )
         if (!isUndefined(rationalVectorInZone)) {
@@ -64,10 +66,9 @@ const computeCommaFromCommaName = ({
     // No real choice but to go with the defaults here, unless we majorly refactor
     // It would be cool if we could use the search options the user provides here, but it creates a
     // Chicken-and-egg problem since we need to use this method itself as part of parsing said options!
-    const commas = findNotatingCommas(
-        computeRationalScaledVectorFromRationalQuotient(commaNameQuotient),
-        { zone },
-    )
+    const commas = findNotatingCommas(computeRationalScaledVectorFromRationalQuotient(commaNameQuotient), {
+        zone,
+    })
 
     let mostPopularComma: Maybe<Comma>
     let bestPopularity = Infinity
@@ -77,8 +78,7 @@ const computeCommaFromCommaName = ({
         if (
             popularity < bestPopularity ||
             (popularity === bestPopularity &&
-                computeRationalScaledVectorCopfr(comma) <
-                    computeRationalScaledVectorCopfr(mostPopularComma!))
+                computeRationalScaledVectorCopfr(comma) < computeRationalScaledVectorCopfr(mostPopularComma!))
         ) {
             bestPopularity = popularity
             mostPopularComma = comma
@@ -106,8 +106,8 @@ const computeCommaFromCommaName = ({
             ? mostPopularComma
             : (invertScaledVector(mostPopularComma) as unknown as Comma)
         : isCommaDown
-        ? (invertScaledVector(mostPopularComma) as unknown as Comma)
-        : mostPopularComma
+          ? (invertScaledVector(mostPopularComma) as unknown as Comma)
+          : mostPopularComma
 }
 
 export { computeCommaFromCommaName }

@@ -1,5 +1,3 @@
-type Unpopularity = number & {_UnpopularityBrand: boolean}
+type Unpopularity = number & { _UnpopularityBrand: boolean }
 
-export {
-    Unpopularity,
-}
+export { Unpopularity }

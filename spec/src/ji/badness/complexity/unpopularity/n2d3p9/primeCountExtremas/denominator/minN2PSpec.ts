@@ -1,4 +1,4 @@
-import { Decimal, Denominator, Exponent, Max, Min, Numerator, Of, Prime, PrimeCount } from "@sagittal/general"
+import { Denominator, Max, Min, Numerator, Of, Prime, PrimeCount } from "@sagittal/general"
 import { computeMinN2PForPossibleMaxDenominatorPrimeCountGivenMaxN2D3P9 } from "../../../../../../../../../src/ji/badness/complexity/unpopularity/n2d3p9/primeCountExtremas/denominator/minN2P"
 import {
     N2,
@@ -17,19 +17,19 @@ describe("computeMinN2PForPossibleMaxDenominatorPrimeCountGivenMaxN2D3P9", (): v
             sortedNumeratorPossibilitiesGivenMaxN2D3P9WithLesserGpfThanDenominatorPrimeSortedByN2: [
                 // This one will not make the cut because the numerator is less than the denominator (25 < 49)
                 {
-                    numerator: 25 as Numerator & Decimal<{ integer: true }>,
+                    numerator: 25 as Numerator,
                     gpf: 5 as Prime,
                     n2: 6.25 as N2,
                 },
                 // This one will make the cut because the numerator is greater than the denominator (125 > 49)
                 {
-                    numerator: 125 as Numerator & Decimal<{ integer: true }>,
+                    numerator: 125 as Numerator,
                     gpf: 5 as Prime,
                     n2: 15.625 as N2,
                 },
                 // This one will not make the cut because the previous one will be taken first (it's sorted by N2!)
                 {
-                    numerator: 625 as Numerator & Decimal<{ integer: true }>,
+                    numerator: 625 as Numerator,
                     gpf: 5 as Prime,
                     n2: 39.0625 as N2,
                 },
@@ -37,19 +37,19 @@ describe("computeMinN2PForPossibleMaxDenominatorPrimeCountGivenMaxN2D3P9", (): v
             sortedNumeratorPossibilitiesGivenMaxN2D3P9WithGreaterGpfThanDenominatorPrimeSortedByN2P: [
                 // This one will not make the cut because the numerator is less than the denominator (47 < 49)
                 {
-                    numerator: 47 as Numerator & Decimal<{ integer: true }>,
+                    numerator: 47 as Numerator,
                     gpf: 47 as Prime,
                     n2p: 23.5 as N2P,
                 },
                 // This one will make the cut because the numerator is greater than the denominator (143 > 49)
                 {
-                    numerator: 143 as Numerator & Decimal<{ integer: true }>,
+                    numerator: 143 as Numerator,
                     gpf: 13 as Prime,
                     n2p: 35.75 as N2P,
                 },
                 // This one will not make the cut because the previous one will be taken first (it's sorted by N2P!)
                 {
-                    numerator: 289 as Numerator & Decimal<{ integer: true }>,
+                    numerator: 289 as Numerator,
                     gpf: 17 as Prime,
                     n2p: 72.25 as N2P,
                 },
@@ -81,19 +81,19 @@ describe("computeMinN2PForPossibleMaxDenominatorPrimeCountGivenMaxN2D3P9", (): v
             sortedNumeratorPossibilitiesGivenMaxN2D3P9WithLesserGpfThanDenominatorPrimeSortedByN2: [
                 // This one will not make the cut because the numerator is less than the denominator (25 < 49)
                 {
-                    numerator: 25 as Numerator & Decimal<{ integer: true }>,
+                    numerator: 25 as Numerator,
                     gpf: 5 as Prime,
                     n2: 6.25 as N2,
                 },
                 // This one will make the cut because the numerator is greater than the denominator (125 > 49)
                 {
-                    numerator: 125 as Numerator & Decimal<{ integer: true }>,
+                    numerator: 125 as Numerator,
                     gpf: 5 as Prime,
                     n2: 15.625 as N2,
                 },
                 // This one will not make the cut because the previous one will be taken first (it's sorted by N2!)
                 {
-                    numerator: 625 as Numerator & Decimal<{ integer: true }>,
+                    numerator: 625 as Numerator,
                     gpf: 5 as Prime,
                     n2: 39.0625 as N2,
                 },
@@ -101,19 +101,19 @@ describe("computeMinN2PForPossibleMaxDenominatorPrimeCountGivenMaxN2D3P9", (): v
             sortedNumeratorPossibilitiesGivenMaxN2D3P9WithGreaterGpfThanDenominatorPrimeSortedByN2P: [
                 // This one will not make the cut because the numerator is less than the denominator (47 < 49)
                 {
-                    numerator: 47 as Numerator & Decimal<{ integer: true }>,
+                    numerator: 47 as Numerator,
                     gpf: 47 as Prime,
                     n2p: 23.5 as N2P,
                 },
                 // This one will make the cut because the numerator is greater than the denominator (529 > 49)
                 {
-                    numerator: 529 as Numerator & Decimal<{ integer: true }>,
+                    numerator: 529 as Numerator,
                     gpf: 23 as Prime,
                     n2p: 132.25 as N2P,
                 },
                 // This one will not make the cut because the previous one will be taken first (it's sorted by N2P!)
                 {
-                    numerator: 667 as Numerator & Decimal<{ integer: true }>,
+                    numerator: 667 as Numerator,
                     gpf: 29 as Prime,
                     n2p: 166.75 as N2P,
                 },

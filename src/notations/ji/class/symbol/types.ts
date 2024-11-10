@@ -1,5 +1,5 @@
-import { CommaClassId } from "../comma";
-import { FlaccoId } from "../flacco";
+import { CommaClassId } from "../comma"
+import { FlaccoId } from "../flacco"
 
 enum SymbolClassId {
     NULL = "null",
@@ -131,11 +131,8 @@ enum SymbolClassId {
 //  We way want to replace getRepresentativeSagittal called off a comma class with
 //  The places which have a comma class might actually want a symbol class in the first place?
 interface SymbolClass {
-    flaccoId: FlaccoId,
-    commaClassId: CommaClassId,
+    flaccoId: FlaccoId
+    commaClassId: CommaClassId
 }
 
-export {
-    SymbolClass,
-    SymbolClassId,
-}
+export { SymbolClass, SymbolClassId }

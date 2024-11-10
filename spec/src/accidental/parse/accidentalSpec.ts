@@ -1,6 +1,6 @@
-import {Io} from "@sagittal/general"
-import {ArmId, Compatible, computeAccidental, HeadId, parseAccidental} from "../../../../src"
-import {Shafts} from "../../../../src/accidental/sagittal"
+import { Io } from "@sagittal/general"
+import { ArmId, Compatible, computeAccidental, HeadId, parseAccidental } from "../../../../src"
+import { Shafts } from "../../../../src/accidental/sagittal"
 
 describe("parseAccidental", (): void => {
     it("works for Sagitype format", (): void => {
@@ -8,7 +8,7 @@ describe("parseAccidental", (): void => {
 
         const actual = parseAccidental(accidentalIo)
 
-        const expected = computeAccidental({armId: ArmId.ANTIWING_AND_TICK, headId: HeadId.BARB_AND_ARC})
+        const expected = computeAccidental({ armId: ArmId.ANTIWING_AND_TICK, headId: HeadId.BARB_AND_ARC })
         expect(actual).toEqual(expected)
     })
 

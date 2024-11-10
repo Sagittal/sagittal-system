@@ -7,7 +7,7 @@ import { CommaClass, CommaClassId } from "./types"
 
 const formatCommaClass = (
     commaClassId: CommaClassId,
-    { align, name = false, glyph = true }: { align?: boolean, name?: boolean, glyph?: boolean } = {},
+    { align, name = false, glyph = true }: { align?: boolean; name?: boolean; glyph?: boolean } = {},
 ): Formatted<CommaClass> => {
     const formattedCommaClass = []
     if (glyph) {
@@ -23,6 +23,4 @@ const formatCommaClass = (
     return formattedCommaClass.join(SPACE) as Formatted<CommaClass>
 }
 
-export {
-    formatCommaClass,
-}
+export { formatCommaClass }

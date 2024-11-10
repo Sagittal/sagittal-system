@@ -1,8 +1,8 @@
 import { CommaMean, Name } from "@sagittal/general"
 import { SizeCategoryBound } from "../../../../ji"
+import { InaMidpoint } from "../../types"
 import { getBoundClass, BoundType, BoundClassId } from "../bound"
 import { JiNotationBoundClass, JiNotationBoundClassEntry, JiNotationLevelId } from "./types"
-import { InaMidpoint } from "../../types"
 
 const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
     [BoundClassId.MINA_0]: {
@@ -21,7 +21,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_2),
         name: "8.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_3]: {
         ...getBoundClass(BoundClassId.MINA_3),
@@ -39,7 +44,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_5),
         name: "19.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.MEDIUM, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.MEDIUM,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_6]: {
         ...getBoundClass(BoundClassId.MINA_6),
@@ -63,7 +73,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_9),
         name: "32.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_10]: {
         ...getBoundClass(BoundClassId.MINA_10),
@@ -87,7 +102,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_13),
         name: "46.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_14]: {
         ...getBoundClass(BoundClassId.MINA_14),
@@ -105,7 +125,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_16),
         name: "57.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.MEDIUM, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.MEDIUM,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_17]: {
         ...getBoundClass(BoundClassId.MINA_17),
@@ -117,7 +142,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_18),
         name: "64.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_19]: {
         ...getBoundClass(BoundClassId.MINA_19),
@@ -141,7 +171,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_22),
         name: "78.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_23]: {
         ...getBoundClass(BoundClassId.MINA_23),
@@ -171,7 +206,13 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_27),
         name: "95.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.MEDIUM, JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.MEDIUM,
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_28]: {
         ...getBoundClass(BoundClassId.MINA_28),
@@ -195,7 +236,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_31),
         name: "109.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_32]: {
         ...getBoundClass(BoundClassId.MINA_32),
@@ -219,7 +265,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_35),
         name: "123.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_36]: {
         ...getBoundClass(BoundClassId.MINA_36),
@@ -237,7 +288,13 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_38),
         name: "133.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.MEDIUM, JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.MEDIUM,
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_39]: {
         ...getBoundClass(BoundClassId.MINA_39),
@@ -255,7 +312,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_41),
         name: "144.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_42]: {
         ...getBoundClass(BoundClassId.MINA_42),
@@ -285,7 +347,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_46),
         name: "161.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_47]: {
         ...getBoundClass(BoundClassId.MINA_47),
@@ -339,7 +406,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_53),
         name: "185.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_54]: {
         ...getBoundClass(BoundClassId.MINA_54),
@@ -369,7 +441,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_58),
         name: "203.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_59]: {
         ...getBoundClass(BoundClassId.MINA_59),
@@ -387,7 +464,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_61),
         name: "213.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.MEDIUM, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.MEDIUM,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_62]: {
         ...getBoundClass(BoundClassId.MINA_62),
@@ -399,7 +481,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_63),
         name: "220.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_64]: {
         ...getBoundClass(BoundClassId.MINA_64),
@@ -417,7 +504,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_66),
         name: "230.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_67]: {
         ...getBoundClass(BoundClassId.MINA_67),
@@ -441,7 +533,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_70),
         name: "244.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_71]: {
         ...getBoundClass(BoundClassId.MINA_71),
@@ -453,7 +550,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_72),
         name: "'(| ,~|)" as Name<CommaMean>,
         boundType: BoundType.COMMA_MEAN,
-        jiNotationLevels: [JiNotationLevelId.MEDIUM, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.MEDIUM,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_72_SPLIT]: {
         ...getBoundClass(BoundClassId.MINA_72_SPLIT),
@@ -483,7 +585,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_76),
         name: "265.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_77]: {
         ...getBoundClass(BoundClassId.MINA_77),
@@ -495,7 +602,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_78),
         name: "/|~ ,,(|(" as Name<CommaMean>,
         boundType: BoundType.COMMA_MEAN,
-        jiNotationLevels: [JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_78_SPLIT]: {
         ...getBoundClass(BoundClassId.MINA_78_SPLIT),
@@ -519,13 +631,23 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_81),
         name: "282.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_82]: {
         ...getBoundClass(BoundClassId.MINA_82),
         name: "286.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.MEDIUM, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.MEDIUM,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_83]: {
         ...getBoundClass(BoundClassId.MINA_83),
@@ -543,7 +665,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_85),
         name: "296.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_86]: {
         ...getBoundClass(BoundClassId.MINA_86),
@@ -585,7 +712,13 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_92),
         name: "S|M" as Name<SizeCategoryBound>,
         boundType: BoundType.SIZE_CATEGORY_BOUND,
-        jiNotationLevels: [JiNotationLevelId.MEDIUM, JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.MEDIUM,
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_93]: {
         ...getBoundClass(BoundClassId.MINA_93),
@@ -615,7 +748,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_97),
         name: "338.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_98]: {
         ...getBoundClass(BoundClassId.MINA_98),
@@ -639,7 +777,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_101),
         name: "352.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_102]: {
         ...getBoundClass(BoundClassId.MINA_102),
@@ -663,7 +806,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_105),
         name: "`'/|) ./|\\" as Name<CommaMean>,
         boundType: BoundType.COMMA_MEAN,
-        jiNotationLevels: [JiNotationLevelId.MEDIUM, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.MEDIUM,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_105_SPLIT]: {
         ...getBoundClass(BoundClassId.MINA_105_SPLIT),
@@ -675,7 +823,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_106),
         name: "369.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_107]: {
         ...getBoundClass(BoundClassId.MINA_107),
@@ -699,7 +852,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_110),
         name: "383.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_111]: {
         ...getBoundClass(BoundClassId.MINA_111),
@@ -729,7 +887,12 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_114),
         name: "397.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
     [BoundClassId.MINA_115]: {
         ...getBoundClass(BoundClassId.MINA_115),
@@ -741,17 +904,21 @@ const JI_NOTATION_BOUND_CLASSES: Record<BoundClassId, JiNotationBoundClass> = {
         ...getBoundClass(BoundClassId.MINA_116),
         name: "404.5°809" as Name<InaMidpoint>,
         boundType: BoundType.INA_MIDPOINT,
-        jiNotationLevels: [JiNotationLevelId.MEDIUM, JiNotationLevelId.HIGH, JiNotationLevelId.ULTRA, JiNotationLevelId.EXTREME, JiNotationLevelId.INSANE],
+        jiNotationLevels: [
+            JiNotationLevelId.MEDIUM,
+            JiNotationLevelId.HIGH,
+            JiNotationLevelId.ULTRA,
+            JiNotationLevelId.EXTREME,
+            JiNotationLevelId.INSANE,
+        ],
     },
 }
 
 const getJiNotationBoundClass = (boundClassId: BoundClassId): JiNotationBoundClass =>
     JI_NOTATION_BOUND_CLASSES[boundClassId]
 
-const JI_NOTATION_BOUND_CLASS_ENTRIES = Object.entries(JI_NOTATION_BOUND_CLASSES) as JiNotationBoundClassEntry[]
-
-export {
+const JI_NOTATION_BOUND_CLASS_ENTRIES = Object.entries(
     JI_NOTATION_BOUND_CLASSES,
-    JI_NOTATION_BOUND_CLASS_ENTRIES,
-    getJiNotationBoundClass,
-}
+) as JiNotationBoundClassEntry[]
+
+export { JI_NOTATION_BOUND_CLASSES, JI_NOTATION_BOUND_CLASS_ENTRIES, getJiNotationBoundClass }

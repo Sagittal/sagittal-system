@@ -1,13 +1,4 @@
-import {
-    computePrimes,
-    increment,
-    Index,
-    Max,
-    Numerator,
-    Of,
-    Prime,
-    PrimeCount,
-} from "@sagittal/general"
+import { computePrimes, increment, Index, Max, Numerator, Of, Prime, PrimeCount } from "@sagittal/general"
 import { N2D3P9 } from "../../../../../../../../../../../../src"
 
 describe("breaking points of max N2D3P9 per numerator prime", (): void => {

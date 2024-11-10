@@ -1,4 +1,4 @@
-import {JiNotationLevelId} from "../../../../../../src"
+import { JiNotationLevelId } from "../../../../../../src"
 import { isWithinJiNotationLevel } from "../../../../../../src/notations/ji/class/level/isWithinLevel"
 
 describe("isWithinJiNotationLevel", (): void => {

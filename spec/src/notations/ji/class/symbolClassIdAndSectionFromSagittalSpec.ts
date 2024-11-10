@@ -1,6 +1,11 @@
 import { ArmId, computeAccidental, HeadId, SymbolClassId } from "../../../../../src"
 import { Shafts } from "../../../../../src/accidental/sagittal"
-import { computeSymbolClassIdAndSectionFromSagittal, SECTION_P1T, SECTION_P2A, SECTION_P2T } from "../../../../../src/notations"
+import {
+    computeSymbolClassIdAndSectionFromSagittal,
+    SECTION_P1T,
+    SECTION_P2A,
+    SECTION_P2T,
+} from "../../../../../src/notations"
 import { SECTION_N1A, SECTION_P1A } from "../../../../../src/notations/ji/class/section/constants"
 
 describe("computeSymbolClassIdAndSectionFromSagittal", (): void => {
@@ -59,7 +64,11 @@ describe("computeSymbolClassIdAndSectionFromSagittal", (): void => {
     })
 
     it("works for a downward sagittal", (): void => {
-        const sagittal = computeAccidental({ armId: ArmId.WING_AND_TICK, headId: HeadId.DOUBLE_BARB, down: true })
+        const sagittal = computeAccidental({
+            armId: ArmId.WING_AND_TICK,
+            headId: HeadId.DOUBLE_BARB,
+            down: true,
+        })
 
         const actual = computeSymbolClassIdAndSectionFromSagittal(sagittal)
 

@@ -5,6 +5,7 @@ import {
     computeRationalDecimalCopfr,
     computeRationalScaledVectorSopfr,
     Quotient,
+    Rational,
     ScaledVector,
     THREE_PRIME_INDEX,
 } from "@sagittal/general"
@@ -13,13 +14,11 @@ import { computeApotomeSlope } from "./unusefulness"
 
 // As reverse-engineered here: http://forum.sagittal.org/viewtopic.php?p=1659#p1659
 
-const computeSecorComplexity = (jiPitch: ScaledVector<{ rational: true }>): SecorComplexity => {
+const computeSecorComplexity = (jiPitch: ScaledVector<Rational>): SecorComplexity => {
     const two3FreeClass = compute23FreeClass(jiPitch)
     const g = computeRationalScaledVectorSopfr(two3FreeClass)
 
-    const [numerator, denominator]: Quotient<{ rational: true }> = computeQuotientFromVector(
-        two3FreeClass.vector,
-    )
+    const [numerator, denominator]: Quotient<Rational> = computeQuotientFromVector(two3FreeClass.vector)
     const h = computeRationalDecimalCopfr(numerator)
     const i = computeRationalDecimalCopfr(denominator)
     const j = abs(h - i)

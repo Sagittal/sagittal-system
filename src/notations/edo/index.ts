@@ -7,12 +7,7 @@ export {
     StepDefinition,
     NonJiMeaning,
 } from "./types"
-export {
-    computeFifthStep,
-    computeSharpStep,
-    computeWholeToneStep,
-    computeLimmaStep,
-} from "./steps"
+export { computeFifthStep, computeSharpStep, computeWholeToneStep, computeLimmaStep } from "./steps"
 export { EDO_NOTATION_DEFINITIONS } from "./definitions"
 export { parseEdoNotationName, formatEdoNotationName } from "./name"
 export { isSubsetNotation, computeSubsetFactor } from "./subset"

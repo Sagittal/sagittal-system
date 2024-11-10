@@ -3,28 +3,19 @@ import {
     computeQuotientFromVector,
     computeRationalVectorFromRationalScaledVector,
     computeRoughRationalVector,
-    computeSuperScaledVector,
-    Direction,
     Vector,
     Quotient,
     TWO_3_FREE,
+    Rational,
+    Rough,
 } from "@sagittal/general"
 import { CommaNameQuotient } from "./types"
 
 const computeCommaNameQuotient = (comma: Comma): CommaNameQuotient => {
-    // const superComma = computeSuperScaledVector(comma) as Comma<{
-    //     rational: true
-    //     direction: Direction.SUPER
-    // }>
-    const superVector = computeRationalVectorFromRationalScaledVector(comma)
-    const two3FreeSuperVector = computeRoughRationalVector(superVector, TWO_3_FREE) as Vector<{
-        rational: true
-        rough: 5
-    }>
+    const vector = computeRationalVectorFromRationalScaledVector(comma)
+    const two3FreeVector = computeRoughRationalVector(vector, TWO_3_FREE) as Vector<Rational & Rough<5>>
 
-    return computeQuotientFromVector(two3FreeSuperVector) as Quotient<{
-        rational: true
-    }> as CommaNameQuotient
+    return computeQuotientFromVector(two3FreeVector) as Quotient as CommaNameQuotient
 }
 
 export { computeCommaNameQuotient }

@@ -151,6 +151,4 @@ enum FlaccoId {
     BIRD_AND_LEFT_SCROLL_DOUBLE_RIGHT_BARB = "birdAndLeftScrollDoubleRightBarb",
 }
 
-export {
-    FlaccoId,
-}
+export { FlaccoId }

@@ -31,22 +31,20 @@ const computeMaybeArmForSelfComplementingCore = (maybeArm: Maybe<Arm>): Maybe<Ar
     }
 }
 
-const computeApotomeComplementHandlingAsymmetricalSelfComplement = (sagittal: Maybe<Sagittal>): Maybe<Sagittal> => {
+const computeApotomeComplementHandlingAsymmetricalSelfComplement = (
+    sagittal: Maybe<Sagittal>,
+): Maybe<Sagittal> => {
     if (isUndefined(sagittal)) return APOTOME_CORE
-    
+
     const { arm, down, ...core } = sagittal
-    
+
     if (deepEquals(core, getCore(HeadId.LEFT_SCROLL_AND_DOUBLE_BARB))) {
         const handledArm = computeMaybeArmForSelfComplementingCore(arm)
 
-        return isUndefined(handledArm) ?
-            { ...core as Core } :
-            { arm: handledArm, ...core as Core }
+        return isUndefined(handledArm) ? { ...(core as Core) } : { arm: handledArm, ...(core as Core) }
     } else {
         return computeApotomeComplement(sagittal)
     }
 }
 
-export {
-    computeApotomeComplementHandlingAsymmetricalSelfComplement,
-}
+export { computeApotomeComplementHandlingAsymmetricalSelfComplement }

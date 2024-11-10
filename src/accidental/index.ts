@@ -1,15 +1,4 @@
-export {
-    Flacco,
-    AccentId,
-    FlagId,
-    ArmId,
-    HeadId,
-    getArm,
-    getHead,
-    Head,
-    Arm,
-    Accent,
-} from "./flacco"
+export { Flacco, AccentId, FlagId, ArmId, HeadId, getArm, getHead, Head, Arm, Accent } from "./flacco"
 export {
     Core,
     Sagittal,

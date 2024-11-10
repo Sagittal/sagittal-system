@@ -1,4 +1,6 @@
 import { Count, count } from "@sagittal/general"
+import { BoundClassId } from "../bound"
+import { Notation } from "../level"
 import {
     SECTION_N1A,
     SECTION_N1T,
@@ -9,16 +11,16 @@ import {
     SECTION_P2A,
     SECTION_P2T,
 } from "../section"
-import { Notation } from "../level"
 import { CaptureZone } from "./types"
-import { BoundClassId } from "../bound"
 
 const checkCounts = ({ boundClassIds, symbolClassIds }: Notation): void => {
     const symbolClassCount = count(symbolClassIds)
     const boundClassCount = count(boundClassIds)
 
-    if (symbolClassCount as Count !== boundClassCount as Count) {
-        throw new Error(`The count of symbol and bound classes must be the same, but were ${symbolClassCount} and ${boundClassCount}, respectively.`)
+    if ((symbolClassCount as Count) !== (boundClassCount as Count)) {
+        throw new Error(
+            `The count of symbol and bound classes must be the same, but were ${symbolClassCount} and ${boundClassCount}, respectively.`,
+        )
     }
 }
 
@@ -60,6 +62,4 @@ const computeCaptureZones = ({ boundClassIds, symbolClassIds }: Notation): Captu
     ]
 }
 
-export {
-    computeCaptureZones,
-}
+export { computeCaptureZones }

@@ -1,11 +1,11 @@
-import { isUndefined, ScaledVector, sumRationalScaledVectors, UNISON } from "@sagittal/general"
+import { isUndefined, Rational, ScaledVector, sumRationalScaledVectors, UNISON } from "@sagittal/general"
 import { Accidental } from "../../../accidental"
-import { computeApotomicPitchAlterationFromSection } from "./section"
-import { computeCommaticPitchAlterationFromSymbolClassIdAndSection } from "./commaticPitchAlteration"
 import { computePitchAlterationFromCompatible } from "../compatiblePitchAlteration"
+import { computeCommaticPitchAlterationFromSymbolClassIdAndSection } from "./commaticPitchAlteration"
+import { computeApotomicPitchAlterationFromSection } from "./section"
 import { computeSymbolClassIdAndSectionFromSagittal } from "./symbolClassIdAndSectionFromSagittal"
 
-const computeJiPitchFromAccidental = (accidental: Accidental): ScaledVector<{ rational: true }> => {
+const computeJiPitchFromAccidental = (accidental: Accidental): ScaledVector<Rational> => {
     if (isUndefined(accidental)) return UNISON
 
     const { compatible, ...sagittal } = accidental
@@ -14,7 +14,7 @@ const computeJiPitchFromAccidental = (accidental: Accidental): ScaledVector<{ ra
 
     const pitchAlterations = [
         computeCommaticPitchAlterationFromSymbolClassIdAndSection([symbolClassId, section]),
-    ] as Array<ScaledVector<{ rational: true }>>
+    ] as Array<ScaledVector<Rational>>
 
     const apotomePitchAlteration = computeApotomicPitchAlterationFromSection(section)
     if (!isUndefined(apotomePitchAlteration)) {

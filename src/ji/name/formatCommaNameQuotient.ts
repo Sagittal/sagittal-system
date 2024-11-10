@@ -10,13 +10,15 @@ import {
     PrimeCount,
     Quotient,
     QuotientPart,
+    Integer,
+    Rational,
 } from "@sagittal/general"
 import { FactoringMode } from "./types"
 
 const formatFactoredCommaNameQuotientPart = (
-    commaNameQuotientPart: QuotientPart & Decimal<{ integer: true }>,
+    commaNameQuotientPart: QuotientPart & Decimal<Integer>,
     quotientPartIndex: number,
-    ascii: boolean = false,
+    ascii = false,
 ): string => {
     if (commaNameQuotientPart === 1) return "1"
 
@@ -50,10 +52,10 @@ const formatFactoredCommaNameQuotientPart = (
 }
 
 const formatUnfactoredCommaNameQuotientPart = (
-    commaNameQuotientPart: QuotientPart & Decimal<{ integer: true }>,
+    commaNameQuotientPart: QuotientPart & Decimal<Integer>,
 ): string => commaNameQuotientPart.toString()
 
-const computeShouldFactor = (commaNameQuotientPart: QuotientPart & Decimal<{ integer: true }>): boolean => {
+const computeShouldFactor = (commaNameQuotientPart: QuotientPart & Decimal<Integer>): boolean => {
     if (computeRationalDecimalCopfr(commaNameQuotientPart) > 2 && commaNameQuotientPart !== 125) return true
 
     return (
@@ -64,7 +66,7 @@ const computeShouldFactor = (commaNameQuotientPart: QuotientPart & Decimal<{ int
 }
 
 const formatMaybeFactoredCommaNameQuotientPart = (
-    commaNameQuotientPart: QuotientPart & Decimal<{ integer: true }>,
+    commaNameQuotientPart: QuotientPart & Decimal<Integer>,
     quotientPartIndex: number,
     ascii: boolean,
 ): string =>
@@ -73,27 +75,21 @@ const formatMaybeFactoredCommaNameQuotientPart = (
         : formatUnfactoredCommaNameQuotientPart(commaNameQuotientPart)
 
 const formatCommaNameQuotient = (
-    commaNameQuotient: Quotient<{ rational: true }>,
+    commaNameQuotient: Quotient<Rational>,
     { factoringMode, ascii }: { factoringMode: FactoringMode; ascii: boolean },
 ): string[] =>
     factoringMode === FactoringMode.ALWAYS
         ? commaNameQuotient.map(
-              (
-                  quotientPart: QuotientPart & Decimal<{ integer: true }>,
-                  quotientPartIndex: number,
-              ): string => {
+              (quotientPart: QuotientPart & Decimal<Integer>, quotientPartIndex: number): string => {
                   return formatFactoredCommaNameQuotientPart(quotientPart, quotientPartIndex, ascii)
               },
           )
         : factoringMode === FactoringMode.NEVER
-        ? commaNameQuotient.map(formatUnfactoredCommaNameQuotientPart)
-        : commaNameQuotient.map(
-              (
-                  quotientPart: QuotientPart & Decimal<{ integer: true }>,
-                  quotientPartIndex: number,
-              ): string => {
-                  return formatMaybeFactoredCommaNameQuotientPart(quotientPart, quotientPartIndex, ascii)
-              },
-          )
+          ? commaNameQuotient.map(formatUnfactoredCommaNameQuotientPart)
+          : commaNameQuotient.map(
+                (quotientPart: QuotientPart & Decimal<Integer>, quotientPartIndex: number): string => {
+                    return formatMaybeFactoredCommaNameQuotientPart(quotientPart, quotientPartIndex, ascii)
+                },
+            )
 
 export { formatCommaNameQuotient }

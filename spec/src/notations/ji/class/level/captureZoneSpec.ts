@@ -1,5 +1,5 @@
-import {Cents, computeCentsFromPitch} from "@sagittal/general"
-import {CommaClassId, computeJiNotationCaptureZone, JiNotationLevelId} from "../../../../../../src"
+import { Cents, computeCentsFromPitch } from "@sagittal/general"
+import { CommaClassId, computeJiNotationCaptureZone, JiNotationLevelId } from "../../../../../../src"
 
 describe("computeJiNotationCaptureZone", (): void => {
     it("given a JI Notation comma class and a JI notation level, returns the capture zone for the JI Notation comma class at that JI notation level (works for a JI Notation comma class introduced before Extreme, but Extreme is requested)", (): void => {
@@ -19,6 +19,8 @@ describe("computeJiNotationCaptureZone", (): void => {
     it("throws an error if a JI notation level is requested for a JI Notation comma class which does not exist at that JI notation level", (): void => {
         expect((): void => {
             computeJiNotationCaptureZone(CommaClassId._5_P_2_11_k, JiNotationLevelId.ULTRA)
-        }).toThrowError("JI Notation comma class `)|( 5²⋅11k is not present at the Ultra JI notation level; it is not introduced until the Extreme JI notation level.")
+        }).toThrowError(
+            "JI Notation comma class `)|( 5²⋅11k is not present at the Ultra JI notation level; it is not introduced until the Extreme JI notation level.",
+        )
     })
 })

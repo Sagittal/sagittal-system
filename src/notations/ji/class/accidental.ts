@@ -1,17 +1,32 @@
 import { deepEquals, finalElement, isUndefined, Maybe } from "@sagittal/general"
-import { Arm, Flacco, getArm, getHead, Head, HeadId, EMPTY_ACCIDENTAL, formatAccidental, Sagittal, Shafts, Accidental, Compatible, areShaftsEven, getCore, isMultiShaft, AccidentalOptions } from "../../../accidental"
+import {
+    Arm,
+    Flacco,
+    getArm,
+    getHead,
+    Head,
+    HeadId,
+    EMPTY_ACCIDENTAL,
+    formatAccidental,
+    Sagittal,
+    Shafts,
+    Accidental,
+    Compatible,
+    areShaftsEven,
+    getCore,
+    isMultiShaft,
+    AccidentalOptions,
+} from "../../../accidental"
 import { computeApotomeComplementHandlingAsymmetricalSelfComplement } from "../asymmetricalSelfComplement"
 import { FLACCOS } from "./flacco"
 
 const armContributesAdditionalValueInSameDirection = (arm: Maybe<Arm>): boolean =>
     !isUndefined(arm) && !finalElement(arm).anti
 
-const headContributesAdditionalValue = (head: Head): boolean =>
-    !deepEquals(head, getHead(HeadId.BARE_SHAFT))
+const headContributesAdditionalValue = (head: Head): boolean => !deepEquals(head, getHead(HeadId.BARE_SHAFT))
 
 const isFlaccoValid = (flacco: Flacco): boolean =>
-    !!Object.values(FLACCOS).find((validFlacco: Flacco): boolean =>
-        deepEquals(flacco, validFlacco))
+    !!Object.values(FLACCOS).find((validFlacco: Flacco): boolean => deepEquals(flacco, validFlacco))
 
 const checkSagittalValidity = (sagittal: Sagittal): void => {
     const { arm, down, shafts, ...head } = sagittal
@@ -21,22 +36,32 @@ const checkSagittalValidity = (sagittal: Sagittal): void => {
         if (deepEquals(head, getHead(HeadId.DOUBLE_BARB))) {
             if (armContributesAdditionalValueInSameDirection(arm)) {
                 if (shafts === Shafts.EX) {
-                    throw new Error(`Invalid sagittal due to being beyond the double apotome: ${formatAccidental(sagittal, { align: false })}`)
+                    throw new Error(
+                        `Invalid sagittal due to being beyond the double apotome: ${formatAccidental(sagittal, { align: false })}`,
+                    )
                 }
                 adjustedSagittal = { arm, shafts: Shafts.SINGLE } as Accidental
             } else {
-                adjustedSagittal =
-                    computeApotomeComplementHandlingAsymmetricalSelfComplement({ arm, ...head, shafts: Shafts.DOUBLE }) as Accidental
+                adjustedSagittal = computeApotomeComplementHandlingAsymmetricalSelfComplement({
+                    arm,
+                    ...head,
+                    shafts: Shafts.DOUBLE,
+                }) as Accidental
             }
         } else {
-            adjustedSagittal =
-                computeApotomeComplementHandlingAsymmetricalSelfComplement({ arm, ...head, shafts: Shafts.DOUBLE }) as Accidental
+            adjustedSagittal = computeApotomeComplementHandlingAsymmetricalSelfComplement({
+                arm,
+                ...head,
+                shafts: Shafts.DOUBLE,
+            }) as Accidental
         }
     }
     const { down: discardDown, shafts: discardShafts, ...flacco } = adjustedSagittal
 
     if (!isFlaccoValid(flacco)) {
-        throw new Error(`Invalid sagittal due to incorrect flag, arm, and shaft combo: ${formatAccidental(sagittal, { align: false })}`)
+        throw new Error(
+            `Invalid sagittal due to incorrect flag, arm, and shaft combo: ${formatAccidental(sagittal, { align: false })}`,
+        )
     }
 }
 
@@ -44,36 +69,54 @@ const checkAccidentalWithCompatibleValidity = (accidental: Accidental): void => 
     const { arm, down, shafts, compatible, ...head } = accidental
 
     if (isMultiShaft(shafts)) {
-        throw new Error(`Cannot combine Sagittal-compatible symbols with multi-shaft sagittals: ${formatAccidental(accidental, { align: false })}`)
+        throw new Error(
+            `Cannot combine Sagittal-compatible symbols with multi-shaft sagittals: ${formatAccidental(accidental, { align: false })}`,
+        )
     }
 
     if (
-        compatible === Compatible.DOUBLE_FLAT
-        && (armContributesAdditionalValueInSameDirection(arm) || (down && headContributesAdditionalValue(head)))
+        compatible === Compatible.DOUBLE_FLAT &&
+        (armContributesAdditionalValueInSameDirection(arm) || (down && headContributesAdditionalValue(head)))
     ) {
-        throw new Error(`Invalid sagittal due to being beyond the double apotome: ${formatAccidental(accidental, { align: false })}`)
+        throw new Error(
+            `Invalid sagittal due to being beyond the double apotome: ${formatAccidental(accidental, { align: false })}`,
+        )
     } else if (
-        compatible === Compatible.DOUBLE_SHARP
-        && (armContributesAdditionalValueInSameDirection(arm) || (!down && headContributesAdditionalValue(head)))
+        compatible === Compatible.DOUBLE_SHARP &&
+        (armContributesAdditionalValueInSameDirection(arm) || (!down && headContributesAdditionalValue(head)))
     ) {
-        throw new Error(`Invalid sagittal due to being beyond the double apotome: ${formatAccidental(accidental, { align: false })}`)
+        throw new Error(
+            `Invalid sagittal due to being beyond the double apotome: ${formatAccidental(accidental, { align: false })}`,
+        )
     }
 
     if (
-        (compatible === Compatible.SHARP || compatible === Compatible.DOUBLE_SHARP)
-        && (down && headContributesAdditionalValue(head))
+        (compatible === Compatible.SHARP || compatible === Compatible.DOUBLE_SHARP) &&
+        down &&
+        headContributesAdditionalValue(head)
     ) {
-        const apotomeComplement = computeApotomeComplementHandlingAsymmetricalSelfComplement({ ...head, shafts })
+        const apotomeComplement = computeApotomeComplementHandlingAsymmetricalSelfComplement({
+            ...head,
+            shafts,
+        })
         if (apotomeComplement?.shafts !== Shafts.DOUBLE) {
-            throw new Error(`You are using too large of a single-shaft symbol against this Sagittal-compatible: ${formatAccidental(accidental, { align: false })} You should instead use the compatible closer to the natural and a single-shaft symbol which goes in its same direction`)
+            throw new Error(
+                `You are using too large of a single-shaft symbol against this Sagittal-compatible: ${formatAccidental(accidental, { align: false })} You should instead use the compatible closer to the natural and a single-shaft symbol which goes in its same direction`,
+            )
         }
     } else if (
-        (compatible === Compatible.FLAT || compatible === Compatible.DOUBLE_FLAT)
-        && (!down && headContributesAdditionalValue(head))
+        (compatible === Compatible.FLAT || compatible === Compatible.DOUBLE_FLAT) &&
+        !down &&
+        headContributesAdditionalValue(head)
     ) {
-        const apotomeComplement = computeApotomeComplementHandlingAsymmetricalSelfComplement({ ...head, shafts })
+        const apotomeComplement = computeApotomeComplementHandlingAsymmetricalSelfComplement({
+            ...head,
+            shafts,
+        })
         if (apotomeComplement?.shafts !== Shafts.DOUBLE) {
-            throw new Error(`You are using too large of a single-shaft symbol against this Sagittal-compatible: ${formatAccidental(accidental, { align: false })} you should instead use the compatible closer to the natural and a single-shaft symbol which goes in its same direction`)
+            throw new Error(
+                `You are using too large of a single-shaft symbol against this Sagittal-compatible: ${formatAccidental(accidental, { align: false })} you should instead use the compatible closer to the natural and a single-shaft symbol which goes in its same direction`,
+            )
         }
     }
 }
@@ -131,6 +174,4 @@ const computeAccidental = (options: AccidentalOptions = {}): Accidental => {
     return accidental
 }
 
-export {
-    computeAccidental,
-}
+export { computeAccidental }

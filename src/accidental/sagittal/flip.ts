@@ -1,5 +1,5 @@
-import {isUndefined, Maybe, shallowClone} from "@sagittal/general"
-import {Sagittal} from "./types"
+import { isUndefined, Maybe, shallowClone } from "@sagittal/general"
+import { Sagittal } from "./types"
 
 const flipSagittal = (sagittal: Maybe<Sagittal>): Maybe<Sagittal> => {
     if (isUndefined(sagittal)) return
@@ -15,6 +15,4 @@ const flipSagittal = (sagittal: Maybe<Sagittal>): Maybe<Sagittal> => {
     return flippedSagittal
 }
 
-export {
-    flipSagittal,
-}
+export { flipSagittal }

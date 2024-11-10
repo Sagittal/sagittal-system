@@ -1,16 +1,7 @@
-import {
-    Error,
-    Comma,
-    Decimal,
-    EtName,
-    EdoStep,
-    Name,
-    Maybe,
-    Abs,
-} from "@sagittal/general"
+import { Error, Comma, Decimal, EtName, EdoStep, Name, Maybe, Abs, Integer } from "@sagittal/general"
 import { Sagitype } from "../../accidental"
 
-const TEMPERED_THREES_ONLY_METHOD: string = "(tempered-3s-only method)"
+const TEMPERED_THREES_ONLY_METHOD = "(tempered-3s-only method)"
 type TemperedThreesOnlyMethod = "(tempered-3s-only method)"
 
 type EdoNotationName = EtName & { _EdoNotationNameBrand: boolean }
@@ -33,11 +24,9 @@ interface NonSubsetEdoNotationDefinition {
     stepDefinitions: StepDefinition[]
 }
 
-type EdoNotationDefinition =
-    | SubsetEdoNotationDefinition
-    | NonSubsetEdoNotationDefinition
+type EdoNotationDefinition = SubsetEdoNotationDefinition | NonSubsetEdoNotationDefinition
 
-type SubsetFactor = Decimal<{ integer: true }> & {
+type SubsetFactor = Decimal<Integer> & {
     _SubsetFactorStepBrand: boolean
 }
 

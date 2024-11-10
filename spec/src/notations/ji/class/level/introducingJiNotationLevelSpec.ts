@@ -1,4 +1,4 @@
-import {CommaClassId, getIntroducingJiNotationLevel, JiNotationLevelId} from "../../../../../../src"
+import { CommaClassId, getIntroducingJiNotationLevel, JiNotationLevelId } from "../../../../../../src"
 
 describe("getIntroducingJiNotationLevel", (): void => {
     it("returns the lowest JI notation level which includes the given comma class id", (): void => {

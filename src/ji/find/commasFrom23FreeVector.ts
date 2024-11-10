@@ -14,6 +14,9 @@ import {
     THREE_PRIME_INDEX,
     TWO_PRIME_INDEX,
     PrimeCount,
+    Rational,
+    Rough,
+    Integer,
 } from "@sagittal/general"
 import { analyzeComma, CommaAnalysis } from "../analyze"
 import {
@@ -23,26 +26,25 @@ import {
     DEFAULT_MAX_PRIME_LIMIT,
     DEFAULT_ZONE,
 } from "./constants"
-import { computeRationalVectorInZone } from "./vectorInZone"
 import { CommasFrom23FreeVectorOptions } from "./types"
+import { computeRationalVectorInZone } from "./vectorInZone"
 
 const compute2FreeRationalVector = (
-    two3FreeRationalVector: Vector<{ rational: true; rough: 5 }>,
-    threeExponent: Exponent<3 & Prime> & PrimeCount<{ rational: true; rough: 5 }>,
-): Vector<{ rational: true; rough: 3 }> => {
+    two3FreeRationalVector: Vector<Rational & Rough<5>>,
+    threeExponent: Exponent<3 & Prime> & PrimeCount<Rational & Rough<5>>,
+): Vector<Rational & Rough<3>> => {
     const twoFreeRationalVector = shallowClone(two3FreeRationalVector)
     twoFreeRationalVector[THREE_PRIME_INDEX] = threeExponent
 
     if (isUndefined(twoFreeRationalVector[TWO_PRIME_INDEX])) {
-        twoFreeRationalVector[TWO_PRIME_INDEX] = 0 as Exponent<3 & Prime> &
-            PrimeCount<{ rational: true; rough: 5 }>
+        twoFreeRationalVector[TWO_PRIME_INDEX] = 0 as Exponent<3 & Prime> & PrimeCount<Rational & Rough<5>>
     }
 
-    return twoFreeRationalVector as Vector<{ rational: true }> as Vector<{ rational: true; rough: 3 }>
+    return twoFreeRationalVector as Vector<Rational> as Vector<Rational & Rough<3>>
 }
 
 const computeCommasFrom23FreeRationalVector = (
-    two3FreeRationalVector: Vector<{ rational: true; rough: 5 }>,
+    two3FreeRationalVector: Vector<Rational & Rough<5>>,
     options?: CommasFrom23FreeVectorOptions,
 ): Comma[] => {
     const {
@@ -55,34 +57,31 @@ const computeCommasFrom23FreeRationalVector = (
 
     const commas: Comma[] = []
 
-    computePlusOrMinusRange(maxAte).forEach(
-        (threeExponent: Decimal<{ integer: true }> & Exponent<3 & Prime>): void => {
-            const twoFreeRationalVector = compute2FreeRationalVector(
-                two3FreeRationalVector,
-                threeExponent as Exponent<3 & Prime> as Exponent<3 & Prime> &
-                    PrimeCount<{ rational: true; rough: 5 }>,
-            )
-            const rationalVectorInZone: Maybe<Vector<{ rational: true }>> = computeRationalVectorInZone(
-                twoFreeRationalVector,
-                zone,
-            )
+    computePlusOrMinusRange(maxAte).forEach((threeExponent: Decimal<Integer> & Exponent<3 & Prime>): void => {
+        const twoFreeRationalVector = compute2FreeRationalVector(
+            two3FreeRationalVector,
+            threeExponent as Exponent<3 & Prime> as Exponent<3 & Prime> & PrimeCount<Rational & Rough<5>>,
+        )
+        const rationalVectorInZone: Maybe<Vector<Rational>> = computeRationalVectorInZone(
+            twoFreeRationalVector,
+            zone,
+        )
 
-            if (rationalVectorInZone) {
-                const comma = computeRationalScaledVectorFromRationalVector(rationalVectorInZone) as Comma
+        if (rationalVectorInZone) {
+            const comma = computeRationalScaledVectorFromRationalVector(rationalVectorInZone) as Comma
 
-                const commaAnalysis: CommaAnalysis = analyzeComma(comma)
-                if (
-                    abs(commaAnalysis.apotomeSlope) > maxAas ||
-                    commaAnalysis.two3FreeClassAnalysis.n2d3p9 > maxN2D3P9 ||
-                    computeRationalScaledVectorSmoothness(commaAnalysis.pitch) > maxPrimeLimit
-                ) {
-                    return
-                }
-
-                commas.push(comma)
+            const commaAnalysis: CommaAnalysis = analyzeComma(comma)
+            if (
+                abs(commaAnalysis.apotomeSlope) > maxAas ||
+                commaAnalysis.two3FreeClassAnalysis.n2d3p9 > maxN2D3P9 ||
+                computeRationalScaledVectorSmoothness(commaAnalysis.pitch) > maxPrimeLimit
+            ) {
+                return
             }
-        },
-    )
+
+            commas.push(comma)
+        }
+    })
 
     return commas
 }

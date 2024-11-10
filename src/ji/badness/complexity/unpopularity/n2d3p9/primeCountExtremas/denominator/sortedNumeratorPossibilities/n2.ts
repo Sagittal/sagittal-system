@@ -2,7 +2,6 @@ import {
     BASE_2,
     computeRationalDecimalCopfr,
     Count,
-    Decimal,
     Exponent,
     Numerator,
     pow,
@@ -10,11 +9,8 @@ import {
 } from "@sagittal/general"
 import { N2 } from "./types"
 
-const computeN2 = (numerator: Numerator & Decimal<{ integer: true }>): N2 =>
+const computeN2 = (numerator: Numerator): N2 =>
     (numerator /
-        pow(
-            BASE_2,
-            computeRationalDecimalCopfr(numerator) as number as Exponent<Count<Prime>>,
-        )) as N2
+        pow(BASE_2, computeRationalDecimalCopfr(numerator) as number as Exponent<Count<Prime>>)) as N2
 
 export { computeN2 }

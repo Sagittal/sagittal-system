@@ -1,9 +1,9 @@
-import { Direction, Name, NumericProperties, Quotient, ScaledVector } from "@sagittal/general"
+import { Direction, Irrational, Name, Quotient, Rational, Rough, ScaledVector } from "@sagittal/general"
 import { Complexity } from "../badness"
 
-type SizeCategoryBound<T extends NumericProperties = {}> = {
+type SizeCategoryBound = {
     name: Name<SizeCategoryBound>
-    pitch: ScaledVector<T & { rational: false }>
+    pitch: ScaledVector<Irrational>
 }
 
 enum FactoringMode {
@@ -69,7 +69,7 @@ type CommaNameOptions = Partial<{
 // Note, however, that when you return the 2's and 3's to this to make it comma-sized, of the size of its name,
 // It WILL be super! This is a subtle but critical point.
 // You can observe this difference in ordering in commaName.ts and two3FreeClass.ts
-type CommaNameQuotient<T extends NumericProperties = {}> = Quotient<T & { rational: true; rough: 3 }> & {
+type CommaNameQuotient = Quotient<Rational & Rough<3>> & {
     _CommaNameQuotientBrand: boolean
 }
 

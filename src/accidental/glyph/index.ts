@@ -23,7 +23,7 @@ export {
     computeCompatibleSmiley,
     computeAccentSmiley,
 } from "./smiley"
-export {alignSagitype} from "./align"
-export {Sagitype, Unicode, Smiley, Glyph} from "./types"
-export {formatAccidental} from "./format"
-export {PARENTHETICAL_NATURAL_SAGITYPE, BLANK_SAGITYPE} from "./constants"
+export { alignSagitype } from "./align"
+export { Sagitype, Unicode, Smiley, Glyph } from "./types"
+export { formatAccidental } from "./format"
+export { PARENTHETICAL_NATURAL_SAGITYPE, BLANK_SAGITYPE } from "./constants"

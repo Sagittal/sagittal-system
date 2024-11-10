@@ -1,13 +1,11 @@
-import {Denominator, Max, Of, Prime} from "@sagittal/general"
-import {N2D3P9} from "../../../types"
-import {NumeratorPossibilityForDenominatorGivenMaxN2D3P9} from "./numeratorPossibilities"
-import {computeSortedNumeratorPossibilitiesGivenMaxN2D3P9WithGreaterGpfThanDenominatorPrimeSortedByN2P} from "./sortedNumeratorPossibilitiesWithGreaterGpf"
-import {computeSortedNumeratorPossibilitiesGivenMaxN2D3P9WithLesserGpfThanDenominatorPrimeSortedByN2} from "./sortedNumeratorPossibilitiesWithLesserGpf"
-import {SortedNumeratorPossibilitiesForDenominatorPrimeGivenMaxN2D3P9} from "./types"
+import { Denominator, Of, Prime } from "@sagittal/general"
+import { NumeratorPossibilityForDenominatorGivenMaxN2D3P9 } from "./numeratorPossibilities"
+import { computeSortedNumeratorPossibilitiesGivenMaxN2D3P9WithGreaterGpfThanDenominatorPrimeSortedByN2P } from "./sortedNumeratorPossibilitiesWithGreaterGpf"
+import { computeSortedNumeratorPossibilitiesGivenMaxN2D3P9WithLesserGpfThanDenominatorPrimeSortedByN2 } from "./sortedNumeratorPossibilitiesWithLesserGpf"
+import { SortedNumeratorPossibilitiesForDenominatorPrimeGivenMaxN2D3P9 } from "./types"
 
 const computeSortedNumeratorPossibilitiesForDenominatorPrimeGivenMaxN2D3P9 = (
     denominatorPrime: Prime & Of<Denominator>,
-    maxN2D3P9: Max<N2D3P9>,
     numeratorPossibilitiesForDenominatorGivenMaxN2D3P9: NumeratorPossibilityForDenominatorGivenMaxN2D3P9[],
 ): SortedNumeratorPossibilitiesForDenominatorPrimeGivenMaxN2D3P9 => {
     const sortedNumeratorPossibilitiesGivenMaxN2D3P9WithLesserGpfThanDenominatorPrimeSortedByN2 =
@@ -28,6 +26,4 @@ const computeSortedNumeratorPossibilitiesForDenominatorPrimeGivenMaxN2D3P9 = (
     }
 }
 
-export {
-    computeSortedNumeratorPossibilitiesForDenominatorPrimeGivenMaxN2D3P9,
-}
+export { computeSortedNumeratorPossibilitiesForDenominatorPrimeGivenMaxN2D3P9 }

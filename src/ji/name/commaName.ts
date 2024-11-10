@@ -5,7 +5,6 @@ import {
     computeSubQuotient,
     computeSuperQuotient,
     computeSuperScaledVector,
-    Direction,
     formatCents,
     isQuotientSub,
     isRationalScaledVectorSmooth,
@@ -14,6 +13,7 @@ import {
     Name,
     ScaledVector,
     stringify,
+    Super,
     THREE_SMOOTHNESS,
 } from "@sagittal/general"
 import { computeCommaNameQuotient } from "./commaNameQuotient"
@@ -26,7 +26,7 @@ import { CommaNameOptions, DirectedNumbers, DirectedWord, FactoringMode, SizeCat
 
 const removeParentheses = (string: string): string => string.replace("(", BLANK).replace(")", BLANK)
 
-const computeWord = (commaIsDown: boolean): string => commaIsDown ? " down" : " up"
+const computeWord = (commaIsDown: boolean): string => (commaIsDown ? " down" : " up")
 
 const computeMaybeDown = (
     comma: Comma,
@@ -76,10 +76,7 @@ const computeCommaName = (comma: Comma, options: CommaNameOptions = {}): Name<Co
 
     const maybeHyphen = abbreviated ? BLANK : "-"
 
-    const superComma = computeSuperScaledVector(comma) as Comma<{
-        rational: true
-        direction: Direction.SUPER
-    }>
+    const superComma = computeSuperScaledVector(comma) as Comma & Super
     const sizeCategory: SizeCategory = computeSizeCategory(superComma)
     const sizeCategoryText = abbreviated
         ? SIZE_CATEGORY_ABBREVIATIONS[sizeCategory]

@@ -1,6 +1,10 @@
-import { computeAccidentalSagitype, computeAccidentalSmiley, computeAccidentalUnicode } from "../../../../../../../src/accidental"
-import { computeEvoAccidentalFromCaptureZone } from "../../../../../../../src/notations/ji/class/flavor/evo"
+import {
+    computeAccidentalSagitype,
+    computeAccidentalSmiley,
+    computeAccidentalUnicode,
+} from "../../../../../../../src/accidental"
 import { CaptureZone, computeRevoAccidentalFromCaptureZone } from "../../../../../../../src/notations"
+import { computeEvoAccidentalFromCaptureZone } from "../../../../../../../src/notations/ji/class/flavor/evo"
 import { FlavorsExpectation } from "./types"
 
 const computeFlavorsExpectation = ({ symbolClassId, section }: CaptureZone): FlavorsExpectation => {
@@ -24,6 +28,4 @@ const computeFlavorsExpectation = ({ symbolClassId, section }: CaptureZone): Fla
     }
 }
 
-export {
-    computeFlavorsExpectation,
-}
+export { computeFlavorsExpectation }

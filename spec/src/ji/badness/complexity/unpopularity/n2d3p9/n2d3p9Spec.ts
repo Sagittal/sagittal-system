@@ -1,4 +1,4 @@
-import { Direction, EMPTY_VECTOR, Vector, Two3FreeClass } from "@sagittal/general"
+import { EMPTY_VECTOR, Vector, Two3FreeClass, Super, Rough, Rational } from "@sagittal/general"
 import { computeN2D3P9, N2D3P9 } from "../../../../../../../src"
 
 describe("computeN2D3P9", (): void => {
@@ -51,11 +51,7 @@ describe("computeN2D3P9", (): void => {
 
     it("can handle 1/1, the empty 2,3-free class", (): void => {
         const two3FreeClass = {
-            vector: EMPTY_VECTOR as Vector<{
-                rational: true
-                direction: Direction.SUPER
-                rough: 5
-            }>, // {1}₂,₃
+            vector: EMPTY_VECTOR as Vector<Rational & Rough<5> & Super>, // {1}₂,₃
         } as Two3FreeClass
 
         const actual = computeN2D3P9(two3FreeClass)

@@ -21,7 +21,7 @@ enum Nominal {
 }
 
 interface Link {
-    nominal: Nominal,
+    nominal: Nominal
     whorl: Whorl
 }
 
@@ -30,9 +30,4 @@ interface Spelling {
     sagittalIndex: Index<Sagittal> // 0 is none, 1 is the first sagittal in the sequence
 }
 
-export {
-    Whorl,
-    Nominal,
-    Link,
-    Spelling,
-}
+export { Whorl, Nominal, Link, Spelling }

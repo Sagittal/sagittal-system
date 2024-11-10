@@ -1,4 +1,4 @@
-import {formatJiNotationLevel, JiNotationLevelId} from "../../../../../../src"
+import { formatJiNotationLevel, JiNotationLevelId } from "../../../../../../src"
 
 describe("formatJiNotationLevel", (): void => {
     it("makes JI levels nice for people to read", (): void => {

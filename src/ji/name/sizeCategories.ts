@@ -1,4 +1,4 @@
-import {SizeCategory, SizeCategoryAbbreviation, SizeCategoryName} from "./types"
+import { SizeCategory, SizeCategoryAbbreviation, SizeCategoryName } from "./types"
 
 const SIZE_CATEGORY_NAMES: Record<SizeCategory, SizeCategoryName> = {
     [SizeCategory.UNISON]: "unison" as SizeCategoryName,
@@ -57,7 +57,12 @@ const SIZE_CATEGORY_NAME_ALTERNATIVES: Record<SizeCategory, SizeCategoryName[]> 
     [SizeCategory.KLEISMA]: ["semicomma"] as SizeCategoryName[],
     [SizeCategory.COMMA]: ["diaschisma", "diaskisma", "diaskhisma"] as SizeCategoryName[],
     [SizeCategory.SMALL_DIESIS]: ["minor-diesis", "fifth-tone"] as SizeCategoryName[],
-    [SizeCategory.MEDIUM_DIESIS]: ["diesis", "quarter-tone", "enharmonic-diesis", "enharmonic"] as SizeCategoryName[],
+    [SizeCategory.MEDIUM_DIESIS]: [
+        "diesis",
+        "quarter-tone",
+        "enharmonic-diesis",
+        "enharmonic",
+    ] as SizeCategoryName[],
     [SizeCategory.LARGE_DIESIS]: ["major-diesis", "third-tone"] as SizeCategoryName[],
     [SizeCategory.SMALL_SEMITONE]: ["chromatic-semitone"] as SizeCategoryName[],
     [SizeCategory.MEDIUM_SEMITONE]: ["semitone", "limma"] as SizeCategoryName[],
@@ -75,8 +80,4 @@ const SIZE_CATEGORY_NAME_ALTERNATIVES: Record<SizeCategory, SizeCategoryName[]> 
     [SizeCategory.DOUBLE_APOTOME]: [] as SizeCategoryName[],
 }
 
-export {
-    SIZE_CATEGORY_NAMES,
-    SIZE_CATEGORY_ABBREVIATIONS,
-    SIZE_CATEGORY_NAME_ALTERNATIVES,
-}
+export { SIZE_CATEGORY_NAMES, SIZE_CATEGORY_ABBREVIATIONS, SIZE_CATEGORY_NAME_ALTERNATIVES }

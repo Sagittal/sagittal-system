@@ -1,6 +1,6 @@
-import {Accidental, ArmId, Compatible, computeAccidental, HeadId} from "../../../../../src"
-import {AccentId, FlagId} from "../../../../../src/accidental"
-import {Shafts} from "../../../../../src/accidental/sagittal"
+import { Accidental, ArmId, Compatible, computeAccidental, HeadId } from "../../../../../src"
+import { AccentId, FlagId } from "../../../../../src/accidental"
+import { Shafts } from "../../../../../src/accidental/sagittal"
 
 describe("computeAccidental", (): void => {
     it("returns the accidental", (): void => {
@@ -10,12 +10,12 @@ describe("computeAccidental", (): void => {
         const armId = ArmId.BIRD
         const anti = true
 
-        const actual = computeAccidental({headId, shafts, down, armId, anti})
+        const actual = computeAccidental({ headId, shafts, down, armId, anti })
 
         const expected = {
             left: [FlagId.BARB],
             right: [FlagId.ARC],
-            arm: [{id: AccentId.BIRD, anti: true}],
+            arm: [{ id: AccentId.BIRD, anti: true }],
             down: true,
             shafts: Shafts.TRIPLE,
         } as Accidental
@@ -28,10 +28,10 @@ describe("computeAccidental", (): void => {
         const shafts = Shafts.EX
 
         expect((): void => {
-            computeAccidental({headId, armId, shafts})
+            computeAccidental({ headId, armId, shafts })
         }).toThrowError("Invalid sagittal due to being beyond the double apotome: `/X\\")
         expect((): void => {
-            computeAccidental({headId, armId, shafts, down: true})
+            computeAccidental({ headId, armId, shafts, down: true })
         }).toThrowError("Invalid sagittal due to being beyond the double apotome: ,\\Y/")
     })
 
@@ -41,8 +41,10 @@ describe("computeAccidental", (): void => {
         const shafts = Shafts.EX
 
         expect((): void => {
-            computeAccidental({headId, armId, shafts})
-        }).toThrowError("A core with flag combo leftScrollDoubleRightBarb does not exist for even shaft counts.")
+            computeAccidental({ headId, armId, shafts })
+        }).toThrowError(
+            "A core with flag combo leftScrollDoubleRightBarb does not exist for even shaft counts.",
+        )
     })
 
     // See: http://forum.sagittal.org/viewtopic.php?p=2549#p2549
@@ -51,18 +53,18 @@ describe("computeAccidental", (): void => {
         const armId = ArmId.BIRD
         const anti = true
 
-        const actual = computeAccidental({headId, armId, anti, shafts: Shafts.DOUBLE})
+        const actual = computeAccidental({ headId, armId, anti, shafts: Shafts.DOUBLE })
 
         const expected = {
             left: [FlagId.SCROLL],
             right: [FlagId.SCROLL],
-            arm: [{id: AccentId.BIRD, anti: true}],
+            arm: [{ id: AccentId.BIRD, anti: true }],
             shafts: Shafts.DOUBLE,
         } as Accidental
         expect(actual).toEqual(expected)
 
         expect((): void => {
-            computeAccidental({headId, armId, anti})
+            computeAccidental({ headId, armId, anti })
         }).toThrowError("Invalid sagittal due to incorrect flag, arm, and shaft combo: ,,)|(")
     })
 
@@ -71,34 +73,34 @@ describe("computeAccidental", (): void => {
         const shafts = Shafts.DOUBLE
 
         expect((): void => {
-            computeAccidental({headId, shafts, armId: ArmId.WING_AND_TICK, anti: true})
+            computeAccidental({ headId, shafts, armId: ArmId.WING_AND_TICK, anti: true })
         }).not.toThrow()
         expect((): void => {
-            computeAccidental({headId, shafts, armId: ArmId.TICK, anti: true})
+            computeAccidental({ headId, shafts, armId: ArmId.TICK, anti: true })
         }).not.toThrow()
         expect((): void => {
-            computeAccidental({headId, shafts, armId: ArmId.ANTIWING_AND_TICK, anti: true})
+            computeAccidental({ headId, shafts, armId: ArmId.ANTIWING_AND_TICK, anti: true })
         }).toThrowError("Invalid sagittal due to incorrect flag, arm, and shaft combo: `./||\\")
         expect((): void => {
-            computeAccidental({headId, shafts, armId: ArmId.BIRD, anti: true})
+            computeAccidental({ headId, shafts, armId: ArmId.BIRD, anti: true })
         }).not.toThrow()
         expect((): void => {
-            computeAccidental({headId, shafts, armId: ArmId.WING, anti: true})
+            computeAccidental({ headId, shafts, armId: ArmId.WING, anti: true })
         }).not.toThrow()
         expect((): void => {
-            computeAccidental({headId, shafts, armId: ArmId.WING})
+            computeAccidental({ headId, shafts, armId: ArmId.WING })
         }).not.toThrow()
         expect((): void => {
-            computeAccidental({headId, shafts, armId: ArmId.BIRD})
+            computeAccidental({ headId, shafts, armId: ArmId.BIRD })
         }).not.toThrow()
         expect((): void => {
-            computeAccidental({headId, shafts, armId: ArmId.ANTIWING_AND_TICK})
+            computeAccidental({ headId, shafts, armId: ArmId.ANTIWING_AND_TICK })
         }).toThrowError("Invalid sagittal due to incorrect flag, arm, and shaft combo: ,'/||\\")
         expect((): void => {
-            computeAccidental({headId, shafts, armId: ArmId.TICK})
+            computeAccidental({ headId, shafts, armId: ArmId.TICK })
         }).not.toThrow()
         expect((): void => {
-            computeAccidental({headId, shafts, armId: ArmId.WING_AND_TICK})
+            computeAccidental({ headId, shafts, armId: ArmId.WING_AND_TICK })
         }).not.toThrow()
     })
 
@@ -106,7 +108,7 @@ describe("computeAccidental", (): void => {
         const headId = HeadId.DOUBLE_ARC
         const compatible = Compatible.SHARP
 
-        const actual = computeAccidental({headId, compatible})
+        const actual = computeAccidental({ headId, compatible })
 
         const expected = {
             left: [FlagId.ARC],
@@ -117,8 +119,10 @@ describe("computeAccidental", (): void => {
         expect(actual).toEqual(expected)
 
         expect((): void => {
-            computeAccidental({headId, down: true, compatible})
-        }).toThrowError(`You are using too large of a single-shaft symbol against this Sagittal-compatible: (!)# You should instead use the compatible closer to the natural and a single-shaft symbol which goes in its same direction`)
+            computeAccidental({ headId, down: true, compatible })
+        }).toThrowError(
+            `You are using too large of a single-shaft symbol against this Sagittal-compatible: (!)# You should instead use the compatible closer to the natural and a single-shaft symbol which goes in its same direction`,
+        )
     })
 
     it("returns an empty object (the empty accidental) if passed nothing", (): void => {
@@ -126,9 +130,9 @@ describe("computeAccidental", (): void => {
     })
 
     it("works for a plain compatible", (): void => {
-        const actual = computeAccidental({compatible: Compatible.DOUBLE_FLAT})
+        const actual = computeAccidental({ compatible: Compatible.DOUBLE_FLAT })
 
-        const expected = {compatible: Compatible.DOUBLE_FLAT} as Accidental
+        const expected = { compatible: Compatible.DOUBLE_FLAT } as Accidental
         expect(actual).toEqual(expected)
     })
 
@@ -138,7 +142,7 @@ describe("computeAccidental", (): void => {
         const compatible = Compatible.FLAT
 
         expect((): void => {
-            computeAccidental({headId, shafts, compatible})
+            computeAccidental({ headId, shafts, compatible })
         }).toThrowError("Cannot combine Sagittal-compatible symbols with multi-shaft sagittals: ~||)b")
     })
 
@@ -147,10 +151,10 @@ describe("computeAccidental", (): void => {
         const armId = ArmId.WING
 
         expect((): void => {
-            computeAccidental({headId, armId, compatible: Compatible.DOUBLE_SHARP})
+            computeAccidental({ headId, armId, compatible: Compatible.DOUBLE_SHARP })
         }).toThrowError("Invalid sagittal due to being beyond the double apotome: `|x")
         expect((): void => {
-            computeAccidental({headId, armId, down: true, compatible: Compatible.DOUBLE_FLAT})
+            computeAccidental({ headId, armId, down: true, compatible: Compatible.DOUBLE_FLAT })
         }).toThrowError("Invalid sagittal due to being beyond the double apotome: ,!bb")
     })
 })

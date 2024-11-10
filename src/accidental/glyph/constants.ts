@@ -1,4 +1,4 @@
-import {Sagitype, Smiley, Unicode} from "./types"
+import { Sagitype, Smiley, Unicode } from "./types"
 
 const BLANK_SAGITYPE = "" as Sagitype
 const BLANK_UNICODE = "" as Unicode

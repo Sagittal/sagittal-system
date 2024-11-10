@@ -1,4 +1,4 @@
-import { ScaledVector } from "@sagittal/general"
+import { Rational, ScaledVector } from "@sagittal/general"
 import {
     ArmId,
     Compatible,
@@ -20,7 +20,7 @@ describe("computeJiPitchFromAccidental", (): void => {
         // ``)|# =
         // ``)|  [  -7  -1   1   1   1 ⟩    +
         //     # [ -11   7             ⟩
-        const expected = { vector: [-18, 6, 1, 1, 1] } as ScaledVector<{ rational: true }>
+        const expected = { vector: [-18, 6, 1, 1, 1] } as ScaledVector<Rational>
         expect(actual).toEqual(expected)
     })
 
@@ -32,7 +32,7 @@ describe("computeJiPitchFromAccidental", (): void => {
 
         const actual = computeJiPitchFromAccidental(accidental)
 
-        const expected = { vector: [-4, 9, -2, -2] } as ScaledVector<{ rational: true }>
+        const expected = { vector: [-4, 9, -2, -2] } as ScaledVector<Rational>
         expect(actual).toEqual(expected)
     })
 })

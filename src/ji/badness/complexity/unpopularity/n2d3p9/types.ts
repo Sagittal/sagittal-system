@@ -1,8 +1,5 @@
-import {Unpopularity} from "../types"
+import { Unpopularity } from "../types"
 
-type N2D3P9 = Unpopularity & {_N2D3P9Brand: boolean}
+type N2D3P9 = Unpopularity & { _N2D3P9Brand: boolean }
 
-export {
-    Unpopularity,
-    N2D3P9,
-}
+export { Unpopularity, N2D3P9 }

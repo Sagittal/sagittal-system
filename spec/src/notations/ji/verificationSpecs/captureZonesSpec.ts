@@ -3,7 +3,7 @@ import {
     Decimal,
     Extrema,
     Maybe,
-    Zone,
+    ScaledVector,
 } from "@sagittal/general"
 import {
     CommaClassId,
@@ -11,15 +11,13 @@ import {
     JI_NOTATION_LEVELS_COMMA_CLASS_IDS,
     JiNotationLevelId,
 } from "../../../../../src"
+import { Zone } from "../../../../../src/ji"
 
 describe("capture zones", (): void => {
     it("Medium JI notation level capture zones check out", (): void => {
         const actual = JI_NOTATION_LEVELS_COMMA_CLASS_IDS[JiNotationLevelId.MEDIUM].map(
             (mediumLevelCommaClassId: CommaClassId): Maybe<Zone> => {
-                return computeJiNotationCaptureZone(
-                    mediumLevelCommaClassId,
-                    JiNotationLevelId.MEDIUM,
-                )
+                return computeJiNotationCaptureZone(mediumLevelCommaClassId, JiNotationLevelId.MEDIUM)
             },
         )
 
@@ -38,11 +36,11 @@ describe("capture zones", (): void => {
         ] as Array<Extrema<{ of: { decimal: Decimal } }>>
         expected.forEach((extrema: Extrema<{ of: { decimal: Decimal } }>, index: number): void => {
             expect(
-                computeIrrationalDecimalFromScaledVector(actual[index]!.extrema[0]!),
-            ).toBeCloseTo(extrema[0].decimal!)
+                computeIrrationalDecimalFromScaledVector(actual[index]!.extrema[0]! as ScaledVector),
+            ).toBeCloseTo(extrema[0].decimal)
             expect(
-                computeIrrationalDecimalFromScaledVector(actual[index]!.extrema[1]!),
-            ).toBeCloseTo(extrema[1].decimal!)
+                computeIrrationalDecimalFromScaledVector(actual[index]!.extrema[1]! as ScaledVector),
+            ).toBeCloseTo(extrema[1].decimal)
         })
     })
 
@@ -84,11 +82,11 @@ describe("capture zones", (): void => {
         ] as Array<Extrema<{ of: { decimal: Decimal } }>>
         expected.forEach((extrema: Extrema<{ of: { decimal: Decimal } }>, index: number): void => {
             expect(
-                computeIrrationalDecimalFromScaledVector(actual[index]!.extrema[0]!),
-            ).toBeCloseTo(extrema[0].decimal!)
+                computeIrrationalDecimalFromScaledVector(actual[index]!.extrema[0]! as ScaledVector),
+            ).toBeCloseTo(extrema[0].decimal)
             expect(
-                computeIrrationalDecimalFromScaledVector(actual[index]!.extrema[1]!),
-            ).toBeCloseTo(extrema[1].decimal!)
+                computeIrrationalDecimalFromScaledVector(actual[index]!.extrema[1]! as ScaledVector),
+            ).toBeCloseTo(extrema[1].decimal)
         })
     })
 
@@ -150,21 +148,18 @@ describe("capture zones", (): void => {
         ] as Array<Extrema<{ of: { decimal: Decimal } }>>
         expected.forEach((extrema: Extrema<{ of: { decimal: Decimal } }>, index: number): void => {
             expect(
-                computeIrrationalDecimalFromScaledVector(actual[index]!.extrema[0]!),
-            ).toBeCloseTo(extrema[0].decimal!)
+                computeIrrationalDecimalFromScaledVector(actual[index]!.extrema[0]! as ScaledVector),
+            ).toBeCloseTo(extrema[0].decimal)
             expect(
-                computeIrrationalDecimalFromScaledVector(actual[index]!.extrema[1]!),
-            ).toBeCloseTo(extrema[1].decimal!)
+                computeIrrationalDecimalFromScaledVector(actual[index]!.extrema[1]! as ScaledVector),
+            ).toBeCloseTo(extrema[1].decimal)
         })
     })
 
     it("Extreme JI notation level capture zones check out", (): void => {
         const actual = JI_NOTATION_LEVELS_COMMA_CLASS_IDS[JiNotationLevelId.EXTREME].map(
             (extremeLevelCommaClassId: CommaClassId): Maybe<Zone> => {
-                return computeJiNotationCaptureZone(
-                    extremeLevelCommaClassId,
-                    JiNotationLevelId.EXTREME,
-                )
+                return computeJiNotationCaptureZone(extremeLevelCommaClassId, JiNotationLevelId.EXTREME)
             },
         )
 
@@ -295,11 +290,11 @@ describe("capture zones", (): void => {
         ] as Array<Extrema<{ of: { decimal: Decimal } }>>
         expected.forEach((extrema: Extrema<{ of: { decimal: Decimal } }>, index: number): void => {
             expect(
-                computeIrrationalDecimalFromScaledVector(actual[index]!.extrema[0]!),
-            ).toBeCloseTo(extrema[0].decimal!)
+                computeIrrationalDecimalFromScaledVector(actual[index]!.extrema[0]! as ScaledVector),
+            ).toBeCloseTo(extrema[0].decimal)
             expect(
-                computeIrrationalDecimalFromScaledVector(actual[index]!.extrema[1]!),
-            ).toBeCloseTo(extrema[1].decimal!)
+                computeIrrationalDecimalFromScaledVector(actual[index]!.extrema[1]! as ScaledVector),
+            ).toBeCloseTo(extrema[1].decimal)
         })
     })
 })

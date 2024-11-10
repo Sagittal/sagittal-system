@@ -1,4 +1,4 @@
-import { NumericProperties, ScaledVector } from "@sagittal/general"
+import { Irrational, ScaledVector } from "@sagittal/general"
 
 enum BoundClassId {
     MINA_0 = "mina0",
@@ -126,8 +126,8 @@ enum BoundClassId {
     MINA_116 = "mina116",
 }
 
-type BoundClass<T extends NumericProperties = {}> = {
-    pitch: ScaledVector<T & { rational: false }>
+type BoundClass = {
+    pitch: ScaledVector<Irrational>
 }
 
 enum BoundType {

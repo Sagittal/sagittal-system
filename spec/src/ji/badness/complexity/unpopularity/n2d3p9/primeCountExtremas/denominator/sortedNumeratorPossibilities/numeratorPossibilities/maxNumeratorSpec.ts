@@ -1,4 +1,4 @@
-import { Decimal, Max, Numerator, slowTestOnlyRunInFullSuite } from "@sagittal/general"
+import { Max, Numerator, slowTestOnlyRunInFullSuite } from "@sagittal/general"
 import { N2D3P9 } from "../../../../../../../../../../../src"
 import { computeMaxNumeratorGivenMaxN2D3P9 } from "../../../../../../../../../../../src/ji/badness/complexity/unpopularity/n2d3p9/primeCountExtremas/denominator/sortedNumeratorPossibilities/numeratorPossibilities/maxNumerator"
 
@@ -10,7 +10,7 @@ describe("computeMaxNumeratorGivenMaxN2D3P9", (): void => {
 
         const actual = computeMaxNumeratorGivenMaxN2D3P9(maxN2D3P9)
 
-        const expected = (5 ** 6) as Max<Numerator & Decimal<{ integer: true }>>
+        const expected = (5 ** 6) as Max<Numerator>
         expect(actual).toEqual(expected)
     })
 
@@ -19,7 +19,7 @@ describe("computeMaxNumeratorGivenMaxN2D3P9", (): void => {
 
         const actual = computeMaxNumeratorGivenMaxN2D3P9(maxN2D3P9)
 
-        const expected = (5 ** 3) as Max<Numerator & Decimal<{ integer: true }>>
+        const expected = (5 ** 3) as Max<Numerator>
         expect(actual).toEqual(expected)
     })
 
@@ -28,7 +28,7 @@ describe("computeMaxNumeratorGivenMaxN2D3P9", (): void => {
 
         const actual = computeMaxNumeratorGivenMaxN2D3P9(maxN2D3P9)
 
-        const expected = (5 ** 1 * 7 ** 1) as Max<Numerator & Decimal<{ integer: true }>>
+        const expected = (5 ** 1 * 7 ** 1) as Max<Numerator>
         expect(actual).toEqual(expected)
     })
 })

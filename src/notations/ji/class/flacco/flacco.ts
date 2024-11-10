@@ -1,11 +1,8 @@
-import { FlaccoId } from "./types"
-import { ArmId, Flacco, HeadId, getArm, getHead } from "../../../../accidental"
+import { Flacco } from "../../../../accidental"
 import { SymbolClassId } from "../symbol"
 import { FLACCOS } from "./constants"
+import { FlaccoId } from "./types"
 
-const getFlacco = (flaccoId: FlaccoId | SymbolClassId): Flacco =>
-    FLACCOS[flaccoId]
+const getFlacco = (flaccoId: FlaccoId | SymbolClassId): Flacco => FLACCOS[flaccoId]
 
-export {
-    getFlacco,
-}
+export { getFlacco }

@@ -165,22 +165,18 @@ describe("parseCommaName", (): void => {
             commaNameQuotient,
             sizeCategory: SizeCategory.LARGE_DIESIS_PLUS_APOTOME,
         })
-        expect(parseCommaName("1/5-Small-Semitone-Plus-Apotome" as Io)).toEqual(
-            {
-                commaNameQuotient,
-                sizeCategory: SizeCategory.SMALL_SEMITONE_PLUS_APOTOME,
-            },
-        )
+        expect(parseCommaName("1/5-Small-Semitone-Plus-Apotome" as Io)).toEqual({
+            commaNameQuotient,
+            sizeCategory: SizeCategory.SMALL_SEMITONE_PLUS_APOTOME,
+        })
         expect(parseCommaName("1/5-Limma-Plus-Apotome" as Io)).toEqual({
             commaNameQuotient,
             sizeCategory: SizeCategory.LIMMA_PLUS_APOTOME,
         })
-        expect(parseCommaName("1/5-Large-Semitone-Plus-Apotome" as Io)).toEqual(
-            {
-                commaNameQuotient,
-                sizeCategory: SizeCategory.LARGE_SEMITONE_PLUS_APOTOME,
-            },
-        )
+        expect(parseCommaName("1/5-Large-Semitone-Plus-Apotome" as Io)).toEqual({
+            commaNameQuotient,
+            sizeCategory: SizeCategory.LARGE_SEMITONE_PLUS_APOTOME,
+        })
         expect(parseCommaName("1/5-Double-Apotome" as Io)).toEqual({
             commaNameQuotient,
             sizeCategory: SizeCategory.DOUBLE_APOTOME,
@@ -269,22 +265,18 @@ describe("parseCommaName", (): void => {
             commaNameQuotient,
             sizeCategory: SizeCategory.LARGE_DIESIS_PLUS_APOTOME,
         })
-        expect(parseCommaName("1/5-small-semitone-plus-apotome" as Io)).toEqual(
-            {
-                commaNameQuotient,
-                sizeCategory: SizeCategory.SMALL_SEMITONE_PLUS_APOTOME,
-            },
-        )
+        expect(parseCommaName("1/5-small-semitone-plus-apotome" as Io)).toEqual({
+            commaNameQuotient,
+            sizeCategory: SizeCategory.SMALL_SEMITONE_PLUS_APOTOME,
+        })
         expect(parseCommaName("1/5-limma-plus-apotome" as Io)).toEqual({
             commaNameQuotient,
             sizeCategory: SizeCategory.LIMMA_PLUS_APOTOME,
         })
-        expect(parseCommaName("1/5-large-semitone-plus-apotome" as Io)).toEqual(
-            {
-                commaNameQuotient,
-                sizeCategory: SizeCategory.LARGE_SEMITONE_PLUS_APOTOME,
-            },
-        )
+        expect(parseCommaName("1/5-large-semitone-plus-apotome" as Io)).toEqual({
+            commaNameQuotient,
+            sizeCategory: SizeCategory.LARGE_SEMITONE_PLUS_APOTOME,
+        })
         expect(parseCommaName("1/5-double-apotome" as Io)).toEqual({
             commaNameQuotient,
             sizeCategory: SizeCategory.DOUBLE_APOTOME,

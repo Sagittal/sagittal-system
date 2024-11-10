@@ -7,7 +7,8 @@ import { Notation } from "./types"
 //  And/or the full set of flaccos you get, at which point delete the commented out extra Flacco IDs here
 
 const MEDIUM_NOTATION: Notation = {
-    boundClassIds: [                    // Total 11
+    boundClassIds: [
+        // Total 11
         BoundClassId.MINA_5,
         BoundClassId.MINA_16,
         BoundClassId.MINA_27,
@@ -20,7 +21,8 @@ const MEDIUM_NOTATION: Notation = {
         BoundClassId.MINA_105,
         BoundClassId.MINA_116,
     ] as BoundClassId[],
-    symbolClassIds: [                        // Extra 2 flaccos, total 13
+    symbolClassIds: [
+        // Extra 2 flaccos, total 13
         SymbolClassId.NULL,
         SymbolClassId.RIGHT_SCROLL,
         SymbolClassId.DOUBLE_SCROLL,
@@ -38,7 +40,8 @@ const MEDIUM_NOTATION: Notation = {
 }
 
 const HIGH_NOTATION: Notation = {
-    boundClassIds: [                    // Total 27
+    boundClassIds: [
+        // Total 27
         BoundClassId.MINA_2,
         BoundClassId.MINA_9,
         BoundClassId.MINA_13,
@@ -67,7 +70,8 @@ const HIGH_NOTATION: Notation = {
         BoundClassId.MINA_114,
         BoundClassId.MINA_116,
     ] as BoundClassId[],
-    symbolClassIds: [                        // Extra 5 flaccos, total 32
+    symbolClassIds: [
+        // Extra 5 flaccos, total 32
         SymbolClassId.NULL,
         SymbolClassId.LEFT_SCROLL,
         SymbolClassId.RIGHT_SCROLL,
@@ -104,7 +108,8 @@ const HIGH_NOTATION: Notation = {
 }
 
 const ULTRA_NOTATION: Notation = {
-    boundClassIds: [                    // Total 47
+    boundClassIds: [
+        // Total 47
         BoundClassId.MINA_2,
         BoundClassId.MINA_3,
         BoundClassId.MINA_5,
@@ -153,7 +158,8 @@ const ULTRA_NOTATION: Notation = {
         BoundClassId.MINA_114,
         BoundClassId.MINA_116,
     ] as BoundClassId[],
-    symbolClassIds: [                        // Extra 8 flaccos, total 55
+    symbolClassIds: [
+        // Extra 8 flaccos, total 55
         SymbolClassId.NULL,
         SymbolClassId.ANTITICK_AND_LEFT_SCROLL,
         SymbolClassId.TICK,
@@ -213,16 +219,10 @@ const ULTRA_NOTATION: Notation = {
 }
 
 const EXTREME_NOTATION: Notation = {
-    boundClassIds: Object.values(BoundClassId),     // Total 123
-    symbolClassIds: Object.values(SymbolClassId),   // Extra 26 flaccos, total 149
+    boundClassIds: Object.values(BoundClassId), // Total 123
+    symbolClassIds: Object.values(SymbolClassId), // Extra 26 flaccos, total 149
 }
 
 const JI_NOTATION: Notation = EXTREME_NOTATION
 
-export {
-    MEDIUM_NOTATION,
-    HIGH_NOTATION,
-    ULTRA_NOTATION,
-    EXTREME_NOTATION,
-    JI_NOTATION,
-}
+export { MEDIUM_NOTATION, HIGH_NOTATION, ULTRA_NOTATION, EXTREME_NOTATION, JI_NOTATION }

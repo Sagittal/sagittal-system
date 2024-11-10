@@ -8,54 +8,52 @@ import {
     Max,
     Maybe,
     Name,
-    NumericProperties,
     Vector,
     Prime,
     Quotient,
     Sopfr,
     ScaledVector,
     Two3FreeClass,
+    Rational,
+    Rough,
 } from "@sagittal/general"
 import { ApotomeSlope, Ate, N2D3P9 } from "../badness"
 import { SizeCategory } from "../name"
 
-interface JiPitchAnalysisProperties<T extends NumericProperties = {}> {
+interface JiPitchAnalysisProperties {
     apotomeSlope: ApotomeSlope
     ate: Ate
     aas: Abs<ApotomeSlope>
-    vector: Vector<T & { rational: true }>
-    quotient: Quotient<T & { rational: true }>
-    decimal: Decimal<T & { rational: true }>
+    vector: Vector
+    quotient: Quotient
+    decimal: Decimal<Rational>
     cents: Cents
     two3FreeClassAnalysis: Two3FreeClassAnalysis
 }
 
-type CommaAnalysis<
-    T extends NumericProperties = {},
-    U extends Comma<T> = Comma<T>,
-> = JiPitchAnalysisProperties<T> & {
+type CommaAnalysis = JiPitchAnalysisProperties & {
     name: Name<Comma>
     sizeCategory: Index<SizeCategory>
-    pitch: U
+    pitch: Comma
 }
 
-type JiPitchAnalysis<T extends NumericProperties = {}> = JiPitchAnalysisProperties<T> & {
-    pitch: ScaledVector<T & { rational: true }>
+type JiPitchAnalysis = JiPitchAnalysisProperties & {
+    pitch: ScaledVector<Rational>
 }
 
-type PotentiallyCommaAnalysis<T extends NumericProperties = {}> = JiPitchAnalysisProperties<T> & {
+type PotentiallyCommaAnalysis = JiPitchAnalysisProperties & {
     name: Maybe<Name<Comma>>
     sizeCategory: Maybe<Index<SizeCategory>>
-    pitch: ScaledVector<T & { rational: true }>
+    pitch: ScaledVector<Rational>
 }
 
 type Two3FreeClassAnalysis = {
     two3FreeClass: Two3FreeClass
     name: Name<Two3FreeClass>
-    two3FreePrimeLimit: Max<Prime<{ rough: 5 }>>
+    two3FreePrimeLimit: Max<Prime<Rough<5>>>
     n2d3p9: N2D3P9
-    two3FreeCopfr: Copfr<{ rough: 5 }>
-    two3FreeSopfr: Sopfr<{ rough: 5 }>
+    two3FreeCopfr: Copfr<Rough<5>>
+    two3FreeSopfr: Sopfr<Rough<5>>
 }
 
 export { JiPitchAnalysis, CommaAnalysis, Two3FreeClassAnalysis, PotentiallyCommaAnalysis }

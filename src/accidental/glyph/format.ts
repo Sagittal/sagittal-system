@@ -1,18 +1,20 @@
-import {Formatted, ioSettings, TableFormat} from "@sagittal/general"
-import {Accidental} from "../types"
-import {alignSagitype} from "./align"
-import {computeAccidentalSagitype} from "./sagitype"
-import {computeAccidentalSmiley} from "./smiley"
-import {Sagitype, Glyph, Smiley, Unicode} from "./types"
-import {computeAccidentalUnicode} from "./unicode"
+import { Formatted, ioSettings, TableFormat } from "@sagittal/general"
+import { Accidental } from "../types"
+import { alignSagitype } from "./align"
+import { computeAccidentalSagitype } from "./sagitype"
+import { computeAccidentalSmiley } from "./smiley"
+import { Sagitype, Glyph, Smiley, Unicode } from "./types"
+import { computeAccidentalUnicode } from "./unicode"
 
-const formatAccidental = (accidental: Accidental, {align = true}: {align?: boolean} = {}): Formatted<Glyph> => {
+const formatAccidental = (
+    accidental: Accidental,
+    { align = true }: { align?: boolean } = {},
+): Formatted<Glyph> => {
     switch (ioSettings.tableFormat) {
         case TableFormat.TERMINAL:
-            const sagitype = computeAccidentalSagitype(accidental)
-            return align ?
-                alignSagitype(sagitype) :
-                sagitype as string as Formatted<Sagitype>
+            return align
+                ? alignSagitype(computeAccidentalSagitype(accidental))
+                : (computeAccidentalSagitype(accidental) as string as Formatted<Sagitype>)
         case TableFormat.FORUM:
         case TableFormat.FORUM_WITH_SPLIT_QUOTIENTS:
             return computeAccidentalSmiley(accidental) as string as Formatted<Smiley>
@@ -22,6 +24,4 @@ const formatAccidental = (accidental: Accidental, {align = true}: {align?: boole
     }
 }
 
-export {
-    formatAccidental,
-}
+export { formatAccidental }

@@ -11,11 +11,11 @@ import { GlyphExpectation } from "../../../../helpers/src/accidental/glyph/types
 
 describe("glyphs", (): void => {
     it("has the correct core glyphs and computes their IO correctly", (): void => {
-        const coreGlyphExpectations: Record<string, GlyphExpectation> = {}
+        const coreGlyphExpectations: Record<string | number | symbol, GlyphExpectation> = {}
 
         Object.values(HeadId).forEach((headId: HeadId): void => {
             Object.values(Shafts).forEach((shafts: Shafts): void => {
-                [false, true].forEach((down: boolean): void => {
+                ;[false, true].forEach((down: boolean): void => {
                     const coreGlyphExpectation = computeCoreGlyphExpectation(headId, { shafts, down })
                     const nameArray = [camelCaseToConstantCase(headId)] as string[]
                     if (shafts !== Shafts.SINGLE) nameArray.push(camelCaseToConstantCase(shafts))
@@ -27,7 +27,7 @@ describe("glyphs", (): void => {
             })
         })
 
-        const expected: Record<string, GlyphExpectation> = {
+        const expected: Record<string | number | symbol, GlyphExpectation> = {
             RIGHT_SCROLL: {
                 unicode: "" as Unicode,
                 sagitype: "|(" as Sagitype,

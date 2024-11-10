@@ -1,9 +1,9 @@
-import {IDENTIFYING_ACCIDENTAL_CHARS, Io} from "@sagittal/general"
-import {Sagitype, Smiley, Unicode} from "../glyph"
-import {parseSagitype} from "./sagitype"
-import {parseSmiley} from "./smiley"
-import {parseUnicode} from "./unicode"
+import { IDENTIFYING_ACCIDENTAL_CHARS, Io } from "@sagittal/general"
+import { Sagitype, Smiley, Unicode } from "../glyph"
 import { Accidental } from "../types"
+import { parseSagitype } from "./sagitype"
+import { parseSmiley } from "./smiley"
+import { parseUnicode } from "./unicode"
 
 const parseAccidental = (accidentalIo: Io): Accidental => {
     if (accidentalIo.match(/[:]/)) {
@@ -15,6 +15,4 @@ const parseAccidental = (accidentalIo: Io): Accidental => {
     return parseUnicode(accidentalIo as Unicode)
 }
 
-export {
-    parseAccidental,
-}
+export { parseAccidental }

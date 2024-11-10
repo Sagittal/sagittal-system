@@ -1,19 +1,11 @@
-import {
-    isScaledVectorGreater,
-    isUndefined,
-    Max,
-    Maybe,
-    Min,
-    ScaledVector,
-    UNISON,
-    Zone,
-} from "@sagittal/general"
+import { isScaledVectorGreater, isUndefined, Max, Maybe, Min, ScaledVector, UNISON } from "@sagittal/general"
+import { Zone } from "../../../../ji"
 import { getCommaClass, formatCommaClass, CommaClassId, CommaClass } from "../comma"
 import { formatJiNotationLevel } from "./format"
-import { JI_NOTATION_LEVELS_BOUND_CLASSES } from "./levelsBoundClasses"
-import { JiNotationBoundClass, JiNotationLevelId } from "./types"
 import { getIntroducingJiNotationLevel } from "./introducingJiNotationLevel"
 import { isWithinJiNotationLevel } from "./isWithinLevel"
+import { JI_NOTATION_LEVELS_BOUND_CLASSES } from "./levelsBoundClasses"
+import { JiNotationBoundClass, JiNotationLevelId } from "./types"
 
 // TODO: POST-NOTATION-GENERATION: JI NOTATION CLEAN-UP
 //  This should be another example of a module that should be outmoded post notation generation?
@@ -42,20 +34,18 @@ const computeJiNotationCaptureZone = (
 
     const indexOfBoundClassJustAboveCommaAtThisLevel = jiNotationLevelBoundClasses.findIndex(
         (jiNotationBoundClass: JiNotationBoundClass): boolean => {
-            return isScaledVectorGreater(jiNotationBoundClass.pitch, commaClass.pitch)
+            return isScaledVectorGreater(jiNotationBoundClass.pitch, commaClass.pitch as ScaledVector)
         },
     )
     const indexOfJiNotationBoundJustBelowCommaClassAtThisLevel =
         indexOfBoundClassJustAboveCommaAtThisLevel - 1
 
-    const lowerBoundClass =
-        jiNotationLevelBoundClasses[indexOfJiNotationBoundJustBelowCommaClassAtThisLevel]
+    const lowerBoundClass = jiNotationLevelBoundClasses[indexOfJiNotationBoundJustBelowCommaClassAtThisLevel]
     const lowerBoundClassPitch = isUndefined(lowerBoundClass)
         ? UNISON
         : (lowerBoundClass.pitch as ScaledVector as Min<ScaledVector>)
-    const upperBoundClassPitch = jiNotationLevelBoundClasses[
-        indexOfBoundClassJustAboveCommaAtThisLevel
-    ].pitch as ScaledVector as Max<ScaledVector>
+    const upperBoundClassPitch = jiNotationLevelBoundClasses[indexOfBoundClassJustAboveCommaAtThisLevel]
+        .pitch as ScaledVector as Max<ScaledVector>
 
     return { extrema: [lowerBoundClassPitch, upperBoundClassPitch] } as Zone<{ of: CommaClass }>
 }

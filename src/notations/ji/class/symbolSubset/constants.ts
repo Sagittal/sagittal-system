@@ -1,10 +1,10 @@
 import { computeKeyPath, Index, sort } from "@sagittal/general"
-import { SymbolSubsetId } from "./types"
 import { SymbolClassId } from "../symbol"
+import { SymbolSubsetId } from "./types"
 
 // TODO: POST-NOTATION-GENERATION: RE-ORG SYMBOL CLASS ID
-// Obviously this would be better if it was up at the notation level, 
-// but because it's bound with this limiting SymbolClassId concept, 
+// Obviously this would be better if it was up at the notation level,
+// but because it's bound with this limiting SymbolClassId concept,
 // gotta be trapped in here with the JI notation for now
 
 const SIZE_SORTED_SYMBOL_SUBSET_IDS: SymbolSubsetId[] = [
@@ -192,9 +192,7 @@ const OLYMPIAN_SYMBOL_SUBSET: Array<[Index<SymbolClassId>, SymbolClassId]> = [
     // [148 as Index<SymbolClassId>, SymbolClassId.BIRD_AND_LEFT_SCROLL_DOUBLE_RIGHT_BARB],
 ]
 
-const MAGRATHEAN_SYMBOL_SUBSET: Array<[Index<SymbolClassId>, SymbolClassId]> = [
-    ...OLYMPIAN_SYMBOL_SUBSET,
-]
+const MAGRATHEAN_SYMBOL_SUBSET: Array<[Index<SymbolClassId>, SymbolClassId]> = [...OLYMPIAN_SYMBOL_SUBSET]
 
 // On an independent trajectory, as it does not contain Spartan or Athenian, though it is contained by Promethean
 // See: http://forum.sagittal.org/viewtopic.php?p=885&sid=832fe7e77de7aae89234e3dbb67f8fb9#p885
@@ -216,7 +214,9 @@ const TROJAN_SYMBOL_SUBSET: Array<[Index<SymbolClassId>, SymbolClassId]> = [
 //  Probably some way to get the indices from the enums rather than separately specifying them like here and for commas
 //  And at that time probably also clean up the /*119*/ style comments in bound class, comma class, and symbol subsets
 const shapeUpIds = (ids: Array<[Index<SymbolClassId>, SymbolClassId]>): SymbolClassId[] =>
-    sort(ids, { by: computeKeyPath(0) }).map(([_, id]: [Index<SymbolClassId>, SymbolClassId]): SymbolClassId => id)
+    sort(ids, { by: computeKeyPath(0) }).map(
+        ([_, id]: [Index<SymbolClassId>, SymbolClassId]): SymbolClassId => id,
+    )
 
 // TODO: POST-NOTATION-GENERATION: TRULY SYMBOL SUBSETS, NOT JUST SYMBOL CLASS SUBSETS
 //  These won't truly be symbol subsets until you map across them and include every complement, shift, and negation
@@ -233,7 +233,4 @@ const SYMBOL_SUBSETS: Record<SymbolSubsetId, SymbolClassId[]> = {
     [SymbolSubsetId.MAGRATHEAN]: shapeUpIds(MAGRATHEAN_SYMBOL_SUBSET),
 }
 
-export {
-    SYMBOL_SUBSETS,
-    SIZE_SORTED_SYMBOL_SUBSET_IDS,
-}
+export { SYMBOL_SUBSETS, SIZE_SORTED_SYMBOL_SUBSET_IDS }

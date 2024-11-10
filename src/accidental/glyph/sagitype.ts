@@ -1,9 +1,9 @@
-import {BLANK, deepEquals, isUndefined, join, Maybe, sumTexts} from "@sagittal/general"
-import {Accent, AccentId, Arm, FlagId} from "../flacco"
-import {Accidental, Compatible, Flavor} from "../types"
-import {Core, Sagittal, Shafts} from "../sagittal"
-import {BLANK_SAGITYPE, PARENTHETICAL_NATURAL_SAGITYPE} from "./constants"
-import {Sagitype} from "./types"
+import { BLANK, deepEquals, isUndefined, join, Maybe, sumTexts } from "@sagittal/general"
+import { Accent, AccentId, Arm, FlagId } from "../flacco"
+import { Core, Sagittal, Shafts } from "../sagittal"
+import { Accidental, Compatible, Flavor } from "../types"
+import { BLANK_SAGITYPE, PARENTHETICAL_NATURAL_SAGITYPE } from "./constants"
+import { Sagitype } from "./types"
 
 const SHAFTS_TO_SAGITYPE_MAP: Record<Shafts, Sagitype> = {
     [Shafts.SINGLE]: "|" as Sagitype,
@@ -89,41 +89,44 @@ const COMPATIBLE_TO_SAGITYPE_MAP: Record<Compatible, Sagitype> = {
     [Compatible.DOUBLE_FLAT]: "bb" as Sagitype,
 }
 
-const computeCoreSagitype = ({down, shafts, left, right}: Core): Sagitype => {
-    const leftSagitype = isUndefined(left) ?
-        BLANK_SAGITYPE :
-        left.map((flagId: FlagId): Sagitype => {
-            return down ? DOWN_LEFT_FLAG_TO_SAGITYPE_MAP[flagId] : LEFT_FLAG_TO_SAGITYPE_MAP[flagId]
-        }).join(BLANK)
+const computeCoreSagitype = ({ down, shafts, left, right }: Core): Sagitype => {
+    const leftSagitype = isUndefined(left)
+        ? BLANK_SAGITYPE
+        : left
+              .map((flagId: FlagId): Sagitype => {
+                  return down ? DOWN_LEFT_FLAG_TO_SAGITYPE_MAP[flagId] : LEFT_FLAG_TO_SAGITYPE_MAP[flagId]
+              })
+              .join(BLANK)
 
     const shaftsSagitype = down ? DOWN_SHAFTS_TO_SAGITYPE_MAP[shafts] : SHAFTS_TO_SAGITYPE_MAP[shafts]
 
-    const rightSagitype = isUndefined(right) ?
-        BLANK_SAGITYPE :
-        right.map((flagId: FlagId): Sagitype => {
-            return down ? DOWN_RIGHT_FLAG_TO_SAGITYPE_MAP[flagId] : RIGHT_FLAG_TO_SAGITYPE_MAP[flagId]
-        }).join(BLANK)
+    const rightSagitype = isUndefined(right)
+        ? BLANK_SAGITYPE
+        : right
+              .map((flagId: FlagId): Sagitype => {
+                  return down ? DOWN_RIGHT_FLAG_TO_SAGITYPE_MAP[flagId] : RIGHT_FLAG_TO_SAGITYPE_MAP[flagId]
+              })
+              .join(BLANK)
 
     return sumTexts(leftSagitype, shaftsSagitype, rightSagitype)
         .replace(/\|\|\|\|/, "X")
         .replace(/!!!!/, "Y") as Sagitype
 }
 
-const computeCompatibleSagitype = (compatible: Compatible): Sagitype =>
-    COMPATIBLE_TO_SAGITYPE_MAP[compatible]
+const computeCompatibleSagitype = (compatible: Compatible): Sagitype => COMPATIBLE_TO_SAGITYPE_MAP[compatible]
 
-const computeAccentSagitype = ({id, anti}: Accent, down?: boolean): Sagitype =>
-    anti ?
-        down ?
-            ACCENT_TO_SAGITYPE_MAP[id] :
-            DOWN_ACCENT_TO_SAGITYPE_MAP[id] :
-        down ?
-            DOWN_ACCENT_TO_SAGITYPE_MAP[id] :
-            ACCENT_TO_SAGITYPE_MAP[id]
+const computeAccentSagitype = ({ id, anti }: Accent, down?: boolean): Sagitype =>
+    anti
+        ? down
+            ? ACCENT_TO_SAGITYPE_MAP[id]
+            : DOWN_ACCENT_TO_SAGITYPE_MAP[id]
+        : down
+          ? DOWN_ACCENT_TO_SAGITYPE_MAP[id]
+          : ACCENT_TO_SAGITYPE_MAP[id]
 
 const computeSagittalSagitype = (sagittal: Maybe<Sagittal>): Sagitype => {
     if (isUndefined(sagittal)) return PARENTHETICAL_NATURAL_SAGITYPE
-    const {arm, ...core} = sagittal
+    const { arm, ...core } = sagittal
 
     const armSagitype = isUndefined(arm) ? BLANK_SAGITYPE : computeArmSagitype(arm, core.down)
     const coreSagitype = computeCoreSagitype(core)
@@ -141,19 +144,19 @@ const computeAccidentalSagitype = <T extends Maybe<Flavor> = undefined>(
     accidental: Accidental<T>,
 ): Sagitype<T> => {
     if (isUndefined(accidental)) return PARENTHETICAL_NATURAL_SAGITYPE as Sagitype<T>
-    const {compatible, arm, ...core} = accidental
+    const { compatible, arm, ...core } = accidental
 
-    const armSagitype = isUndefined(arm) ?
-        BLANK_SAGITYPE :
-        computeArmSagitype(arm, core.down)
+    const armSagitype = isUndefined(arm) ? BLANK_SAGITYPE : computeArmSagitype(arm, core.down)
 
-    const coreSagitype = deepEquals(core, {} as Core) ?
-        isUndefined(compatible) ? PARENTHETICAL_NATURAL_SAGITYPE : BLANK_SAGITYPE :
-        computeCoreSagitype(core)
+    const coreSagitype = deepEquals(core, {} as Core)
+        ? isUndefined(compatible)
+            ? PARENTHETICAL_NATURAL_SAGITYPE
+            : BLANK_SAGITYPE
+        : computeCoreSagitype(core)
 
-    const compatibleSagitype = isUndefined(compatible) ?
-        BLANK_SAGITYPE :
-        computeCompatibleSagitype(compatible)
+    const compatibleSagitype = isUndefined(compatible)
+        ? BLANK_SAGITYPE
+        : computeCompatibleSagitype(compatible)
 
     return sumTexts(armSagitype, coreSagitype, compatibleSagitype) as Sagitype<T>
 }

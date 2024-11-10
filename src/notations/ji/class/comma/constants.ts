@@ -8,8 +8,8 @@ import {
     SYNTONIC_COMMA,
     UNISON,
 } from "@sagittal/general"
-import { CommaClass, CommaClassId } from "./types"
 import { SymbolClassId } from "../symbol"
+import { CommaClass, CommaClassId } from "./types"
 
 const COMMA_CLASSES: Record<CommaClassId, CommaClass> = {
     /*0*/ [CommaClassId._1_u]: {

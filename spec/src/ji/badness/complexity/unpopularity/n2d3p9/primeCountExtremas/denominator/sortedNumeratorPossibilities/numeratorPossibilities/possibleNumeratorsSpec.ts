@@ -1,4 +1,4 @@
-import { Decimal, Max, Numerator } from "@sagittal/general"
+import { Max, Numerator } from "@sagittal/general"
 import { N2D3P9 } from "../../../../../../../../../../../src"
 import { computePossibleNumeratorsGivenMaxN2D3P9 } from "../../../../../../../../../../../src/ji/badness/complexity/unpopularity/n2d3p9/primeCountExtremas/denominator/sortedNumeratorPossibilities/numeratorPossibilities/possibleNumerators"
 
@@ -9,13 +9,13 @@ describe("computePossibleNumeratorsGivenMaxN2D3P9", (): void => {
         const actual = computePossibleNumeratorsGivenMaxN2D3P9(maxN2D3P9)
 
         const expected = [
-            7 as Numerator & Decimal<{ integer: true }>,
-            11 as Numerator & Decimal<{ integer: true }>,
-            13 as Numerator & Decimal<{ integer: true }>,
-            17 as Numerator & Decimal<{ integer: true }>,
-            19 as Numerator & Decimal<{ integer: true }>,
-            23 as Numerator & Decimal<{ integer: true }>,
-            25 as Numerator & Decimal<{ integer: true }>,
+            7 as Numerator,
+            11 as Numerator,
+            13 as Numerator,
+            17 as Numerator,
+            19 as Numerator,
+            23 as Numerator,
+            25 as Numerator,
         ]
         expect(actual).toEqual(expected)
     })

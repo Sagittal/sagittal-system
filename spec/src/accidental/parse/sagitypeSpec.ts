@@ -28,7 +28,7 @@ describe("parseSagitype", (): void => {
 
         const actual = parseSagitype(sagitype)
 
-        const expected = computeAccidental()        // {}
+        const expected = computeAccidental() // {}
         expect(actual).toEqual(expected)
     })
 
@@ -37,7 +37,11 @@ describe("parseSagitype", (): void => {
 
         const actual = parseSagitype(sagitype)
 
-        const expected = computeAccidental({ headId: HeadId.LEFT_BOATHOOK, shafts: Shafts.TRIPLE, down: true })
+        const expected = computeAccidental({
+            headId: HeadId.LEFT_BOATHOOK,
+            shafts: Shafts.TRIPLE,
+            down: true,
+        })
         expect(actual).toEqual(expected)
     })
 
@@ -102,6 +106,8 @@ describe("parseSagitype", (): void => {
         expect(parseSagitype(",," as Sagitype)).toEqual(computeAccidental({ armId: ArmId.BIRD, down: true }))
         // Antiwing & tick is a valid arm, but not a valid symbol!
         expect(parseSagitype("." as Sagitype)).toEqual(computeAccidental({ armId: ArmId.TICK, down: true }))
-        expect(parseSagitype(",." as Sagitype)).toEqual(computeAccidental({ armId: ArmId.WING_AND_TICK, down: true }))
+        expect(parseSagitype(",." as Sagitype)).toEqual(
+            computeAccidental({ armId: ArmId.WING_AND_TICK, down: true }),
+        )
     })
 })

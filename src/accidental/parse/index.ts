@@ -1,2 +1,2 @@
-export {parseAccidental} from "./accidental"
-export {parseSagitype} from "./sagitype"
+export { parseAccidental } from "./accidental"
+export { parseSagitype } from "./sagitype"

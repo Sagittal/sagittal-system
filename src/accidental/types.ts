@@ -3,12 +3,12 @@ import { ArmId, HeadId } from "./flacco"
 import { Shafts, Sagittal } from "./sagittal"
 
 type AccidentalOptions = Partial<{
-    armId: ArmId,
-    anti: boolean,
-    headId: HeadId,
-    shafts: Shafts,
-    down: boolean,
-    compatible: Compatible,
+    armId: ArmId
+    anti: boolean
+    headId: HeadId
+    shafts: Shafts
+    down: boolean
+    compatible: Compatible
 }>
 
 enum Flavor {
@@ -38,13 +38,8 @@ enum Compatible {
     DOUBLE_FLAT = "doubleFlat",
 }
 
-type Accidental<T extends Maybe<Flavor> = undefined> = Maybe<Sagittal>
-    & {compatible?: Compatible}
-    & (T extends Flavor ? {_FlavorBrand: T} : {})
+type Accidental<T extends Maybe<Flavor> = undefined> = Maybe<Sagittal> & {
+    compatible?: Compatible
+} & (T extends Flavor ? { _FlavorBrand: T } : unknown)
 
-export {
-    Flavor,
-    Accidental,
-    Compatible,
-    AccidentalOptions,
-}
+export { Flavor, Accidental, Compatible, AccidentalOptions }

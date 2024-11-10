@@ -8,14 +8,18 @@ import { getJiNotationBoundClass } from "../../../../../../src/notations/ji/clas
 
 describe("JI_NOTATION_LEVELS_BOUND_CLASSES", (): void => {
     it("has the same number of bound classes per JI notation level as the comma class ids", (): void => {
-        expect(JI_NOTATION_LEVELS_BOUND_CLASSES[JiNotationLevelId.MEDIUM].length)
-            .toBe(JI_NOTATION_LEVELS_COMMA_CLASS_IDS[JiNotationLevelId.MEDIUM].length)      // 11
-        expect(JI_NOTATION_LEVELS_BOUND_CLASSES[JiNotationLevelId.HIGH].length)
-            .toBe(JI_NOTATION_LEVELS_COMMA_CLASS_IDS[JiNotationLevelId.HIGH].length)        // 27
-        expect(JI_NOTATION_LEVELS_BOUND_CLASSES[JiNotationLevelId.ULTRA].length)
-            .toBe(JI_NOTATION_LEVELS_COMMA_CLASS_IDS[JiNotationLevelId.ULTRA].length)       // 47
-        expect(JI_NOTATION_LEVELS_BOUND_CLASSES[JiNotationLevelId.EXTREME].length)
-            .toBe(JI_NOTATION_LEVELS_COMMA_CLASS_IDS[JiNotationLevelId.EXTREME].length)     // 123
+        expect(JI_NOTATION_LEVELS_BOUND_CLASSES[JiNotationLevelId.MEDIUM].length).toBe(
+            JI_NOTATION_LEVELS_COMMA_CLASS_IDS[JiNotationLevelId.MEDIUM].length,
+        ) // 11
+        expect(JI_NOTATION_LEVELS_BOUND_CLASSES[JiNotationLevelId.HIGH].length).toBe(
+            JI_NOTATION_LEVELS_COMMA_CLASS_IDS[JiNotationLevelId.HIGH].length,
+        ) // 27
+        expect(JI_NOTATION_LEVELS_BOUND_CLASSES[JiNotationLevelId.ULTRA].length).toBe(
+            JI_NOTATION_LEVELS_COMMA_CLASS_IDS[JiNotationLevelId.ULTRA].length,
+        ) // 47
+        expect(JI_NOTATION_LEVELS_BOUND_CLASSES[JiNotationLevelId.EXTREME].length).toBe(
+            JI_NOTATION_LEVELS_COMMA_CLASS_IDS[JiNotationLevelId.EXTREME].length,
+        ) // 123
     })
 
     it("gives the correct bound class IDs for the Medium level", (): void => {

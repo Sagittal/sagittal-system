@@ -1,4 +1,4 @@
-import {ArmId, computeAccidental, HeadId} from "../../../../src"
+import { ArmId, computeAccidental, HeadId } from "../../../../src"
 import {
     Accidental,
     Compatible,
@@ -11,7 +11,7 @@ import {
 
 describe("computeSagittalUnicode", (): void => {
     it("given a symbol, returns its unicode representation", (): void => {
-        const sagittal = computeAccidental({armId: ArmId.BIRD, headId: HeadId.LEFT_SCROLL})          // ``)|
+        const sagittal = computeAccidental({ armId: ArmId.BIRD, headId: HeadId.LEFT_SCROLL }) // ``)|
 
         const actual = computeSagittalUnicode(sagittal)
 

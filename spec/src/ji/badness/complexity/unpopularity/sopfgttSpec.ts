@@ -1,4 +1,4 @@
-import { Sopfr, Two3FreeClass } from "@sagittal/general"
+import { Rough, Sopfr, Two3FreeClass } from "@sagittal/general"
 import { computeSopfgtt } from "../../../../../../src/ji/badness"
 import { Unpopularity } from "../../../../../../src/ji/badness/complexity/unpopularity/types"
 
@@ -8,7 +8,7 @@ describe("computeSopfgtt", (): void => {
 
         const actual = computeSopfgtt(two3FreeClass)
 
-        const expected = 33 as Unpopularity & Sopfr<{ rough: 5 }>
+        const expected = 33 as Unpopularity & Sopfr<Rough<5>>
         expect(actual).toBe(expected)
     })
 })

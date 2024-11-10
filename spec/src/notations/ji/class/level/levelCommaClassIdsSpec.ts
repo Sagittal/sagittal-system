@@ -1,5 +1,5 @@
-import {shallowClone, sort} from "@sagittal/general"
-import {JI_NOTATION_LEVELS_COMMA_CLASS_IDS, JiNotationLevelId} from "../../../../../../src"
+import { shallowClone, sort } from "@sagittal/general"
+import { JI_NOTATION_LEVELS_COMMA_CLASS_IDS, JiNotationLevelId } from "../../../../../../src"
 
 describe("JI_NOTATION_LEVELS_COMMA_CLASS_IDS", (): void => {
     it("has the correct count of comma classes per JI notation level", (): void => {
@@ -12,7 +12,7 @@ describe("JI_NOTATION_LEVELS_COMMA_CLASS_IDS", (): void => {
     // TODO: POST-NOTATION-GENERATION: IDS VS INDICES
     //  I expect this test to not make any sense any more... but I still want to protect that this works
     //  It's because they need to be sorted by their indices, not their IDs
-    xit("keeps the comma class IDs in each level sorted", (): void => {
+    it("keeps the comma class IDs in each level sorted", (): void => {
         expect(JI_NOTATION_LEVELS_COMMA_CLASS_IDS[JiNotationLevelId.MEDIUM]).toEqual(
             sort(shallowClone(JI_NOTATION_LEVELS_COMMA_CLASS_IDS[JiNotationLevelId.MEDIUM])),
         )

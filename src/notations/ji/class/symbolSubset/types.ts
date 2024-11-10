@@ -12,6 +12,4 @@ enum SymbolSubsetId {
     TROJAN = "trojan",
 }
 
-export {
-    SymbolSubsetId,
-}
+export { SymbolSubsetId }

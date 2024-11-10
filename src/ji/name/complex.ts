@@ -11,9 +11,10 @@ import {
     invertVector,
     Max,
     ScaledVector,
+    Rational,
 } from "@sagittal/general"
 import { ApotomeSlope, Ate, computeAte } from "../badness"
-import { computeCommasFrom23FreeRationalVector } from "../find"
+import { CommasFrom23FreeVectorOptions, computeCommasFrom23FreeRationalVector } from "../find"
 import { computeSizeCategoryZone } from "./sizeCategoryZone"
 import { MaybeComplexOptions } from "./types"
 
@@ -49,10 +50,7 @@ const COMMA_COMPLEXITY_ABBREVIATIONS = [
     "13c",
 ]
 
-const computeMaybeComplex = (
-    comma: Comma,
-    { sizeCategory, abbreviated }: MaybeComplexOptions,
-): string => {
+const computeMaybeComplex = (comma: Comma, { sizeCategory, abbreviated }: MaybeComplexOptions): string => {
     const maxAte = decrement(computeAte(comma)) as Max<Ate>
     if (maxAte === -1) return BLANK
 
@@ -60,16 +58,13 @@ const computeMaybeComplex = (
     const maxAas = Infinity as Max<Abs<ApotomeSlope>>
     const two3FreeRationalVector = computeRoughRationalVector(
         computeRationalVectorFromRationalScaledVector(
-            computeSuperScaledVector(comma) as ScaledVector<{ rational: true }>,
+            computeSuperScaledVector(comma) as ScaledVector<Rational>,
         ),
         FIVE_ROUGHNESS,
     )
     const maxPrimeLimit = computeRationalScaledVectorSmoothness(comma)
-    const options = { zone, maxPrimeLimit, maxAas, maxAte }
-    const sameDirectionCommas = computeCommasFrom23FreeRationalVector(
-        two3FreeRationalVector,
-        options,
-    )
+    const options = { zone, maxPrimeLimit, maxAas, maxAte } as CommasFrom23FreeVectorOptions
+    const sameDirectionCommas = computeCommasFrom23FreeRationalVector(two3FreeRationalVector, options)
     const otherDirectionCommas = computeCommasFrom23FreeRationalVector(
         invertVector(two3FreeRationalVector),
         options,
@@ -83,8 +78,8 @@ const computeMaybeComplex = (
             ? `${computeAte(comma)}e`
             : `${computeAte(comma)}-EDO-`
         : abbreviated
-        ? COMMA_COMPLEXITY_ABBREVIATIONS[commas.length - 1]
-        : `${COMMA_COMPLEXITY_NAMES[commas.length - 1]}-`
+          ? COMMA_COMPLEXITY_ABBREVIATIONS[commas.length - 1]
+          : `${COMMA_COMPLEXITY_NAMES[commas.length - 1]}-`
 }
 
 // TODO: COMPLEXITY TIE-BREAKER

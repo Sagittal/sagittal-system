@@ -1,4 +1,4 @@
-import {getSmallestSymbolSubsetId, SymbolClassId, SymbolSubsetId} from "../../../../../../src"
+import { getSmallestSymbolSubsetId, SymbolClassId, SymbolSubsetId } from "../../../../../../src"
 
 describe("getSmallestSymbolSubsetId", (): void => {
     it("returns the smallest symbol subset which includes (a symbol for) the given flacco id", (): void => {
