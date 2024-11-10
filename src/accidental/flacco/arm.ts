@@ -1,18 +1,19 @@
 import { AccentId, Arm, ArmId } from "./types"
 
 const getArm = (armId: ArmId, { anti }: { anti?: boolean } = {}): Arm => {
+    /* eslint-disable prettier/prettier */
     switch (armId) {
-        case ArmId.WING: //  `|
+        case ArmId.WING:                                                            //  `|
             return anti ? [{ id: AccentId.WING, anti }] : [{ id: AccentId.WING }]
-        case ArmId.BIRD: // ``|
+        case ArmId.BIRD:                                                            // ``|
             return anti ? [{ id: AccentId.BIRD, anti }] : [{ id: AccentId.BIRD }]
-        case ArmId.ANTIWING_AND_TICK: // ,'|
+        case ArmId.ANTIWING_AND_TICK:                                               // ,'|
             return anti
                 ? [{ id: AccentId.WING }, { id: AccentId.TICK, anti }]
                 : [{ id: AccentId.WING, anti: true }, { id: AccentId.TICK }]
-        case ArmId.TICK: //  '|
+        case ArmId.TICK:                                                            //  '|
             return anti ? [{ id: AccentId.TICK, anti }] : [{ id: AccentId.TICK }]
-        case ArmId.WING_AND_TICK: // `'|
+        case ArmId.WING_AND_TICK:                                                   // `'|
             return anti
                 ? [
                       { id: AccentId.WING, anti },
@@ -20,6 +21,7 @@ const getArm = (armId: ArmId, { anti }: { anti?: boolean } = {}): Arm => {
                   ]
                 : [{ id: AccentId.WING }, { id: AccentId.TICK }]
     }
+    /* eslint-enable prettier/prettier */
 }
 
 export { getArm }

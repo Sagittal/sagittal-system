@@ -4,13 +4,11 @@ import {
     computeRationalDecimalCopfr,
     computeRationalDecimalGpf,
     computeRationalVectorFromRationalDecimal,
-    Decimal,
     DOT_OPERATOR,
     formatDecimalAsSuperscript,
     PrimeCount,
     Quotient,
     QuotientPart,
-    Integer,
     Rational,
 } from "@sagittal/general"
 import { FactoringMode } from "./types"
@@ -51,9 +49,8 @@ const formatFactoredCommaNameQuotientPart = (
         : joinedFactoredTerms
 }
 
-const formatUnfactoredCommaNameQuotientPart = (
-    commaNameQuotientPart: QuotientPart,
-): string => commaNameQuotientPart.toString()
+const formatUnfactoredCommaNameQuotientPart = (commaNameQuotientPart: QuotientPart): string =>
+    commaNameQuotientPart.toString()
 
 const computeShouldFactor = (commaNameQuotientPart: QuotientPart): boolean => {
     if (computeRationalDecimalCopfr(commaNameQuotientPart) > 2 && commaNameQuotientPart !== 125) return true
@@ -79,17 +76,13 @@ const formatCommaNameQuotient = (
     { factoringMode, ascii }: { factoringMode: FactoringMode; ascii: boolean },
 ): string[] =>
     factoringMode === FactoringMode.ALWAYS
-        ? commaNameQuotient.map(
-              (quotientPart: QuotientPart, quotientPartIndex: number): string => {
-                  return formatFactoredCommaNameQuotientPart(quotientPart, quotientPartIndex, ascii)
-              },
-          )
+        ? commaNameQuotient.map((quotientPart: QuotientPart, quotientPartIndex: number): string => {
+              return formatFactoredCommaNameQuotientPart(quotientPart, quotientPartIndex, ascii)
+          })
         : factoringMode === FactoringMode.NEVER
           ? commaNameQuotient.map(formatUnfactoredCommaNameQuotientPart)
-          : commaNameQuotient.map(
-                (quotientPart: QuotientPart, quotientPartIndex: number): string => {
-                    return formatMaybeFactoredCommaNameQuotientPart(quotientPart, quotientPartIndex, ascii)
-                },
-            )
+          : commaNameQuotient.map((quotientPart: QuotientPart, quotientPartIndex: number): string => {
+                return formatMaybeFactoredCommaNameQuotientPart(quotientPart, quotientPartIndex, ascii)
+            })
 
 export { formatCommaNameQuotient }

@@ -1,4 +1,4 @@
-import {Filename, NEWLINE, readLines, setupScriptAndIo} from "@sagittal/general"
+import { Filename, NEWLINE, readLines, setupScriptAndIo } from "@sagittal/general"
 
 setupScriptAndIo("tmp" as Filename)
 

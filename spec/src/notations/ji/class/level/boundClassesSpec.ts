@@ -33,11 +33,11 @@ describe("JI_NOTATION_BOUND_CLASS_ENTRIES", (): void => {
         let currentOddSemitina = 1
 
         const exceptionalJiNotationBoundIds: BoundClassId[] = [
-            BoundClassId.MINA_49, // Comma mean
-            BoundClassId.MINA_51, // Comma mean
-            BoundClassId.MINA_72, // Comma mean
-            BoundClassId.MINA_78, // Comma mean
-            BoundClassId.MINA_92, // Size category bound
+            BoundClassId.MINA_49, //  Comma mean
+            BoundClassId.MINA_51, //  Comma mean
+            BoundClassId.MINA_72, //  Comma mean
+            BoundClassId.MINA_78, //  Comma mean
+            BoundClassId.MINA_92, //  Size category bound
             BoundClassId.MINA_105, // Comma mean
             BoundClassId.MINA_113, // Comma mean
         ] as BoundClassId[]

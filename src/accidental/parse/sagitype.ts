@@ -101,18 +101,20 @@ const parseSagitype = (sagitype: Sagitype): Accidental => {
             } else {
                 right.push(FlagId.BARB)
             }
+        /* eslint-disable prettier/prettier */
         } else if (sagittalChar === ")") {
             if (pastShaft) {
-                right.push(FlagId.ARC) //      !)  or   |)
+                right.push(FlagId.ARC)      //      !)  or   |)
             } else {
-                left.push(FlagId.SCROLL) //     )!   or  )|
+                left.push(FlagId.SCROLL)    //     )!   or  )|
             }
         } else if (sagittalChar === "(") {
             if (pastShaft) {
-                right.push(FlagId.SCROLL) //      !(  or   |(
+                right.push(FlagId.SCROLL)   //      !(  or   |(
             } else {
-                left.push(FlagId.ARC) //     (!   or  (|
+                left.push(FlagId.ARC)       //     (!   or  (|
             }
+        /* eslint-enable prettier/prettier */
         } else if (sagittalChar === "~") {
             if (pastShaft) {
                 right.push(FlagId.BOATHOOK)

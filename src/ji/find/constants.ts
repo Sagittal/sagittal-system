@@ -3,7 +3,7 @@ import { HALF_APOTOME } from "../../constants"
 import { ApotomeSlope, Ate, MAX_N2D3P9_FOR_WHICH_POSSIBLE_NUMERATORS_ARE_KNOWN } from "../badness"
 import { Zone } from "../types"
 
-const DEFAULT_LOWER_BOUND = { vector: [] as unknown[] } as Min<ScaledVector> //  0.0000000000¢
+const DEFAULT_LOWER_BOUND = { vector: [] as unknown[] } as Min<ScaledVector> //   0.0000000000¢
 const DEFAULT_UPPER_BOUND = HALF_APOTOME as ScaledVector as Max<ScaledVector> // 56.8425030289¢
 const DEFAULT_EXCLUSIVE: Exclusive = false
 const DEFAULT_ZONE = {

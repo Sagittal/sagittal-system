@@ -7,27 +7,29 @@ import { Core, Shafts } from "./types"
 const HEADS_SUPPORTED_WITH_EVEN_SHAFTS = [
     // Lower than )||( is covered by )/|\ through )|\\
 
-    HeadId.DOUBLE_SCROLL, //   )||(
-    HeadId.LEFT_SCROLL_AND_BOATHOOK, //  )~||
-    HeadId.BOATHOOK_AND_SCROLL, //   ~||(
-    HeadId.RIGHT_BOATHOOK, //    ||~
-    HeadId.DOUBLE_LEFT_BOATHOOK, //  ~~||
-    HeadId.SCROLL_AND_BOATHOOK, //   )||~
-    HeadId.LEFT_BARB, //   /||
-    HeadId.LEFT_SCROLL_AND_BARB, //  )/||
-    HeadId.RIGHT_ARC, //    ||)
-    HeadId.SCROLL_AND_ARC, //   )||)
-    HeadId.RIGHT_BARB, //    ||\
-    HeadId.LEFT_ARC, //   (||
-    HeadId.BOATHOOK_AND_ARC, //   ~||)
-    HeadId.BARB_AND_BOATHOOK, //   /||~
-    HeadId.ARC_AND_SCROLL, //   (||(
-    HeadId.BOATHOOK_AND_BARB, //   ~||\
-    HeadId.DOUBLE_LEFT_BARB, //  //||
-    HeadId.LEFT_SCROLL_DOUBLE_LEFT_BARB, // )//||
-    HeadId.BARB_AND_ARC, //   /||)
-    HeadId.ARC_AND_BOATHOOK, //   (||~
-    HeadId.DOUBLE_BARB, //   /||\
+    /* eslint-disable prettier/prettier */
+    HeadId.DOUBLE_SCROLL,                   //   )||(
+    HeadId.LEFT_SCROLL_AND_BOATHOOK,        //  )~||
+    HeadId.BOATHOOK_AND_SCROLL,             //   ~||(
+    HeadId.RIGHT_BOATHOOK,                  //    ||~
+    HeadId.DOUBLE_LEFT_BOATHOOK,            //  ~~||
+    HeadId.SCROLL_AND_BOATHOOK,             //   )||~
+    HeadId.LEFT_BARB,                       //   /||
+    HeadId.LEFT_SCROLL_AND_BARB,            //  )/||
+    HeadId.RIGHT_ARC,                       //    ||)
+    HeadId.SCROLL_AND_ARC,                  //   )||)
+    HeadId.RIGHT_BARB,                      //    ||\
+    HeadId.LEFT_ARC,                        //   (||
+    HeadId.BOATHOOK_AND_ARC,                //   ~||)
+    HeadId.BARB_AND_BOATHOOK,               //   /||~
+    HeadId.ARC_AND_SCROLL,                  //   (||(
+    HeadId.BOATHOOK_AND_BARB,               //   ~||\
+    HeadId.DOUBLE_LEFT_BARB,                //  //||
+    HeadId.LEFT_SCROLL_DOUBLE_LEFT_BARB,    // )//||
+    HeadId.BARB_AND_ARC,                    //   /||)
+    HeadId.ARC_AND_BOATHOOK,                //   (||~
+    HeadId.DOUBLE_BARB,                     //   /||\
+    /* eslint-enable prettier/prettier */
 
     // Above /||\ and you're already into triple shafts; no need for (/|| or beyond
 ]
