@@ -30,6 +30,7 @@ export {
     SizeCategory,
     DirectedNumbers,
     DirectedWord,
+    OUTDATED_COMMA_NAME_OPTIONS_PREFERENCE,
 } from "./name"
 export {
     CommaAnalysis,

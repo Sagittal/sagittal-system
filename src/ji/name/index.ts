@@ -6,7 +6,7 @@ export { formatComma } from "./formatComma"
 export { formatSizeCategory } from "./formatSizeCategory"
 export { computeSizeCategoryIndex } from "./sizeCategoryIndex"
 export { SIZE_CATEGORY_BOUNDS } from "./sizeCategoryBounds"
-export { MAX_SIZE_CATEGORY_BOUND } from "./constants"
+export { MAX_SIZE_CATEGORY_BOUND, OUTDATED_COMMA_NAME_OPTIONS_PREFERENCE } from "./constants"
 export {
     CommaNameOptions,
     ParsedCommaName,

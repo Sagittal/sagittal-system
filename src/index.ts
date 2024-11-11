@@ -93,6 +93,7 @@ export {
     SizeCategory,
     DirectedNumbers,
     DirectedWord,
+    OUTDATED_COMMA_NAME_OPTIONS_PREFERENCE,
 } from "./ji"
 export {
     computeMaybeCommaClassId,
