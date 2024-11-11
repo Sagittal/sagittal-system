@@ -15,6 +15,7 @@ import {
 } from "@sagittal/general"
 import { ApotomeSlope, Ate, computeAte } from "../badness"
 import { CommasFrom23FreeVectorOptions, computeCommasFrom23FreeRationalVector } from "../find"
+import { OUTDATED_COMMA_NAME_OPTIONS_PREFERENCE } from "./constants"
 import { computeSizeCategoryZone } from "./sizeCategoryZone"
 import { MaybeComplexOptions } from "./types"
 
@@ -63,7 +64,13 @@ const computeMaybeComplex = (comma: Comma, { sizeCategory, abbreviated }: MaybeC
         FIVE_ROUGHNESS,
     )
     const maxPrimeLimit = computeRationalScaledVectorSmoothness(comma)
-    const options = { zone, maxPrimeLimit, maxAas, maxAte } as CommasFrom23FreeVectorOptions
+    const options = {
+        zone,
+        maxPrimeLimit,
+        maxAas,
+        maxAte,
+        ...OUTDATED_COMMA_NAME_OPTIONS_PREFERENCE,
+    } as CommasFrom23FreeVectorOptions
     const sameDirectionCommas = computeCommasFrom23FreeRationalVector(two3FreeRationalVector, options)
     const otherDirectionCommas = computeCommasFrom23FreeRationalVector(
         invertVector(two3FreeRationalVector),

@@ -1,7 +1,7 @@
 import { Abs, Copfr, Exclusive, Max, Min, Prime, Sopfr, ScaledVector, Rough } from "@sagittal/general"
 import { HALF_APOTOME } from "../../constants"
 import { ApotomeSlope, Ate, MAX_N2D3P9_FOR_WHICH_POSSIBLE_NUMERATORS_ARE_KNOWN } from "../badness"
-import { FactoringMode } from "../name"
+import { DirectedNumbers, DirectedWord, FactoringMode } from "../name"
 import { Zone } from "../types"
 
 const DEFAULT_LOWER_BOUND = { vector: [] as unknown[] } as Min<ScaledVector> //   0.0000000000¢
@@ -18,7 +18,9 @@ const DEFAULT_MAX_2_3_FREE_SOPFR = 61 as Max<Sopfr<Rough<5>>> // Can go as high 
 const DEFAULT_MAX_2_3_FREE_COPFR = 555 as Max<Copfr<Rough<5>>> // A silly number, unlikely to come close
 const DEFAULT_MAX_PRIME_LIMIT = 47 as Max<Max<Prime>> // Can be set as high as SoPFR; no sense going beyond it
 
-const DEFAULT_FACTORING = FactoringMode.THRESHOLD
+const DEFAULT_DIRECTED_WORD = DirectedWord.CONDITIONALLY
+const DEFAULT_DIRECTED_NUMBERS = DirectedNumbers.OFF
+const DEFAULT_FACTORING_MODE = FactoringMode.THRESHOLD
 const DEFAULT_ABBREVIATED = true
 const DEFAULT_ASCII = false
 
@@ -33,7 +35,9 @@ export {
     DEFAULT_MAX_PRIME_LIMIT,
     DEFAULT_ZONE,
     DEFAULT_EXCLUSIVE,
-    DEFAULT_FACTORING,
+    DEFAULT_DIRECTED_WORD,
+    DEFAULT_DIRECTED_NUMBERS,
+    DEFAULT_FACTORING_MODE,
     DEFAULT_ABBREVIATED,
     DEFAULT_ASCII,
 }

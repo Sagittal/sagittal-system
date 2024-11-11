@@ -3,8 +3,10 @@ import { CommaNameOptions, computeCommaName, computeSizeCategoryIndex } from "..
 import { analyzeJiPitch } from "./pitch"
 import { CommaAnalysis } from "./types"
 
-const analyzeComma = (comma: Comma, options: CommaNameOptions = {}): CommaAnalysis => {
-    const name = computeCommaName(comma, options)
+const analyzeComma = (comma: Comma, commaNameOptions: CommaNameOptions = {}): CommaAnalysis => {
+    console.log("in analyzeComma: directedWord", commaNameOptions.directedWord)
+    console.log("in analyzeComma: directedNumbers", commaNameOptions.directedNumbers)
+    const name = computeCommaName(comma, commaNameOptions)
     const sizeCategory = computeSizeCategoryIndex(comma)
 
     const jiPitchAnalysis = analyzeJiPitch(comma)

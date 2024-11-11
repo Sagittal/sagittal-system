@@ -19,7 +19,11 @@ import {
     Integer,
 } from "@sagittal/general"
 import { analyzeComma, CommaAnalysis } from "../analyze"
+import { OUTDATED_COMMA_NAME_OPTIONS_PREFERENCE } from "../name"
 import {
+    DEFAULT_ABBREVIATED,
+    DEFAULT_ASCII,
+    DEFAULT_FACTORING_MODE,
     DEFAULT_MAX_AAS,
     DEFAULT_MAX_ATE,
     DEFAULT_MAX_N2D3P9,
@@ -53,11 +57,11 @@ const computeCommasFrom23FreeRationalVector = (
         maxAas = DEFAULT_MAX_AAS,
         maxN2D3P9 = DEFAULT_MAX_N2D3P9,
         maxPrimeLimit = DEFAULT_MAX_PRIME_LIMIT,
-        directedWord,
-        directedNumbers,
-        factoringMode,
-        abbreviated,
-        ascii,
+        directedWord = OUTDATED_COMMA_NAME_OPTIONS_PREFERENCE.directedWord,
+        directedNumbers = OUTDATED_COMMA_NAME_OPTIONS_PREFERENCE.directedNumbers,
+        factoringMode = DEFAULT_FACTORING_MODE,
+        abbreviated = DEFAULT_ABBREVIATED,
+        ascii = DEFAULT_ASCII,
     } = options || {}
 
     const commas: Comma[] = []
