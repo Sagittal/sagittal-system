@@ -4,8 +4,6 @@ import { analyzeJiPitch } from "./pitch"
 import { CommaAnalysis } from "./types"
 
 const analyzeComma = (comma: Comma, commaNameOptions: CommaNameOptions = {}): CommaAnalysis => {
-    console.log("in analyzeComma: directedWord", commaNameOptions.directedWord)
-    console.log("in analyzeComma: directedNumbers", commaNameOptions.directedNumbers)
     const name = computeCommaName(comma, commaNameOptions)
     const sizeCategory = computeSizeCategoryIndex(comma)
 
