@@ -1,4 +1,4 @@
-import { Cents, Name, ScaledVector, Irrational } from "@sagittal/general"
+import { Cents, Name, ScaledVector, Irrational, Apotome } from "@sagittal/general"
 
 type Tinas = Cents & { _InaBrand: "Tina" }
 type Minas = Cents & { _InaBrand: "Mina" }
@@ -10,7 +10,7 @@ type Ina = Cents & { _InaBrand: "Tina" | "Mina" | "Ultrina" | "Hina" | "Athina" 
 
 type InaMidpoint = {
     name: Name<InaMidpoint>
-    pitch: ScaledVector<Irrational>
+    pitch: ScaledVector<Irrational, { of: Apotome }>
 }
 
 export { Tinas, Minas, Ultrinas, Hinas, Athinas, InaMidpoint, Ina }
