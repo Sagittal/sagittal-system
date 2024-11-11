@@ -94,6 +94,9 @@ export {
     DirectedNumbers,
     DirectedWord,
     OUTDATED_COMMA_NAME_OPTIONS_PREFERENCE,
+    DEFAULT_FACTORING,
+    DEFAULT_ABBREVIATED,
+    DEFAULT_ASCII,
 } from "./ji"
 export {
     computeMaybeCommaClassId,

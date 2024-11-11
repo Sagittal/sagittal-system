@@ -12,6 +12,9 @@ export {
     DEFAULT_MAX_N2D3P9,
     DEFAULT_EXCLUSIVE,
     DEFAULT_ZONE,
+    DEFAULT_FACTORING,
+    DEFAULT_ABBREVIATED,
+    DEFAULT_ASCII,
 } from "./find"
 export {
     computeCommaFromCommaName,

@@ -53,6 +53,11 @@ const computeCommasFrom23FreeRationalVector = (
         maxAas = DEFAULT_MAX_AAS,
         maxN2D3P9 = DEFAULT_MAX_N2D3P9,
         maxPrimeLimit = DEFAULT_MAX_PRIME_LIMIT,
+        directedWord,
+        directedNumbers,
+        factoringMode,
+        abbreviated,
+        ascii,
     } = options || {}
 
     const commas: Comma[] = []
@@ -67,7 +72,13 @@ const computeCommasFrom23FreeRationalVector = (
         if (rationalVectorInZone) {
             const comma = computeRationalScaledVectorFromRationalVector(rationalVectorInZone) as Comma
 
-            const commaAnalysis: CommaAnalysis = analyzeComma(comma)
+            const commaAnalysis: CommaAnalysis = analyzeComma(comma, {
+                directedWord,
+                directedNumbers,
+                factoringMode,
+                abbreviated,
+                ascii,
+            })
             if (
                 abs(commaAnalysis.apotomeSlope) > maxAas ||
                 commaAnalysis.two3FreeClassAnalysis.n2d3p9 > maxN2D3P9 ||
