@@ -34,7 +34,7 @@ describe("capture zones", (): void => {
             [{ decimal: 1.023527 }, { decimal: 1.0264 }],   // [{ cents: 40.260512 }, { cents: 45.112497 }],
             [{ decimal: 1.0264 }, { decimal: 1.030027 }],   // [{ cents: 45.112497 }, { cents: 51.219540 }],
             [{ decimal: 1.030027 }, { decimal: 1.033378 }], // [{ cents: 51.219540 }, { cents: 56.842503 }],
-        ] as Array<Extrema<{ of: { decimal: Decimal } }>>
+        ] as Extrema<{ of: { decimal: Decimal } }>[]
         /* eslint-enable prettier/prettier */
 
         expected.forEach((extrema: Extrema<{ of: { decimal: Decimal } }>, index: number): void => {
@@ -83,7 +83,7 @@ describe("capture zones", (): void => {
             [{ decimal: 1.030446 }, { decimal: 1.031618 }], // [{ cents: 51.924115 }, { cents: 53.891470 }],
             [{ decimal: 1.031618 }, { decimal: 1.032791 }], // [{ cents: 53.891470 }, { cents: 55.858825 }],
             [{ decimal: 1.032791 }, { decimal: 1.033965 }], // [{ cents: 55.858825 }, { cents: 56.842503 }],
-        ] as Array<Extrema<{ of: { decimal: Decimal } }>>
+        ] as Extrema<{ of: { decimal: Decimal } }>[]
         /* eslint-enable prettier/prettier */
 
         expected.forEach((extrema: Extrema<{ of: { decimal: Decimal } }>, index: number): void => {
@@ -152,7 +152,7 @@ describe("capture zones", (): void => {
             [{ decimal: 1.031618 }, { decimal: 1.032336 }], // [{ cents: 53.891470 }, { cents: 55.095545 }],
             [{ decimal: 1.032336 }, { decimal: 1.032791 }], // [{ cents: 55.095545 }, { cents: 55.858825 }],
             [{ decimal: 1.032791 }, { decimal: 1.033965 }], // [{ cents: 55.858825 }, { cents: 56.842503 }],
-        ] as Array<Extrema<{ of: { decimal: Decimal } }>>
+        ] as Extrema<{ of: { decimal: Decimal } }>[]
         /* eslint-enable prettier/prettier */
 
         expected.forEach((extrema: Extrema<{ of: { decimal: Decimal } }>, index: number): void => {
@@ -297,7 +297,7 @@ describe("capture zones", (): void => {
             [{ decimal: 1.03254 }, { decimal: 1.032791 }],  // [{ cents: 55.437249 }, { cents: 55.858825 }],
             [{ decimal: 1.032791 }, { decimal: 1.033126 }], // [{ cents: 55.858825 }, { cents: 56.420926 }],
             [{ decimal: 1.033126 }, { decimal: 1.033378 }], // [{ cents: 56.420926 }, { cents: 56.842503 }],
-        ] as Array<Extrema<{ of: { decimal: Decimal } }>>
+        ] as Extrema<{ of: { decimal: Decimal } }>[]
         /* eslint-enable prettier/prettier */
 
         expected.forEach((extrema: Extrema<{ of: { decimal: Decimal } }>, index: number): void => {

@@ -16,8 +16,8 @@ import { computePrimeCountExtremaGivenMaxN2D3P9 } from "./primeCountExtrema"
 const computePrimeCountExtremasGivenMaxN2D3P9 = (
     maxN2D3P9: Max<N2D3P9>,
     options: { mirrored?: boolean } = {},
-): Array<Extrema<{ of: PrimeCount }>> => {
-    const primeCountExtremasGivenMaxN2D3P9: Array<Extrema<{ of: PrimeCount }>> = shallowClone(
+): Extrema<{ of: PrimeCount }>[] => {
+    const primeCountExtremasGivenMaxN2D3P9: Extrema<{ of: PrimeCount }>[] = shallowClone(
         INITIAL_PRIME_COUNT_EXTREMAS_FOR_TWO_AND_THREE,
     )
 

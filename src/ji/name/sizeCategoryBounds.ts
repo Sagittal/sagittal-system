@@ -12,7 +12,6 @@ import {
     PYTHAGOREAN_LIMMA,
     PYTHAGOREAN_SCHISMA,
     PYTHAGOREAN_WHOLE_TONE,
-    Rational,
     ScaledVector,
     SUPERCOMPLEX_PYTHAGOREAN_KLEISMA,
     THIRTYONE_THREE_COMMA,
@@ -62,7 +61,7 @@ const MS_LS_SIZE_CATEGORY_BOUND = {
 const LS_A_SIZE_CATEGORY_BOUND = {
     name: "LS|A" as Name<SizeCategoryBound>,
     pitch: {
-        vector: [62, -39] as Vector<Rational>,
+        vector: [62, -39] as Vector,
         scaler: HALF_SCALER,
     } as ScaledVector<Irrational>,
 }
@@ -81,77 +80,77 @@ const SIZE_CATEGORY_BOUNDS: SizeCategoryBound[] = [
     {
         name: "A|s+A" as Name<SizeCategoryBound>, // Apotome + 1.8075229327¢
         pitch: {
-            vector: [-106, 67] as Vector<Rational>,
+            vector: [-106, 67] as Vector,
             scaler: HALF_SCALER,
         } as ScaledVector<Irrational>,
     },
     {
         name: "s+A|k+A" as Name<SizeCategoryBound>, // Apotome + 4.4999134612584¢
         pitch: {
-            vector: [295, -186] as Vector<Rational>,
+            vector: [295, -186] as Vector,
             scaler: HALF_SCALER,
         } as ScaledVector<Irrational>,
     },
     {
         name: "k+A|C+A" as Name<SizeCategoryBound>, // Apotome + 11.7300051923244¢
         pitch: {
-            vector: [-41, 26] as Vector<Rational>,
+            vector: [-41, 26] as Vector,
             scaler: HALF_SCALER,
         } as ScaledVector<Irrational>,
     },
     {
         name: "C+A|S+A" as Name<SizeCategoryBound>, // Apotome + 33.382492644207¢
         pitch: {
-            vector: [5, -3] as Vector<Rational>,
+            vector: [5, -3] as Vector,
             scaler: HALF_SCALER,
         } as ScaledVector<Irrational>,
     },
     {
         name: "S+A|M+A" as Name<SizeCategoryBound>, // Apotome + 45.112497836531¢
         pitch: {
-            vector: [-14, 9] as Vector<Rational>,
+            vector: [-14, 9] as Vector,
             scaler: HALF_SCALER,
         } as ScaledVector<Irrational>,
     },
     {
         name: "M+A|L+A" as Name<SizeCategoryBound>, // Apotome + 56.842503028856¢
         pitch: {
-            vector: [-33, 21] as Vector<Rational>,
+            vector: [-33, 21] as Vector,
             scaler: HALF_SCALER,
         } as ScaledVector<Irrational>,
     },
     {
         name: "L+A|SS+A" as Name<SizeCategoryBound>, // Apotome + 68.572508221180¢
         pitch: {
-            vector: [-52, 33] as Vector<Rational>,
+            vector: [-52, 33] as Vector,
             scaler: HALF_SCALER,
         } as ScaledVector<Irrational>,
     },
     {
         name: "SS+A|MS+A" as Name<SizeCategoryBound>, // Apotome + 80.302513413505¢
         pitch: {
-            vector: [-71, 45] as Vector<Rational>,
+            vector: [-71, 45] as Vector,
             scaler: HALF_SCALER,
         } as ScaledVector<Irrational>,
     },
     {
         name: "MS+A|LS+A" as Name<SizeCategoryBound>, // Apotome + 101.95500086539¢
         pitch: {
-            vector: [-25, 16] as Vector<Rational>,
+            vector: [-25, 16] as Vector,
             scaler: HALF_SCALER,
         } as ScaledVector<Irrational>,
     },
     {
         name: "LS+A|A+A" as Name<SizeCategoryBound>, // Apotome + 111.87748312495¢
         pitch: {
-            vector: [40, -25] as Vector<Rational>,
+            vector: [40, -25] as Vector,
             scaler: HALF_SCALER,
         } as ScaledVector<Irrational>,
     },
     {
         name: "A+A|" as Name<SizeCategoryBound>, // Apotome + apotome
         pitch: {
-            vector: [-44, 28] as Vector<Rational>,
+            vector: [-44, 28] as Vector,
             scaler: HALF_SCALER,
         } as ScaledVector<Irrational>,
     },

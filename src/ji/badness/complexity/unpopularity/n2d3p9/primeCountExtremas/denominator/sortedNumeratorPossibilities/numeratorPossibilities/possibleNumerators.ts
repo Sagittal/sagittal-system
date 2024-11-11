@@ -2,7 +2,7 @@ import { isIntegerDecimalRough, Max, Numerator, TWO_3_FREE } from "@sagittal/gen
 import { N2D3P9 } from "../../../../types"
 import { computeMaxNumeratorGivenMaxN2D3P9 } from "./maxNumerator"
 
-const computePossibleNumeratorsGivenMaxN2D3P9 = (maxN2D3P9: Max<N2D3P9>): Array<Numerator> => {
+const computePossibleNumeratorsGivenMaxN2D3P9 = (maxN2D3P9: Max<N2D3P9>): Numerator[] => {
     const maxNumerator = computeMaxNumeratorGivenMaxN2D3P9(maxN2D3P9)
 
     const possibleNumerators = []

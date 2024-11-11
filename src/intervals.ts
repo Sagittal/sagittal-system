@@ -9,7 +9,6 @@ import {
     Quotient,
     scaleScaledVector,
     ScaledVector,
-    Rational,
     Integer,
     Irrational,
 } from "@sagittal/general"
@@ -27,23 +26,23 @@ import {
 const TINA: ScaledVector<Irrational> = scaleScaledVector(APOTOME, [
     ONE,
     INSANE_EDA as Decimal<Integer>,
-] as Quotient<Rational>)
+] as Quotient)
 const MINA: ScaledVector<Irrational> = scaleScaledVector(APOTOME, [
     ONE,
     EXTREME_EDA as Decimal<Integer>,
-] as Quotient<Rational>)
+] as Quotient)
 const ULTRINA: ScaledVector<Irrational> = scaleScaledVector(APOTOME, [
     ONE,
     ULTRA_EDA as Decimal<Integer>,
-] as Quotient<Rational>)
+] as Quotient)
 const HINA: ScaledVector<Irrational> = scaleScaledVector(APOTOME, [
     ONE,
     HIGH_EDA as Decimal<Integer>,
-] as Quotient<Rational>)
+] as Quotient)
 const ATHINA: ScaledVector<Irrational> = scaleScaledVector(APOTOME, [
     ONE,
     MEDIUM_EDA as Decimal<Integer>,
-] as Quotient<Rational>)
+] as Quotient)
 
 const INA_CENTS_SIZES: Record<JiNotationLevelId, Cents> = JI_NOTATION_LEVEL_EDAS.reduce(
     (

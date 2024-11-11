@@ -31,7 +31,7 @@ const compute3LimitCommaInSizeCategory = (sizeCategory: SizeCategory): Comma => 
     const zone = computeSizeCategoryZone(sizeCategory)
 
     while (true) {
-        let rationalVectorInZone: Maybe<Vector<Rational>> = computeRationalVectorInZone(
+        let rationalVectorInZone: Maybe<Vector> = computeRationalVectorInZone(
             [0, threeExponent] as Vector<Rational & Rough<3>>,
             zone,
         )

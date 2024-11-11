@@ -9,7 +9,6 @@ import {
     PrimeCount,
     Quotient,
     QuotientPart,
-    Rational,
     stringify,
 } from "@sagittal/general"
 import { FactoringMode } from "./types"
@@ -73,7 +72,7 @@ const formatMaybeFactoredCommaNameQuotientPart = (
         : formatUnfactoredCommaNameQuotientPart(commaNameQuotientPart)
 
 const formatCommaNameQuotient = (
-    commaNameQuotient: Quotient<Rational>,
+    commaNameQuotient: Quotient,
     { factoringMode, ascii }: { factoringMode: FactoringMode; ascii: boolean },
 ): string[] =>
     factoringMode === FactoringMode.ALWAYS

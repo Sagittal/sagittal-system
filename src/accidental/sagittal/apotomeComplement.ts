@@ -6,7 +6,7 @@ import { Core, Sagittal, Shafts } from "./types"
 const reorientAccent = ({ anti, id }: Accent): Accent => (anti ? { id } : { id, anti: true })
 
 /* eslint-disable prettier/prettier */
-const APOTOME_COMPLEMENT_CORE_PAIRS: Array<[Core, Core]> = [
+const APOTOME_COMPLEMENT_CORE_PAIRS: [Core, Core][] = [
     [getCore(HeadId.BARE_SHAFT), APOTOME_CORE],                                                                 //     |      /||\
     [getCore(HeadId.LEFT_SCROLL), getCore(HeadId.ARC_AND_BOATHOOK, { shafts: Shafts.DOUBLE })],                 //    )|      (||~   A W
     [getCore(HeadId.RIGHT_SCROLL), getCore(HeadId.BARB_AND_ARC, { shafts: Shafts.DOUBLE })],                    //     |(     /||)   B V

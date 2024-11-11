@@ -26,8 +26,8 @@ describe("analyzeJiPitch", (): void => {
         const expected = {
             pitch: jiPitch,
             cents: 1240.022726 as Cents,
-            vector: [-7, -6, 3, 5, -1] as Vector<Rational>,
-            quotient: [2100875, 1026432] as Quotient<Rational>,
+            vector: [-7, -6, 3, 5, -1] as Vector,
+            quotient: [2100875, 1026432] as Quotient,
             decimal: 2.046775 as Decimal<Rational>,
             apotomeSlope: -82.352717 as ApotomeSlope,
             ate: 6 as Ate,

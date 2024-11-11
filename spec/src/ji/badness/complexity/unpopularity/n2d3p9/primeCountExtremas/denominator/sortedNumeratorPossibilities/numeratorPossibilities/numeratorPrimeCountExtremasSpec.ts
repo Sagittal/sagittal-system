@@ -23,7 +23,7 @@ describe("computeNumeratorPrimeCountExtremasGivenMaxN2D3P9", (): void => {
             [0, 0],
             [0, 1],
             [0, 1],
-        ] as Array<Extrema<{ of: PrimeCount }>>
+        ] as Extrema<{ of: PrimeCount }>[]
         expect(actual).toEqual(expected)
     })
 })

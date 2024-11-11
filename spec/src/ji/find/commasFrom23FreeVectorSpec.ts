@@ -91,7 +91,7 @@ describe("computeCommasFrom23FreeRationalVector", (): void => {
             maxPrimeLimit,
         })
 
-        const expected = [{ vector: [] as unknown[] as Vector<Rational> }] as Comma[]
+        const expected = [{ vector: [] as unknown[] as Vector }] as Comma[]
         expect(actual).toEqual(expected)
     })
 })

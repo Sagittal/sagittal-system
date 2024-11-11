@@ -130,7 +130,7 @@ describe("secondary comma zones", (): void => {
             [{ decimal: 1.03254 }, { decimal: 1.032791 }],  // [{ cents: 55.437249 }, { cents: 55.858825 }],
             [{ decimal: 1.032791 }, { decimal: 1.033126 }], // [{ cents: 55.858825 }, { cents: 56.420926 }],
             [{ decimal: 1.032791 }, { decimal: 1.033965 }], // [{ cents: 55.858825 }, { cents: 56.842503 }],
-        ] as Array<Extrema<{ of: { decimal: Decimal } }>>
+        ] as Extrema<{ of: { decimal: Decimal } }>[]
         /* eslint-enable prettier/prettier */
 
         expected.forEach((extrema: Extrema<{ of: { decimal: Decimal } }>, index: number): void => {

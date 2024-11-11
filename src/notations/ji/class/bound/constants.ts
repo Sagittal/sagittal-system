@@ -1,12 +1,4 @@
-import {
-    APOTOME,
-    HALF_SCALER,
-    Vector,
-    PYTHAGOREAN_LIMMA,
-    ScaledVector,
-    Rational,
-    Irrational,
-} from "@sagittal/general"
+import { APOTOME, HALF_SCALER, Vector, PYTHAGOREAN_LIMMA, ScaledVector, Irrational } from "@sagittal/general"
 import { BoundClass, BoundClassId } from "./types"
 
 const BOUND_CLASSES: Record<BoundClassId, BoundClass> = {
@@ -306,7 +298,7 @@ const BOUND_CLASSES: Record<BoundClassId, BoundClass> = {
     },
     /*49*/ [BoundClassId.MINA_49]: {
         pitch: {
-            vector: [-16, 0, 3, 2, 1] as Vector<Rational>,
+            vector: [-16, 0, 3, 2, 1] as Vector,
             scaler: HALF_SCALER,
         } as ScaledVector<Irrational>,
     },
@@ -324,7 +316,7 @@ const BOUND_CLASSES: Record<BoundClassId, BoundClass> = {
     },
     /*52*/ [BoundClassId.MINA_51]: {
         pitch: {
-            vector: [-4, -1, -1, 0, 0, 1, 0, 1] as Vector<Rational>,
+            vector: [-4, -1, -1, 0, 0, 1, 0, 1] as Vector,
             scaler: HALF_SCALER,
         } as ScaledVector<Irrational>,
     },
@@ -456,7 +448,7 @@ const BOUND_CLASSES: Record<BoundClassId, BoundClass> = {
     },
     /*74*/ [BoundClassId.MINA_72]: {
         pitch: {
-            vector: [4, -5, 2, -2, 0, 0, 0, 0, 0, 0, 1] as Vector<Rational>,
+            vector: [4, -5, 2, -2, 0, 0, 0, 0, 0, 0, 1] as Vector,
             scaler: HALF_SCALER,
         } as ScaledVector<Irrational>,
     },
@@ -498,7 +490,7 @@ const BOUND_CLASSES: Record<BoundClassId, BoundClass> = {
     },
     /*81*/ [BoundClassId.MINA_78]: {
         pitch: {
-            vector: [-6, 3, -1, 1, 0, -1, 0, 0, 1] as Vector<Rational>,
+            vector: [-6, 3, -1, 1, 0, -1, 0, 0, 1] as Vector,
             scaler: HALF_SCALER,
         } as ScaledVector<Irrational>,
     },
@@ -666,7 +658,7 @@ const BOUND_CLASSES: Record<BoundClassId, BoundClass> = {
     },
     /*109*/ [BoundClassId.MINA_105]: {
         pitch: {
-            vector: [-4, -4, 3, 0, 1] as Vector<Rational>,
+            vector: [-4, -4, 3, 0, 1] as Vector,
             scaler: HALF_SCALER,
         } as ScaledVector<Irrational>,
     },
@@ -720,7 +712,7 @@ const BOUND_CLASSES: Record<BoundClassId, BoundClass> = {
     },
     /*118*/ [BoundClassId.MINA_113]: {
         pitch: {
-            vector: [-15, 9, 1, 0, 1, 0, 0, 0, 0, 0, -1] as Vector<Rational>,
+            vector: [-15, 9, 1, 0, 1, 0, 0, 0, 0, 0, -1] as Vector,
             scaler: HALF_SCALER,
         } as ScaledVector<Irrational>,
     },

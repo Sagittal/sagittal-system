@@ -14,7 +14,7 @@ const computeJiPitchFromAccidental = (accidental: Accidental): ScaledVector<Rati
 
     const pitchAlterations = [
         computeCommaticPitchAlterationFromSymbolClassIdAndSection([symbolClassId, section]),
-    ] as Array<ScaledVector<Rational>>
+    ] as ScaledVector<Rational>[]
 
     const apotomePitchAlteration = computeApotomicPitchAlterationFromSection(section)
     if (!isUndefined(apotomePitchAlteration)) {

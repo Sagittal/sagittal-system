@@ -8,7 +8,6 @@ import {
     Vector,
     PitchExpectation,
     ScaledVector,
-    Rational,
     Irrational,
     NoProperties,
 } from "@sagittal/general"
@@ -35,7 +34,7 @@ describe("SIZE_CATEGORY_BOUNDS", (): void => {
             {
                 // n|s
                 pitch: {
-                    vector: [-84, 53] as Vector<Rational>,
+                    vector: [-84, 53] as Vector,
                     scaler: HALF_SCALER,
                 } as ScaledVector<Irrational>,
                 vector: [-42, 26.5] as Vector<Irrational>,
@@ -45,7 +44,7 @@ describe("SIZE_CATEGORY_BOUNDS", (): void => {
             {
                 // s|k
                 pitch: {
-                    vector: [317, -200] as Vector<Rational>,
+                    vector: [317, -200] as Vector,
                     scaler: HALF_SCALER,
                 } as ScaledVector<Irrational>,
                 vector: [158.5, -100] as Vector<Irrational>,
@@ -55,7 +54,7 @@ describe("SIZE_CATEGORY_BOUNDS", (): void => {
             {
                 // k|C
                 pitch: {
-                    vector: [-19, 12] as Vector<Rational>,
+                    vector: [-19, 12] as Vector,
                     scaler: HALF_SCALER,
                 } as ScaledVector<Irrational>,
                 vector: [-9.5, 6] as Vector<Irrational>,
@@ -65,7 +64,7 @@ describe("SIZE_CATEGORY_BOUNDS", (): void => {
             {
                 // C|S
                 pitch: {
-                    vector: [27, -17] as Vector<Rational>,
+                    vector: [27, -17] as Vector,
                     scaler: HALF_SCALER,
                 } as ScaledVector<Irrational>,
                 vector: [13.5, -8.5] as Vector<Irrational>,
@@ -75,7 +74,7 @@ describe("SIZE_CATEGORY_BOUNDS", (): void => {
             {
                 // S|M
                 pitch: {
-                    vector: [8, -5] as Vector<Rational>,
+                    vector: [8, -5] as Vector,
                     scaler: HALF_SCALER,
                 } as ScaledVector<Irrational>,
                 vector: [4, -2.5] as Vector<Irrational>,
@@ -95,7 +94,7 @@ describe("SIZE_CATEGORY_BOUNDS", (): void => {
             {
                 // L|SS
                 pitch: {
-                    vector: [-30, 19] as Vector<Rational>,
+                    vector: [-30, 19] as Vector,
                     scaler: HALF_SCALER,
                 } as ScaledVector<Irrational>,
                 vector: [-15, 9.5] as Vector<Irrational>,
@@ -105,7 +104,7 @@ describe("SIZE_CATEGORY_BOUNDS", (): void => {
             {
                 // SS|MS
                 pitch: {
-                    vector: [-49, 31] as Vector<Rational>,
+                    vector: [-49, 31] as Vector,
                     scaler: HALF_SCALER,
                 } as ScaledVector<Irrational>,
                 vector: [-24.5, 15.5] as Vector<Irrational>,
@@ -115,7 +114,7 @@ describe("SIZE_CATEGORY_BOUNDS", (): void => {
             {
                 // MS|LS
                 pitch: {
-                    vector: [-3, 2] as Vector<Rational>,
+                    vector: [-3, 2] as Vector,
                     scaler: HALF_SCALER,
                 } as ScaledVector<Irrational>,
                 vector: [-1.5, 1] as Vector<Irrational>,
@@ -125,7 +124,7 @@ describe("SIZE_CATEGORY_BOUNDS", (): void => {
             {
                 // LS|A
                 pitch: {
-                    vector: [62, -39] as Vector<Rational>,
+                    vector: [62, -39] as Vector,
                     scaler: HALF_SCALER,
                 } as ScaledVector<Irrational>,
                 vector: [31, -19.5] as Vector<Irrational>,
@@ -135,7 +134,7 @@ describe("SIZE_CATEGORY_BOUNDS", (): void => {
             {
                 // A|s+A
                 pitch: {
-                    vector: [-106, 67] as Vector<Rational>,
+                    vector: [-106, 67] as Vector,
                     scaler: HALF_SCALER,
                 } as ScaledVector<Irrational>,
                 vector: [-53, 33.5] as Vector<Irrational>,
@@ -145,7 +144,7 @@ describe("SIZE_CATEGORY_BOUNDS", (): void => {
             {
                 // s+A|k+A
                 pitch: {
-                    vector: [295, -186] as Vector<Rational>,
+                    vector: [295, -186] as Vector,
                     scaler: HALF_SCALER,
                 } as ScaledVector<Irrational>,
                 vector: [147.5, -93] as Vector<Irrational>,
@@ -155,7 +154,7 @@ describe("SIZE_CATEGORY_BOUNDS", (): void => {
             {
                 // k+A|C+A
                 pitch: {
-                    vector: [-41, 26] as Vector<Rational>,
+                    vector: [-41, 26] as Vector,
                     scaler: HALF_SCALER,
                 } as ScaledVector<Irrational>,
                 vector: [-20.5, 13] as Vector<Irrational>,
@@ -165,7 +164,7 @@ describe("SIZE_CATEGORY_BOUNDS", (): void => {
             {
                 // C+A|S+A
                 pitch: {
-                    vector: [5, -3] as Vector<Rational>,
+                    vector: [5, -3] as Vector,
                     scaler: HALF_SCALER,
                 } as ScaledVector<Irrational>,
                 vector: [2.5, -1.5] as Vector<Irrational>,
@@ -175,7 +174,7 @@ describe("SIZE_CATEGORY_BOUNDS", (): void => {
             {
                 // S+A|M+A
                 pitch: {
-                    vector: [-14, 9] as Vector<Rational>,
+                    vector: [-14, 9] as Vector,
                     scaler: HALF_SCALER,
                 } as ScaledVector<Irrational>,
                 vector: [-7, 4.5] as Vector<Irrational>,
@@ -185,7 +184,7 @@ describe("SIZE_CATEGORY_BOUNDS", (): void => {
             {
                 // M+A|L+A
                 pitch: {
-                    vector: [-33, 21] as Vector<Rational>,
+                    vector: [-33, 21] as Vector,
                     scaler: HALF_SCALER,
                 } as ScaledVector<Irrational>,
                 vector: [-16.5, 10.5] as Vector<Irrational>,
@@ -195,7 +194,7 @@ describe("SIZE_CATEGORY_BOUNDS", (): void => {
             {
                 // L+A|SS+A
                 pitch: {
-                    vector: [-52, 33] as Vector<Rational>,
+                    vector: [-52, 33] as Vector,
                     scaler: HALF_SCALER,
                 } as ScaledVector<Irrational>,
                 vector: [-26, 16.5] as Vector<Irrational>,
@@ -205,7 +204,7 @@ describe("SIZE_CATEGORY_BOUNDS", (): void => {
             {
                 // SS+A|MS+A
                 pitch: {
-                    vector: [-71, 45] as Vector<Rational>,
+                    vector: [-71, 45] as Vector,
                     scaler: HALF_SCALER,
                 } as ScaledVector<Irrational>,
                 vector: [-35.5, 22.5] as Vector<Irrational>,
@@ -215,7 +214,7 @@ describe("SIZE_CATEGORY_BOUNDS", (): void => {
             {
                 // MS+A|LS+A
                 pitch: {
-                    vector: [-25, 16] as Vector<Rational>,
+                    vector: [-25, 16] as Vector,
                     scaler: HALF_SCALER,
                 } as ScaledVector<Irrational>,
                 vector: [-12.5, 8] as Vector<Irrational>,
@@ -225,7 +224,7 @@ describe("SIZE_CATEGORY_BOUNDS", (): void => {
             {
                 // LS+A|A+A
                 pitch: {
-                    vector: [40, -25] as Vector<Rational>,
+                    vector: [40, -25] as Vector,
                     scaler: HALF_SCALER,
                 } as ScaledVector<Irrational>,
                 vector: [20, -12.5] as Vector<Irrational>,
@@ -235,7 +234,7 @@ describe("SIZE_CATEGORY_BOUNDS", (): void => {
             {
                 // A+A|
                 pitch: {
-                    vector: [-44, 28] as Vector<Rational>,
+                    vector: [-44, 28] as Vector,
                     scaler: HALF_SCALER,
                 } as ScaledVector<Irrational>,
                 vector: [-22, 14] as Vector<Irrational>,

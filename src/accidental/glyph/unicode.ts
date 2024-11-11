@@ -5,7 +5,7 @@ import { Accidental, Compatible, Flavor } from "../types"
 import { BLANK_UNICODE, PARENTHETICAL_NATURAL_UNICODE } from "./constants"
 import { Unicode } from "./types"
 
-const CORE_UNICODE_EQUIVALENTS: Array<{ core: Core; unicode: Unicode }> = [
+const CORE_UNICODE_EQUIVALENTS: { core: Core; unicode: Unicode }[] = [
     { core: getCore(HeadId.BARE_SHAFT), unicode: "" as Unicode },
     { core: getCore(HeadId.BARE_SHAFT, { down: true }), unicode: "" as Unicode },
     { core: getCore(HeadId.LEFT_SCROLL), unicode: "" as Unicode },

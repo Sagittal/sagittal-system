@@ -8,11 +8,11 @@ import { JiNotationLevelId } from "./types"
 //  Really I guess in the end all that should be defined here is fancy stuff that needs to operate *across* the
 //  JI notations, like secondary comma zone, introducing level, etc.
 
-const SAGITTAL_COMPATIBLE_COMMA_CLASS_IDS: Array<[Index<CommaClassId>, CommaClassId]> = [
+const SAGITTAL_COMPATIBLE_COMMA_CLASS_IDS: [Index<CommaClassId>, CommaClassId][] = [
     [0 as Index<CommaClassId>, CommaClassId._1_u],
 ]
 
-const MEDIUM_LEVEL_COMMA_CLASS_IDS: Array<[Index<CommaClassId>, CommaClassId]> = [
+const MEDIUM_LEVEL_COMMA_CLASS_IDS: [Index<CommaClassId>, CommaClassId][] = [
     ...SAGITTAL_COMPATIBLE_COMMA_CLASS_IDS,
     [12 as Index<CommaClassId>, CommaClassId._5_V_7_k],
     [20 as Index<CommaClassId>, CommaClassId._7_V_11_k],
@@ -26,7 +26,7 @@ const MEDIUM_LEVEL_COMMA_CLASS_IDS: Array<[Index<CommaClassId>, CommaClassId]> =
     [114 as Index<CommaClassId>, CommaClassId._11_M],
 ]
 
-const HIGH_LEVEL_COMMA_CLASS_IDS: Array<[Index<CommaClassId>, CommaClassId]> = [
+const HIGH_LEVEL_COMMA_CLASS_IDS: [Index<CommaClassId>, CommaClassId][] = [
     ...MEDIUM_LEVEL_COMMA_CLASS_IDS,
     [7 as Index<CommaClassId>, CommaClassId._19_s],
     [18 as Index<CommaClassId>, CommaClassId._1_V_17_k],
@@ -48,7 +48,7 @@ const HIGH_LEVEL_COMMA_CLASS_IDS: Array<[Index<CommaClassId>, CommaClassId]> = [
     [122 as Index<CommaClassId>, CommaClassId._5_V_49_M],
 ]
 
-const ULTRA_LEVEL_COMMA_CLASS_IDS: Array<[Index<CommaClassId>, CommaClassId]> = [
+const ULTRA_LEVEL_COMMA_CLASS_IDS: [Index<CommaClassId>, CommaClassId][] = [
     ...HIGH_LEVEL_COMMA_CLASS_IDS,
     [3 as Index<CommaClassId>, CommaClassId._19_V_5_n],
     [4 as Index<CommaClassId>, CommaClassId._5_s],
@@ -72,7 +72,7 @@ const ULTRA_LEVEL_COMMA_CLASS_IDS: Array<[Index<CommaClassId>, CommaClassId]> = 
     [119 as Index<CommaClassId>, CommaClassId._55_M],
 ]
 
-const EXTREME_LEVEL_COMMA_CLASS_IDS: Array<[Index<CommaClassId>, CommaClassId]> = [
+const EXTREME_LEVEL_COMMA_CLASS_IDS: [Index<CommaClassId>, CommaClassId][] = [
     ...ULTRA_LEVEL_COMMA_CLASS_IDS,
     [1 as Index<CommaClassId>, CommaClassId._1_V_5_7_13_n],
     [2 as Index<CommaClassId>, CommaClassId._65_V_77_n],
@@ -154,7 +154,7 @@ const EXTREME_LEVEL_COMMA_CLASS_IDS: Array<[Index<CommaClassId>, CommaClassId]> 
 
 const INSANE_LEVEL_COMMA_CLASS_IDS = sort([...EXTREME_LEVEL_COMMA_CLASS_IDS], { by: computeKeyPath(0) })
 
-const shapeUpIds = (ids: Array<[Index<CommaClassId>, CommaClassId]>): CommaClassId[] =>
+const shapeUpIds = (ids: [Index<CommaClassId>, CommaClassId][]): CommaClassId[] =>
     sort(ids, { by: computeKeyPath(0) }).map(
         ([_, id]: [Index<CommaClassId>, CommaClassId]): CommaClassId => id,
     )

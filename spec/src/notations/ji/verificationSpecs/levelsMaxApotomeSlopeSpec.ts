@@ -10,9 +10,10 @@ import {
 
 describe("max AAS per JI notation level", (): void => {
     it("increases a bit at each JI notation level", (): void => {
-        const entries = Object.entries(JI_NOTATION_LEVELS_COMMA_CLASS_IDS) as Array<
-            [JiNotationLevelId, CommaClassId[]]
-        >
+        const entries = Object.entries(JI_NOTATION_LEVELS_COMMA_CLASS_IDS) as [
+            JiNotationLevelId,
+            CommaClassId[],
+        ][]
         const actual = entries.map(
             ([jiNotationLevel, jiNotationLevelCommaClassIds]: [JiNotationLevelId, CommaClassId[]]): Partial<
                 Record<JiNotationLevelId, ApotomeSlope>
@@ -36,7 +37,7 @@ describe("max AAS per JI notation level", (): void => {
             },
         )
 
-        const expected: Array<Partial<Record<JiNotationLevelId, Max<ApotomeSlope>>>> = [
+        const expected: Partial<Record<JiNotationLevelId, Max<ApotomeSlope>>>[] = [
             { [JiNotationLevelId.MEDIUM]: 6.354529 as Max<ApotomeSlope> },
             { [JiNotationLevelId.HIGH]: 7.763479 as Max<ApotomeSlope> },
             { [JiNotationLevelId.ULTRA]: 11.558452 as Max<ApotomeSlope> },

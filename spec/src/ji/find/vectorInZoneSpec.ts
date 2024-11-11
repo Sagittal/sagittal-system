@@ -26,7 +26,7 @@ describe("computeRationalVectorInZone", (): void => {
             exclusive,
         })
 
-        const expected = [-8, -6, 3, 5, -1] as Vector<Rational>
+        const expected = [-8, -6, 3, 5, -1] as Vector
         expect(actual).toEqual(expected)
     })
 
@@ -106,7 +106,7 @@ describe("computeRationalVectorInZone", (): void => {
             exclusive,
         })
 
-        const expected = [485, -306] as Vector<Rational>
+        const expected = [485, -306] as Vector
         expect(actual).toEqual(expected)
     })
 
@@ -134,7 +134,7 @@ describe("computeRationalVectorInZone", (): void => {
             exclusive,
         })
 
-        const expected = [] as unknown[] as Vector<Rational>
+        const expected = [] as unknown[] as Vector
         expect(actual).toEqual(expected)
     })
 
@@ -148,7 +148,7 @@ describe("computeRationalVectorInZone", (): void => {
             exclusive,
         })
 
-        const expected = [-1054, 665] as Vector<Rational>
+        const expected = [-1054, 665] as Vector
         expect(actual).toEqual(expected)
     })
 })

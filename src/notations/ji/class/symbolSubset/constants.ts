@@ -18,11 +18,11 @@ const SIZE_SORTED_SYMBOL_SUBSET_IDS: SymbolSubsetId[] = [
     SymbolSubsetId.MAGRATHEAN,
 ]
 
-const SAGITTAL_COMPATIBLE_SYMBOL_SUBSET: Array<[Index<SymbolClassId>, SymbolClassId]> = [
+const SAGITTAL_COMPATIBLE_SYMBOL_SUBSET: [Index<SymbolClassId>, SymbolClassId][] = [
     [0 as Index<SymbolClassId>, SymbolClassId.NULL],
 ]
 
-const SPARTAN_SYMBOL_SUBSET: Array<[Index<SymbolClassId>, SymbolClassId]> = [
+const SPARTAN_SYMBOL_SUBSET: [Index<SymbolClassId>, SymbolClassId][] = [
     [12 as Index<SymbolClassId>, SymbolClassId.RIGHT_SCROLL],
     [44 as Index<SymbolClassId>, SymbolClassId.LEFT_BARB],
     [58 as Index<SymbolClassId>, SymbolClassId.RIGHT_ARC],
@@ -33,7 +33,7 @@ const SPARTAN_SYMBOL_SUBSET: Array<[Index<SymbolClassId>, SymbolClassId]> = [
     // [141 as Index<SymbolClassId>, SymbolClassId.ARC_AND_BARB],
 ]
 
-const ATHENIAN_SYMBOL_SUBSET: Array<[Index<SymbolClassId>, SymbolClassId]> = [
+const ATHENIAN_SYMBOL_SUBSET: [Index<SymbolClassId>, SymbolClassId][] = [
     ...SPARTAN_SYMBOL_SUBSET,
     [20 as Index<SymbolClassId>, SymbolClassId.DOUBLE_SCROLL],
     [30 as Index<SymbolClassId>, SymbolClassId.BOATHOOK_AND_SCROLL],
@@ -42,7 +42,7 @@ const ATHENIAN_SYMBOL_SUBSET: Array<[Index<SymbolClassId>, SymbolClassId]> = [
     [84 as Index<SymbolClassId>, SymbolClassId.ARC_AND_SCROLL],
 ]
 
-const PROMETHEAN_SYMBOL_SUBSET: Array<[Index<SymbolClassId>, SymbolClassId]> = [
+const PROMETHEAN_SYMBOL_SUBSET: [Index<SymbolClassId>, SymbolClassId][] = [
     ...ATHENIAN_SYMBOL_SUBSET,
     [7 as Index<SymbolClassId>, SymbolClassId.LEFT_SCROLL],
     [18 as Index<SymbolClassId>, SymbolClassId.LEFT_BOATHOOK],
@@ -67,7 +67,7 @@ const PROMETHEAN_SYMBOL_SUBSET: Array<[Index<SymbolClassId>, SymbolClassId]> = [
 // TODO: POST-NOTATION-GENERATION: TRULY SYMBOL SUBSETS, NOT JUST SYMBOL CLASS SUBSETS
 //  Define subsets in terms of new accents?
 //  Surely there must be some way to simplify / generate this
-const HERCULEAN_SYMBOL_SUBSET: Array<[Index<SymbolClassId>, SymbolClassId]> = [
+const HERCULEAN_SYMBOL_SUBSET: [Index<SymbolClassId>, SymbolClassId][] = [
     ...PROMETHEAN_SYMBOL_SUBSET,
     [3 as Index<SymbolClassId>, SymbolClassId.ANTITICK_AND_LEFT_SCROLL],
     [4 as Index<SymbolClassId>, SymbolClassId.TICK],
@@ -94,7 +94,7 @@ const HERCULEAN_SYMBOL_SUBSET: Array<[Index<SymbolClassId>, SymbolClassId]> = [
     // [137 as Index<SymbolClassId>, SymbolClassId.ANTITICK_ARC_AND_BARB],
 ]
 
-const OLYMPIAN_SYMBOL_SUBSET: Array<[Index<SymbolClassId>, SymbolClassId]> = [
+const OLYMPIAN_SYMBOL_SUBSET: [Index<SymbolClassId>, SymbolClassId][] = [
     ...HERCULEAN_SYMBOL_SUBSET,
     [1 as Index<SymbolClassId>, SymbolClassId.WING],
     [2 as Index<SymbolClassId>, SymbolClassId.BIRD],
@@ -192,11 +192,11 @@ const OLYMPIAN_SYMBOL_SUBSET: Array<[Index<SymbolClassId>, SymbolClassId]> = [
     // [148 as Index<SymbolClassId>, SymbolClassId.BIRD_AND_LEFT_SCROLL_DOUBLE_RIGHT_BARB],
 ]
 
-const MAGRATHEAN_SYMBOL_SUBSET: Array<[Index<SymbolClassId>, SymbolClassId]> = [...OLYMPIAN_SYMBOL_SUBSET]
+const MAGRATHEAN_SYMBOL_SUBSET: [Index<SymbolClassId>, SymbolClassId][] = [...OLYMPIAN_SYMBOL_SUBSET]
 
 // On an independent trajectory, as it does not contain Spartan or Athenian, though it is contained by Promethean
 // See: http://forum.sagittal.org/viewtopic.php?p=885&sid=832fe7e77de7aae89234e3dbb67f8fb9#p885
-const TROJAN_SYMBOL_SUBSET: Array<[Index<SymbolClassId>, SymbolClassId]> = [
+const TROJAN_SYMBOL_SUBSET: [Index<SymbolClassId>, SymbolClassId][] = [
     [30 as Index<SymbolClassId>, SymbolClassId.BOATHOOK_AND_SCROLL],
     [34 as Index<SymbolClassId>, SymbolClassId.RIGHT_BOATHOOK],
     [44 as Index<SymbolClassId>, SymbolClassId.LEFT_BARB],
@@ -213,7 +213,7 @@ const TROJAN_SYMBOL_SUBSET: Array<[Index<SymbolClassId>, SymbolClassId]> = [
 // TODO: POST-NOTATION-GENERATION: IDS VS INDICES
 //  Probably some way to get the indices from the enums rather than separately specifying them like here and for commas
 //  And at that time probably also clean up the /*119*/ style comments in bound class, comma class, and symbol subsets
-const shapeUpIds = (ids: Array<[Index<SymbolClassId>, SymbolClassId]>): SymbolClassId[] =>
+const shapeUpIds = (ids: [Index<SymbolClassId>, SymbolClassId][]): SymbolClassId[] =>
     sort(ids, { by: computeKeyPath(0) }).map(
         ([_, id]: [Index<SymbolClassId>, SymbolClassId]): SymbolClassId => id,
     )

@@ -14,7 +14,6 @@ import {
     PitchExpectation,
     Quotient,
     Irrational,
-    Rational,
 } from "@sagittal/general"
 import {
     BoundClassId,
@@ -524,7 +523,7 @@ describe("JI_NOTATION_BOUND_CLASS_ENTRIES", (): void => {
                 cents: 23.955448 as Cents,
                 vector: [-8, 0, 1.5, 1, 0.5] as Vector<Irrational>,
                 pitch: {
-                    vector: [-16, 0, 3, 2, 1] as Vector<Rational>,
+                    vector: [-16, 0, 3, 2, 1] as Vector,
                     scaler: [1, 2] as Quotient,
                 },
             },
@@ -551,7 +550,7 @@ describe("JI_NOTATION_BOUND_CLASS_ENTRIES", (): void => {
                 cents: 24.885981 as Cents,
                 vector: [-2, -0.5, -0.5, 0, 0, 0.5, 0, 0.5] as Vector<Irrational>,
                 pitch: {
-                    vector: [-4, -1, -1, 0, 0, 1, 0, 1] as Vector<Rational>,
+                    vector: [-4, -1, -1, 0, 0, 1, 0, 1] as Vector,
                     scaler: [1, 2] as Quotient,
                 },
             },
@@ -749,7 +748,7 @@ describe("JI_NOTATION_BOUND_CLASS_ENTRIES", (): void => {
                 cents: 35.118091 as Cents,
                 vector: [2, -2.5, 1, -1, 0, 0, 0, 0, 0, 0, 0.5] as Vector<Irrational>,
                 pitch: {
-                    vector: [4, -5, 2, -2, 0, 0, 0, 0, 0, 0, 1] as Vector<Rational>,
+                    vector: [4, -5, 2, -2, 0, 0, 0, 0, 0, 0, 1] as Vector,
                     scaler: [1, 2] as Quotient,
                 },
             },
@@ -812,7 +811,7 @@ describe("JI_NOTATION_BOUND_CLASS_ENTRIES", (): void => {
                 cents: 38.06194 as Cents,
                 vector: [-3, 1.5, -0.5, 0.5, 0, -0.5, 0, 0, 0.5] as Vector<Irrational>,
                 pitch: {
-                    vector: [-6, 3, -1, 1, 0, -1, 0, 0, 1] as Vector<Rational>,
+                    vector: [-6, 3, -1, 1, 0, -1, 0, 0, 1] as Vector,
                     scaler: [1, 2] as Quotient,
                 },
             },
@@ -947,7 +946,7 @@ describe("JI_NOTATION_BOUND_CLASS_ENTRIES", (): void => {
                 cents: 45.112497 as Cents,
                 vector: [4, -2.5] as Vector<Irrational>,
                 pitch: {
-                    vector: [8, -5] as Vector<Rational>,
+                    vector: [8, -5] as Vector,
                     scaler: [1, 2] as Quotient,
                 },
             },
@@ -1064,7 +1063,7 @@ describe("JI_NOTATION_BOUND_CLASS_ENTRIES", (): void => {
                 cents: 51.21954 as Cents,
                 vector: [-2, -2, 1.5, 0, 0.5] as Vector<Irrational>,
                 pitch: {
-                    vector: [-4, -4, 3, 0, 1] as Vector<Rational>,
+                    vector: [-4, -4, 3, 0, 1] as Vector,
                     scaler: [1, 2] as Quotient,
                 },
             },
@@ -1145,7 +1144,7 @@ describe("JI_NOTATION_BOUND_CLASS_ENTRIES", (): void => {
                 cents: 55.095545 as Cents,
                 vector: [-7.5, 4.5, 0.5, 0, 0.5, 0, 0, 0, 0, 0, -0.5] as Vector<Irrational>,
                 pitch: {
-                    vector: [-15, 9, 1, 0, 1, 0, 0, 0, 0, 0, -1] as Vector<Rational>,
+                    vector: [-15, 9, 1, 0, 1, 0, 0, 0, 0, 0, -1] as Vector,
                     scaler: [1, 2] as Quotient,
                 },
             },

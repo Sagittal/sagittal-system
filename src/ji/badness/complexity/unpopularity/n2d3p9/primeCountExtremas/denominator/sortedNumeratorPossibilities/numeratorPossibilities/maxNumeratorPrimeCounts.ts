@@ -15,7 +15,7 @@ import { INITIAL_MAX_NUMERATOR_PRIME_COUNTS_FOR_TWO_AND_THREE } from "./constant
 
 const computeMaxNumeratorPrimeCountsGivenMaxN2D3P9 = (
     maxN2D3P9: Max<N2D3P9>,
-): Array<Max<Numerator & PrimeCount>> => {
+): Max<Numerator & PrimeCount>[] => {
     const primes = computePrimes()
 
     let numeratorPrimeIndex = FIVE_PRIME_INDEX

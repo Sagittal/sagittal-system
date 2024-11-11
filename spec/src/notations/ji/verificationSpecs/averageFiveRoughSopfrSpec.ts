@@ -16,7 +16,7 @@ const AVERAGE_2_3_FREE_SOPFR = 22.878049 as Mean<{
 
 describe("average 2,3-free SoPFR", (): void => {
     it("is about 23", (): void => {
-        const two3FreeSopfrs: Array<Sopfr<Rough<5>>> = JI_NOTATION_COMMA_CLASS_IDS.map(
+        const two3FreeSopfrs: Sopfr<Rough<5>>[] = JI_NOTATION_COMMA_CLASS_IDS.map(
             (commaClassId: CommaClassId): Sopfr<Rough<5>> => {
                 const commaClass = getCommaClass(commaClassId)
                 const two3FreeClass = compute23FreeClass(commaClass.pitch)

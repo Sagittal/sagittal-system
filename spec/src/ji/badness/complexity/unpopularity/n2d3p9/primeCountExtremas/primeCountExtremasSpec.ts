@@ -10,7 +10,7 @@ describe("computePrimeCountExtremasGivenMaxN2D3P9", (): void => {
         const expected = [
             [0, 0], // 2
             [0, 0], // 3
-        ] as Array<Extrema<{ of: PrimeCount }>>
+        ] as Extrema<{ of: PrimeCount }>[]
         expect(actual).toEqual(expected)
     })
 
@@ -22,7 +22,7 @@ describe("computePrimeCountExtremasGivenMaxN2D3P9", (): void => {
         const expected = [
             [0, 0], // 2
             [0, 0], // 3
-        ] as Array<Extrema<{ of: PrimeCount }>>
+        ] as Extrema<{ of: PrimeCount }>[]
         expect(actual).toEqual(expected)
     })
 
@@ -38,7 +38,7 @@ describe("computePrimeCountExtremasGivenMaxN2D3P9", (): void => {
             [0, 2], // 7
             [0, 1], // 11
             [0, 1], // 13
-        ] as Array<Extrema<{ of: PrimeCount }>>
+        ] as Extrema<{ of: PrimeCount }>[]
         expect(actual).toEqual(expected)
     })
 
@@ -66,7 +66,7 @@ describe("computePrimeCountExtremasGivenMaxN2D3P9", (): void => {
             [0, 1], // 41
             [0, 1], // 43
             [0, 1], // 47
-        ] as Array<Extrema<{ of: PrimeCount }>>
+        ] as Extrema<{ of: PrimeCount }>[]
         expect(actual).toEqual(expected)
     })
 })

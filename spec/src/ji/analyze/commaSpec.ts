@@ -27,8 +27,8 @@ describe("analyzeComma", (): void => {
         const expected = {
             pitch: comma,
             cents: 40.022726 as Cents,
-            vector: [-8, -6, 3, 5, -1] as Vector<Rational>,
-            quotient: [2100875, 2052864] as Quotient<Rational>,
+            vector: [-8, -6, 3, 5, -1] as Vector,
+            quotient: [2100875, 2052864] as Quotient,
             decimal: 1.023387 as Decimal<Rational>,
             name: "5³⋅7⁵/11S" as Name<Comma>,
             sizeCategory: 5 as Index<SizeCategory>,

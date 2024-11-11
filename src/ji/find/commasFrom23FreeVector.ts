@@ -40,7 +40,7 @@ const compute2FreeRationalVector = (
         twoFreeRationalVector[TWO_PRIME_INDEX] = 0 as Exponent<3 & Prime> & PrimeCount<Rational & Rough<5>>
     }
 
-    return twoFreeRationalVector as Vector<Rational> as Vector<Rational & Rough<3>>
+    return twoFreeRationalVector as Vector as Vector<Rational & Rough<3>>
 }
 
 const computeCommasFrom23FreeRationalVector = (
@@ -62,10 +62,7 @@ const computeCommasFrom23FreeRationalVector = (
             two3FreeRationalVector,
             threeExponent as Exponent<3 & Prime> as Exponent<3 & Prime> & PrimeCount<Rational & Rough<5>>,
         )
-        const rationalVectorInZone: Maybe<Vector<Rational>> = computeRationalVectorInZone(
-            twoFreeRationalVector,
-            zone,
-        )
+        const rationalVectorInZone: Maybe<Vector> = computeRationalVectorInZone(twoFreeRationalVector, zone)
 
         if (rationalVectorInZone) {
             const comma = computeRationalScaledVectorFromRationalVector(rationalVectorInZone) as Comma

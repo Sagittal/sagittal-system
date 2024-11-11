@@ -4,7 +4,7 @@ import { computeMaxNumeratorPrimeCountsGivenMaxN2D3P9 } from "./maxNumeratorPrim
 
 const computeNumeratorPrimeCountExtremasGivenMaxN2D3P9 = (
     maxN2D3P9: Max<N2D3P9>,
-): Array<Extrema<{ of: PrimeCount }>> => {
+): Extrema<{ of: PrimeCount }>[] => {
     const maxNumeratorPrimeCountsGivenMaxN2D3P9 = computeMaxNumeratorPrimeCountsGivenMaxN2D3P9(maxN2D3P9)
 
     return maxNumeratorPrimeCountsGivenMaxN2D3P9.map(

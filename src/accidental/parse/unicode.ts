@@ -27,9 +27,10 @@ const parseUnicode = (unicode: Unicode): Accidental => {
                 })
             }
         } else {
-            const compatibleToUnicodeMapEntries = Object.entries(COMPATIBLE_TO_UNICODE_MAP) as Array<
-                [Compatible, Unicode]
-            >
+            const compatibleToUnicodeMapEntries = Object.entries(COMPATIBLE_TO_UNICODE_MAP) as [
+                Compatible,
+                Unicode,
+            ][]
             compatibleToUnicodeMapEntries.forEach(
                 ([entryCompatible, entryUnicode]: [Compatible, Unicode]): void => {
                     if (unicodeChar === entryUnicode) {
@@ -38,9 +39,7 @@ const parseUnicode = (unicode: Unicode): Accidental => {
                 },
             )
 
-            const accentToUnicodeMapEntries = Object.entries(ACCENT_TO_UNICODE_MAP) as Array<
-                [AccentId, Unicode]
-            >
+            const accentToUnicodeMapEntries = Object.entries(ACCENT_TO_UNICODE_MAP) as [AccentId, Unicode][]
             accentToUnicodeMapEntries.forEach(([accentId, entryUnicode]: [AccentId, Unicode]): void => {
                 if (unicodeChar === entryUnicode) {
                     accidental.arm = accidental.arm || []
@@ -48,9 +47,10 @@ const parseUnicode = (unicode: Unicode): Accidental => {
                 }
             })
 
-            const downAccentToUnicodeMapEntries = Object.entries(DOWN_ACCENT_TO_UNICODE_MAP) as Array<
-                [AccentId, Unicode]
-            >
+            const downAccentToUnicodeMapEntries = Object.entries(DOWN_ACCENT_TO_UNICODE_MAP) as [
+                AccentId,
+                Unicode,
+            ][]
             downAccentToUnicodeMapEntries.forEach(
                 ([downAccentId, entryUnicode]: [AccentId, Unicode]): void => {
                     if (unicodeChar === entryUnicode) {

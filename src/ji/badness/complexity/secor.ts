@@ -18,7 +18,7 @@ const computeSecorComplexity = (jiPitch: ScaledVector<Rational>): SecorComplexit
     const two3FreeClass = compute23FreeClass(jiPitch)
     const g = computeRationalScaledVectorSopfr(two3FreeClass)
 
-    const [numerator, denominator]: Quotient<Rational> = computeQuotientFromVector(two3FreeClass.vector)
+    const [numerator, denominator]: Quotient = computeQuotientFromVector(two3FreeClass.vector)
     const h = computeRationalDecimalCopfr(numerator)
     const i = computeRationalDecimalCopfr(denominator)
     const j = abs(h - i)

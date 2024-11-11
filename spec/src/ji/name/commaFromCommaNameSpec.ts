@@ -1,4 +1,4 @@
-import { Comma, Direction, Rational, Vector } from "@sagittal/general"
+import { Comma, Direction, Vector } from "@sagittal/general"
 import { computeCommaFromCommaName } from "../../../../src"
 import { CommaNameQuotient, SizeCategory } from "../../../../src/ji/name/types"
 
@@ -26,7 +26,7 @@ describe("computeCommaFromCommaName", (): void => {
         })
 
         const expected = {
-            vector: [-13, 9, -1, 1, 1, 0, 0, 0, 0, 0, 0, -1] as Vector<Rational>,
+            vector: [-13, 9, -1, 1, 1, 0, 0, 0, 0, 0, 0, -1] as Vector,
         } as Comma
         expect(actual).toEqual(expected)
     })
@@ -41,7 +41,7 @@ describe("computeCommaFromCommaName", (): void => {
         })
 
         const expected = {
-            vector: [-4, 4, -1] as Vector<Rational>,
+            vector: [-4, 4, -1] as Vector,
         } as Comma
         expect(actual).toEqual(expected)
     })
@@ -56,7 +56,7 @@ describe("computeCommaFromCommaName", (): void => {
         })
 
         const expected = {
-            vector: [-12, 5, 0, 0, 0, 0, 1] as Vector<Rational>,
+            vector: [-12, 5, 0, 0, 0, 0, 1] as Vector,
         } as Comma
         expect(actual).toEqual(expected)
     })
@@ -71,7 +71,7 @@ describe("computeCommaFromCommaName", (): void => {
         })
 
         const expected = {
-            vector: [1, -4, 2, -1, 1] as Vector<Rational>,
+            vector: [1, -4, 2, -1, 1] as Vector,
         } as Comma // 550/567
         expect(actual).toEqual(expected)
     })
@@ -86,7 +86,7 @@ describe("computeCommaFromCommaName", (): void => {
         })
 
         const expected = {
-            vector: [485, -306] as Vector<Rational>,
+            vector: [485, -306] as Vector,
         } as Comma
         expect(actual).toEqual(expected)
     })

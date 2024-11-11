@@ -48,7 +48,7 @@ const computeInZone = <T extends NumericProperties>(
 const computeRationalVectorInZone = (
     twoFreeRationalVector: Vector<Rational & Rough<3>>,
     zone: Zone,
-): Maybe<Vector<Rational>> => {
+): Maybe<Vector> => {
     const {
         extrema: [lowerBound, upperBound],
     } = zone

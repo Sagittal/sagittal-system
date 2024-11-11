@@ -2,7 +2,7 @@ import { computePrimes, increment, Index, Max, Numerator, Of, Prime, PrimeCount 
 import { N2D3P9 } from "../../../../../../../../../../../../src"
 
 describe("breaking points of max N2D3P9 per numerator prime", (): void => {
-    const expected: Array<Array<Max<N2D3P9>>> = [
+    const expected: Max<N2D3P9>[][] = [
         [],
         [],
         [
@@ -68,7 +68,7 @@ describe("breaking points of max N2D3P9 per numerator prime", (): void => {
         [1, 4386.722222],
         [1, 4449.388888],
         [1, 4769.388888],
-    ] as Array<Array<Max<N2D3P9>>>
+    ] as Max<N2D3P9>[][]
 
     it("okay, here is where we are going to figure this out", (): void => {
         const computeMaxN2D3P9GivenMaxNumeratorPrimeCount = (
@@ -82,13 +82,13 @@ describe("breaking points of max N2D3P9 per numerator prime", (): void => {
 
         const MAX_REASONABLE_MAX_N2D3P9 = 5000 as Max<Max<N2D3P9>>
 
-        const breakingPoints = [[], []] as Array<Array<Max<N2D3P9>>>
+        const breakingPoints = [[], []] as Max<N2D3P9>[][]
         let primeIndex: Index<Prime> = 2 as Index<Prime>
 
         const primes = computePrimes()
 
         while (true) {
-            breakingPoints.push([] as Array<Max<N2D3P9>>)
+            breakingPoints.push([] as Max<N2D3P9>[])
             const numeratorPrime = primes[primeIndex] as Prime & Of<Numerator>
 
             let maxNumeratorPrimeCount = 0 as Max<Numerator & PrimeCount>
