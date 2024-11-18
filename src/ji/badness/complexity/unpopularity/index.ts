@@ -9,5 +9,6 @@ export {
     KnownLowN2D3P9Numerator,
     computeN2D3P9FromKnownLowN2D3P9NumeratorAndPossibleDenominator,
     computeKnownRationalQuotients,
+    NumeratorPossibilityForDenominatorGivenMaxN2D3P9,
 } from "./n2d3p9"
 export { computeSopfgtt } from "./sopfgtt"

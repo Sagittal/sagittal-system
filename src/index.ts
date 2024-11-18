@@ -99,6 +99,7 @@ export {
     DEFAULT_FACTORING_MODE,
     DEFAULT_ABBREVIATED,
     DEFAULT_ASCII,
+    NumeratorPossibilityForDenominatorGivenMaxN2D3P9,
 } from "./ji"
 export {
     computeMaybeCommaClassId,

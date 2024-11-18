@@ -1,5 +1,4 @@
-import { Comma, Index } from "@sagittal/general"
-import { indexOf } from "@sagittal/general/dist/cjs/code"
+import { Comma, Index, indexOf } from "@sagittal/general"
 import { computeSizeCategory } from "./sizeCategory"
 import { SizeCategory } from "./types"
 

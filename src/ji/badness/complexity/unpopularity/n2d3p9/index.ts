@@ -5,6 +5,7 @@ export {
     SortedNumeratorPossibilityWithGreaterGpfThanDenominatorPrimeIncludingN2P,
     SortedNumeratorPossibilityWithLesserGpfThanDenominatorPrimeIncludingN2,
     computeN2,
+    NumeratorPossibilityForDenominatorGivenMaxN2D3P9,
 } from "./primeCountExtremas"
 export {
     KnownLowN2D3P9Numerator,

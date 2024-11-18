@@ -68,5 +68,6 @@ export {
     computeN2D3P9FromKnownLowN2D3P9NumeratorAndPossibleDenominator,
     computeKnownRationalQuotients,
     Ate,
+    NumeratorPossibilityForDenominatorGivenMaxN2D3P9,
 } from "./badness"
 export { Zone } from "./types"
