@@ -100,6 +100,7 @@ export {
     DEFAULT_ABBREVIATED,
     DEFAULT_ASCII,
     NumeratorPossibilityForDenominatorGivenMaxN2D3P9,
+    Zone,
 } from "./ji"
 export {
     computeMaybeCommaClassId,
