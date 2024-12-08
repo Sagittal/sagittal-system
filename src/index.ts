@@ -23,6 +23,7 @@ export {
     FlagId,
     SAGITTAL_SEMIFLAT,
     SAGITTAL_SEMISHARP,
+    flipSagittal,
 } from "./accidental"
 export { HALF_APOTOME, NOMINALS } from "./constants"
 export {
