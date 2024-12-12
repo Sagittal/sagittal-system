@@ -36,6 +36,14 @@ import { CommaNameQuotient, ParsedCommaName, SizeCategory, SizeCategoryName } fr
 //  But I now think the way is to first separate them into prime powers (as integers, not exponential expressions),
 //  in prime order. e.g. 25⋅7, 125⋅7, 5⋅49, 5⋅7⋅11.
 //  Then if any prime power individually exceeds the factoring criteria, turn it into an exponential expression.
+//  for comma sections in scripts/edoStaves, need this to make it work:
+//  const superCommaLongName = computeCommaName(superComma, LONG_COMMA_NAME_OPTIONS)
+//      .replace(/5²/g, "25")
+//
+//  additionally, some capitalization and hyphenation issues with long names. need this to work:
+//  const superCommaLongName = computeCommaName(superComma, LONG_COMMA_NAME_OPTIONS)
+//      .replace(/-/g, " ")
+//      .toLowerCase()
 
 const parseCommaName = (commaNameIo: Io): ParsedCommaName => {
     const commaNameParts = commaNameIo.match(
