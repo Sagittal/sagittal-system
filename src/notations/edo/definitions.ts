@@ -435,12 +435,12 @@ const EDO_NOTATION_DEFINITIONS: Record<EdoNotationName, EdoNotationDefinition> =
     }, // https://forum.sagittal.org/viewtopic.php?p=4751#p4751
     "130": {
         stepDefinitions: [
-            { sagitype: "|(" },
-            { sagitype: "/|" },
-            { sagitype: "|)" },
-            { sagitype: "|\\" },
-            { sagitype: "/|)" },
-            { sagitype: "/|\\" },
+            { sagitype: "|(", validCommas: ["5/7k"] },
+            { sagitype: "/|", validCommas: ["5C"] },
+            { sagitype: "|)", validCommas: ["7C"] },
+            { sagitype: "//|", validCommas: ["25S"] },
+            { sagitype: "/|)", validCommas: ["35M"] },
+            { sagitype: "/|\\", validCommas: ["11M"] },
         ],
     },
     "135": {
